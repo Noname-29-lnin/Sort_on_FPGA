@@ -10,7 +10,7 @@
 #include <atomic>
 #include <future>
 
-#include "./defines.hpp"
+#include "defines.hpp"
 
 #define DEFINES_H_
 using SIZE_TYPE_T   = DATATYPE_VAR;
@@ -28,26 +28,36 @@ class C_Func_Cal {
         SIZE_TYPE_T F_Cal_Mean (
             std::vector<SIZE_ARR_T> &arr, int si, int ei
         );
-        void F_Reverse_Array(std::vector<SIZE_ARR_T>& arr, SIZE_ARR_T si, SIZE_ARR_T ei);
+        void F_Reverse_Array(std::vector<SIZE_ARR_T>& arr, int si, int ei);
 };
 
 class C_Sort_Algor {
     private:
-        int P_QuickSort_Partition(std::vector<SIZE_ARR_T>& arr, SIZE_ARR_T si, SIZE_ARR_T ei);
+        size_t P_count_swap     = 0;
+        size_t P_count_compare  = 0;
+        int P_QuickSort_Partition(std::vector<SIZE_ARR_T>& arr, int si, int ei);
         void P_MergeSort_Merge(std::vector<SIZE_ARR_T>& arr, int left, int mid, int right);
     public:
+        void P_QuickSort(
+            std::vector<SIZE_ARR_T> &arr, int si, int ei
+        );
+        void P_MergeSort(
+            std::vector<SIZE_ARR_T> &arr, int si, int ei
+        );
         void F_QuickSort(
             std::vector<SIZE_ARR_T> &arr, int si, int ei
         );
         void F_MergeSort(
             std::vector<SIZE_ARR_T> &arr, int si, int ei
         );
+        size_t Get_Count_Compare() const { return P_count_compare; }
+        size_t Get_Count_Swap() const { return P_count_swap; }
 };
 
 class C_Framework_Serial : public C_Func_Cal, public C_Sort_Algor{
     private:
-        SIZE_TYPE_T P_count_swap    = 0;
-        SIZE_TYPE_T P_count_compare = 0;
+        size_t P_count_swap    = 0;
+        size_t P_count_compare = 0;
         Status_e P_status;
         int P_Partition(std::vector<SIZE_ARR_T>& arr, int si, int ei);
         void P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, int M, int& S_cnt);
@@ -56,6 +66,8 @@ class C_Framework_Serial : public C_Func_Cal, public C_Sort_Algor{
         void F_Framework_Serial(
             std::vector<SIZE_ARR_T> &arr, int M
         );
+        size_t Get_Count_Compare() { return P_count_compare; }
+        size_t Get_Count_Swap() { return P_count_swap; }
 };
 
 #endif

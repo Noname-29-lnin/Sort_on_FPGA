@@ -1,0 +1,1055 @@
+desc: --stacks=yes --massif-out-file=./Reports/ANALYSIS_DIR/checkmemory/MergeSort_1.out
+cmd: ./main 2 3
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=170403
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1864
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=348930
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1384
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=479529
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1960
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=619004
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1608
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=5
+#-----------
+time=817267
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1608
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=6
+#-----------
+time=947414
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1864
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=1035960
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1864
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1154761
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1384
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1245560
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1448
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=1385822
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1608
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=1571885
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1960
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=1694219
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1608
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=1770840
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1608
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=14
+#-----------
+time=1907708
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1608
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=1985008
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1608
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=2121860
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1864
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=2227962
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1384
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=18
+#-----------
+time=2380556
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=504
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=2471079
+mem_heap_B=81389
+mem_heap_extra_B=51
+mem_stacks_B=2968
+heap_tree=detailed
+n3: 81389 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x2: ???
+       n1: 72704 0x1FFF00039A: ???
+        n1: 72704 0x1FFF0003A1: ???
+         n0: 72704 0x1FFF0003A3: ???
+ n1: 8192 0x497F023: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 8192 0x4983015: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+   n1: 8192 0x10C932: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+    n0: 8192 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n0: 493 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=20
+#-----------
+time=2580664
+mem_heap_B=81702
+mem_heap_extra_B=74
+mem_stacks_B=1608
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=2689436
+mem_heap_B=81958
+mem_heap_extra_B=74
+mem_stacks_B=1760
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=2799009
+mem_heap_B=82470
+mem_heap_extra_B=74
+mem_stacks_B=1752
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=2963635
+mem_heap_B=82470
+mem_heap_extra_B=74
+mem_stacks_B=1608
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=3068665
+mem_heap_B=84461
+mem_heap_extra_B=67
+mem_stacks_B=1472
+heap_tree=detailed
+n4: 84461 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x2: ???
+       n1: 72704 0x1FFF00039A: ???
+        n1: 72704 0x1FFF0003A1: ???
+         n0: 72704 0x1FFF0003A3: ???
+ n1: 8192 0x497F023: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 8192 0x4983015: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+   n1: 8192 0x10C932: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+    n0: 8192 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 3072 0x10C7D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n1: 3072 0x10CAAA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 3072 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n0: 493 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=25
+#-----------
+time=3205349
+mem_heap_B=83494
+mem_heap_extra_B=74
+mem_stacks_B=1608
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=3341388
+mem_heap_B=83494
+mem_heap_extra_B=74
+mem_stacks_B=1752
+heap_tree=detailed
+n4: 83494 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x2: ???
+       n1: 72704 0x1FFF00039A: ???
+        n1: 72704 0x1FFF0003A1: ???
+         n0: 72704 0x1FFF0003A3: ???
+ n1: 8192 0x497F023: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 8192 0x4983015: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+   n1: 8192 0x10C932: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+    n0: 8192 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 2048 0x10C7D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n1: 2048 0x10CAAA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 2048 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n0: 550 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=27
+#-----------
+time=3423761
+mem_heap_B=83494
+mem_heap_extra_B=74
+mem_stacks_B=1608
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=3560892
+mem_heap_B=83494
+mem_heap_extra_B=74
+mem_stacks_B=1752
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=3703443
+mem_heap_B=85542
+mem_heap_extra_B=74
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=3853570
+mem_heap_B=85542
+mem_heap_extra_B=74
+mem_stacks_B=1544
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=3953661
+mem_heap_B=85542
+mem_heap_extra_B=74
+mem_stacks_B=1776
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=4054204
+mem_heap_B=85542
+mem_heap_extra_B=74
+mem_stacks_B=1608
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=4154298
+mem_heap_B=85542
+mem_heap_extra_B=74
+mem_stacks_B=1968
+heap_tree=detailed
+n4: 85542 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x2: ???
+       n1: 72704 0x1FFF00039A: ???
+        n1: 72704 0x1FFF0003A1: ???
+         n0: 72704 0x1FFF0003A3: ???
+ n1: 8192 0x497F023: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 8192 0x4983015: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+   n1: 8192 0x10C932: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+    n0: 8192 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 4096 0x10C7D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n1: 4096 0x10CAAA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 4096 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n0: 550 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=4254427
+mem_heap_B=85542
+mem_heap_extra_B=74
+mem_stacks_B=1544
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=4354500
+mem_heap_B=85542
+mem_heap_extra_B=74
+mem_stacks_B=1640
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=4504682
+mem_heap_B=85542
+mem_heap_extra_B=74
+mem_stacks_B=2040
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=4604957
+mem_heap_B=85542
+mem_heap_extra_B=74
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=4755360
+mem_heap_B=85542
+mem_heap_extra_B=74
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=4856001
+mem_heap_B=82016
+mem_heap_extra_B=40
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=4956223
+mem_heap_B=82016
+mem_heap_extra_B=40
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=5063859
+mem_heap_B=86208
+mem_heap_extra_B=48
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=5163993
+mem_heap_B=86224
+mem_heap_extra_B=96
+mem_stacks_B=1336
+heap_tree=detailed
+n5: 86224 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x2: ???
+       n1: 72704 0x1FFF00039A: ???
+        n1: 72704 0x1FFF0003A1: ???
+         n0: 72704 0x1FFF0003A3: ???
+ n2: 8192 0x10BCD4: std::vector<float, std::allocator<float> >::vector(std::vector<float, std::allocator<float> > const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n0: 4096 0x10A8CD: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n0: 4096 0x10A9CC: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 4096 0x10C7D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n1: 4096 0x10CAAA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 4096 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 1024 0x4B34BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B43CDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B42F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B416D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B416D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B2B14C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x4B2B14C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x4BEACBA: __printf_chk (printf_chk.c:33)
+         n1: 1024 0x10C9EE: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+          n0: 1024 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n0: 208 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=5264400
+mem_heap_B=86444
+mem_heap_extra_B=84
+mem_stacks_B=1112
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=5364915
+mem_heap_B=86276
+mem_heap_extra_B=84
+mem_stacks_B=1192
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=5465013
+mem_heap_B=86208
+mem_heap_extra_B=48
+mem_stacks_B=1064
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=5595811
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4056
+heap_tree=peak
+n6: 95120 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x2: ???
+       n1: 72704 0x1FFF00039A: ???
+        n1: 72704 0x1FFF0003A1: ???
+         n0: 72704 0x1FFF0003A3: ???
+ n2: 8192 0x10BCD4: std::vector<float, std::allocator<float> >::vector(std::vector<float, std::allocator<float> > const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n0: 4096 0x10A8CD: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n0: 4096 0x10A9CC: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 8192 0x497F023: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n2: 8192 0x4983015: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+   n1: 8192 0x10C380: void WriteDataToFile_Dec<float>(std::vector<float, std::allocator<float> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+    n0: 8192 0x10AB33: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 4096 0x10C7D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n1: 4096 0x10CAAA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 4096 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 1024 0x4B34BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B43CDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B42F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B416D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B416D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B2B14C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x4B2B14C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x4BEACBA: __printf_chk (printf_chk.c:33)
+         n1: 1024 0x10C9EE: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+          n0: 1024 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n0: 912 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=5745902
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=1312
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=5846006
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4280
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=5946070
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4312
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=6022702
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=2376
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=6099343
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4360
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=6175976
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=3704
+heap_tree=detailed
+n6: 95120 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x2: ???
+       n1: 72704 0x1FFF00039A: ???
+        n1: 72704 0x1FFF0003A1: ???
+         n0: 72704 0x1FFF0003A3: ???
+ n2: 8192 0x10BCD4: std::vector<float, std::allocator<float> >::vector(std::vector<float, std::allocator<float> > const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n0: 4096 0x10A8CD: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n0: 4096 0x10A9CC: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 8192 0x497F023: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n2: 8192 0x4983015: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+   n1: 8192 0x10C380: void WriteDataToFile_Dec<float>(std::vector<float, std::allocator<float> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+    n0: 8192 0x10AB33: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 4096 0x10C7D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n1: 4096 0x10CAAA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 4096 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 1024 0x4B34BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B43CDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B42F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B416D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B416D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B2B14C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x4B2B14C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x4BEACBA: __printf_chk (printf_chk.c:33)
+         n1: 1024 0x10C9EE: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+          n0: 1024 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n0: 912 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=53
+#-----------
+time=6252605
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4312
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=6329256
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4200
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=6405953
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=3752
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=6482587
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4200
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=6559211
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=1696
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=6635849
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4200
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=6712471
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=1432
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=6789121
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4360
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=6865781
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=2352
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=6942415
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4280
+heap_tree=detailed
+n6: 95120 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x2: ???
+       n1: 72704 0x1FFF00039A: ???
+        n1: 72704 0x1FFF0003A1: ???
+         n0: 72704 0x1FFF0003A3: ???
+ n2: 8192 0x10BCD4: std::vector<float, std::allocator<float> >::vector(std::vector<float, std::allocator<float> > const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n0: 4096 0x10A8CD: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n0: 4096 0x10A9CC: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 8192 0x497F023: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n2: 8192 0x4983015: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+   n1: 8192 0x10C380: void WriteDataToFile_Dec<float>(std::vector<float, std::allocator<float> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+    n0: 8192 0x10AB33: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 4096 0x10C7D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n1: 4096 0x10CAAA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 4096 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 1024 0x4B34BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B43CDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B42F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B416D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B416D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B2B14C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x4B2B14C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x4BEACBA: __printf_chk (printf_chk.c:33)
+         n1: 1024 0x10C9EE: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+          n0: 1024 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n0: 912 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=63
+#-----------
+time=7019036
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4192
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=7095663
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=1912
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=7172324
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4200
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=7248952
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=1448
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=7325577
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4320
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=7402199
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=1672
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=7478824
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4296
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=7555467
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=3704
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=7632094
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4296
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=7708798
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=3704
+heap_tree=detailed
+n6: 95120 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x2: ???
+       n1: 72704 0x1FFF00039A: ???
+        n1: 72704 0x1FFF0003A1: ???
+         n0: 72704 0x1FFF0003A3: ???
+ n2: 8192 0x10BCD4: std::vector<float, std::allocator<float> >::vector(std::vector<float, std::allocator<float> > const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n0: 4096 0x10A8CD: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n0: 4096 0x10A9CC: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 8192 0x497F023: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n2: 8192 0x4983015: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+   n1: 8192 0x10C380: void WriteDataToFile_Dec<float>(std::vector<float, std::allocator<float> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+    n0: 8192 0x10AB33: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 4096 0x10C7D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n1: 4096 0x10CAAA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 4096 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 1024 0x4B34BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B43CDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B42F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B416D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B416D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B2B14C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x4B2B14C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x4BEACBA: __printf_chk (printf_chk.c:33)
+         n1: 1024 0x10C9EE: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+          n0: 1024 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n0: 912 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=73
+#-----------
+time=7785437
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4280
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=7862067
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=3704
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=7938734
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4280
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=8015359
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4192
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=8091984
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4344
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=8168614
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=1440
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=8245263
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4360
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=8321898
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=1408
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=8398554
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4360
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=8475192
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=3704
+heap_tree=detailed
+n6: 95120 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x2: ???
+       n1: 72704 0x1FFF00039A: ???
+        n1: 72704 0x1FFF0003A1: ???
+         n0: 72704 0x1FFF0003A3: ???
+ n2: 8192 0x10BCD4: std::vector<float, std::allocator<float> >::vector(std::vector<float, std::allocator<float> > const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n0: 4096 0x10A8CD: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n0: 4096 0x10A9CC: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 8192 0x497F023: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n2: 8192 0x4983015: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+   n1: 8192 0x10C380: void WriteDataToFile_Dec<float>(std::vector<float, std::allocator<float> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+    n0: 8192 0x10AB33: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 4096 0x10C7D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n1: 4096 0x10CAAA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 4096 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 1024 0x4B34BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B43CDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B42F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B416D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B416D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B2B14C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x4B2B14C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x4BEACBA: __printf_chk (printf_chk.c:33)
+         n1: 1024 0x10C9EE: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+          n0: 1024 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n0: 912 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=83
+#-----------
+time=8551817
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4312
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=8628449
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4096
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=8705323
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=3752
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=8781996
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4200
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=8858629
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=1744
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=8935263
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4312
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=9011890
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=2384
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=9088523
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4312
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=9165146
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4200
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=9241768
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=3752
+heap_tree=detailed
+n6: 95120 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x2: ???
+       n1: 72704 0x1FFF00039A: ???
+        n1: 72704 0x1FFF0003A1: ???
+         n0: 72704 0x1FFF0003A3: ???
+ n2: 8192 0x10BCD4: std::vector<float, std::allocator<float> >::vector(std::vector<float, std::allocator<float> > const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n0: 4096 0x10A8CD: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n0: 4096 0x10A9CC: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 8192 0x497F023: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n2: 8192 0x4983015: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+   n1: 8192 0x10C380: void WriteDataToFile_Dec<float>(std::vector<float, std::allocator<float> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+    n0: 8192 0x10AB33: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 4096 0x10C7D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+  n1: 4096 0x10CAAA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+   n0: 4096 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n1: 1024 0x4B34BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B43CDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B42F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B416D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B416D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B2B14C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x4B2B14C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x4BEACBA: __printf_chk (printf_chk.c:33)
+         n1: 1024 0x10C9EE: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+          n0: 1024 0x10A799: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+ n0: 912 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=93
+#-----------
+time=9318398
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=4272
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=9395027
+mem_heap_B=95120
+mem_heap_extra_B=112
+mem_stacks_B=1464
+heap_tree=empty

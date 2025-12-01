@@ -84,11 +84,12 @@ $(S_BUILD_FILE)/%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 run: $(TARGET)
-	@mkdir -p $(COMPILE_DIR)
 	./$(TARGET) $(S_VALUE_SERIAL) $(S_VALUE_PARALLEL) | tee $(COMPILE_DIR)/$(S_ANALYSIS_NAME).log
 
 clean:
 	rm -rf $(S_BUILD_FILE) $(TARGET)
+	@mkdir -p $(COMPILE_DIR)
+	
 
 clear:
 	rm -rf $(S_BUILD_FILE) $(TARGET) $(REPORT_DIR)

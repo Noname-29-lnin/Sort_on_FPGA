@@ -1,0 +1,17 @@
+Finished reading file: ./tools/unsorted.txt
+Number Compare = 2541
+Number Swap = 270
+PASS
+Finish write file './Reports/COMPILE_REPORT/sorted.txt'.
+
+ Performance counter stats for './main 2 3':
+
+           207.444      cache-references                                                      
+            68.175      cache-misses                     #   32,86% of all cache refs         
+
+       0,001530902 seconds time elapsed
+
+       0,001575000 seconds user
+       0,000000000 seconds sys
+
+
