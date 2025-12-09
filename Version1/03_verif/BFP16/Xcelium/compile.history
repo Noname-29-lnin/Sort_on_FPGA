@@ -1,1 +1,1 @@
-s1(09Dec2025:02:40:26):  xrun +xm64bit -sv -f ./../BFP16/flist.f -top tb_BFP16_add -access +rwc -clean -log ./../BFP16/Xcelium/compile.log +nctimescale+1ns/1ps +ntb_random_seed=automatic -allowredefinition -v93 
+s1(09Dec2025:12:09:05):  xrun +xm64bit -sv -f ./../BFP16/flist.f -top tb_BFP16_add -access +rwc -clean -log ./../BFP16/Xcelium/compile.log +nctimescale+1ns/1ps +ntb_random_seed=automatic -allowredefinition -v93 
