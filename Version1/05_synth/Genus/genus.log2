@@ -1,0 +1,78 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: GENUS15.20 - 15.20-p004_1, built Sat Nov 14 2015
+Options: -files genus_synth.tcl 
+Date:    Tue Dec 09 03:19:59 2025
+Host:    centos7 (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (2*Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz 8192KB)
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+Sourcing GUI preferences file /home/admin/.cadence/genus/gui.tcl...
+Finished loading tool scripts (5 seconds elapsed).
+
+Sourcing genus_synth.tcl ...
+TOP_MODULE = FPU_unit
+LIB_DIR = ./../PDK45nm/gpdk045_lib
+LIB_NAME = slow_vdd1v0_basicCells_hvt
+LIB_FILE = ./../PDK45nm/gpdk045_lib/slow_vdd1v0_basicCells_hvt.lib
+SDC_FILE = ./constraint.sdc
+SRD_FILE = ./../../02_rtl/BFP16_ADD/
+
+  Message Summary for Library ./../PDK45nm/gpdk045_lib/slow_vdd1v0_basicCells_hvt.lib:
+  ************************************************************************************
+  Could not find an attribute in the library. [LBR-436]: 574
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  ************************************************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow_vdd1v0_basicCells_hvt.lib'.
+        : The nominal operating condition represents either the nominal PVT values if specified in the library source, or the default PVT values (1.0, 1.0, 1.0).
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNAHVT' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Otherwise, the library cell will be marked as unusable and as timing model.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNAHVT' must have an output pin.
+  Setting attribute of root '/': 'library' = ./../PDK45nm/gpdk045_lib/slow_vdd1v0_basicCells_hvt.lib
+  Library has 324 usable logic and 128 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'BFP16_add' from file './../../02_rtl/BFP16_ADD/BFP16_add.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'BFP16_add' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'COMP_8bit' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'SWAP_unit' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'MAN_ALU' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'EXP_adjust' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'BFP16_add'.
+UM:  flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:             5              5                                      elaborate
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'design' named 'FPU_unit' could not be found.
+        : Check to make sure that the object exists and is of the correct type.  The 'what_is' command can be used to determine the type of an object.
+  set_top_module: changes to the new top module 
+
+Usage: set_top_module [<design>]
+
+    [<design>]:
+        the name of the design 
+errorInfo: Failed on set_top_module
+    while executing
+"set_top_module ${Top_module}"
+Failed on set_top_module
+Encountered problems processing file: genus_synth.tcl
+WARNING: This version of the tool is 3678 days old.
+genus@root:> exitt
+invalid command name "exitt"
+genus@root:> exitt
+invalid command name "exitt"
+genus@root:> exit
+Normal exit.

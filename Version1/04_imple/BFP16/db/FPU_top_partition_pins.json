@@ -1,0 +1,209 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "o_32_s[0]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[1]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[2]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[3]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[4]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[5]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[6]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[7]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[8]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[9]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[10]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[11]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[12]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[13]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[14]",
+					"strict" : false
+				},
+				{
+					"name" : "o_32_s[15]",
+					"strict" : false
+				},
+				{
+					"name" : "i_clk",
+					"strict" : false
+				},
+				{
+					"name" : "i_rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[15]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[15]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[14]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[14]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[8]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[8]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[7]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[7]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[9]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[9]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[10]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[10]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[11]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[11]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[12]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[12]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[13]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[13]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[5]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[5]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[6]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[6]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[3]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[4]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[4]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "i_32_a[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

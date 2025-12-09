@@ -38,6 +38,6 @@ assign w_o_pos_one[0] = (~i_data[7] & ~i_data[5] & ~i_data[3] & ~i_data[1] & i_d
 assign w_o_pos_one[1] = (~i_data[7] & ~i_data[6] & ~i_data[3] & ~i_data[2] & i_data[0]) | (~i_data[7] & ~i_data[6] & ~i_data[3] & ~i_data[2] & i_data[1]) | (~i_data[7] & ~i_data[6] & i_data[4]) | (~i_data[7] & ~i_data[6] & i_data[5]);
 assign w_o_pos_one[2] = (~i_data[7] & ~i_data[6] & ~i_data[5] & ~i_data[4] & i_data[0]) | (~i_data[7] & ~i_data[6] & ~i_data[5] & ~i_data[4] & i_data[1]) | (~i_data[7] & ~i_data[6] & ~i_data[5] & ~i_data[4] & i_data[2]) | (~i_data[7] & ~i_data[6] & ~i_data[5] & ~i_data[4] & i_data[3]);
 assign o_zero_flag = ~(i_data[7] | i_data[6] | i_data[5] | i_data[4] | i_data[3] | i_data[2] | i_data[1] | i_data[0] );
-// assign o_pos_one = o_zero_flag ? '0 : w_o_pos_one;
-assign o_pos_one = w_o_pos_one;
+assign o_pos_one = o_zero_flag ? '1 : w_o_pos_one;
+// assign o_pos_one = w_o_pos_one;
 endmodule

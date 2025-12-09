@@ -1,0 +1,14 @@
+./../../02_rtl/BFP16_ADD/BFP16_add.sv
+./../../02_rtl/BFP16_ADD/CLA_4bit.sv
+./../../02_rtl/BFP16_ADD/CLA_8bit.sv
+./../../02_rtl/BFP16_ADD/COMP_4bit.sv
+./../../02_rtl/BFP16_ADD/COMP_8bit.sv
+./../../02_rtl/BFP16_ADD/EXP_adjust.sv
+./../../02_rtl/BFP16_ADD/LOPD_8bit.sv
+./../../02_rtl/BFP16_ADD/MAN_ALU.sv
+./../../02_rtl/BFP16_ADD/NOR_unit.sv
+./../../02_rtl/BFP16_ADD/PSC_unit.sv
+./../../02_rtl/BFP16_ADD/SHF_left.sv
+./../../02_rtl/BFP16_ADD/SHF_right.sv
+./../../02_rtl/BFP16_ADD/SIGN_unit.sv
+./../../02_rtl/BFP16_ADD/SWAP_unit.sv
