@@ -6,6 +6,8 @@ module addr_to_fpu #(
     input logic                     i_rst_n     ,
     input logic [SIZE_ADDR-1:0]     i_addr_si   ,
     input logic [SIZE_ADDR-1:0]     i_addr_ei   ,
+
+    output logic                    o_done        
 );
 
 endmodule
