@@ -1,0 +1,34 @@
+Finished reading file: ./tools/unsorted.txt
+Size of array: 32
+Number subarry M = 2
+Finish write file './Reports/COMPILE_REPORT/sorted.txt'.
+[FrameworkStandard] Number of Similar = 0
+[FrameworkStandard] Number of Ascending = 3
+[FrameworkStandard] Number of Descending = 6
+ Part_si = 0  Part_si = 0  Part_si = 16  Part_si = 0  Part_si = 8  Part_si = 16  Part_si = 24 
+ Part_ei = 31  Part_ei = 15  Part_ei = 31  Part_ei = 7  Part_ei = 15  Part_ei = 23  Part_ei = 31 
+Size_Part = 7
+Addr_si = 0 Addr_ei = 31 Addr_mean = 14
+Mean Value = 3.54217e+08
+Addr_si = 0 Addr_ei = 15 Addr_mean = 6
+Mean Value = -5.63314e+08
+Addr_si = 16 Addr_ei = 31 Addr_mean = 24
+Mean Value = 1.27175e+09
+Addr_si = 0 Addr_ei = 7 Addr_mean = 3
+Mean Value = -1.35614e+09
+Addr_si = 8 Addr_ei = 15 Addr_mean = 11
+Mean Value = 2.29511e+08
+Addr_si = 16 Addr_ei = 23 Addr_mean = 20
+Mean Value = 8.46016e+08
+Addr_si = 24 Addr_ei = 31 Addr_mean = 28
+Mean Value = 1.69748e+09
+Finish write file './Reports/COMPILE_REPORT/sorted_RTL.txt'.
+
+Sort algorithm                Check sorted   Time (ns)           Number Swap         Number Compare      Auxiliary Space (Bytes)
+-----------------------------------------------------------------------------------------------------------------------------
+Data Set                      FAIL           0                   0                   0                   0                   
+-----------------------------------------------------------------------------------------------------------------------------
+Framework_QuickSort           PASS           2111                144                 73                  0                   
+-----------------------------------------------------------------------------------------------------------------------------
+Data Test                     FAIL           14111               96                  49                  0                   
+-----------------------------------------------------------------------------------------------------------------------------

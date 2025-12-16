@@ -1,12 +1,16 @@
 Finished reading file: ./tools/unsorted.txt
-Size of array: 32
+Size of array: 1024
+Number subarry M = 8
+Finish write file './Reports/COMPILE_REPORT/sorted.txt'.
+Finish write file './Reports/COMPILE_REPORT/sorted_RTL.txt'.
 
 Sort algorithm                Check sorted   Time (ns)           Number Swap         Number Compare      Auxiliary Space (Bytes)
 -----------------------------------------------------------------------------------------------------------------------------
 Data Set                      FAIL           0                   0                   0                   0                   
 -----------------------------------------------------------------------------------------------------------------------------
-Framework_QuickSort           PASS           2348                154                 64                  0                   
+QuickSort                     PASS           41938               12131               6289                0                   
 -----------------------------------------------------------------------------------------------------------------------------
-Data Test                     PASS           8205                0                   0                   0                   
+Framework_QuickSort           PASS           91237               9352                4677                0                   
 -----------------------------------------------------------------------------------------------------------------------------
-Finish write file './Reports/COMPILE_REPORT/sorted.txt'.
+Data Test                     PASS           783881              296540680           292797083           0                   
+-----------------------------------------------------------------------------------------------------------------------------

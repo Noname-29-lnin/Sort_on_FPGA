@@ -17,6 +17,7 @@
 
 #define PATH_UNSORTED_FILE      "./tools/unsorted.txt"
 #define PATH_SORTED_FILE        "./Reports/COMPILE_REPORT/sorted.txt"
+#define PATH_SORTED_FILE_1      "./Reports/COMPILE_REPORT/sorted_RTL.txt"
 
 C_Framework_Serial C_framwork_standard;
 C_Sort_Algor C_RTL_sort;
@@ -30,7 +31,7 @@ int main(int argc, char** argv) {
     ReadDataToFile_DEC<DATATPPE_ARR>(PATH_UNSORTED_FILE, arr);
 
     std::cout << "Size of array: " << arr.size() << std::endl;
-    
+
     std::vector<SortResult<size_t>> results;
 
     results.push_back({"Data Set", CheckSortedString<DATATPPE_ARR>(arr), 0, 0, 0, 0});
@@ -44,22 +45,26 @@ int main(int argc, char** argv) {
 
     C_Framework_Serial C_Framework_QuickSort;
     std::vector<DATATPPE_ARR> Data_Framework_QuickSort = arr;
-    // int M_Framework_Serial = std::stoi(argv[1]);
-    int M_Framework_Serial = 2;
+    int M_Framework_Serial = std::stoi(argv[1]);
+    std::cout << "Number subarry M = " << M_Framework_Serial << std::endl;
     size_t Time_Framework_QuickSort =  V_CAL_MeasureTime([&]() {
-                C_Framework_QuickSort.F_Framework_Serial(Data_Framework_QuickSort, M_Framework_Serial);
-            });
+        C_Framework_QuickSort.F_Framework_Serial(Data_Framework_QuickSort, M_Framework_Serial);
+    });
     results.push_back({"Framework_QuickSort", CheckSortedString(Data_Framework_QuickSort), Time_Framework_QuickSort, C_Framework_QuickSort.Get_Count_Compare(), C_Framework_QuickSort.Get_Count_Swap(), 0});
+    WriteDataToFile_Dec<DATATPPE_ARR>(Data_Framework_QuickSort, PATH_SORTED_FILE);
 
+    std::cout << "[FrameworkStandard] Number of Similar = " << C_Framework_QuickSort.Get_Count_Similar() << std::endl;
+    std::cout << "[FrameworkStandard] Number of Ascending = " << C_Framework_QuickSort.Get_Count_Ascending() << std::endl;
+    std::cout << "[FrameworkStandard] Number of Descending = " << C_Framework_QuickSort.Get_Count_Descending() << std::endl;
+    
     std::vector<DATATPPE_ARR> Data_test = arr;
-    c_test.F_Framework_Serial_RTL(Data_test, 2);
     size_t Time_Framework_test =  V_CAL_MeasureTime([&]() {
-                c_test.F_Framework_Serial_RTL(Data_test, 2);
+                c_test.F_Framework_Serial_RTL(Data_test, M_Framework_Serial);
             });
-    results.push_back({"Data Test", CheckSortedString<DATATPPE_ARR>(Data_test), Time_Framework_test, 0, 0, 0});
+    results.push_back({"Data Test", CheckSortedString<DATATPPE_ARR>(Data_test), Time_Framework_test, c_test.Get_Count_Compare(), c_test.Get_Count_Swap(), 0});
+    WriteDataToFile_Dec<DATATPPE_ARR>(Data_test, PATH_SORTED_FILE_1);
     
     Print_Table_Result(results);
 
-    WriteDataToFile_Dec<DATATPPE_ARR>(Data_test, PATH_SORTED_FILE);
     return 0;
 }

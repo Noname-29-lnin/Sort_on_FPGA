@@ -50,14 +50,20 @@ class C_Sort_Algor {
         void F_MergeSort(
             std::vector<SIZE_ARR_T> &arr, int si, int ei
         );
+        void F_SelectionSort(
+            std::vector<SIZE_ARR_T> &arr, int si, int ei
+        );
         size_t Get_Count_Compare() const { return P_count_compare; }
         size_t Get_Count_Swap() const { return P_count_swap; }
 };
 
 class C_Framework_Serial : public C_Func_Cal, public C_Sort_Algor{
     private:
-        size_t P_count_swap    = 0;
-        size_t P_count_compare = 0;
+        size_t P_count_is_Sim   = 0;
+        size_t P_count_is_Asc   = 0;
+        size_t P_count_is_Desc  = 0;
+        size_t P_count_swap     = 0;
+        size_t P_count_compare  = 0;
         Status_e P_status;
         int P_Partition(std::vector<SIZE_ARR_T>& arr, int si, int ei);
         void P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, int M, int& S_cnt);
@@ -68,6 +74,9 @@ class C_Framework_Serial : public C_Func_Cal, public C_Sort_Algor{
         );
         size_t Get_Count_Compare() { return P_count_compare; }
         size_t Get_Count_Swap() { return P_count_swap; }
+        size_t Get_Count_Similar() { return P_count_is_Sim; }
+        size_t Get_Count_Ascending() { return P_count_is_Asc; }
+        size_t Get_Count_Descending() { return P_count_is_Desc; }
 };
 
 #endif

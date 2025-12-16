@@ -20,10 +20,22 @@ void C_Func_Cal::F_Reverse_Array(std::vector<SIZE_ARR_T>& arr, int si, int ei){
 /*
     Sort_Algo
 */
+void C_Sort_Algor::F_SelectionSort(std::vector<SIZE_ARR_T> &arr, int si, int ei){
+    for(int i = si; i<ei; i++){
+        int min = i;
+        for(int j = i + 1; j <= ei; j++){
+            if(arr[j] < arr[min]){
+                min = j;
+            }
+        }
+        std::swap(arr[i], arr[min]);
+    }
+}
+
 int C_Sort_Algor::P_QuickSort_Partition(std::vector<SIZE_ARR_T>& arr, int si, int ei) {
     int pivot   = arr[ei];
     int pi_pos  = si - 1;
-    for (int j = si; j <= ei; ++j) {
+    for (int j = si; j < ei; ++j) {
         P_count_compare ++;
         if (arr[j] < pivot) {
             ++pi_pos;
@@ -85,9 +97,15 @@ Status_e C_Framework_Serial::P_SS_Check(std::vector<SIZE_ARR_T> &arr, int si, in
     bool is_Acsending   = true;
     bool is_Decsending  = true;
     for(int i = si + 1; i <= ei; ++i){
-        if(arr[i] != arr[i - 1])    is_Similar      = false;
-        if(arr[i] < arr[i - 1])     is_Acsending    = false;
-        if(arr[i] > arr[i - 1])     is_Decsending   = false;
+        if(arr[i] != arr[i - 1]){
+            is_Similar      = false;
+        }
+        if(arr[i] < arr[i - 1]){
+            is_Acsending    = false;
+        }
+        if(arr[i] > arr[i - 1]){
+            is_Decsending   = false;
+        }
     }
     if(is_Similar){
         return SIMILAR;
@@ -106,6 +124,8 @@ Status_e C_Framework_Serial::P_SS_Check(std::vector<SIZE_ARR_T> &arr, int si, in
 int C_Framework_Serial::P_Partition(std::vector<SIZE_ARR_T>& arr, int si, int ei){
     int bi = si;
     SIZE_TYPE_T mean = F_Cal_Mean(arr, si, ei);
+    // std::cout <<"Addr_si = " << si << " Addr_ei = " << ei << std::endl;
+    // std::cout << "Mean_Value_Standard = " << mean << std::endl;
     for(int i = si; i <= ei; i++){
         P_count_compare++;
         if(arr[i] <= mean){
@@ -120,12 +140,15 @@ void C_Framework_Serial::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei
     if(si < ei){
         P_status = P_SS_Check(arr, si, ei);
         if(P_status == SIMILAR) {
+            P_count_is_Sim ++;
             return;
         }
         else if(P_status == ACSENDING) {
+            P_count_is_Asc ++;
             return;
         }
         else if(P_status == DESCENDING){
+            P_count_is_Desc ++;
             F_Reverse_Array(arr, si, ei);
             return;
         }
@@ -139,8 +162,10 @@ void C_Framework_Serial::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei
                 }
                 P_Division(arr, bi+1, ei, M, S_cnt);
             } else { // core-sort
-                // P_QuickSort(arr, si, ei);
-                P_MergeSort(arr, si, ei);
+                P_QuickSort(arr, si, ei);
+                // std::cout << "Get_Count_Compare = " << C_Sort_Algor::Get_Count_Compare() << std::endl;
+                // std::cout << "Get_Count_Swap = " << C_Sort_Algor::Get_Count_Swap() << std::endl;
+                // P_MergeSort(arr, si, ei);
                 P_count_compare += C_Sort_Algor::Get_Count_Compare();
                 P_count_swap    += C_Sort_Algor::Get_Count_Swap();
 
@@ -155,5 +180,8 @@ void C_Framework_Serial::F_Framework_Serial(std::vector<SIZE_ARR_T> &arr, int M)
     int cnt     = 0;
     P_count_compare = 0;
     P_count_swap    = 0;
+    P_count_is_Sim  = 0;
+    P_count_is_Asc  = 0;
+    P_count_is_Desc = 0;
     P_Division(arr, addr_si, addr_ei, M, cnt);
 }

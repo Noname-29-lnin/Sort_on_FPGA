@@ -1,7 +1,9 @@
 MAIN_TEST=main
-SRC_FILE=./flist.f
-BUILD_DIR=./build
-REPORT_DIR=./Reports
+SRC_FILE=flist.f
+BUILD_DIR=build
+REPORT_DIR=Reports
 VALUE_SERIAL=2
-VALUE_PARALLEL=3
-ANALYSIS_NAME=MergeSort_1
+VALUE_PARALLEL=2
+ANALYSIS_NAME=test_2_swap
+NAME_TEST=slipt_coresort
+DIR_TEST=./example/Slipt_CoreSort

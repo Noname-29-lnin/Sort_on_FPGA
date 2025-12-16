@@ -1,0 +1,17 @@
+Split result (15 sub-arrays):
+slipt: si=0, ei=31
+slipt: si=0, ei=15
+slipt: si=16, ei=31
+slipt: si=0, ei=7
+slipt: si=8, ei=15
+slipt: si=16, ei=23
+slipt: si=24, ei=31
+slipt: si=0, ei=3
+slipt: si=4, ei=7
+slipt: si=8, ei=11
+slipt: si=12, ei=15
+slipt: si=16, ei=19
+slipt: si=20, ei=23
+slipt: si=24, ei=27
+slipt: si=28, ei=31
+✅ P_SliptSubArr TEST PASSED
