@@ -55,12 +55,21 @@ SIZE_TYPE_T C_Framework_RTL::P_Cal_Mean(std::vector<SIZE_ARR_T> &arr, int si, in
 }
 
 void C_Framework_RTL::P_Partition(std::vector<SIZE_TYPE_T> &arr, int si, int ei){
+
+    int pi = si;
+    for(int i = si; i <= ei; i++){
+        if(arr[i] < 0.0){
+            std::swap(arr[i], arr[pi]);
+            pi++;
+        }
+    }
+
     SIZE_TYPE_T mean_value = P_Cal_Mean(arr, si, ei);
-    mean_value = mean_value + mean_value*0.1;
+    // mean_value = mean_value + 1.0;
     bool is_check;
     SIZE_ARR_T temp_partition = 0;
     SIZE_ARR_T temp_data = 0;
-    int pi = si;
+    pi = si;
     // while(!is_check){
     //     temp_partition = ReadData(arr, pi, true, is_check);
     // }
@@ -157,7 +166,7 @@ void C_Framework_RTL::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, i
     // int pi_2 = (pi_0 + 1 + ei) / 2;
     std::vector<int> part_si;
     std::vector<int> part_ei;
-    P_SliptSubArr(M, si, ei, part_si, part_ei);
+    P_SliptSubArr(M+1, si, ei, part_si, part_ei);
     for(auto index_si : part_si){
         std::cout <<" Part_si = " << index_si << " ";
     }
@@ -176,26 +185,26 @@ void C_Framework_RTL::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, i
     }
 
     // sort by subarrays
-    // std::vector<int> coresort_si;
-    // std::vector<int> coresort_ei;
-    // P_SliptCoreSort((M+1), si, ei, coresort_si, coresort_ei);
-    // for(auto index_si : coresort_si){
-    //     std::cout <<" coresort_si = " << index_si << " ";
-    // }
-    // std::cout << std::endl;
-    // for(auto index_ei : coresort_ei){
-    //     std::cout <<" coresort_ei = " << index_ei << " ";
-    // }
-    // std::cout << std::endl;
-    // for (size_t i = 0; i < coresort_si.size(); ++i) {
-    //     if (coresort_si[i] <= coresort_ei[i]) {
-    //         P_QuickSort(arr, coresort_si[i], coresort_ei[i]);
-    //         // F_SelectionSort(arr, coresort_si[i], coresort_ei[i]);
-    //         // std::sort(arr.begin() + coresort_si[i], arr.begin() + coresort_ei[i] + 1);
-    //         P_count_compare += C_Sort_Algor::Get_Count_Compare();
-    //         P_count_swap    += C_Sort_Algor::Get_Count_Swap();
-    //     }
-    // }
+    std::vector<int> coresort_si;
+    std::vector<int> coresort_ei;
+    P_SliptCoreSort((M), si, ei, coresort_si, coresort_ei);
+    for(auto index_si : coresort_si){
+        std::cout <<" coresort_si = " << index_si << " ";
+    }
+    std::cout << std::endl;
+    for(auto index_ei : coresort_ei){
+        std::cout <<" coresort_ei = " << index_ei << " ";
+    }
+    std::cout << std::endl;
+    for (size_t i = 0; i < coresort_si.size(); ++i) {
+        if (coresort_si[i] <= coresort_ei[i]) {
+            P_QuickSort(arr, coresort_si[i], coresort_ei[i]);
+            // F_SelectionSort(arr, coresort_si[i], coresort_ei[i]);
+            // std::sort(arr.begin() + coresort_si[i], arr.begin() + coresort_ei[i] + 1);
+            P_count_compare += C_Sort_Algor::Get_Count_Compare();
+            P_count_swap    += C_Sort_Algor::Get_Count_Swap();
+        }
+    }
 }
 
 void C_Framework_RTL::F_Framework_Serial_RTL(std::vector<SIZE_ARR_T> &arr, int M){

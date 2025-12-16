@@ -5,30 +5,48 @@ Finish write file './Reports/COMPILE_REPORT/sorted.txt'.
 [FrameworkStandard] Number of Similar = 0
 [FrameworkStandard] Number of Ascending = 3
 [FrameworkStandard] Number of Descending = 6
- Part_si = 0  Part_si = 0  Part_si = 16  Part_si = 0  Part_si = 8  Part_si = 16  Part_si = 24 
- Part_ei = 31  Part_ei = 15  Part_ei = 31  Part_ei = 7  Part_ei = 15  Part_ei = 23  Part_ei = 31 
-Size_Part = 7
+ Part_si = 0  Part_si = 0  Part_si = 16  Part_si = 0  Part_si = 8  Part_si = 16  Part_si = 24  Part_si = 0  Part_si = 4  Part_si = 8  Part_si = 12  Part_si = 16  Part_si = 20  Part_si = 24  Part_si = 28 
+ Part_ei = 31  Part_ei = 15  Part_ei = 31  Part_ei = 7  Part_ei = 15  Part_ei = 23  Part_ei = 31  Part_ei = 3  Part_ei = 7  Part_ei = 11  Part_ei = 15  Part_ei = 19  Part_ei = 23  Part_ei = 27  Part_ei = 31 
+Size_Part = 15
 Addr_si = 0 Addr_ei = 31 Addr_mean = 14
-Mean Value = 3.54217e+08
+Mean Value = 3.22016e+08
 Addr_si = 0 Addr_ei = 15 Addr_mean = 6
-Mean Value = -5.63314e+08
-Addr_si = 16 Addr_ei = 31 Addr_mean = 24
-Mean Value = 1.27175e+09
+Mean Value = -5.12104e+08
+Addr_si = 16 Addr_ei = 31 Addr_mean = 23
+Mean Value = 1.15613e+09
 Addr_si = 0 Addr_ei = 7 Addr_mean = 3
-Mean Value = -1.35614e+09
-Addr_si = 8 Addr_ei = 15 Addr_mean = 11
-Mean Value = 2.29511e+08
-Addr_si = 16 Addr_ei = 23 Addr_mean = 20
-Mean Value = 8.46016e+08
-Addr_si = 24 Addr_ei = 31 Addr_mean = 28
-Mean Value = 1.69748e+09
+Mean Value = -1.30066e+09
+Addr_si = 8 Addr_ei = 15 Addr_mean = 14
+Mean Value = 2.7645e+08
+Addr_si = 16 Addr_ei = 23 Addr_mean = 19
+Mean Value = 7.64719e+08
+Addr_si = 24 Addr_ei = 31 Addr_mean = 27
+Mean Value = 1.54755e+09
+Addr_si = 0 Addr_ei = 3 Addr_mean = 1
+Mean Value = -1.65785e+09
+Addr_si = 4 Addr_ei = 7 Addr_mean = 5
+Mean Value = -9.43469e+08
+Addr_si = 8 Addr_ei = 11 Addr_mean = 8
+Mean Value = 1.44786e+07
+Addr_si = 12 Addr_ei = 15 Addr_mean = 14
+Mean Value = 5.3842e+08
+Addr_si = 16 Addr_ei = 19 Addr_mean = 17
+Mean Value = 5.46052e+08
+Addr_si = 20 Addr_ei = 23 Addr_mean = 21
+Mean Value = 9.83386e+08
+Addr_si = 24 Addr_ei = 27 Addr_mean = 25
+Mean Value = 1.33669e+09
+Addr_si = 28 Addr_ei = 31 Addr_mean = 29
+Mean Value = 1.75841e+09
+ coresort_si = 0  coresort_si = 8  coresort_si = 16  coresort_si = 24 
+ coresort_ei = 7  coresort_ei = 15  coresort_ei = 23  coresort_ei = 31 
 Finish write file './Reports/COMPILE_REPORT/sorted_RTL.txt'.
 
 Sort algorithm                Check sorted   Time (ns)           Number Swap         Number Compare      Auxiliary Space (Bytes)
 -----------------------------------------------------------------------------------------------------------------------------
 Data Set                      FAIL           0                   0                   0                   0                   
 -----------------------------------------------------------------------------------------------------------------------------
-Framework_QuickSort           PASS           2111                144                 73                  0                   
+Framework_QuickSort           PASS           1925                144                 73                  0                   
 -----------------------------------------------------------------------------------------------------------------------------
-Data Test                     FAIL           14111               96                  49                  0                   
+Data Test                     FAIL           28186               346                 258                 0                   
 -----------------------------------------------------------------------------------------------------------------------------
