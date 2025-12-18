@@ -93,8 +93,8 @@ void C_Framework_RTL::P_Partition(std::vector<SIZE_TYPE_T> &arr, int si, int ei)
             // }
         }
     }
-    std::cout <<"Addr_si = " << si << " Addr_ei = " << ei << " Addr_mean = " << pi - 1 << std::endl;
-    std::cout << "Mean Value = " << mean_value << std::endl; 
+    // std::cout <<"Addr_si = " << si << " Addr_ei = " << ei << " Addr_mean = " << pi - 1 << std::endl;
+    // std::cout << "Mean Value = " << mean_value << std::endl; 
 }
 
 void C_Framework_RTL::P_SliptCoreSort(int N, int si, int ei, std::vector<int> &coresort_si, std::vector<int> &coresort_ei){
@@ -121,16 +121,12 @@ void C_Framework_RTL::P_SliptCoreSort(int N, int si, int ei, std::vector<int> &c
 void C_Framework_RTL::P_SliptSubArr(int N, int si, int ei, std::vector<int> &part_si, std::vector<int> &part_ei){
     part_si.clear();
     part_ei.clear();
-
     // root
     part_si.push_back(si);
     part_ei.push_back(ei);
 
-    // tổng số node trong cây nhị phân đầy
     const int total_nodes = (1 << (N + 1)) - 1;
-
     for (int i = 0; i < total_nodes; ++i) {
-        // nếu chưa đủ node thì mới sinh con
         if ((int)part_si.size() >= total_nodes)
             break;
 
@@ -138,7 +134,6 @@ void C_Framework_RTL::P_SliptSubArr(int N, int si, int ei, std::vector<int> &par
         int r = part_ei[i];
 
         if (l >= r) {
-            // đoạn không thể chia nữa
             part_si.push_back(l);
             part_ei.push_back(r);
             part_si.push_back(l);
@@ -151,7 +146,6 @@ void C_Framework_RTL::P_SliptSubArr(int N, int si, int ei, std::vector<int> &par
         // left child
         part_si.push_back(l);
         part_ei.push_back(mid);
-
         // right child
         part_si.push_back(mid + 1);
         part_ei.push_back(r);
@@ -166,7 +160,7 @@ void C_Framework_RTL::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, i
     // int pi_2 = (pi_0 + 1 + ei) / 2;
     std::vector<int> part_si;
     std::vector<int> part_ei;
-    P_SliptSubArr(M+1, si, ei, part_si, part_ei);
+    P_SliptSubArr(M, si, ei, part_si, part_ei);
     for(auto index_si : part_si){
         std::cout <<" Part_si = " << index_si << " ";
     }
@@ -187,7 +181,7 @@ void C_Framework_RTL::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, i
     // sort by subarrays
     std::vector<int> coresort_si;
     std::vector<int> coresort_ei;
-    P_SliptCoreSort((M), si, ei, coresort_si, coresort_ei);
+    P_SliptCoreSort((M+1), si, ei, coresort_si, coresort_ei);
     for(auto index_si : coresort_si){
         std::cout <<" coresort_si = " << index_si << " ";
     }
@@ -198,9 +192,9 @@ void C_Framework_RTL::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, i
     std::cout << std::endl;
     for (size_t i = 0; i < coresort_si.size(); ++i) {
         if (coresort_si[i] <= coresort_ei[i]) {
-            P_QuickSort(arr, coresort_si[i], coresort_ei[i]);
+            // P_QuickSort(arr, coresort_si[i], coresort_ei[i]);
             // F_SelectionSort(arr, coresort_si[i], coresort_ei[i]);
-            // std::sort(arr.begin() + coresort_si[i], arr.begin() + coresort_ei[i] + 1);
+            std::sort(arr.begin() + coresort_si[i], arr.begin() + coresort_ei[i] + 1);
             P_count_compare += C_Sort_Algor::Get_Count_Compare();
             P_count_swap    += C_Sort_Algor::Get_Count_Swap();
         }

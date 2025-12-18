@@ -155,11 +155,14 @@ void C_Framework_Serial::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei
         else {
             if(S_cnt < (1 << (M))){
                 int bi = P_Partition(arr, si, ei);
+                std::cout << "PI_STANDARD = " << bi << std::endl;
                 S_cnt++;
+                std::cout << "STANDARDD: si = " << si << " bi = " << bi << std::endl;
                 P_Division(arr, si, bi, M, S_cnt);
                 if((si == 0) || (ei == static_cast<int>(arr.size()) - 1)) {
                     S_cnt = 1;
                 }
+                std::cout << "STANDARDD: bi+1 = " << bi+1 << " ei = " << ei << std::endl;
                 P_Division(arr, bi+1, ei, M, S_cnt);
             } else { // core-sort
                 P_QuickSort(arr, si, ei);

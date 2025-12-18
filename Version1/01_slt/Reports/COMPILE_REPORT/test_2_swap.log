@@ -1,52 +1,64 @@
 Finished reading file: ./tools/unsorted.txt
 Size of array: 32
 Number subarry M = 2
+PI_STANDARD = 14
+STANDARDD: si = 0 bi = 14
+PI_STANDARD = 6
+STANDARDD: si = 0 bi = 6
+PI_STANDARD = 2
+STANDARDD: si = 0 bi = 2
+STANDARDD: bi+1 = 3 ei = 6
+PI_STANDARD = 5
+STANDARDD: si = 3 bi = 5
+PI_STANDARD = 3
+STANDARDD: si = 3 bi = 3
+STANDARDD: bi+1 = 4 ei = 5
+STANDARDD: bi+1 = 6 ei = 6
+STANDARDD: bi+1 = 7 ei = 14
+PI_STANDARD = 8
+STANDARDD: si = 7 bi = 8
+STANDARDD: bi+1 = 9 ei = 14
+PI_STANDARD = 11
+STANDARDD: si = 9 bi = 11
+PI_STANDARD = 10
+STANDARDD: si = 9 bi = 10
+STANDARDD: bi+1 = 11 ei = 11
+STANDARDD: bi+1 = 12 ei = 14
+STANDARDD: bi+1 = 15 ei = 31
+PI_STANDARD = 23
+STANDARDD: si = 15 bi = 23
+PI_STANDARD = 19
+STANDARDD: si = 15 bi = 19
+PI_STANDARD = 17
+STANDARDD: si = 15 bi = 17
+STANDARDD: bi+1 = 18 ei = 19
+STANDARDD: bi+1 = 20 ei = 23
+STANDARDD: bi+1 = 24 ei = 31
+PI_STANDARD = 27
+STANDARDD: si = 24 bi = 27
+PI_STANDARD = 25
+STANDARDD: si = 24 bi = 25
+STANDARDD: bi+1 = 26 ei = 27
+STANDARDD: bi+1 = 28 ei = 31
+PI_STANDARD = 29
+STANDARDD: si = 28 bi = 29
+STANDARDD: bi+1 = 30 ei = 31
 Finish write file './Reports/COMPILE_REPORT/sorted.txt'.
 [FrameworkStandard] Number of Similar = 0
 [FrameworkStandard] Number of Ascending = 3
 [FrameworkStandard] Number of Descending = 6
- Part_si = 0  Part_si = 0  Part_si = 16  Part_si = 0  Part_si = 8  Part_si = 16  Part_si = 24  Part_si = 0  Part_si = 4  Part_si = 8  Part_si = 12  Part_si = 16  Part_si = 20  Part_si = 24  Part_si = 28 
- Part_ei = 31  Part_ei = 15  Part_ei = 31  Part_ei = 7  Part_ei = 15  Part_ei = 23  Part_ei = 31  Part_ei = 3  Part_ei = 7  Part_ei = 11  Part_ei = 15  Part_ei = 19  Part_ei = 23  Part_ei = 27  Part_ei = 31 
-Size_Part = 15
-Addr_si = 0 Addr_ei = 31 Addr_mean = 14
-Mean Value = 3.22016e+08
-Addr_si = 0 Addr_ei = 15 Addr_mean = 6
-Mean Value = -5.12104e+08
-Addr_si = 16 Addr_ei = 31 Addr_mean = 23
-Mean Value = 1.15613e+09
-Addr_si = 0 Addr_ei = 7 Addr_mean = 3
-Mean Value = -1.30066e+09
-Addr_si = 8 Addr_ei = 15 Addr_mean = 14
-Mean Value = 2.7645e+08
-Addr_si = 16 Addr_ei = 23 Addr_mean = 19
-Mean Value = 7.64719e+08
-Addr_si = 24 Addr_ei = 31 Addr_mean = 27
-Mean Value = 1.54755e+09
-Addr_si = 0 Addr_ei = 3 Addr_mean = 1
-Mean Value = -1.65785e+09
-Addr_si = 4 Addr_ei = 7 Addr_mean = 5
-Mean Value = -9.43469e+08
-Addr_si = 8 Addr_ei = 11 Addr_mean = 8
-Mean Value = 1.44786e+07
-Addr_si = 12 Addr_ei = 15 Addr_mean = 14
-Mean Value = 5.3842e+08
-Addr_si = 16 Addr_ei = 19 Addr_mean = 17
-Mean Value = 5.46052e+08
-Addr_si = 20 Addr_ei = 23 Addr_mean = 21
-Mean Value = 9.83386e+08
-Addr_si = 24 Addr_ei = 27 Addr_mean = 25
-Mean Value = 1.33669e+09
-Addr_si = 28 Addr_ei = 31 Addr_mean = 29
-Mean Value = 1.75841e+09
- coresort_si = 0  coresort_si = 8  coresort_si = 16  coresort_si = 24 
- coresort_ei = 7  coresort_ei = 15  coresort_ei = 23  coresort_ei = 31 
+ Part_si = 0  Part_si = 0  Part_si = 16  Part_si = 0  Part_si = 8  Part_si = 16  Part_si = 24 
+ Part_ei = 31  Part_ei = 15  Part_ei = 31  Part_ei = 7  Part_ei = 15  Part_ei = 23  Part_ei = 31 
+Size_Part = 7
+ coresort_si = 0  coresort_si = 4  coresort_si = 8  coresort_si = 12  coresort_si = 16  coresort_si = 20  coresort_si = 24  coresort_si = 28 
+ coresort_ei = 3  coresort_ei = 7  coresort_ei = 11  coresort_ei = 15  coresort_ei = 19  coresort_ei = 23  coresort_ei = 27  coresort_ei = 31 
 Finish write file './Reports/COMPILE_REPORT/sorted_RTL.txt'.
 
 Sort algorithm                Check sorted   Time (ns)           Number Swap         Number Compare      Auxiliary Space (Bytes)
 -----------------------------------------------------------------------------------------------------------------------------
 Data Set                      FAIL           0                   0                   0                   0                   
 -----------------------------------------------------------------------------------------------------------------------------
-Framework_QuickSort           PASS           1925                144                 73                  0                   
+Framework_QuickSort           PASS           17734               144                 73                  0                   
 -----------------------------------------------------------------------------------------------------------------------------
-Data Test                     FAIL           28186               346                 258                 0                   
+Data Test                     FAIL           10305               96                  49                  0                   
 -----------------------------------------------------------------------------------------------------------------------------
