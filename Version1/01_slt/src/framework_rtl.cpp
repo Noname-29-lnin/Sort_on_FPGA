@@ -145,9 +145,9 @@ void C_Framework_RTL::P_SliptSubArr(int N, int si, int ei, std::vector<int> &par
 
         // left child
         part_si.push_back(l);
-        part_ei.push_back(mid);
+        part_ei.push_back(mid-1);
         // right child
-        part_si.push_back(mid + 1);
+        part_si.push_back(mid);
         part_ei.push_back(r);
     }
 }
@@ -160,7 +160,7 @@ void C_Framework_RTL::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, i
     // int pi_2 = (pi_0 + 1 + ei) / 2;
     std::vector<int> part_si;
     std::vector<int> part_ei;
-    P_SliptSubArr(M, si, ei, part_si, part_ei);
+    P_SliptSubArr(M+1, si, ei, part_si, part_ei);
     for(auto index_si : part_si){
         std::cout <<" Part_si = " << index_si << " ";
     }

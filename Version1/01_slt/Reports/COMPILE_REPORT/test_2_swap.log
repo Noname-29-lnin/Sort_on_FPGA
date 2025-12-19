@@ -47,9 +47,9 @@ Finish write file './Reports/COMPILE_REPORT/sorted.txt'.
 [FrameworkStandard] Number of Similar = 0
 [FrameworkStandard] Number of Ascending = 3
 [FrameworkStandard] Number of Descending = 6
- Part_si = 0  Part_si = 0  Part_si = 16  Part_si = 0  Part_si = 8  Part_si = 16  Part_si = 24 
- Part_ei = 31  Part_ei = 15  Part_ei = 31  Part_ei = 7  Part_ei = 15  Part_ei = 23  Part_ei = 31 
-Size_Part = 7
+ Part_si = 0  Part_si = 0  Part_si = 15  Part_si = 0  Part_si = 7  Part_si = 15  Part_si = 23  Part_si = 0  Part_si = 3  Part_si = 7  Part_si = 10  Part_si = 15  Part_si = 18  Part_si = 23  Part_si = 27 
+ Part_ei = 31  Part_ei = 14  Part_ei = 31  Part_ei = 6  Part_ei = 14  Part_ei = 22  Part_ei = 31  Part_ei = 2  Part_ei = 6  Part_ei = 9  Part_ei = 14  Part_ei = 17  Part_ei = 22  Part_ei = 26  Part_ei = 31 
+Size_Part = 15
  coresort_si = 0  coresort_si = 4  coresort_si = 8  coresort_si = 12  coresort_si = 16  coresort_si = 20  coresort_si = 24  coresort_si = 28 
  coresort_ei = 3  coresort_ei = 7  coresort_ei = 11  coresort_ei = 15  coresort_ei = 19  coresort_ei = 23  coresort_ei = 27  coresort_ei = 31 
 Finish write file './Reports/COMPILE_REPORT/sorted_RTL.txt'.
@@ -58,7 +58,7 @@ Sort algorithm                Check sorted   Time (ns)           Number Swap    
 -----------------------------------------------------------------------------------------------------------------------------
 Data Set                      FAIL           0                   0                   0                   0                   
 -----------------------------------------------------------------------------------------------------------------------------
-Framework_QuickSort           PASS           17734               144                 73                  0                   
+Framework_QuickSort           PASS           17864               144                 73                  0                   
 -----------------------------------------------------------------------------------------------------------------------------
-Data Test                     FAIL           10305               96                  49                  0                   
+Data Test                     FAIL           10789               128                 61                  0                   
 -----------------------------------------------------------------------------------------------------------------------------
