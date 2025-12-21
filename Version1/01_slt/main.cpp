@@ -16,6 +16,7 @@
 /////////////////////////////////////////////////////////////////
 
 #define PATH_UNSORTED_FILE      "./tools/unsorted.txt"
+#define PATH_UNSORTED_READ      "./Reports/COMPILE_REPORT/unsorted.txt"
 #define PATH_SORTED_FILE        "./Reports/COMPILE_REPORT/sorted.txt"
 #define PATH_SORTED_FILE_1      "./Reports/COMPILE_REPORT/sorted_RTL.txt"
 
@@ -29,6 +30,7 @@ C_Framework_RTL c_test;
 int main(int argc, char** argv) {
     std::vector<DATATPPE_ARR> arr;
     ReadDataToFile_DEC<DATATPPE_ARR>(PATH_UNSORTED_FILE, arr);
+    WriteDataToFile_Dec<DATATPPE_ARR>(arr, PATH_UNSORTED_READ);
 
     std::cout << "Size of array: " << arr.size() << std::endl;
 

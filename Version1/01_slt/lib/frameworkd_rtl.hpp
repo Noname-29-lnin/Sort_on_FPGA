@@ -27,7 +27,7 @@ class C_Framework_RTL : public C_Sort_Algor{
         void WriteData(std::vector<SIZE_ARR_T> &arr, int addr, bool is_En, SIZE_ARR_T data_wr , bool &is_valid);
         // Status_e Check_SS(SIZE_ARR_T data_check, bool &is_Similar, bool &is_Ascending, bool &is_Descending);
         SIZE_TYPE_T P_Cal_Mean(std::vector<SIZE_ARR_T> &arr, int si, int ei);
-        void P_SliptSubArr(int N, int si, int ei, std::vector<int> &part_si, std::vector<int> &part_ei);
+        void P_SliptSubArr(int N, int size_arr, int si, int ei, std::vector<int> &part_si, std::vector<int> &part_ei);
         void P_SliptCoreSort(int N, int si, int ei, std::vector<int> &coresort_si, std::vector<int> &coresort_ei);
         void P_Partition(std::vector<SIZE_TYPE_T> &arr, int si, int ei);
         void P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, int M);

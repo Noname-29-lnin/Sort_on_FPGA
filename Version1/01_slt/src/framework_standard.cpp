@@ -122,21 +122,23 @@ Status_e C_Framework_Serial::P_SS_Check(std::vector<SIZE_ARR_T> &arr, int si, in
 };
 
 int C_Framework_Serial::P_Partition(std::vector<SIZE_ARR_T>& arr, int si, int ei){
-    int bi = si;
+    int bi = si - 1;
     SIZE_TYPE_T mean = F_Cal_Mean(arr, si, ei);
     // std::cout <<"Addr_si = " << si << " Addr_ei = " << ei << std::endl;
     // std::cout << "Mean_Value_Standard = " << mean << std::endl;
     for(int i = si; i <= ei; i++){
         P_count_compare++;
         if(arr[i] <= mean){
+            ++bi;
             std::swap(arr[bi], arr[i]);
-            bi = bi + 1;
             P_count_swap++;
         }
     }
-    return bi - 1;
+    return bi;
 }
 void C_Framework_Serial::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, int M, int& S_cnt){
+    // std::cout << "----------------" << std::endl;
+    // std::cout << "STANDARDD: si = " << si << " ei = " << ei << std::endl;
     if(si < ei){
         P_status = P_SS_Check(arr, si, ei);
         if(P_status == SIMILAR) {
@@ -153,18 +155,19 @@ void C_Framework_Serial::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei
             return;
         }
         else {
-            if(S_cnt < (1 << (M))){
+            if(S_cnt < (1 << (M-1))){
                 int bi = P_Partition(arr, si, ei);
-                std::cout << "PI_STANDARD = " << bi << std::endl;
+                // std::cout << "PI_STANDARD = " << bi << std::endl;
                 S_cnt++;
-                std::cout << "STANDARDD: si = " << si << " bi = " << bi << std::endl;
+                // std::cout << "STANDARDD: si = " << si << " bi = " << bi << std::endl;
                 P_Division(arr, si, bi, M, S_cnt);
                 if((si == 0) || (ei == static_cast<int>(arr.size()) - 1)) {
                     S_cnt = 1;
                 }
-                std::cout << "STANDARDD: bi+1 = " << bi+1 << " ei = " << ei << std::endl;
+                // std::cout << "STANDARDD: bi+1 = " << bi+1 << " ei = " << ei << std::endl;
                 P_Division(arr, bi+1, ei, M, S_cnt);
             } else { // core-sort
+                // std::cout << "STANDARDD sort: si = " << si << " ei = " << ei << std::endl;
                 P_QuickSort(arr, si, ei);
                 // std::cout << "Get_Count_Compare = " << C_Sort_Algor::Get_Count_Compare() << std::endl;
                 // std::cout << "Get_Count_Swap = " << C_Sort_Algor::Get_Count_Swap() << std::endl;
