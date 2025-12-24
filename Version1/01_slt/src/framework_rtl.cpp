@@ -31,48 +31,61 @@ void C_Framework_RTL::WriteData(std::vector<SIZE_ARR_T> &arr, int addr, bool is_
 // }
 
 SIZE_TYPE_T C_Framework_RTL::P_Cal_Mean(std::vector<SIZE_ARR_T> &arr, int si, int ei){
-    SIZE_TYPE_T temp_sum = 0;
-    SIZE_ARR_T  temp_read_data = 0;
-    // int         temp_count = 0;
-    bool        is_valid = false;
-    for(int i = si; i <= ei; i++){
-        while (!is_valid){
-            temp_read_data = ReadData(arr, i, true, is_valid);
-        }
-        temp_sum += temp_read_data;
-        // temp_count ++;
+    // SIZE_TYPE_T temp_sum = 0;
+    // SIZE_ARR_T  temp_read_data = 0;
+    // // int         temp_count = 0;
+    // bool        is_valid = false;
+    // for(int i = si; i <= ei; i++){
+    //     while (!is_valid){
+    //         temp_read_data = ReadData(arr, i, true, is_valid);
+    //     }
+    //     temp_sum += temp_read_data;
+    //     // temp_count ++;
+    // }
+    // // return temp_sum / temp_count;
+    // return temp_sum / (ei-si+1);
+    SIZE_TYPE_T t_sum = 0;
+    for(int i =si; i <= ei; i++){
+        t_sum += arr[i];
     }
-    // return temp_sum / temp_count;
-    return temp_sum / (ei-si+1);
+    SIZE_TYPE_T t_div = 1;
+    t_div = t_sum / (ei - si + 1);
+    return t_div;
 }
 
-void C_Framework_RTL::P_Partition(std::vector<SIZE_TYPE_T> &arr, int si, int ei){
+void C_Framework_RTL::P_Partition(std::vector<SIZE_TYPE_T> &arr, int future_si, int si, int ei){
 
     SIZE_TYPE_T mean_value = P_Cal_Mean(arr, si, ei);
-    bool is_check;
-    SIZE_ARR_T temp_partition = 0;
-    SIZE_ARR_T temp_data = 0;
+    // bool is_check;
+    // SIZE_ARR_T temp_partition = 0;
+    // SIZE_ARR_T temp_data = 0;
     int pi = si;
-    while(!is_check){
-        temp_partition = ReadData(arr, pi, true, is_check);
-    }
+    // while(!is_check){
+    //     temp_partition = ReadData(arr, pi, true, is_check);
+    // }
     for(int i = si; i <= ei; i++){
-        while(!is_check){
-            temp_data = ReadData(arr, i, true, is_check);
-        }
+        // while(!is_check){
+        //     temp_data = ReadData(arr, i, true, is_check);
+        // }
         P_count_compare ++;
         if(arr[i] <= mean_value){
-            // P_count_swap++;
-            while(!is_check){
-                WriteData(arr, i, true , temp_partition, is_check);
-            }
-            while(!is_check){
-                WriteData(arr, pi, true , temp_data, is_check);
-            }
-            // pi++;
-            while(!is_check){
-                temp_partition = ReadData(arr, pi, true, is_check);
-            }
+            std::swap(arr[i], arr[pi]);
+            P_count_swap++;
+            // while(!is_check){
+            //     WriteData(arr, i, true , temp_partition, is_check);
+            // }
+            // while(!is_check){
+            //     WriteData(arr, pi, true , temp_data, is_check);
+            // }
+            pi++;
+            // if(pi == future_si){
+            //     std::cout << "future_si = " << future_si << std::endl;
+            //     return;
+            //     std::cout << "Exit False" << future_si << std::endl;
+            // }
+            // while(!is_check){
+            //     temp_partition = ReadData(arr, pi, true, is_check);
+            // }
         }
     }
 }
@@ -122,15 +135,32 @@ void C_Framework_RTL::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, i
     int n = arr.size() - 1;
     std::vector<int> part_si;
     std::vector<int> part_ei;
-    P_SliptSubArr(M, n, si, ei, part_si, part_ei);
-    for(auto index_si : part_si){
-        std::cout <<" Part_si = " << index_si << " ";
-    }
-    std::cout << std::endl;
-    for(auto index_ei : part_ei){
-        std::cout <<" Part_ei = " << index_ei << " ";
-    }
-    std::cout << std::endl;
+    // P_SliptSubArr(M+1, n, si, ei, part_si, part_ei);
+    // for(auto index_si : part_si){
+    //     std::cout <<" Part_si = " << index_si << " ";
+    // }
+    // std::cout << std::endl;
+    // for(auto index_ei : part_ei){
+    //     std::cout <<" Part_ei = " << index_ei << " ";
+    // }
+    // std::cout << std::endl;
+    part_si.push_back(si);
+    part_ei.push_back(ei);
+    part_si.push_back(4);
+    part_ei.push_back(ei);
+    part_si.push_back(si);
+    part_ei.push_back(15);
+    part_si.push_back(7);
+    part_ei.push_back(15);
+    part_si.push_back(2);
+    part_ei.push_back(15);
+    part_si.push_back(15);
+    part_ei.push_back(ei);
+    part_si.push_back(15);
+    part_ei.push_back(24);
+    part_si.push_back(18);
+    part_ei.push_back(ei);
+
 
     // // sort by subarrays
     std::vector<int> coresort_si;
@@ -147,15 +177,16 @@ void C_Framework_RTL::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, i
 
     // partition
     for (size_t i = 0; i < part_si.size(); ++i) {
+        std::cout << "Addr_si="<<part_si[i] <<" Addr_ei=" << part_ei[i] << " " << std::endl;
         if (part_si[i] <= part_ei[i]) {
-            P_Partition(arr, part_si[i], part_ei[i]);
+            P_Partition(arr, part_si[i+1], part_si[i], part_ei[i]);
         }
     }
     for (size_t i = 0; i < coresort_si.size(); ++i) {
         if (coresort_si[i] <= coresort_ei[i]) {
-            P_QuickSort(arr, si, ei);
-            P_count_compare += C_Sort_Algor::Get_Count_Compare();
-            P_count_swap    += C_Sort_Algor::Get_Count_Swap();
+            // P_QuickSort(arr, coresort_si[i], coresort_ei[i]);
+            // P_count_compare += C_Sort_Algor::Get_Count_Compare();
+            // P_count_swap    += C_Sort_Algor::Get_Count_Swap();
         }
     }
 }

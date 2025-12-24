@@ -1,0 +1,28 @@
+Finished reading file: ./tools/unsorted.txt
+Finish write file './Reports/COMPILE_REPORT/unsorted.txt'.
+Size of array: 32
+Number subarry M = 2
+Finish write file './Reports/COMPILE_REPORT/sorted.txt'.
+[FrameworkStandard] Number of Similar = 0
+[FrameworkStandard] Number of Ascending = 0
+[FrameworkStandard] Number of Descending = 2
+ coresort_si = 0  coresort_si = 8  coresort_si = 16  coresort_si = 24 
+ coresort_ei = 7  coresort_ei = 15  coresort_ei = 23  coresort_ei = 31 
+Addr_si=0 Addr_ei=31 
+Addr_si=4 Addr_ei=31 
+Addr_si=0 Addr_ei=15 
+Addr_si=7 Addr_ei=15 
+Addr_si=2 Addr_ei=15 
+Addr_si=15 Addr_ei=31 
+Addr_si=15 Addr_ei=24 
+Addr_si=18 Addr_ei=31 
+Finish write file './Reports/COMPILE_REPORT/sorted_RTL.txt'.
+
+Sort algorithm                Check sorted   Time (ns)           Number Swap         Number Compare      Auxiliary Space (Bytes)
+-----------------------------------------------------------------------------------------------------------------------------
+Data Set                      FAIL           0                   0                   0                   0                   
+-----------------------------------------------------------------------------------------------------------------------------
+Framework_QuickSort           PASS           20952               213                 111                 0                   
+-----------------------------------------------------------------------------------------------------------------------------
+Data Test                     FAIL           7679                140                 75                  0                   
+-----------------------------------------------------------------------------------------------------------------------------

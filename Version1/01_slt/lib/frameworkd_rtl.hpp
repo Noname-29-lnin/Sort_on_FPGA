@@ -29,7 +29,7 @@ class C_Framework_RTL : public C_Sort_Algor{
         SIZE_TYPE_T P_Cal_Mean(std::vector<SIZE_ARR_T> &arr, int si, int ei);
         void P_SliptSubArr(int N, int size_arr, int si, int ei, std::vector<int> &part_si, std::vector<int> &part_ei);
         void P_SliptCoreSort(int N, int si, int ei, std::vector<int> &coresort_si, std::vector<int> &coresort_ei);
-        void P_Partition(std::vector<SIZE_TYPE_T> &arr, int si, int ei);
+        void P_Partition(std::vector<SIZE_TYPE_T> &arr,int future_si, int si, int ei);
         void P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, int M);
     public:
         void F_Framework_Serial_RTL(

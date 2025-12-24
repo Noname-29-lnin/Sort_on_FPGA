@@ -1,0 +1,73 @@
+Finished reading file: ./tools/unsorted.txt
+Finish write file './Reports/COMPILE_REPORT/unsorted.txt'.
+Size of array: 2048
+Number subarry M = 4
+Finish write file './Reports/COMPILE_REPORT/sorted.txt'.
+[FrameworkStandard] Number of Similar = 0
+[FrameworkStandard] Number of Ascending = 15
+[FrameworkStandard] Number of Descending = 17
+Addr_si=0 Addr_ei=2047 
+future_si = 64
+Addr_si=64 Addr_ei=2047 
+future_si = 128
+Addr_si=128 Addr_ei=2047 
+future_si = 192
+Addr_si=192 Addr_ei=2047 
+Addr_si=256 Addr_ei=2047 
+future_si = 320
+Addr_si=320 Addr_ei=2047 
+future_si = 384
+Addr_si=384 Addr_ei=2047 
+future_si = 448
+Addr_si=448 Addr_ei=2047 
+future_si = 512
+Addr_si=512 Addr_ei=2047 
+future_si = 576
+Addr_si=576 Addr_ei=2047 
+future_si = 640
+Addr_si=640 Addr_ei=2047 
+future_si = 704
+Addr_si=704 Addr_ei=2047 
+future_si = 768
+Addr_si=768 Addr_ei=2047 
+future_si = 832
+Addr_si=832 Addr_ei=2047 
+future_si = 896
+Addr_si=896 Addr_ei=2047 
+future_si = 960
+Addr_si=960 Addr_ei=2047 
+future_si = 1024
+Addr_si=1024 Addr_ei=2047 
+Addr_si=1088 Addr_ei=2047 
+future_si = 1152
+Addr_si=1152 Addr_ei=2047 
+Addr_si=1216 Addr_ei=2047 
+future_si = 1280
+Addr_si=1280 Addr_ei=2047 
+Addr_si=1344 Addr_ei=2047 
+future_si = 1408
+Addr_si=1408 Addr_ei=2047 
+future_si = 1472
+Addr_si=1472 Addr_ei=2047 
+future_si = 1536
+Addr_si=1536 Addr_ei=2047 
+future_si = 1600
+Addr_si=1600 Addr_ei=2047 
+Addr_si=1664 Addr_ei=2047 
+future_si = 1728
+Addr_si=1728 Addr_ei=2047 
+future_si = 1792
+Addr_si=1792 Addr_ei=2047 
+Addr_si=1856 Addr_ei=2047 
+Addr_si=1920 Addr_ei=2047 
+future_si = 1984
+Finish write file './Reports/COMPILE_REPORT/sorted_RTL.txt'.
+
+Sort algorithm                Check sorted   Time (ns)           Number Swap         Number Compare      Auxiliary Space (Bytes)
+-----------------------------------------------------------------------------------------------------------------------------
+Data Set                      FAIL           0                   0                   0                   0                   
+-----------------------------------------------------------------------------------------------------------------------------
+Framework_QuickSort           PASS           132671              296503              154578              0                   
+-----------------------------------------------------------------------------------------------------------------------------
+Data Test                     PASS           42989130            251946677           251752336           0                   
+-----------------------------------------------------------------------------------------------------------------------------
