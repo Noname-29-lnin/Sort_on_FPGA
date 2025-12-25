@@ -31,19 +31,6 @@ void C_Framework_RTL::WriteData(std::vector<SIZE_ARR_T> &arr, int addr, bool is_
 // }
 
 SIZE_TYPE_T C_Framework_RTL::P_Cal_Mean(std::vector<SIZE_ARR_T> &arr, int si, int ei){
-    // SIZE_TYPE_T temp_sum = 0;
-    // SIZE_ARR_T  temp_read_data = 0;
-    // // int         temp_count = 0;
-    // bool        is_valid = false;
-    // for(int i = si; i <= ei; i++){
-    //     while (!is_valid){
-    //         temp_read_data = ReadData(arr, i, true, is_valid);
-    //     }
-    //     temp_sum += temp_read_data;
-    //     // temp_count ++;
-    // }
-    // // return temp_sum / temp_count;
-    // return temp_sum / (ei-si+1);
     SIZE_TYPE_T t_sum = 0;
     for(int i =si; i <= ei; i++){
         t_sum += arr[i];

@@ -1,22 +1,39 @@
 module BFP16_add #(
     parameter SIZE_DATA     = 32
 )(
+    input logic                     i_clk       ,
+    input logic                     i_rst_n     ,
+
+    input logic                     i_valid     ,
     input logic [SIZE_DATA-1:0]     i_data_a    ,
     input logic [SIZE_DATA-1:0]     i_data_b    ,
-    output logic [SIZE_DATA-1:0]    o_bfu_add    
+    output logic [SIZE_DATA-1:0]    o_bfu_add   ,
+    output logic                    o_valid      
 );
+
+logic [SIZE_DATA-1:0] w_data_a, w_data_b;
+
+always_ff @( posedge i_clk or negedge i_rst_n ) begin : proc_save_data_in
+    if(~i_rst_n) begin
+        w_data_a    <= '0;
+        w_data_b    <= '0;
+    end else if(i_valid) begin
+        w_data_a    <= i_data_a;
+        w_data_b    <= i_data_b;
+    end
+end
 
 logic w_sign_a, w_sign_b;
 logic [7:0] w_exp_a, w_exp_b;
 logic [7:0] w_man_a, w_man_b;
-assign w_sign_a = i_data_a[31];
-assign w_sign_b = i_data_b[31];
-assign w_exp_a  = i_data_a[30:23];
-assign w_exp_b  = i_data_b[30:23];
-assign w_man_a  = {1'b1, i_data_a[22:16]};
-assign w_man_b  = {1'b1, i_data_b[22:16]};
+assign w_sign_a = w_data_a[31];
+assign w_sign_b = w_data_b[31];
+assign w_exp_a  = w_data_a[30:23];
+assign w_exp_b  = w_data_b[30:23];
+assign w_man_a  = {1'b1, w_data_a[22:16]};
+assign w_man_b  = {1'b1, w_data_b[22:16]};
 logic is_b_zero;
-assign is_b_zero = ~|(i_data_b);
+assign is_b_zero = ~|(w_data_b);
 
 // Internal Signals
 logic w_comp_exp_less;
@@ -167,6 +184,19 @@ assign w_exp_result = is_b_zero ? w_exp_a : (w_sel_exp ? 8'hFF : w_exp_adjust);
 assign w_man_result = w_sel_man[1] ? (w_sel_man[0] ? 8'b1100_0000 : 8'b1000_0000) : w_nor_man;
 logic [22:0] w_man_b_zero;
 assign w_man_b_zero = is_b_zero ? i_data_a[22:0] : {w_man_result[6:0], 16'b0};
-assign o_bfu_add = {w_sign_result, w_exp_result, w_man_b_zero};
+
+always_ff @( posedge i_clk or negedge i_rst_n ) begin : proc_save_valid_data
+    if(~i_rst_n) 
+        o_valid     <= '0;
+    else 
+        o_valid     <= i_valid;
+end
+
+always_ff @( posedge i_clk or negedge i_rst_n ) begin : proc_save_out_data
+    if(~i_rst_n) 
+        o_bfu_add     <= '0;
+    else 
+        o_bfu_add     <= {w_sign_result, w_exp_result, w_man_b_zero};
+end
 
 endmodule

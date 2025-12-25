@@ -1,0 +1,78 @@
+# vsim -lib ./../PACS/PACS_ADDRESS/QuestaSim/work -debugDB -l ./../PACS/PACS_ADDRESS/QuestaSim/tb_PACS_control_address.log -voptargs="+acc" -assertdebug -c tb_PACS_control_address -wlf ./../PACS/PACS_ADDRESS/QuestaSim/tb_PACS_control_address.wlf -do "cd ./../PACS/PACS_ADDRESS/QuestaSim; log -r /*; run -all;" 
+# Start time: 23:08:40 on Dec 25,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_PACS_control_address(fast)
+# Loading work.PACS_control_address(fast)
+# Loading work.CNT_T_FF(fast)
+# Loading work.SS_detect_start(fast)
+# Loading work.SS_detect_edge(fast)
+# ** Note: (vsim-8900) Creating design debug database ./../PACS/PACS_ADDRESS/QuestaSim/tb_PACS_control_address.dbg.
+# cd ./../PACS/PACS_ADDRESS/QuestaSim
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+#  log -r /*
+#  run -all
+# o_addr_ram = 00000001
+# o_addr_ram = 00000002
+# o_addr_ram = 00000003
+# o_addr_ram = 00000004
+# o_addr_ram = 00000005
+# o_addr_ram = 00000006
+# o_addr_ram = 00000007
+# o_addr_ram = 00000008
+# o_addr_ram = 00000009
+# o_addr_ram = 0000000a
+# o_addr_ram = 0000000b
+# o_addr_ram = 0000000c
+# o_addr_ram = 0000000d
+# o_addr_ram = 0000000e
+# o_addr_ram = 0000000f
+# o_addr_ram = 00000010
+# o_addr_ram = 00000011
+# o_addr_ram = 00000012
+# o_addr_ram = 00000013
+# o_addr_ram = 00000014
+# o_addr_ram = 00000015
+# o_addr_ram = 00000001
+# o_addr_ram = 00000002
+# o_addr_ram = 00000003
+# o_addr_ram = 00000004
+# o_addr_ram = 00000005
+# o_addr_ram = 00000006
+# o_addr_ram = 00000007
+# o_addr_ram = 00000008
+# o_addr_ram = 00000009
+# o_addr_ram = 0000000a
+# o_addr_ram = 0000000b
+# o_addr_ram = 0000000c
+# o_addr_ram = 0000000d
+# o_addr_ram = 0000000e
+# o_addr_ram = 0000000f
+# o_addr_ram = 00000010
+# o_addr_ram = 00000011
+# o_addr_ram = 00000012
+# o_addr_ram = 00000013
+# o_addr_ram = 00000014
+# o_addr_ram = 00000015
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/PACS/PACS_ADDRESS/tb_PACS_control_address.sv(93)
+#    Time: 2951 ns  Iteration: 0  Instance: /tb_PACS_control_address
+# End time: 23:08:40 on Dec 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1

@@ -16,6 +16,12 @@ module PA_Cal_Mean #(
     output logic                    o_done       
 );
 
-
+BFP16_add #(
+    .SIZE_DATA      (32)
+) BFP16_ADD_UNIT (
+    .i_data_a       (),
+    .i_data_b       (),
+    .o_bfu_add      () 
+);
 
 endmodule

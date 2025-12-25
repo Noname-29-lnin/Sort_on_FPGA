@@ -67,9 +67,13 @@ class C_Framework_Serial : public C_Func_Cal, public C_Sort_Algor{
         Status_e P_status;
         int P_Partition(std::vector<SIZE_ARR_T>& arr, int si, int ei);
         void P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, int M, int& S_cnt);
+        void P_Division_Merge(std::vector<SIZE_ARR_T>&arr, int si, int ei, int M, int &S_cnt);
         Status_e P_SS_Check(std::vector<SIZE_ARR_T> &arr, int si, int ei);
     public:
         void F_Framework_Serial(
+            std::vector<SIZE_ARR_T> &arr, int M
+        );
+        void F_Frameworkd_Serial_Merge(
             std::vector<SIZE_ARR_T> &arr, int M
         );
         size_t Get_Count_Compare() { return P_count_compare; }

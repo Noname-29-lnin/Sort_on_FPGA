@@ -74,10 +74,8 @@ SIZE_ARR_T C_RTL_Framework_Serial::RTL_partition(std::vector<SIZE_ARR_T> &arr, i
 {
     SIZE_TYPE_T bi = addr_si;
     SIZE_TYPE_T mean = RTL_Cal_Mean(arr, addr_si, addr_ei);
-    for (int i = addr_si; i <= addr_ei; i++)
-    {
-        if (arr[i] < mean)
-        {
+    for (int i = addr_si; i <= addr_ei; i++){
+        if (arr[i] < mean){
             std::swap(arr[i], arr[bi]);
             bi++;
         }
