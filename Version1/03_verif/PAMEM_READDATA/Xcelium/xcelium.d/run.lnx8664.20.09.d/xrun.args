@@ -1,0 +1,19 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++xm64bit
+-sv
+-f
+./../PAMEM/flist.f
+-top
+tb_PAMEM_readdata
+-access
++rwc
+-clean
+-log
+./../PAMEM/Xcelium/compile.log
++nctimescale+1ns/1ps
++ntb_random_seed=automatic
+-allowredefinition
+-v93

@@ -184,12 +184,15 @@ assign w_exp_result = is_b_zero ? w_exp_a : (w_sel_exp ? 8'hFF : w_exp_adjust);
 assign w_man_result = w_sel_man[1] ? (w_sel_man[0] ? 8'b1100_0000 : 8'b1000_0000) : w_nor_man;
 logic [22:0] w_man_b_zero;
 assign w_man_b_zero = is_b_zero ? i_data_a[22:0] : {w_man_result[6:0], 16'b0};
-
+logic w_o_valid;
 always_ff @( posedge i_clk or negedge i_rst_n ) begin : proc_save_valid_data
-    if(~i_rst_n) 
+    if(~i_rst_n) begin
+        w_o_valid   <= '0;
         o_valid     <= '0;
-    else 
-        o_valid     <= i_valid;
+    end else begin
+        w_o_valid   <= i_valid;
+        o_valid     <= w_o_valid;
+    end 
 end
 
 always_ff @( posedge i_clk or negedge i_rst_n ) begin : proc_save_out_data

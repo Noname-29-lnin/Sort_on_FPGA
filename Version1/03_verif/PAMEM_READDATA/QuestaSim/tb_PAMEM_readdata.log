@@ -1,0 +1,46 @@
+# vsim -lib ./../PAMEM/QuestaSim/work -debugDB -l ./../PAMEM/QuestaSim/tb_PAMEM_readdata.log -voptargs="+acc" -assertdebug -c tb_PAMEM_readdata -wlf ./../PAMEM/QuestaSim/tb_PAMEM_readdata.wlf -do "cd ./../PAMEM/QuestaSim; log -r /*; run -all;" 
+# Start time: 19:49:25 on Dec 26,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_PAMEM_readdata(fast)
+# Loading work.tb_simple_dual_port_ram_single_clock(fast)
+# Loading work.PAMEM_readdata(fast)
+# Loading work.SS_detect_edge(fast)
+# Loading work.SS_detect_start(fast)
+# Loading work.SS_detect_edge(fast__1)
+# Loading work.CNT_T_FF(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 'read_addr'. The port definition is at: /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/lib/tb_simple_dual_port_ram_single_clock.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_PAMEM_readdata/RAM_UNIT File: /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/PAMEM/tb_PAMEM_readdata.sv Line: 31
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'o_data'. The port definition is at: /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/lib/tb_simple_dual_port_ram_single_clock.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_PAMEM_readdata/RAM_UNIT File: /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/PAMEM/tb_PAMEM_readdata.sv Line: 31
+# ** Note: (vsim-8900) Creating design debug database ./../PAMEM/QuestaSim/tb_PAMEM_readdata.dbg.
+# cd ./../PAMEM/QuestaSim
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+#  log -r /*
+#  run -all
+# Initial load memory contents from /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/lib/mem_init.hex
+# ** Warning: (vsim-PLI-3406) Too many digits (8) in data on line 1 of file "/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/lib/mem_init.hex". (Max is 2.)    : /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/lib/tb_simple_dual_port_ram_single_clock.sv(26)
+#    Time: 0 ps  Iteration: 0  Instance: /tb_PAMEM_readdata/RAM_UNIT
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/PAMEM/tb_PAMEM_readdata.sv(83)
+#    Time: 1130 ns  Iteration: 0  Instance: /tb_PAMEM_readdata
+# Dumping memory contents to /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/PAMEM/mem_dump.hex
+# End time: 19:49:26 on Dec 26,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 4

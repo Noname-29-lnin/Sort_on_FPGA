@@ -1,0 +1,23 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.20.09.d
+-RUNMODE
+-sv
+./../../03_verif/PAMEM_WRITE/tb_PAMEM_writedata.sv
+./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv
+./../../02_rtl/PA_mem/PAMEM_writedata.sv
+./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+-ALLOWREDEFINITION
+-CDSLIB
+./xcelium.d/run.lnx8664.20.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.20.09.d/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.20.09.d/xllibs
+-ALLOWUNBOUND
+-hastop

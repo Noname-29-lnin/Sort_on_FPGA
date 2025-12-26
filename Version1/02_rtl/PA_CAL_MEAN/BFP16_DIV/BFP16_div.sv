@@ -1,9 +1,14 @@
 module BFP16_div #(
     parameter SIZE_DATA     = 32
 )(
+    input logic                     i_clk       ,
+    input logic                     i_rst_n     ,
+
+    input logic                     i_valid     ,
     input logic [SIZE_DATA-1:0]     i_data_a    ,
     input logic [SIZE_DATA-1:0]     i_data_b    ,
-    output logic [SIZE_DATA-1:0]    o_bfu_div    
+    output logic [SIZE_DATA-1:0]    o_bfu_div   ,
+    output logic                    o_valid      
 );
 
 logic w_sign_a, w_sign_b;

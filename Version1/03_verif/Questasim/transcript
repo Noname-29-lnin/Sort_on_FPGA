@@ -12,20 +12,27 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
-# ./../PACS/PACS_ADDRESS/QuestaSim/tb_PACS_control_address.wlf opened as dataset "tb_PACS_control_address"
-# add wave vsim:/tb_PACS_control_address/*
+# ./../PAMEM/QuestaSim/tb_PAMEM_readdata.wlf opened as dataset "tb_PAMEM_readdata"
+# add wave vsim:/tb_PAMEM_readdata/*
 # Unrecognized dataset prefix: vsim
 #  radix -HEX
 # HEXADECIMAL
 # 
 # stdin: <EOF>
 add wave -position insertpoint  \
-tb_PACS_control_address:/tb_PACS_control_address/DUT/i_clk \
-tb_PACS_control_address:/tb_PACS_control_address/DUT/i_rst_n \
-tb_PACS_control_address:/tb_PACS_control_address/DUT/i_start \
-tb_PACS_control_address:/tb_PACS_control_address/DUT/i_rd_ram \
-tb_PACS_control_address:/tb_PACS_control_address/DUT/i_addr_si \
-tb_PACS_control_address:/tb_PACS_control_address/DUT/i_addr_ei \
-tb_PACS_control_address:/tb_PACS_control_address/DUT/o_rd_ram \
-tb_PACS_control_address:/tb_PACS_control_address/DUT/o_addr_ram \
-tb_PACS_control_address:/tb_PACS_control_address/DUT/o_done
+tb_PAMEM_readdata:/tb_PAMEM_readdata/DUT/i_clk \
+tb_PAMEM_readdata:/tb_PAMEM_readdata/DUT/i_rst_n \
+tb_PAMEM_readdata:/tb_PAMEM_readdata/DUT/i_start \
+tb_PAMEM_readdata:/tb_PAMEM_readdata/DUT/i_addr_a \
+tb_PAMEM_readdata:/tb_PAMEM_readdata/DUT/i_addr_b \
+tb_PAMEM_readdata:/tb_PAMEM_readdata/DUT/o_data_a \
+tb_PAMEM_readdata:/tb_PAMEM_readdata/DUT/o_data_b \
+tb_PAMEM_readdata:/tb_PAMEM_readdata/DUT/i_valid_rd \
+tb_PAMEM_readdata:/tb_PAMEM_readdata/DUT/i_data_ram \
+tb_PAMEM_readdata:/tb_PAMEM_readdata/DUT/o_rd_ram \
+tb_PAMEM_readdata:/tb_PAMEM_readdata/DUT/o_addr_ram \
+tb_PAMEM_readdata:/tb_PAMEM_readdata/DUT/o_done
+add wave -position insertpoint  \
+tb_PAMEM_readdata:/tb_PAMEM_readdata/DUT/w_addr_b
+add wave -position insertpoint  \
+tb_PAMEM_readdata:/tb_PAMEM_readdata/DUT/i_addr_a

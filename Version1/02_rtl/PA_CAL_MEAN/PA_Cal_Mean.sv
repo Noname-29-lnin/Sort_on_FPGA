@@ -8,20 +8,60 @@ module PA_Cal_Mean #(
     input logic [SIZE_ADDR-1:0]     i_addr_si   ,
     input logic [SIZE_ADDR-1:0]     i_addr_ei   ,
 
-    input logic [SIZE_DATA-1:0]     i_data_ram  ,
     input logic                     i_valid_ram ,
-    output logic                    o_en_ram    ,
+    input logic [SIZE_DATA-1:0]     i_data_ram  ,
 
+    output logic                    o_en_ram    ,
+    output logic [SIZE_ADDR-1:0]    o_addr_ram  ,
     output logic [SIZE_DATA-1:0]    o_mean_value,
     output logic                    o_done       
 );
 
-BFP16_add #(
-    .SIZE_DATA      (32)
-) BFP16_ADD_UNIT (
-    .i_data_a       (),
-    .i_data_b       (),
-    .o_bfu_add      () 
+logic w_PACS_done;
+logic w_BFP16_DIV_done;
+logic [SIZE_DATA-1:0] w_sum;
+logic [SIZE_DATA-1:0] w_divisor;
+
+PA_Cal_Sum #(
+    .SIZE_ADDR      (SIZE_ADDR),
+    .SIZE_DATA      (SIZE_DATA)
+) PACS_UNIT (
+    .i_clk          (i_clk),
+    .i_rst_n        (i_rst_n),
+    .i_start        (i_start),
+    .i_addr_si      (i_addr_si),
+    .i_addr_ei      (i_addr_ei),
+    .i_valid_ram    (i_valid_ram),
+    .i_data_ram     (i_data_ram),
+    .o_sum          (w_sum),
+    .o_rd_ram       (o_en_ram),
+    .o_addr_ram     (o_addr_ram),
+    .o_done         (w_PACS_done) 
+);
+
+PACD_divisor #(
+    .SIZE_ADDR      (SIZE_ADDR),
+    .SIZE_DATA      (SIZE_DATA)
+) PACD_DIVISOR (
+    .i_clk          (i_clk),
+    .i_rst_n        (i_rst_n),
+    .i_start        (i_start),
+    .i_addr_si      (i_addr_si),
+    .i_addr_ei      (i_addr_ei),
+    .o_diff_addr    (w_divisor),
+    .o_done         (w_BFP16_DIV_done) 
+);
+
+BFP16_div #(
+    .SIZE_DATA      (SIZE_DATA)
+) BFP16_DIV_UNIT (
+    .i_clk          (i_clk),
+    .i_rst_n        (i_rst_n),
+    .i_valid        (),
+    .i_data_a       (w_sum),
+    .i_data_b       (w_divisor),
+    .o_bfu_div      (o_mean_value),
+    .o_valid        (o_done) 
 );
 
 endmodule

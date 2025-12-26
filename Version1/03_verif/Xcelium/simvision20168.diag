@@ -1,0 +1,64 @@
+*** Message Type: info ***
+When: Thu Dec 25 21:07:52 EST 2025
+SimVision started.
+Version: TOOL:  simvision(64)   20.09-s001
+User: admin
+Host: centos7
+Platform: Linux/x86_64/3.10.0-1160.108.1.el7.x86_64
+Started: Thu Dec 25 21:07:52 EST 2025
+Command: /opt/cadence/XCELIUM2009/tools.lnx86/simvision/bin/64bit/simvision.exe -waves ./../PACS/PACS_UNIT/Xcelium/tb_PA_Cal_Sum.shm
+Work Directory: /home/admin/shared/My_project/Sort_on_FPGA/Version1/03_verif/Xcelium
+ 
+*** Message Type: info ***
+When: Thu Dec 25 21:07:53 EST 2025
+Create waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Thu Dec 25 21:07:54 EST 2025
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Thu Dec 25 21:07:55 EST 2025
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Thu Dec 25 21:08:52 EST 2025
+Create source window: "Source Browser 1"
+ 
+*** Message Type: info ***
+When: Thu Dec 25 21:08:53 EST 2025
+Delete waveform window: "Waveform 1"
+ 
+*** Message Type: error ***
+When: Thu Dec 25 21:08:57 EST 2025
+invalid command name "::timeaxis0"
+    while executing
+"$_timeaxis convert t2exp $time"
+    (method "::WaveWindow::seeTime" body line 2)
+    invoked from within
+"seeTime [$itk_option(-markerdata) marker cget  $itk_option(-markerprimary) -time]"
+    (method "::WaveWindow::_doGotoCause" body line 59)
+    invoked from within
+"_doGotoCause $cnode"
+    ("@goto-cause" arm line 2)
+    invoked from within
+"switch -glob -- $dclickpref {
+       @no-action {
+               # Do nothing
+       }
+            @goto-cause {
+                _doGotoCause $cnode
+            }
+           ..."
+    (method "::WaveWindow::_moveCursor" body line 337)
+    invoked from within
+"::.waveWindow0 _moveCursor cursor 185 165 -double"
+    (in namespace inscope "::WaveWindow" script line 1)
+    invoked from within
+"namespace inscope ::WaveWindow {::.waveWindow0 _moveCursor cursor 185 165 -double}"
+    (command bound to event)
+ 
+*** Message Type: info ***
+When: Thu Dec 25 21:09:00 EST 2025
+SimVision Exit.
+ 

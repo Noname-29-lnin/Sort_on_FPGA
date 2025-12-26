@@ -1,0 +1,94 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Dec 26, 2025 at 08:02:06 EST
+xrun
+	+xm64bit
+	-sv
+	-f ./../PAMEM/flist.f
+		./../../03_verif/PAMEM/tb_PAMEM_readdata.sv
+		./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv
+		./../../02_rtl/PA_mem/PAMEM_readdata.sv
+		./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+		./../../02_rtl/SS_MODULE/SS_detect_start.sv
+		./../../02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv
+	-top tb_PAMEM_readdata
+	-access +rwc
+	-clean
+	-log ./../PAMEM/Xcelium/compile.log
+	+nctimescale+1ns/1ps
+	+ntb_random_seed=automatic
+	-allowredefinition
+	-v93
+
+   User defined plus("+") options:
+	+ntb_random_seed=automatic
+
+xrun: *W,OPDEPRREN: Command Line Option (+nctimescale+1ns/1ps) is deprecated. Use (+xmtimescale+1ns/1ps) instead.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ./../../03_verif/PAMEM/tb_PAMEM_readdata.sv
+	module worklib.tb_PAMEM_readdata:sv
+		errors: 0, warnings: 0
+file: ./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv
+	module worklib.tb_simple_dual_port_ram_single_clock:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/PAMEM_readdata.sv
+	module worklib.PAMEM_readdata:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+	module worklib.SS_detect_edge:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/SS_detect_start.sv
+	module worklib.SS_detect_start:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv
+	module worklib.CNT_T_FF:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_PAMEM_readdata
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.CNT_T_FF:sv <0x72f5ca14>
+			streams:   3, words:   921
+		worklib.SS_detect_edge:sv <0x21c25ec6>
+			streams:   4, words:   955
+		worklib.SS_detect_start:sv <0x1b5466da>
+			streams:   4, words:  1265
+		worklib.SS_detect_edge:sv <0x02d248f6>
+			streams:   4, words:   955
+		worklib.PAMEM_readdata:sv <0x57545927>
+			streams:  20, words:  6087
+		worklib.tb_simple_dual_port_ram_single_clock:sv <0x31888071>
+			streams:   8, words:  4078
+		worklib.tb_PAMEM_readdata:sv <0x32c13697>
+			streams:  19, words: 13142
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                10       6
+		Registers:              46      35
+		Scalar wires:           38       -
+		Vectored wires:         14       -
+		Always blocks:          22      14
+		Initial blocks:          4       4
+		Final blocks:            1       1
+		Cont. assignments:       5       3
+		Pseudo assignments:     25      25
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_PAMEM_readdata:sv
+Loading snapshot worklib.tb_PAMEM_readdata:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+Initial load memory contents from ./../../03_verif/lib/mem_init.hex
+o_data_a = 4ea94be4
+o_data_b = ce1e628c
+o_data_a = cea04596
+o_data_b = 4edafdac
+Dumping memory contents to ./../../03_verif/PAMEM/mem_dump.hex
+Simulation complete via $finish(1) at time 1370 NS + 0
+../PAMEM/tb_PAMEM_readdata.sv:99     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Dec 26, 2025 at 08:02:07 EST  (total: 00:00:01)

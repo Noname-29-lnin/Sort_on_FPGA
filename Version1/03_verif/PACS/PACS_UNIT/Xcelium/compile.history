@@ -1,0 +1,1 @@
+s1(25Dec2025:21:14:21):  xrun +xm64bit -sv -f ./../PACS/PACS_UNIT/flist.f -top tb_PA_Cal_Sum -access +rwc -clean -log ./../PACS/PACS_UNIT/Xcelium/compile.log +nctimescale+1ns/1ps +ntb_random_seed=automatic -allowredefinition -v93 

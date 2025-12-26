@@ -1,0 +1,14 @@
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 19:49:24 on Dec 26,2025
+vlog -f ./../PAMEM/flist.f 
+-- Compiling module tb_PAMEM_readdata
+-- Compiling module tb_simple_dual_port_ram_single_clock
+-- Compiling module PAMEM_readdata
+-- Compiling module SS_detect_edge
+-- Compiling module SS_detect_start
+-- Compiling module CNT_T_FF
+
+Top level modules:
+	tb_PAMEM_readdata
+End time: 19:49:24 on Dec 26,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

@@ -1,0 +1,32 @@
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 09:49:32 on Dec 26,2025
+vlog -f ./../PACS/PACS_UNIT/flist.f 
+-- Compiling module tb_PA_Cal_Sum
+-- Compiling module tb_simple_dual_port_ram_single_clock
+-- Compiling module PA_Cal_Sum
+-- Compiling module BFP16_add
+-- Compiling module CLA_4bit
+-- Compiling module CLA_8bit
+-- Compiling module COMP_4bit
+-- Compiling module COMP_8bit
+-- Compiling module EXP_adjust
+-- Compiling module LOPD_8bit
+-- Compiling module MAN_ALU
+-- Compiling module NOR_unit
+-- Compiling module PSC_unit
+-- Compiling module SHF_left
+-- Compiling module SHF_right
+-- Compiling module SIGN_unit
+-- Compiling module SWAP_unit
+-- Compiling module CNT_T_FF
+-- Compiling module PA_Cal_Diff_Addr
+-- Compiling module PACS_control_address
+-- Compiling module PACS_detect_intit_data
+-- Compiling module SS_detect_edge
+-- Compiling module SS_detect_start
+
+Top level modules:
+	tb_PA_Cal_Sum
+	PA_Cal_Diff_Addr
+End time: 09:49:32 on Dec 26,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

@@ -1,0 +1,115 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Dec 26, 2025 at 10:28:09 EST
+xrun
+	+xm64bit
+	-sv
+	-f ./../PAMEM_UNIT/flist.f
+		./../../03_verif/PAMEM_UNIT/tb_PA_mem.sv
+		./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv
+		./../../02_rtl/PA_mem/PA_mem.sv
+		./../../02_rtl/PA_mem/PAMEM_swap.sv
+		./../../02_rtl/PA_mem/Update_I.sv
+		./../../02_rtl/PA_mem/PAMEM_readdata.sv
+		./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+		./../../02_rtl/SS_MODULE/SS_detect_start.sv
+		./../../02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv
+		./../../02_rtl/PA_mem/PAMEM_writedata.sv
+	-top tb_PA_mem
+	-access +rwc
+	-clean
+	-log ./../PAMEM_UNIT/Xcelium/compile.log
+	+nctimescale+1ns/1ps
+	+ntb_random_seed=automatic
+	-allowredefinition
+	-v93
+
+   User defined plus("+") options:
+	+ntb_random_seed=automatic
+
+xrun: *W,OPDEPRREN: Command Line Option (+nctimescale+1ns/1ps) is deprecated. Use (+xmtimescale+1ns/1ps) instead.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ./../../03_verif/PAMEM_UNIT/tb_PA_mem.sv
+	module worklib.tb_PA_mem:sv
+		errors: 0, warnings: 0
+file: ./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv
+	module worklib.tb_simple_dual_port_ram_single_clock:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/PA_mem.sv
+	module worklib.PA_mem:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/PAMEM_swap.sv
+	module worklib.PAMEM_swap:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/Update_I.sv
+	module worklib.Update_I:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/PAMEM_readdata.sv
+	module worklib.PAMEM_readdata:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+	module worklib.SS_detect_edge:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/SS_detect_start.sv
+	module worklib.SS_detect_start:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv
+	module worklib.CNT_T_FF:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/PAMEM_writedata.sv
+	module worklib.PAMEM_writedata:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_PA_mem
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.PAMEM_writedata:sv <0x7a4ad8c1>
+			streams:  16, words:  5014
+		worklib.PAMEM_swap:sv <0x4ecc5f40>
+			streams:  15, words:  4556
+		worklib.CNT_T_FF:sv <0x72f5ca14>
+			streams:   3, words:   921
+		worklib.PAMEM_readdata:sv <0x57545927>
+			streams:  20, words:  6087
+		worklib.SS_detect_edge:sv <0x02d248f6>
+			streams:   4, words:   955
+		worklib.Update_I:sv <0x2e200112>
+			streams:  12, words:  3324
+		worklib.SS_detect_edge:sv <0x21c25ec6>
+			streams:   4, words:   955
+		worklib.SS_detect_start:sv <0x5eb942d8>
+			streams:   4, words:  1265
+		worklib.PA_mem:sv <0x337bd304>
+			streams:  31, words:  8789
+		worklib.tb_PA_mem:sv <0x483d2e19>
+			streams:  25, words:  9976
+		worklib.tb_simple_dual_port_ram_single_clock:sv <0x72df4ff9>
+			streams:   8, words:  4070
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                24      10
+		Registers:             138      90
+		Scalar wires:           98       -
+		Vectored wires:         49       -
+		Always blocks:          57      30
+		Initial blocks:          4       4
+		Final blocks:            1       1
+		Cont. assignments:      26      11
+		Pseudo assignments:     70      65
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_PA_mem:sv
+Loading snapshot worklib.tb_PA_mem:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+Initial load memory contents from ./../../03_verif/lib/mem_init.hex
+Dumping memory contents to ./../../03_verif/PAMEM_UNIT/mem_dump.hex
+Dumping memory contents to ./../../03_verif/PAMEM_UNIT/mem_dump.hex
+Simulation complete via $finish(1) at time 10210 NS + 0
+../PAMEM_UNIT/tb_PA_mem.sv:93     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Dec 26, 2025 at 10:28:10 EST  (total: 00:00:01)

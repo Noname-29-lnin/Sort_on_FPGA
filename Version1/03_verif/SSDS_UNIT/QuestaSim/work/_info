@@ -1,0 +1,107 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/Questasim
+T_opt
+!s110 1766742392
+VUgfUNKY>[FGJB]hfm7]Tc2
+04 18 4 work tb_SS_detect_start fast 0
+=1-000ae431a4f1-694e5977-e2c8f-6e4c3
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U4 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work ./../SSDS_UNIT/QuestaSim/work -debugdb +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vSS_detect_edge
+Z4 2/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/SSDS_UNIT/tb_SS_detect_start.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_start.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_edge.sv
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z6 !s110 1766742391
+!i10b 1
+!s100 RUPB:4HA5<B8e9N<1N=P?0
+IZK45b]4oad0JCZ4@KdL_l3
+S1
+R2
+w1765271085
+8/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_edge.sv
+F/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_edge.sv
+!i122 1
+Z7 L0 3 34
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z10 !s108 1766742391.000000
+Z11 !s107 /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_edge.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_start.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/SSDS_UNIT/tb_SS_detect_start.sv|
+Z12 !s90 -f|./../SSDS_UNIT/flist.f|
+!i113 0
+Z13 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+n@s@s_detect_edge
+vSS_detect_start
+R4
+R5
+R6
+!i10b 1
+!s100 <XMnLTiI54[P8:5ELce[M1
+InZ3C_00QZ7cTF;8<iUh9Z1
+S1
+R2
+w1766742378
+8/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_start.sv
+F/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_start.sv
+!i122 1
+R7
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R3
+n@s@s_detect_start
+vtb_SS_detect_start
+R4
+R5
+R6
+!i10b 1
+!s100 ]WSlQleefW_[dngjHia=O2
+Io;aVm?PM6?b:?iEczH]io1
+S1
+R2
+w1766742387
+8/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/SSDS_UNIT/tb_SS_detect_start.sv
+F/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/SSDS_UNIT/tb_SS_detect_start.sv
+!i122 1
+L0 2 46
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R3
+ntb_@s@s_detect_start

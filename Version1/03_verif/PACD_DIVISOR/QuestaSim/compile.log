@@ -1,0 +1,18 @@
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 12:50:25 on Dec 26,2025
+vlog -f ./../PACD_DIVISOR/flist.f 
+-- Compiling module tb_PACD_divisor
+-- Compiling module PACD_divisor
+-- Compiling module PACD_diff_addr
+-- Compiling module PACD_LOPD_8bit
+-- Compiling module PACD_LOPD_16bit
+-- Compiling module PACD_LOPD_32bit
+-- Compiling module SS_detect_edge
+-- Compiling module SS_detect_start
+-- Compiling module SHF_left
+
+Top level modules:
+	tb_PACD_divisor
+	SS_detect_start
+End time: 12:50:25 on Dec 26,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

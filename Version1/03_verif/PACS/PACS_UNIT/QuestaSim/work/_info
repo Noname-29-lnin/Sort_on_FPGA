@@ -1,0 +1,650 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/Questasim
+T_opt
+!s110 1766717373
+V<`?XiQ[6gSHOSIN>HHdQk0
+04 13 4 work tb_PA_Cal_Sum fast 0
+=1-000ae431a4f1-694df7bc-e4d76-1c93d
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U51 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work ./../PACS/PACS_UNIT/QuestaSim/work -debugdb +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vBFP16_add
+Z4 2./../../03_verif/PACS/PACS_UNIT/tb_PA_Cal_Sum.sv|./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv|./../../02_rtl/PA_CAL_MEAN/PA_Cal_Sum.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/BFP16_add.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/CLA_4bit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/CLA_8bit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_4bit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_8bit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/EXP_adjust.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/LOPD_8bit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/MAN_ALU.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/NOR_unit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/PSC_unit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_left.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_right.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SIGN_unit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SWAP_unit.sv|./../../02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv|./../../02_rtl/PA_CAL_MEAN/PA_Cal_Diff_Addr.sv|./../../02_rtl/PA_CAL_MEAN/PACS_control_address.sv|./../../02_rtl/PA_CAL_MEAN/PACS_detect_intit_data.sv|./../../02_rtl/SS_MODULE/SS_detect_edge.sv|./../../02_rtl/SS_MODULE/SS_detect_start.sv
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z6 !s110 1766717372
+!i10b 1
+!s100 _z_EOZ[k;P4ReEEO;DTCI3
+IZf=ckehAGcLhQM>ZYo[6n0
+S1
+R2
+w1766717360
+8./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/BFP16_add.sv
+F./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/BFP16_add.sv
+!i122 14
+L0 1 205
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z9 !s108 1766717372.000000
+Z10 !s107 ./../../02_rtl/SS_MODULE/SS_detect_start.sv|./../../02_rtl/SS_MODULE/SS_detect_edge.sv|./../../02_rtl/PA_CAL_MEAN/PACS_detect_intit_data.sv|./../../02_rtl/PA_CAL_MEAN/PACS_control_address.sv|./../../02_rtl/PA_CAL_MEAN/PA_Cal_Diff_Addr.sv|./../../02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SWAP_unit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SIGN_unit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_right.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_left.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/PSC_unit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/NOR_unit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/MAN_ALU.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/LOPD_8bit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/EXP_adjust.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_8bit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_4bit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/CLA_8bit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/CLA_4bit.sv|./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/BFP16_add.sv|./../../02_rtl/PA_CAL_MEAN/PA_Cal_Sum.sv|./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv|./../../03_verif/PACS/PACS_UNIT/tb_PA_Cal_Sum.sv|
+Z11 !s90 -f|./../PACS/PACS_UNIT/flist.f|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+n@b@f@p16_add
+vCLA_4bit
+R4
+R5
+R6
+!i10b 1
+!s100 K4nQ9>NEU5ZKo<Q?QE:531
+Ia8K];XT@Cg4mEUA1R_LJT1
+S1
+R2
+Z13 w1765287137
+8./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/CLA_4bit.sv
+F./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/CLA_4bit.sv
+!i122 14
+Z14 L0 1 26
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@c@l@a_4bit
+vCLA_8bit
+R4
+R5
+R6
+!i10b 1
+!s100 hg?]T;mmS2_:;_6@miKH=3
+Ih?Dc5:G3gEDo0`2md]^1W1
+S1
+R2
+R13
+8./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/CLA_8bit.sv
+F./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/CLA_8bit.sv
+!i122 14
+Z15 L0 1 35
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@c@l@a_8bit
+vCNT_T_FF
+R4
+R5
+R6
+!i10b 1
+!s100 4:zWo=1ena7F5[L:VM7`h2
+I=ja=53dHD`hhehWSH`J6M1
+S1
+R2
+w1763047617
+8./../../02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv
+F./../../02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv
+!i122 14
+R14
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@c@n@t_@t_@f@f
+vCOMP_4bit
+R4
+R5
+R6
+!i10b 1
+!s100 hea?`V`WM[kW?d2;zL[6=1
+IKaEkVRHYz^WKDeD1VK=D>2
+S1
+R2
+w1765204074
+8./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_4bit.sv
+F./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_4bit.sv
+!i122 14
+L0 1 12
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@c@o@m@p_4bit
+vCOMP_8bit
+R4
+R5
+R6
+!i10b 1
+!s100 e@Ji`hT;WR=PgJ8N>_mX`1
+Ia:ZWI>KI:a3j3b8<I@5N^3
+S1
+R2
+w1765204082
+8./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_8bit.sv
+F./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_8bit.sv
+!i122 14
+R14
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@c@o@m@p_8bit
+vEXP_adjust
+R4
+R5
+R6
+!i10b 1
+!s100 X?fokbP?REG`Z1J;5Cg^h1
+I:?@2;LWF`fc=<]Z3@blV83
+S1
+R2
+R13
+8./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/EXP_adjust.sv
+F./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/EXP_adjust.sv
+!i122 14
+R15
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@e@x@p_adjust
+vLOPD_8bit
+R4
+R5
+R6
+!i10b 1
+!s100 <gn]>SiZj^2a`Co3U;3Ak3
+I<l<G73W@FT33P0a7VgHDZ3
+S1
+R2
+w1765265262
+8./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/LOPD_8bit.sv
+F./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/LOPD_8bit.sv
+!i122 14
+L0 1 43
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@l@o@p@d_8bit
+vMAN_ALU
+R4
+R5
+R6
+!i10b 1
+!s100 oKoIVaZVbGIRb4@JcgKSC3
+IH<P9SfNDjE4USOGlROf8:0
+S1
+R2
+R13
+8./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/MAN_ALU.sv
+F./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/MAN_ALU.sv
+!i122 14
+L0 1 33
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@m@a@n_@a@l@u
+vNOR_unit
+R4
+R5
+R6
+!i10b 1
+!s100 @TC5@?gf?F_?0IeY0E>d_3
+IkbjN8G=XYH;Q>JTBoOJ@^3
+S1
+R2
+R13
+8./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/NOR_unit.sv
+F./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/NOR_unit.sv
+!i122 14
+L0 1 25
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@n@o@r_unit
+vPA_Cal_Diff_Addr
+R4
+R5
+R6
+!i10b 1
+!s100 0NTC9E:XMFABf>ag5fAIH2
+IBe222>XR=VNCa4>L7f^nd0
+S1
+R2
+w1766670396
+8./../../02_rtl/PA_CAL_MEAN/PA_Cal_Diff_Addr.sv
+F./../../02_rtl/PA_CAL_MEAN/PA_Cal_Diff_Addr.sv
+!i122 14
+Z16 L0 1 28
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@p@a_@cal_@diff_@addr
+vPA_Cal_Sum
+R4
+R5
+R6
+!i10b 1
+!s100 ;jS@Q`TR[^jFmU2Q`=g1m3
+I9L`]<Y9_4JR_KC=^ViYbA1
+S1
+R2
+w1766715255
+8./../../02_rtl/PA_CAL_MEAN/PA_Cal_Sum.sv
+F./../../02_rtl/PA_CAL_MEAN/PA_Cal_Sum.sv
+!i122 14
+L0 1 108
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@p@a_@cal_@sum
+vPACS_control_address
+R4
+R5
+R6
+!i10b 1
+!s100 GhRoi69<bGHR[TSj9:H?N3
+I[3ajF6mi]A_CL8@O0dPd90
+S1
+R2
+w1766679051
+8./../../02_rtl/PA_CAL_MEAN/PACS_control_address.sv
+F./../../02_rtl/PA_CAL_MEAN/PACS_control_address.sv
+!i122 14
+L0 1 107
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@p@a@c@s_control_address
+vPACS_detect_intit_data
+R4
+R5
+R6
+!i10b 1
+!s100 I@8UGYo3WS0J?gZ1^N8C10
+IVQoA]ej0100[`OOYUD_U72
+S1
+R2
+w1766674206
+8./../../02_rtl/PA_CAL_MEAN/PACS_detect_intit_data.sv
+F./../../02_rtl/PA_CAL_MEAN/PACS_detect_intit_data.sv
+!i122 14
+L0 1 27
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@p@a@c@s_detect_intit_data
+vPSC_unit
+R4
+R5
+R6
+!i10b 1
+!s100 f<A@CX5DA=YMnejWNTXiI0
+Ib>giE[=BEHKBg>W<FWh6c2
+S1
+R2
+w1765267626
+8./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/PSC_unit.sv
+F./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/PSC_unit.sv
+!i122 14
+R16
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@p@s@c_unit
+vSHF_left
+R4
+R5
+R6
+!i10b 1
+!s100 KUH]DmmzHdM:UCoFoG;k42
+IUK1mLN;DzR=nOi]c?CJzl2
+S1
+R2
+w1765204358
+8./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_left.sv
+F./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_left.sv
+!i122 14
+R14
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@s@h@f_left
+vSHF_right
+R4
+R5
+R6
+!i10b 1
+!s100 LnSVX`I]5hKBR[XK3b9;71
+ILcHOVfb4z6COC@X]i1QBS1
+S1
+R2
+w1765266531
+8./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_right.sv
+F./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_right.sv
+!i122 14
+L0 1 24
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@s@h@f_right
+vSIGN_unit
+R4
+R5
+R6
+!i10b 1
+!s100 fJ[bK6kbh37NDf<l5_;GG0
+IehNQm;UUA1A`gg4UTjhRD0
+S1
+R2
+R13
+8./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SIGN_unit.sv
+F./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SIGN_unit.sv
+!i122 14
+L0 1 10
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@s@i@g@n_unit
+vSS_detect_edge
+R4
+R5
+R6
+!i10b 1
+!s100 RUPB:4HA5<B8e9N<1N=P?0
+I7NS3TX``ac7a`lGeg1YaA3
+S1
+R2
+w1765271085
+8./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+F./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+!i122 14
+Z17 L0 3 34
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@s@s_detect_edge
+vSS_detect_start
+R4
+R5
+R6
+!i10b 1
+!s100 <XMnLTiI54[P8:5ELce[M1
+I<VV6Fn=fcbL:zR6VWbA?T0
+S1
+R2
+w1765271081
+8./../../02_rtl/SS_MODULE/SS_detect_start.sv
+F./../../02_rtl/SS_MODULE/SS_detect_start.sv
+!i122 14
+R17
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@s@s_detect_start
+vSWAP_unit
+R4
+R5
+R6
+!i10b 1
+!s100 CVPAMKfPB[inZ7EFZ5AGi1
+IQ>P>c7zHgHeBNMKl[T]`30
+S1
+R2
+w1765204265
+8./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SWAP_unit.sv
+F./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SWAP_unit.sv
+!i122 14
+L0 1 16
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@s@w@a@p_unit
+vtb_PA_Cal_Sum
+R4
+R5
+R6
+!i10b 1
+!s100 9NFkhARhB[6I[bM7FW0@e2
+IU`VB]>`91Hm8UYff8e>S_3
+S1
+R2
+w1766716401
+8./../../03_verif/PACS/PACS_UNIT/tb_PA_Cal_Sum.sv
+F./../../03_verif/PACS/PACS_UNIT/tb_PA_Cal_Sum.sv
+!i122 14
+L0 1 118
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+ntb_@p@a_@cal_@sum
+vtb_simple_dual_port_ram_single_clock
+R4
+R5
+R6
+!i10b 1
+!s100 f46Ki03G56R?IeiBY[F?62
+IKjKF]Aaci0mOP72>iBiPe0
+S1
+R2
+w1766715095
+8./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv
+F./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv
+!i122 14
+L0 1 58
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3

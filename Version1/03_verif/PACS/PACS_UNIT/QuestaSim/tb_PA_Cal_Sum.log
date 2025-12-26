@@ -1,0 +1,59 @@
+# vsim -lib ./../PACS/PACS_UNIT/QuestaSim/work -debugDB -l ./../PACS/PACS_UNIT/QuestaSim/tb_PA_Cal_Sum.log -voptargs="+acc" -assertdebug -c tb_PA_Cal_Sum -wlf ./../PACS/PACS_UNIT/QuestaSim/tb_PA_Cal_Sum.wlf -do "cd ./../PACS/PACS_UNIT/QuestaSim; log -r /*; run -all;" 
+# Start time: 09:49:32 on Dec 26,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_PA_Cal_Sum(fast)
+# Loading work.tb_simple_dual_port_ram_single_clock(fast)
+# Loading work.PA_Cal_Sum(fast)
+# Loading work.SS_detect_edge(fast)
+# Loading work.PACS_detect_intit_data(fast)
+# Loading work.BFP16_add(fast)
+# Loading work.COMP_8bit(fast)
+# Loading work.COMP_4bit(fast)
+# Loading work.SWAP_unit(fast)
+# Loading work.CLA_8bit(fast)
+# Loading work.CLA_4bit(fast)
+# Loading work.SHF_right(fast)
+# Loading work.MAN_ALU(fast)
+# Loading work.LOPD_8bit(fast)
+# Loading work.NOR_unit(fast)
+# Loading work.SHF_left(fast)
+# Loading work.EXP_adjust(fast)
+# Loading work.SIGN_unit(fast)
+# Loading work.PSC_unit(fast)
+# Loading work.PACS_control_address(fast)
+# Loading work.CNT_T_FF(fast)
+# Loading work.SS_detect_start(fast)
+# Loading work.SS_detect_edge(fast__1)
+# ** Note: (vsim-8900) Creating design debug database ./../PACS/PACS_UNIT/QuestaSim/tb_PA_Cal_Sum.dbg.
+# cd ./../PACS/PACS_UNIT/QuestaSim
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+#  log -r /*
+#  run -all
+# Initial load memory contents from ./../../03_verif/lib/mem_init.hex
+# o_sum = ce9c0000 (float = -1308622848.000000000000000000000000)
+# o_sum = d18a38ba (float = -74207150080.000000000000000000000000)
+# error = 0.98237
+# ** Note: $finish    : ./../../03_verif/PACS/PACS_UNIT/tb_PA_Cal_Sum.sv(114)
+#    Time: 205030 ns  Iteration: 0  Instance: /tb_PA_Cal_Sum
+# Dumping memory contents to ./../../03_verif/PACS/PACS_UNIT/mem_out.hex
+# End time: 09:49:34 on Dec 26,2025, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 1

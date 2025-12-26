@@ -1,0 +1,291 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/Questasim
+T_opt
+!s110 1766728226
+VWJozTcz6DVQm_MP9E3ZK<2
+04 15 4 work tb_PACD_divisor fast 0
+=1-000ae431a4f1-694e2222-fd32-44f83
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U11 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work ./../PACD_DIVISOR/QuestaSim/work -debugdb +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vPACD_diff_addr
+Z4 2/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/PACD_DIVISOR/tb_PACD_divisor.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_divisor.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_diff_addr.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_8bit.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_16bit.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_32bit.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_edge.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_start.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_left.sv
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z6 !s110 1766728225
+!i10b 1
+!s100 SXL:1X;RnYnbjC11gBknl3
+I<UiZ@5iD:A[DOG=VP=n6o0
+S1
+R2
+w1766727563
+8/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_diff_addr.sv
+F/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_diff_addr.sv
+!i122 16
+L0 1 61
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z9 !s108 1766728225.000000
+Z10 !s107 /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_left.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_start.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_edge.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_32bit.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_16bit.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_8bit.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_diff_addr.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_divisor.sv|/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/PACD_DIVISOR/tb_PACD_divisor.sv|
+Z11 !s90 -f|./../PACD_DIVISOR/flist.f|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+n@p@a@c@d_diff_addr
+vPACD_divisor
+R4
+R5
+R6
+!i10b 1
+!s100 ?LT<JbXR2POi6RQ;<[9D33
+IBioDjVcJL]L9LG8T1Q:[]2
+S1
+R2
+w1766728199
+8/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_divisor.sv
+F/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_divisor.sv
+!i122 16
+L0 1 118
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@p@a@c@d_divisor
+vPACD_LOPD_16bit
+R4
+R5
+R6
+!i10b 1
+!s100 ;Ini`OLRi3]z<Y<O2V6@42
+Ij85lVVM]W8XXIE:b;mV191
+S1
+R2
+w1766718778
+8/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_16bit.sv
+F/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_16bit.sv
+!i122 16
+L0 1 40
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@p@a@c@d_@l@o@p@d_16bit
+vPACD_LOPD_32bit
+R4
+R5
+R6
+!i10b 1
+!s100 EQCLY5=8P]=M23Q?F:V1z0
+I_V]E[GoDd<8]BOzC_JD862
+S1
+R2
+w1766726855
+8/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_32bit.sv
+F/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_32bit.sv
+!i122 16
+L0 1 85
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@p@a@c@d_@l@o@p@d_32bit
+vPACD_LOPD_8bit
+R4
+R5
+R6
+!i10b 1
+!s100 ?U>REdH=H=S?f7lI`WWgd1
+I<7Uj;a0BQld^4lTLZ6[Da0
+S1
+R2
+w1766718741
+8/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_8bit.sv
+F/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_8bit.sv
+!i122 16
+L0 1 43
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@p@a@c@d_@l@o@p@d_8bit
+vSHF_left
+R4
+R5
+R6
+!i10b 1
+!s100 KUH]DmmzHdM:UCoFoG;k42
+I1oEcHcSM=Rf:cJI_9OXCQ1
+S1
+R2
+w1765204358
+8/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_left.sv
+F/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_left.sv
+!i122 16
+L0 1 26
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@s@h@f_left
+vSS_detect_edge
+R4
+R5
+R6
+!i10b 1
+!s100 RUPB:4HA5<B8e9N<1N=P?0
+IZK45b]4oad0JCZ4@KdL_l3
+S1
+R2
+w1765271085
+8/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_edge.sv
+F/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_edge.sv
+!i122 16
+Z13 L0 3 34
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@s@s_detect_edge
+vSS_detect_start
+R4
+R5
+R6
+!i10b 1
+!s100 <XMnLTiI54[P8:5ELce[M1
+InZ3C_00QZ7cTF;8<iUh9Z1
+S1
+R2
+w1765271081
+8/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_start.sv
+F/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_start.sv
+!i122 16
+R13
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@s@s_detect_start
+vtb_PACD_divisor
+R4
+R5
+R6
+!i10b 1
+!s100 H]e:>HQ<9o=4QKg]iBoi71
+IFUl]VJz46JGf1K6CJ04b?3
+S1
+R2
+w1766728220
+8/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/PACD_DIVISOR/tb_PACD_divisor.sv
+F/home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/PACD_DIVISOR/tb_PACD_divisor.sv
+!i122 16
+L0 3 73
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+ntb_@p@a@c@d_divisor

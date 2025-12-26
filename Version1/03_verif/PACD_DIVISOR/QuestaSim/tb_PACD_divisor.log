@@ -1,0 +1,41 @@
+# vsim -lib ./../PACD_DIVISOR/QuestaSim/work -debugDB -l ./../PACD_DIVISOR/QuestaSim/tb_PACD_divisor.log -voptargs="+acc" -assertdebug -c tb_PACD_divisor -wlf ./../PACD_DIVISOR/QuestaSim/tb_PACD_divisor.wlf -do "cd ./../PACD_DIVISOR/QuestaSim; log -r /*; run -all;" 
+# Start time: 12:50:25 on Dec 26,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_PACD_divisor(fast)
+# Loading work.PACD_divisor(fast)
+# Loading work.PACD_diff_addr(fast)
+# Loading work.PACD_LOPD_32bit(fast)
+# Loading work.PACD_LOPD_16bit(fast)
+# Loading work.PACD_LOPD_8bit(fast)
+# Loading work.SHF_left(fast)
+# ** Note: (vsim-8900) Creating design debug database ./../PACD_DIVISOR/QuestaSim/tb_PACD_divisor.dbg.
+# cd ./../PACD_DIVISOR/QuestaSim
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+#  log -r /*
+#  run -all
+# o_diff_addr = 43960000 (300.0000)
+# o_diff_addr = 4f800000 (4294967296.0000)
+# o_diff_addr = 41300000 (11.0000)
+# ** Note: $finish    : /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/03_verif/PACD_DIVISOR/tb_PACD_divisor.sv(72)
+#    Time: 630 ns  Iteration: 2  Instance: /tb_PACD_divisor
+# End time: 12:50:26 on Dec 26,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

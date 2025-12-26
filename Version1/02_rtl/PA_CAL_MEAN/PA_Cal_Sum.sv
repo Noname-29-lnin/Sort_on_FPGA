@@ -26,9 +26,9 @@ logic w_init_sum;
 logic [SIZE_DATA-1:0] w_data_save;
 
 logic [SIZE_DATA-1:0] w_bfp16_sum;
-logic                 w_bfp16_valid;
+logic w_bfp16_valid;
 
-logic   w_controladdress_done;
+logic w_controladdress_done;
 logic w_output_sum;
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -102,7 +102,7 @@ always_ff @( posedge i_clk or negedge i_rst_n ) begin
     if(~i_rst_n) 
         o_done       <= '0;
     else 
-        o_done       <= w_controladdress_done;
+        o_done       <= w_output_sum;
 end
 
 endmodule

@@ -1,0 +1,194 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Dec 25, 2025 at 21:14:21 EST
+xrun
+	+xm64bit
+	-sv
+	-f ./../PACS/PACS_UNIT/flist.f
+		./../../03_verif/PACS/PACS_UNIT/tb_PA_Cal_Sum.sv
+		./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv
+		./../../02_rtl/PA_CAL_MEAN/PA_Cal_Sum.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/BFP16_add.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/CLA_4bit.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/CLA_8bit.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_4bit.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_8bit.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/EXP_adjust.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/LOPD_8bit.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/MAN_ALU.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/NOR_unit.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/PSC_unit.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_left.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_right.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SIGN_unit.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SWAP_unit.sv
+		./../../02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv
+		./../../02_rtl/PA_CAL_MEAN/PA_Cal_Diff_Addr.sv
+		./../../02_rtl/PA_CAL_MEAN/PACS_control_address.sv
+		./../../02_rtl/PA_CAL_MEAN/PACS_detect_intit_data.sv
+		./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+		./../../02_rtl/SS_MODULE/SS_detect_start.sv
+	-top tb_PA_Cal_Sum
+	-access +rwc
+	-clean
+	-log ./../PACS/PACS_UNIT/Xcelium/compile.log
+	+nctimescale+1ns/1ps
+	+ntb_random_seed=automatic
+	-allowredefinition
+	-v93
+
+   User defined plus("+") options:
+	+ntb_random_seed=automatic
+
+xrun: *W,OPDEPRREN: Command Line Option (+nctimescale+1ns/1ps) is deprecated. Use (+xmtimescale+1ns/1ps) instead.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ./../../03_verif/PACS/PACS_UNIT/tb_PA_Cal_Sum.sv
+	module worklib.tb_PA_Cal_Sum:sv
+		errors: 0, warnings: 0
+file: ./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv
+	module worklib.tb_simple_dual_port_ram_single_clock:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/PA_Cal_Sum.sv
+	module worklib.PA_Cal_Sum:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/BFP16_add.sv
+	module worklib.BFP16_add:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/CLA_4bit.sv
+	module worklib.CLA_4bit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/CLA_8bit.sv
+	module worklib.CLA_8bit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_4bit.sv
+	module worklib.COMP_4bit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_8bit.sv
+	module worklib.COMP_8bit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/EXP_adjust.sv
+	module worklib.EXP_adjust:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/LOPD_8bit.sv
+	module worklib.LOPD_8bit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/MAN_ALU.sv
+	module worklib.MAN_ALU:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/NOR_unit.sv
+	module worklib.NOR_unit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/PSC_unit.sv
+	module worklib.PSC_unit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_left.sv
+	module worklib.SHF_left:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_right.sv
+	module worklib.SHF_right:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SIGN_unit.sv
+	module worklib.SIGN_unit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SWAP_unit.sv
+	module worklib.SWAP_unit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv
+	module worklib.CNT_T_FF:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/PA_Cal_Diff_Addr.sv
+	module worklib.PA_Cal_Diff_Addr:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/PACS_control_address.sv
+	module worklib.PACS_control_address:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/PACS_detect_intit_data.sv
+	module worklib.PACS_detect_intit_data:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+	module worklib.SS_detect_edge:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/SS_detect_start.sv
+	module worklib.SS_detect_start:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_PA_Cal_Sum
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.CNT_T_FF:sv <0x1093e084>
+			streams:   3, words:   921
+		worklib.SS_detect_edge:sv <0x168bba11>
+			streams:   4, words:   955
+		worklib.SS_detect_start:sv <0x319e58b3>
+			streams:   4, words:  1265
+		worklib.PSC_unit:sv <0x3562ee99>
+			streams:   7, words:  2343
+		worklib.SIGN_unit:sv <0x60834573>
+			streams:   1, words:   258
+		worklib.EXP_adjust:sv <0x08433086>
+			streams:   6, words:  1863
+		worklib.NOR_unit:sv <0x15db70a2>
+			streams:   2, words:   921
+		worklib.LOPD_8bit:sv <0x44196244>
+			streams:   5, words:  2493
+		worklib.CLA_8bit:sv <0x4e06e867>
+			streams:  13, words:  4500
+		worklib.MAN_ALU:sv <0x3b134060>
+			streams:   9, words:  2737
+		worklib.CLA_4bit:sv <0x25354e89>
+			streams:   9, words:  3384
+		worklib.CLA_8bit:sv <0x1e949be0>
+			streams:  13, words:  4418
+		worklib.SWAP_unit:sv <0x638603e2>
+			streams:   1, words:   508
+		worklib.COMP_4bit:sv <0x471c4c6c>
+			streams:   2, words:  1737
+		worklib.COMP_8bit:sv <0x68570c50>
+			streams:   5, words:  1802
+		worklib.BFP16_add:sv <0x762daa3f>
+			streams:  64, words: 18309
+		worklib.PACS_detect_intit_data:sv <0x5b3b57d4>
+			streams:   4, words:  1044
+		worklib.SS_detect_edge:sv <0x54b88a36>
+			streams:   4, words:   955
+		worklib.PA_Cal_Sum:sv <0x0a27b68e>
+			streams:  18, words:  5398
+		worklib.tb_simple_dual_port_ram_single_clock:sv <0x0aae3dd2>
+			streams:   8, words:  4062
+		worklib.tb_PA_Cal_Sum:sv <0x73ae8843>
+			streams:  18, words:  8654
+		worklib.SHF_right:sv <0x7bfd9c23>
+			streams:   6, words:  3493
+		worklib.SHF_left:sv <0x1403a0ec>
+			streams:   5, words:  2711
+		worklib.PACS_control_address:sv <0x633c3f85>
+			streams:  21, words:  7543
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                45      22
+		Registers:             224     131
+		Scalar wires:          238       -
+		Expanded wires:         32       4
+		Vectored wires:        139       -
+		Always blocks:          40      19
+		Initial blocks:          4       4
+		Final blocks:            1       1
+		Cont. assignments:     129      62
+		Pseudo assignments:    155     118
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_PA_Cal_Sum:sv
+Loading snapshot worklib.tb_PA_Cal_Sum:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+Initial load memory contents from ./../../03_verif/lib/mem_init.hex
+o_sum = cf1c0000
+Dumping memory contents to ./../../03_verif/PACS/PACS_UNIT/mem_out.hex
+Simulation complete via $finish(1) at time 2790 NS + 0
+../PACS/PACS_UNIT/tb_PA_Cal_Sum.sv:81     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Dec 25, 2025 at 21:14:22 EST  (total: 00:00:01)

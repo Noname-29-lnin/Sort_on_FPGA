@@ -1,0 +1,66 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Dec 26, 2025 at 04:53:12 EST
+xrun
+	+xm64bit
+	-sv
+	-f ./../SSDS_UNIT/flist.f
+		./../../03_verif/SSDS_UNIT/tb_SS_detect_start.sv
+		./../../02_rtl/SS_MODULE/SS_detect_start.sv
+		./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+	-top tb_SS_detect_start
+	-access +rwc
+	-clean
+	-log ./../SSDS_UNIT/Xcelium/compile.log
+	+nctimescale+1ns/1ps
+	+ntb_random_seed=automatic
+	-allowredefinition
+	-v93
+
+   User defined plus("+") options:
+	+ntb_random_seed=automatic
+
+xrun: *W,OPDEPRREN: Command Line Option (+nctimescale+1ns/1ps) is deprecated. Use (+xmtimescale+1ns/1ps) instead.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ./../../03_verif/SSDS_UNIT/tb_SS_detect_start.sv
+	module worklib.tb_SS_detect_start:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/SS_detect_start.sv
+	module worklib.SS_detect_start:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+	module worklib.SS_detect_edge:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_SS_detect_start
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.SS_detect_edge:sv <0x21c25ec6>
+			streams:   4, words:   955
+		worklib.SS_detect_start:sv <0x1b5466da>
+			streams:   4, words:  1265
+		worklib.tb_SS_detect_start:sv <0x5629be9e>
+			streams:   8, words:  6223
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 4       3
+		Registers:              14      11
+		Scalar wires:           12       -
+		Always blocks:           5       3
+		Initial blocks:          3       3
+		Cont. assignments:       2       2
+		Pseudo assignments:      7       7
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_SS_detect_start:sv
+Loading snapshot worklib.tb_SS_detect_start:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+Simulation complete via $finish(1) at time 350 NS + 0
+../SSDS_UNIT/tb_SS_detect_start.sv:49     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Dec 26, 2025 at 04:53:14 EST  (total: 00:00:02)
