@@ -45,7 +45,7 @@ end
 
 always_ff @( posedge i_clk or negedge i_rst_n ) begin
     if(~i_rst_n) begin
-        w_num_elems_next       <= '0;
+        w_num_elems_next       <= '1;
     end else begin 
         w_num_elems_next       <= w_num_elems;
     end
@@ -57,7 +57,7 @@ always_ff @( posedge i_clk or negedge i_rst_n ) begin : proc_done
     if(~i_rst_n) begin
         o_done          <= '0;
     end else begin 
-        o_done          <= w_pre_done;
+        o_done          <= w_pre_done & ~w_start;
     end
 end
 assign o_en = w_enable;

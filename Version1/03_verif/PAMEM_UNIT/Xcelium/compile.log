@@ -1,5 +1,5 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s001: Started on Dec 26, 2025 at 10:28:09 EST
+TOOL:	xrun(64)	20.09-s001: Started on Dec 27, 2025 at 05:17:20 EST
 xrun
 	+xm64bit
 	-sv
@@ -8,12 +8,18 @@ xrun
 		./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv
 		./../../02_rtl/PA_mem/PA_mem.sv
 		./../../02_rtl/PA_mem/PAMEM_swap.sv
-		./../../02_rtl/PA_mem/Update_I.sv
-		./../../02_rtl/PA_mem/PAMEM_readdata.sv
+		./../../02_rtl/PA_mem/PAMEM_writedata.sv
+		./../../02_rtl/PA_mem/PASW_unit.sv
 		./../../02_rtl/SS_MODULE/SS_detect_edge.sv
 		./../../02_rtl/SS_MODULE/SS_detect_start.sv
+		./../../02_rtl/PA_mem/COMP_FPU/COMP_Exponent.sv
+		./../../02_rtl/PA_mem/COMP_FPU/COMP_FPU.sv
+		./../../02_rtl/PA_mem/COMP_FPU/COMP_Mantissa.sv
+		./../../02_rtl/PA_mem/COMP_FPU/COMP_Sign.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_4bit.sv
+		./../../02_rtl/PA_mem/PAMEM_readdata.sv
 		./../../02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv
-		./../../02_rtl/PA_mem/PAMEM_writedata.sv
+		./../../02_rtl/PA_mem/PAMEM_address.sv
 	-top tb_PA_mem
 	-access +rwc
 	-clean
@@ -40,11 +46,11 @@ file: ./../../02_rtl/PA_mem/PA_mem.sv
 file: ./../../02_rtl/PA_mem/PAMEM_swap.sv
 	module worklib.PAMEM_swap:sv
 		errors: 0, warnings: 0
-file: ./../../02_rtl/PA_mem/Update_I.sv
-	module worklib.Update_I:sv
+file: ./../../02_rtl/PA_mem/PAMEM_writedata.sv
+	module worklib.PAMEM_writedata:sv
 		errors: 0, warnings: 0
-file: ./../../02_rtl/PA_mem/PAMEM_readdata.sv
-	module worklib.PAMEM_readdata:sv
+file: ./../../02_rtl/PA_mem/PASW_unit.sv
+	module worklib.PASW_unit:sv
 		errors: 0, warnings: 0
 file: ./../../02_rtl/SS_MODULE/SS_detect_edge.sv
 	module worklib.SS_detect_edge:sv
@@ -52,11 +58,29 @@ file: ./../../02_rtl/SS_MODULE/SS_detect_edge.sv
 file: ./../../02_rtl/SS_MODULE/SS_detect_start.sv
 	module worklib.SS_detect_start:sv
 		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/COMP_FPU/COMP_Exponent.sv
+	module worklib.COMP_Exponent:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/COMP_FPU/COMP_FPU.sv
+	module worklib.COMP_FPU:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/COMP_FPU/COMP_Mantissa.sv
+	module worklib.COMP_Mantissa:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/COMP_FPU/COMP_Sign.sv
+	module worklib.COMP_Sign:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_4bit.sv
+	module worklib.COMP_4bit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/PAMEM_readdata.sv
+	module worklib.PAMEM_readdata:sv
+		errors: 0, warnings: 0
 file: ./../../02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv
 	module worklib.CNT_T_FF:sv
 		errors: 0, warnings: 0
-file: ./../../02_rtl/PA_mem/PAMEM_writedata.sv
-	module worklib.PAMEM_writedata:sv
+file: ./../../02_rtl/PA_mem/PAMEM_address.sv
+	module worklib.PAMEM_address:sv
 		errors: 0, warnings: 0
 	Elaborating the design hierarchy:
 		Caching library 'worklib' ....... Done
@@ -67,39 +91,54 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 	Generating native compiled code:
 		worklib.PAMEM_writedata:sv <0x7a4ad8c1>
 			streams:  16, words:  5014
-		worklib.PAMEM_swap:sv <0x4ecc5f40>
-			streams:  15, words:  4556
-		worklib.CNT_T_FF:sv <0x72f5ca14>
-			streams:   3, words:   921
-		worklib.PAMEM_readdata:sv <0x57545927>
-			streams:  20, words:  6087
+		worklib.COMP_Mantissa:sv <0x6f2a0e2b>
+			streams:  13, words:  5452
+		worklib.COMP_4bit:sv <0x7b7d3efa>
+			streams:   2, words:  1737
+		worklib.COMP_Exponent:sv <0x7b212436>
+			streams:   6, words:  2198
+		worklib.COMP_Sign:sv <0x225e3c63>
+			streams:   2, words:   421
+		worklib.COMP_FPU:sv <0x0a81736f>
+			streams:  18, words:  5568
+		worklib.PASW_unit:sv <0x13ba827c>
+			streams:  15, words:  5436
+		worklib.PAMEM_swap:sv <0x2ba6e0ce>
+			streams:  18, words:  4925
 		worklib.SS_detect_edge:sv <0x02d248f6>
 			streams:   4, words:   955
-		worklib.Update_I:sv <0x2e200112>
-			streams:  12, words:  3324
+		worklib.PAMEM_readdata:sv <0x57545927>
+			streams:  20, words:  6087
+		worklib.CNT_T_FF:sv <0x72f5ca14>
+			streams:   3, words:   921
 		worklib.SS_detect_edge:sv <0x21c25ec6>
 			streams:   4, words:   955
 		worklib.SS_detect_start:sv <0x5eb942d8>
 			streams:   4, words:  1265
-		worklib.PA_mem:sv <0x337bd304>
-			streams:  31, words:  8789
-		worklib.tb_PA_mem:sv <0x483d2e19>
-			streams:  25, words:  9976
+		worklib.PA_mem:sv <0x6d9d33b9>
+			streams:  31, words:  8590
+		worklib.tb_PA_mem:sv <0x263d303e>
+			streams:  25, words: 11636
+		worklib.PAMEM_address:sv <0x5d2c8862>
+			streams:  27, words: 10359
+		worklib.PAMEM_address:sv <0x49ad5b99>
+			streams:  27, words: 10277
 		worklib.tb_simple_dual_port_ram_single_clock:sv <0x72df4ff9>
 			streams:   8, words:  4070
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                 Instances  Unique
-		Modules:                24      10
-		Registers:             138      90
-		Scalar wires:           98       -
-		Vectored wires:         49       -
-		Always blocks:          57      30
+		Modules:                61      16
+		Registers:             283     144
+		Scalar wires:          332       -
+		Expanded wires:         64       4
+		Vectored wires:         54       -
+		Always blocks:         109      35
 		Initial blocks:          4       4
 		Final blocks:            1       1
-		Cont. assignments:      26      11
-		Pseudo assignments:     70      65
+		Cont. assignments:      68      23
+		Pseudo assignments:    221     115
 		Simulation timescale:  1ps
 	Writing initial simulation snapshot: worklib.tb_PA_mem:sv
 Loading snapshot worklib.tb_PA_mem:sv .................... Done
@@ -107,9 +146,10 @@ xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009
 xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
 xcelium> run
 Initial load memory contents from ./../../03_verif/lib/mem_init.hex
+o_pi_value =  530
 Dumping memory contents to ./../../03_verif/PAMEM_UNIT/mem_dump.hex
 Dumping memory contents to ./../../03_verif/PAMEM_UNIT/mem_dump.hex
-Simulation complete via $finish(1) at time 10210 NS + 0
-../PAMEM_UNIT/tb_PA_mem.sv:93     $finish;
+Simulation complete via $finish(1) at time 359730 NS + 0
+../PAMEM_UNIT/tb_PA_mem.sv:98     $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Dec 26, 2025 at 10:28:10 EST  (total: 00:00:01)
+TOOL:	xrun(64)	20.09-s001: Exiting on Dec 27, 2025 at 05:17:21 EST  (total: 00:00:01)

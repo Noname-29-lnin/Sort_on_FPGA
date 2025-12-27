@@ -1,0 +1,1 @@
+s1(27Dec2025:03:38:25):  xrun +xm64bit -sv -f ./../PAMEM_SWAP/flist.f -top tb_PAMEM_swap -access +rwc -clean -log ./../PAMEM_SWAP/Xcelium/compile.log +nctimescale+1ns/1ps +ntb_random_seed=automatic -allowredefinition -v93 

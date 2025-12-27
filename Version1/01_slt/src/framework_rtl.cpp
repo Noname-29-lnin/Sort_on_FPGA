@@ -14,22 +14,6 @@ void C_Framework_RTL::WriteData(std::vector<SIZE_ARR_T> &arr, int addr, bool is_
     is_valid = true;
 }
 
-// Status_e C_Framework_RTL::Check_SS(SIZE_ARR_T data_check, bool &is_Similar, bool &is_Ascending, bool &is_Descending){
-//     if(P_data_check != data_check){
-//         is_Similar      = false;
-//         is_Ascending    = true;
-//         is_Descending   = true;
-//     } else if (P_data_check > data_check){
-//         is_Similar      = true;
-//         is_Ascending    = true;
-//         is_Descending   = false;
-//     } else {
-//         is_Similar      = true;
-//         is_Ascending    = false;
-//         is_Descending   = true;
-//     }
-// }
-
 SIZE_TYPE_T C_Framework_RTL::P_Cal_Mean(std::vector<SIZE_ARR_T> &arr, int si, int ei){
     SIZE_TYPE_T t_sum = 0;
     for(int i =si; i <= ei; i++){
@@ -40,41 +24,39 @@ SIZE_TYPE_T C_Framework_RTL::P_Cal_Mean(std::vector<SIZE_ARR_T> &arr, int si, in
     return t_div;
 }
 
-void C_Framework_RTL::P_Partition(std::vector<SIZE_TYPE_T> &arr, int future_si, int si, int ei){
 
+int C_Framework_RTL::P_Partition(std::vector<SIZE_TYPE_T> &arr, int si, int ei){
     SIZE_TYPE_T mean_value = P_Cal_Mean(arr, si, ei);
+    std::cout << "Mean_value = " << mean_value << std::endl;
     // bool is_check;
-    // SIZE_ARR_T temp_partition = 0;
-    // SIZE_ARR_T temp_data = 0;
+    SIZE_ARR_T temp_partition = 0;
+    SIZE_ARR_T temp_data = 0;
+    int i  = si;
     int pi = si;
-    // while(!is_check){
-    //     temp_partition = ReadData(arr, pi, true, is_check);
-    // }
-    for(int i = si; i <= ei; i++){
+    while (i <= ei){
         // while(!is_check){
         //     temp_data = ReadData(arr, i, true, is_check);
         // }
+        // while(!is_check){
+        //     temp_partition = ReadData(arr, pi, true, is_check);
+        // }
+        temp_data = arr[i];
+        temp_partition = arr[pi];
         P_count_compare ++;
-        if(arr[i] <= mean_value){
-            std::swap(arr[i], arr[pi]);
-            P_count_swap++;
+        if(temp_data < mean_value){
             // while(!is_check){
             //     WriteData(arr, i, true , temp_partition, is_check);
             // }
             // while(!is_check){
             //     WriteData(arr, pi, true , temp_data, is_check);
             // }
+            arr[i] = temp_partition;
+            arr[pi] = temp_data;
             pi++;
-            // if(pi == future_si){
-            //     std::cout << "future_si = " << future_si << std::endl;
-            //     return;
-            //     std::cout << "Exit False" << future_si << std::endl;
-            // }
-            // while(!is_check){
-            //     temp_partition = ReadData(arr, pi, true, is_check);
-            // }
         }
+        i++;
     }
+    return pi - 1;
 }
 
 void C_Framework_RTL::P_SliptCoreSort(int N, int si, int ei, std::vector<int> &coresort_si, std::vector<int> &coresort_ei){
@@ -108,73 +90,26 @@ void C_Framework_RTL::P_SliptSubArr(int N, int size_arr, int si, int ei, std::ve
     int cur = si;
 
     for(int i = 0; i < num_core; ++i){
-
         part_si.push_back(cur);
         part_ei.push_back(size_arr);
-
         cur += base;
     }
 }
 
-
-void C_Framework_RTL::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, int M)
-{
-    int n = arr.size() - 1;
-    std::vector<int> part_si;
-    std::vector<int> part_ei;
-    // P_SliptSubArr(M+1, n, si, ei, part_si, part_ei);
-    // for(auto index_si : part_si){
-    //     std::cout <<" Part_si = " << index_si << " ";
-    // }
-    // std::cout << std::endl;
-    // for(auto index_ei : part_ei){
-    //     std::cout <<" Part_ei = " << index_ei << " ";
-    // }
-    // std::cout << std::endl;
-    part_si.push_back(si);
-    part_ei.push_back(ei);
-    part_si.push_back(4);
-    part_ei.push_back(ei);
-    part_si.push_back(si);
-    part_ei.push_back(15);
-    part_si.push_back(7);
-    part_ei.push_back(15);
-    part_si.push_back(2);
-    part_ei.push_back(15);
-    part_si.push_back(15);
-    part_ei.push_back(ei);
-    part_si.push_back(15);
-    part_ei.push_back(24);
-    part_si.push_back(18);
-    part_ei.push_back(ei);
-
-
-    // // sort by subarrays
-    std::vector<int> coresort_si;
-    std::vector<int> coresort_ei;
-    P_SliptCoreSort((M), si, ei, coresort_si, coresort_ei);
-    for(auto index_si : coresort_si){
-        std::cout <<" coresort_si = " << index_si << " ";
-    }
-    std::cout << std::endl;
-    for(auto index_ei : coresort_ei){
-        std::cout <<" coresort_ei = " << index_ei << " ";
-    }
-    std::cout << std::endl;
-
-    // partition
-    for (size_t i = 0; i < part_si.size(); ++i) {
-        std::cout << "Addr_si="<<part_si[i] <<" Addr_ei=" << part_ei[i] << " " << std::endl;
-        if (part_si[i] <= part_ei[i]) {
-            P_Partition(arr, part_si[i+1], part_si[i], part_ei[i]);
+void C_Framework_RTL::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, int M, int S_cnt){
+    if(S_cnt < (1 << (M-1))){
+        int bi = P_Partition(arr, si, ei);
+        std::cout << "PI_STANDARD = " << bi << std::endl;
+        S_cnt++;
+        P_Division(arr, si, bi, M, S_cnt);
+        if((si == 0) || (ei == static_cast<int>(arr.size()) - 1)) {
+            S_cnt = 1;
         }
-    }
-    for (size_t i = 0; i < coresort_si.size(); ++i) {
-        if (coresort_si[i] <= coresort_ei[i]) {
-            // P_QuickSort(arr, coresort_si[i], coresort_ei[i]);
-            // P_count_compare += C_Sort_Algor::Get_Count_Compare();
-            // P_count_swap    += C_Sort_Algor::Get_Count_Swap();
-        }
+        P_Division(arr, bi+1, ei, M, S_cnt);
+    } else { // core-sort
+        P_QuickSort(arr, si, ei);
+        P_count_compare += C_Sort_Algor::Get_Count_Compare();
+        P_count_swap    += C_Sort_Algor::Get_Count_Swap();
     }
 }
 
@@ -183,5 +118,6 @@ void C_Framework_RTL::F_Framework_Serial_RTL(std::vector<SIZE_ARR_T> &arr, int M
     int ei = arr.size() - 1;
     P_count_compare = 0;
     P_count_swap    = 0;
-    P_Division(arr, si, ei, M);
+    int cnt = 0;
+    P_Division(arr, si, ei, M, cnt);
 }

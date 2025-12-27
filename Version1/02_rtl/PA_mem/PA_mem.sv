@@ -55,39 +55,64 @@ SS_detect_start SSDS_UPDATE_PI (
     .i_done         (w_done_i),
     .o_w_start      (w_en_update_pi) 
 );
-
-Update_I #(
+// Update_I #(
+//     .SIZE_ADDR      (SIZE_ADDR)
+// ) UPDATE_READ_DATA_UNIT (
+//     .i_clk          (i_clk),
+//     .i_rst_n        (i_rst_n),
+//     .i_num_elems    (i_addr_ei),
+//     .i_start_val    (i_addr_si),
+//     .i_start        (i_start),
+//     .i_en           (w_PAMEM_WRITE_done),
+//     .o_en           (),
+//     .o_value_i      (i_value),
+//     .o_done         (w_done_i) 
+// );
+PAMEM_address #(
     .SIZE_ADDR      (SIZE_ADDR)
-) UPDATE_READ_DATA_UNIT (
+) PACS_I_VALUE_UNIT (
     .i_clk          (i_clk),
     .i_rst_n        (i_rst_n),
-    .i_num_elems    (i_addr_ei),
-    .i_start_val    (i_addr_si),
     .i_start        (i_start),
-    .i_en           (w_PAMEM_WRITE_done),
-    .o_en           (),
-    .o_value_i      (i_value),
+    .i_rd_ram       (w_PAMEM_WRITE_done),
+    .i_addr_si      (i_addr_si),
+    .i_addr_ei      (i_addr_ei),
+    .o_rd_ram       (w_PAMEM_READ_start),
+    .o_addr_ram     (i_value),
     .o_done         (w_done_i) 
 );
-Update_I #(
+// Update_I #(
+//     .SIZE_ADDR      (SIZE_ADDR)
+// ) UPDATE_POS_PARTITION_UNIT (
+//     .i_clk          (i_clk),
+//     .i_rst_n        (i_rst_n),
+//     .i_num_elems    (i_addr_ei),
+//     .i_start_val    (i_addr_si),
+//     .i_start        (i_start),
+//     .i_en           (w_PAMEM_WRITE_update_pi & w_en_update_pi),
+//     .o_en           (),
+//     .o_value_i      (pi_value),
+//     .o_done         (w_done_pi) 
+// );
+PAMEM_address #(
     .SIZE_ADDR      (SIZE_ADDR)
-) UPDATE_POS_PARTITION_UNIT (
+) PACS_PI_VALUE_UNIT (
     .i_clk          (i_clk),
     .i_rst_n        (i_rst_n),
-    .i_num_elems    (i_addr_ei),
-    .i_start_val    (i_addr_si),
     .i_start        (i_start),
-    .i_en           (w_en_update_pi & w_PAMEM_WRITE_update_pi),
-    .o_en           (),
-    .o_value_i      (pi_value),
+    .i_rd_ram       (w_PAMEM_WRITE_update_pi & w_en_update_pi),
+    .i_addr_si      (i_addr_si),
+    .i_addr_ei      (i_addr_ei),
+    .o_rd_ram       (),
+    .o_addr_ram     (pi_value),
     .o_done         (w_done_pi) 
 );
-always_ff @( posedge i_clk or negedge i_rst_n ) begin
-    if(~i_rst_n)
-        w_PAMEM_READ_start  <= '0;
-    else 
-        w_PAMEM_READ_start  <= i_start;
-end
+// always_ff @( posedge i_clk or negedge i_rst_n ) begin
+//     if(~i_rst_n)
+//         w_PAMEM_READ_start  <= '0;
+//     else 
+//         w_PAMEM_READ_start  <= i_start;
+// end
 PAMEM_readdata #(
     .SIZE_ADDR      (SIZE_ADDR),
     .SIZE_DATA      (SIZE_DATA) 
@@ -113,7 +138,6 @@ PAMEM_swap #(
     .i_rst_n        (i_rst_n),
     .i_start        (w_PAMEM_READ_done),
     .i_mean_value   (mean_value),
-    .i_data_i       (w_PAMEM_READ_data_a),
     .i_addr_a       (i_value),
     .i_addr_b       (pi_value),
     .i_data_a       (w_PAMEM_READ_data_a),

@@ -84,9 +84,14 @@ initial begin
     @(posedge i_clk);
     i_start = 1;
     i_addr_si   = 0;
-    i_addr_ei   = 2047;
-    i_mean_value    = 32'h447a0000;
-    #10000;
+    i_addr_ei   = 32'h4e3ebc20;
+    i_mean_value    = 0;
+    @(posedge i_clk);
+    i_start = 0;
+    
+    @(negedge o_done);
+    $display("o_pi_value = %d", o_pi_ram);
+    #100;
     $display("Dumping memory contents to %s", MEM_DUMP_FILE);
     $writememh(MEM_DUMP_FILE, RAM_UNIT.ram);
     #100;

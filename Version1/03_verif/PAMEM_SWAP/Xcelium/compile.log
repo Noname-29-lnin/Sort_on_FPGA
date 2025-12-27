@@ -1,0 +1,125 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Dec 27, 2025 at 03:38:24 EST
+xrun
+	+xm64bit
+	-sv
+	-f ./../PAMEM_SWAP/flist.f
+		./../../03_verif/PAMEM_SWAP/tb_PAMEM_swap.sv
+		./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv
+		./../../02_rtl/PA_mem/PAMEM_swap.sv
+		./../../02_rtl/PA_mem/PAMEM_writedata.sv
+		./../../02_rtl/PA_mem/PASW_unit.sv
+		./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+		./../../02_rtl/SS_MODULE/SS_detect_start.sv
+		./../../02_rtl/PA_mem/COMP_FPU/COMP_Exponent.sv
+		./../../02_rtl/PA_mem/COMP_FPU/COMP_FPU.sv
+		./../../02_rtl/PA_mem/COMP_FPU/COMP_Mantissa.sv
+		./../../02_rtl/PA_mem/COMP_FPU/COMP_Sign.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_4bit.sv
+	-top tb_PAMEM_swap
+	-access +rwc
+	-clean
+	-log ./../PAMEM_SWAP/Xcelium/compile.log
+	+nctimescale+1ns/1ps
+	+ntb_random_seed=automatic
+	-allowredefinition
+	-v93
+
+   User defined plus("+") options:
+	+ntb_random_seed=automatic
+
+xrun: *W,OPDEPRREN: Command Line Option (+nctimescale+1ns/1ps) is deprecated. Use (+xmtimescale+1ns/1ps) instead.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ./../../03_verif/PAMEM_SWAP/tb_PAMEM_swap.sv
+	module worklib.tb_PAMEM_swap:sv
+		errors: 0, warnings: 0
+file: ./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv
+	module worklib.tb_simple_dual_port_ram_single_clock:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/PAMEM_swap.sv
+	module worklib.PAMEM_swap:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/PAMEM_writedata.sv
+	module worklib.PAMEM_writedata:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/PASW_unit.sv
+	module worklib.PASW_unit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+	module worklib.SS_detect_edge:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/SS_detect_start.sv
+	module worklib.SS_detect_start:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/COMP_FPU/COMP_Exponent.sv
+	module worklib.COMP_Exponent:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/COMP_FPU/COMP_FPU.sv
+	module worklib.COMP_FPU:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/COMP_FPU/COMP_Mantissa.sv
+	module worklib.COMP_Mantissa:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_mem/COMP_FPU/COMP_Sign.sv
+	module worklib.COMP_Sign:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/COMP_4bit.sv
+	module worklib.COMP_4bit:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_PAMEM_swap
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.PAMEM_writedata:sv <0x526075c4>
+			streams:  16, words:  4981
+		worklib.COMP_Mantissa:sv <0x6f2a0e2b>
+			streams:  13, words:  5452
+		worklib.COMP_4bit:sv <0x7b7d3efa>
+			streams:   2, words:  1737
+		worklib.COMP_Exponent:sv <0x7b212436>
+			streams:   6, words:  2198
+		worklib.COMP_Sign:sv <0x225e3c63>
+			streams:   2, words:   421
+		worklib.COMP_FPU:sv <0x0a81736f>
+			streams:  18, words:  5568
+		worklib.PASW_unit:sv <0x13ba827c>
+			streams:  15, words:  5436
+		worklib.SS_detect_edge:sv <0x02d248f6>
+			streams:   4, words:   955
+		worklib.PAMEM_swap:sv <0x3c9163ef>
+			streams:  18, words:  4916
+		worklib.tb_PAMEM_swap:sv <0x20771c80>
+			streams:  23, words: 15983
+		worklib.tb_simple_dual_port_ram_single_clock:sv <0x09cdd645>
+			streams:   8, words:  4054
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                19      11
+		Registers:             151     106
+		Scalar wires:          102       -
+		Expanded wires:         64       4
+		Vectored wires:         30       -
+		Always blocks:          22      20
+		Initial blocks:          4       4
+		Final blocks:            1       1
+		Cont. assignments:      31      17
+		Pseudo assignments:     64      64
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_PAMEM_swap:sv
+Loading snapshot worklib.tb_PAMEM_swap:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+Initial load memory contents from ./../../03_verif/lib/mem_init.hex
+w_temp_pi = 13 (0d)
+Dumping memory contents to ./../../03_verif/PAMEM_SWAP/mem_dump.hex
+Dumping memory contents to ./../../03_verif/PAMEM_SWAP/mem_dump.hex
+Simulation complete via $finish(1) at time 9350 NS + 0
+../PAMEM_SWAP/tb_PAMEM_swap.sv:131     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Dec 27, 2025 at 03:38:25 EST  (total: 00:00:01)

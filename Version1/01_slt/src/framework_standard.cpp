@@ -9,12 +9,13 @@ SIZE_TYPE_T C_Func_Cal::F_Cal_Mean(std::vector<SIZE_ARR_T> &arr, int si, int ei)
         t_sum += arr[i];
     }
     SIZE_TYPE_T t_div = 1;
-    t_div = t_sum / (ei - si + 1);
+    t_div = t_sum / (SIZE_TYPE_T)(ei - si + 1);
     return t_div;
 }
 
-void C_Func_Cal::F_Reverse_Array(std::vector<SIZE_ARR_T>& arr, int si, int ei){
-    while(si < ei){ std::swap(arr[si++], arr[ei--]); }
+void C_Func_Cal::F_Reverse_Array(std::vector<SIZE_ARR_T>& arr, int si, int ei)
+{
+    std::reverse(arr.begin() + si, arr.begin() + ei + 1);
 }
 
 /*
@@ -124,22 +125,16 @@ Status_e C_Framework_Serial::P_SS_Check(std::vector<SIZE_ARR_T> &arr, int si, in
 int C_Framework_Serial::P_Partition(std::vector<SIZE_ARR_T>& arr, int si, int ei){
     int bi = si - 1;
     SIZE_TYPE_T mean = F_Cal_Mean(arr, si, ei);
-    // std::cout <<"Addr_si = " << si << " Addr_ei = " << ei << std::endl;
-    // std::cout << "Mean_Value_Standard = " << mean << std::endl;
     for(int i = si; i <= ei; i++){
-        P_count_compare++;
         if(arr[i] <= mean){
             ++bi;
             std::swap(arr[bi], arr[i]);
-            P_count_swap++;
         }
     }
     return bi;
 }
 
-void C_Framework_Serial::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, int M, int& S_cnt){
-    // std::cout << "----------------" << std::endl;
-    // std::cout << "STANDARDD: si = " << si << " ei = " << ei << std::endl;
+void C_Framework_Serial::P_Division_Quick(std::vector<SIZE_ARR_T>& arr, int si, int ei, int M, int& S_cnt){
     if(si < ei){
         P_status = P_SS_Check(arr, si, ei);
         if(P_status == SIMILAR) {
@@ -158,21 +153,14 @@ void C_Framework_Serial::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei
         else {
             if(S_cnt < (1 << (M-1))){
                 int bi = P_Partition(arr, si, ei);
-                // std::cout << "PI_STANDARD = " << bi << std::endl;
                 S_cnt++;
-                // std::cout << "STANDARDD: si = " << si << " bi = " << bi << std::endl;
-                P_Division(arr, si, bi, M, S_cnt);
+                P_Division_Quick(arr, si, bi, M, S_cnt);
                 if((si == 0) || (ei == static_cast<int>(arr.size()) - 1)) {
                     S_cnt = 1;
                 }
-                // std::cout << "STANDARDD: bi+1 = " << bi+1 << " ei = " << ei << std::endl;
-                P_Division(arr, bi+1, ei, M, S_cnt);
+                P_Division_Quick(arr, bi+1, ei, M, S_cnt);
             } else { // core-sort
-                // std::cout << "STANDARDD sort: si = " << si << " ei = " << ei << std::endl;
                 P_QuickSort(arr, si, ei);
-                // std::cout << "Get_Count_Compare = " << C_Sort_Algor::Get_Count_Compare() << std::endl;
-                // std::cout << "Get_Count_Swap = " << C_Sort_Algor::Get_Count_Swap() << std::endl;
-                // P_MergeSort(arr, si, ei);
                 P_count_compare += C_Sort_Algor::Get_Count_Compare();
                 P_count_swap    += C_Sort_Algor::Get_Count_Swap();
 
@@ -182,8 +170,6 @@ void C_Framework_Serial::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei
 }
 
 void C_Framework_Serial::P_Division_Merge(std::vector<SIZE_ARR_T>&arr, int si, int ei, int M, int &S_cnt){
-    // std::cout << "----------------" << std::endl;
-    // std::cout << "STANDARDD: si = " << si << " ei = " << ei << std::endl;
     if(si < ei){
         P_status = P_SS_Check(arr, si, ei);
         if(P_status == SIMILAR) {
@@ -202,21 +188,14 @@ void C_Framework_Serial::P_Division_Merge(std::vector<SIZE_ARR_T>&arr, int si, i
         else {
             if(S_cnt < (1 << (M-1))){
                 int bi = P_Partition(arr, si, ei);
-                // std::cout << "PI_STANDARD = " << bi << std::endl;
                 S_cnt++;
-                // std::cout << "STANDARDD: si = " << si << " bi = " << bi << std::endl;
-                P_Division(arr, si, bi, M, S_cnt);
+                P_Division_Merge(arr, si, bi, M, S_cnt);
                 if((si == 0) || (ei == static_cast<int>(arr.size()) - 1)) {
                     S_cnt = 1;
                 }
-                // std::cout << "STANDARDD: bi+1 = " << bi+1 << " ei = " << ei << std::endl;
-                P_Division(arr, bi+1, ei, M, S_cnt);
+                P_Division_Merge(arr, bi+1, ei, M, S_cnt);
             } else { // core-sort
-                // std::cout << "STANDARDD sort: si = " << si << " ei = " << ei << std::endl;
                 P_MergeSort(arr, si, ei);
-                // std::cout << "Get_Count_Compare = " << C_Sort_Algor::Get_Count_Compare() << std::endl;
-                // std::cout << "Get_Count_Swap = " << C_Sort_Algor::Get_Count_Swap() << std::endl;
-                // P_MergeSort(arr, si, ei);
                 P_count_compare += C_Sort_Algor::Get_Count_Compare();
                 P_count_swap    += C_Sort_Algor::Get_Count_Swap();
 
@@ -225,7 +204,7 @@ void C_Framework_Serial::P_Division_Merge(std::vector<SIZE_ARR_T>&arr, int si, i
     }
 }
 
-void C_Framework_Serial::F_Framework_Serial(std::vector<SIZE_ARR_T> &arr, int M){
+void C_Framework_Serial::F_Frameworkd_Serial_Quick(std::vector<SIZE_ARR_T> &arr, int M){
     int addr_si = 0;
     int addr_ei = arr.size() - 1;
     int cnt     = 0;
@@ -234,7 +213,7 @@ void C_Framework_Serial::F_Framework_Serial(std::vector<SIZE_ARR_T> &arr, int M)
     P_count_is_Sim  = 0;
     P_count_is_Asc  = 0;
     P_count_is_Desc = 0;
-    P_Division(arr, addr_si, addr_ei, M, cnt);
+    P_Division_Quick(arr, addr_si, addr_ei, M, cnt);
 }
 
 void C_Framework_Serial::F_Frameworkd_Serial_Merge(std::vector<SIZE_ARR_T> &arr, int M){

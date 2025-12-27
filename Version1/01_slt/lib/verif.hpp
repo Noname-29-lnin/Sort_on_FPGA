@@ -33,12 +33,12 @@ size_t V_CAL_MeasureTime(Func func) {
 
 template <typename SIZE_ARR_T>
 std::string CheckSortedString(const std::vector<SIZE_ARR_T>& arr){
-    // return std::is_sorted(arr.begin(), arr.end()) ? "PASS" : "FAIL";
-    for(size_t i = 1; i < arr.size(); ++i){
-        if(arr[i] + 0.000000001 < arr[i-1]) // cho phép chênh nhỏ
-            return "FAIL";
-    }
-    return "PASS";
+    return std::is_sorted(arr.begin(), arr.end()) ? "PASS" : "FAIL";
+    // for(size_t i = 1; i < arr.size(); ++i){
+    //     if(arr[i] + 0.000000001 < arr[i-1]) // cho phép chênh nhỏ
+    //         return "FAIL";
+    // }
+    // return "PASS";
 }
 
 template <typename SIZE_TYPE_T>
@@ -48,7 +48,6 @@ struct SortResult {
     SIZE_TYPE_T time_run;
     SIZE_TYPE_T count_swap;
     SIZE_TYPE_T count_compare;
-    SIZE_TYPE_T count_auxiliary_space;
 };
 
 template <typename SIZE_TYPE_T>
@@ -59,9 +58,9 @@ void Print_Table_Result(const std::vector<SortResult<SIZE_TYPE_T>>& results) {
               << std::setw(20) << "Time (ns)"
               << std::setw(20) << "Number Swap" 
               << std::setw(20) << "Number Compare"
-              << std::setw(20) << "Auxiliary Space (Bytes)"  << std::endl; 
+              << std::endl; 
 
-    std::cout << std::string(125, '-') << std::endl;
+    std::cout << std::string(110, '-') << std::endl;
 
     for (const auto& res : results) {
         std::cout << std::left << std::setw(30) << res.algorithm_name
@@ -69,9 +68,8 @@ void Print_Table_Result(const std::vector<SortResult<SIZE_TYPE_T>>& results) {
                   << std::setw(20) << res.time_run
                   << std::setw(20) << res.count_swap 
                   << std::setw(20) << res.count_compare 
-                  << std::setw(20) << res.count_auxiliary_space 
                   << std::endl;
-        std::cout << std::string(125, '-') << std::endl;
+        std::cout << std::string(110, '-') << std::endl;
     }
 }
 
@@ -83,17 +81,14 @@ inline float Convert_FP(const uint32_t data) {
 
 template <typename SIZE_ARR_T>
 void WriteDataToFile_Dec(const std::vector<SIZE_ARR_T>& vec, const std::string& filename) {
-    std::ofstream outFile(filename); // Mở file để ghi
-
+    std::ofstream outFile(filename);
     if (!outFile.is_open()) {
         std::cerr << "Error: Can't open file '" << filename << std::endl;
         return;
     }
-
     for (const auto& val : vec) {
-        outFile << val << "\n"; // Mỗi phần tử ghi trên một dòng
+        outFile << val << "\n";
     }
-
     outFile.close();
     std::cout << "Finish write file '" << filename << "'.\n";
 }
@@ -101,12 +96,10 @@ void WriteDataToFile_Dec(const std::vector<SIZE_ARR_T>& vec, const std::string& 
 template <typename SIZE_ARR_T>
 void WriteDataToFile_Hex(const std::vector<SIZE_ARR_T>& vec, const std::string& filename) {
     std::ofstream outFile(filename);
-
     if (!outFile.is_open()) {
         std::cerr << "Error: Can't open file '" << filename << "'\n";
         return;
     }
-
     for (const auto& val : vec) {
         std::ios oldState(nullptr);
         oldState.copyfmt(outFile);
@@ -123,7 +116,6 @@ void WriteDataToFile_Hex(const std::vector<SIZE_ARR_T>& vec, const std::string& 
                 << Convert_FP(static_cast<uint32_t>(val))
                 << "\n";
     }
-
     outFile.close();
     std::cout << "Finish write HEX file: '" << filename << "'\n";
 }
@@ -158,7 +150,6 @@ void ReadDataToFile_DEC(const std::string& filename, std::vector<SIZE_TYPE_T> &a
         std::cerr << "Cannot open file: " << filename << std::endl;
         return;
     }
-
     printf("Finished reading file: %s\n", filename.c_str());
 }
 
