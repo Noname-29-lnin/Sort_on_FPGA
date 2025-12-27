@@ -1,0 +1,61 @@
+\documentclass{my-article}
+\usepackage{my-coverpage}
+\usepackage{my-codespace}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+
+\NameUpperUniname{Vietnam National University Ho Chi Minh City}
+\NameUniname{Ho Chi Minh City University of Technology}
+\NameDeptname{Faculty of Electrical and Electronics Engineering}
+\NamePathlogo{./my-chapters/my-images/01_logobachkhoatoi.png}
+\NamePathBackground[width=\paperwidth,height=\paperheight]{./my-chapters/my-images/bia.jpg} 
+\NameGroup{}
+\NameClass{}
+\NameLesson[\Large]{PROJECT2 REPORT}
+\NameTitle[\Large]{Sorting base-on FPGA}
+\NameStudent{Nguyễn Đại Đồng}
+\NameIDStudent{2210780}
+\NameAdvisor{Nguyễn Trung Hiếu}
+\NamePlace{Ho Chi Minh}
+\NameTime{../../20..}
+
+
+\begin{document}
+
+\MycoverProject
+\newpage
+\fontsize{13}{14}\selectfont
+\pagestyle{fancy}
+\MycountPages{roman}
+\tableofcontents
+\listoffigures
+\listoftables
+\listoflistings
+\newpage
+\MychapterAbstract{
+	Đồ án thực hiện một bộ có thể cho phép phần cứng sắp xếp dữ liệu trên một mảng lớn (tầm GB) mà không cần sử dụng đến CPU, giúp giải quyết được vấn đề liên quan việc tổn hao trên bus khi sử dụng CPU giao tiếp với Memory External.
+}
+\newpage
+\MychapterAcknowledgement{
+	Xin cảm ơn thầy Nguyễn Trung Hiếu.
+}
+\newpage
+\fancyhead[R]{Advisor: {\fontencoding{T5}\selectfont Nguyễn Trung Hiếu}}
+\MycountPages{number}
+\include{./my-chapters/introduction.tex}
+\include{./my-chapters/theorical_basic.tex}
+\include{./my-chapters/SystemLevelTest.tex}
+\include{./my-chapters/RTL.tex}
+\include{./my-chapters/verification.tex}
+
+\newpage
+%\Myref{my-bib/ref}
+%\section*{References}%
+\addcontentsline{toc}{section}{References}%
+\bibliographystyle{ieeetr}%
+\bibliography{my-bib/ref}%
+\end{document}
+
+

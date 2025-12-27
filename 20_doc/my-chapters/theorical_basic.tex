@@ -1,0 +1,144 @@
+\section{Literature Review}
+
+Nghiên cứu này được xây dựng dựa trên nền tảng lý thuyết của framework sắp xếp dữ liệu đề xuất bởi Shahriar Shirvani Moghaddam và Kiaksar Shirvani Moghaddam trong công trình \textit{"A General Framework for Sorting Large Data Sets Using Independent Subarrays of Approximately Equal Length"}\cite{moghaddam2022general}. Khác với các phương pháp tiếp cận truyền thống thường tập trung vào việc tối ưu hóa một thuật toán cụ thể, framework này cung cấp một cơ chế tổng quát để chia nhỏ bài toán sắp xếp lớn thành các tác vụ độc lập, tạo tiền đề cho việc xử lý song song hiệu quả.
+
+Cơ chế hoạt động của framework được chia thành ba giai đoạn chính (phases), được thiết kế để khắc phục nhược điểm mất cân bằng tải thường thấy ở Quick-sort truyền thống:
+
+\begin{enumerate}[label=\textbf{Phase \arabic*.}, leftmargin=2cm]
+	\item Sorted/Similar Checker - SS Checker
+	
+	Trước khi thực hiện bất kỳ thao tác phân hoạch nào, framework thực hiện một bước kiểm tra trạng thái dữ liệu đầu vào. Khối \textit{SS Checker} có nhiệm vụ xác định xem mảng dữ liệu hiện tại có thuộc một trong các trường hợp đặc biệt sau hay không:
+	\begin{itemize}
+		\item Đã được sắp xếp hoàn toàn (Sorted).
+		\item Được sắp xếp theo thứ tự ngược (Reversely sorted).
+		\item Chứa các phần tử giống hệt nhau (Similar elements).
+	\end{itemize}
+	Việc phát hiện sớm các trường hợp này giúp hệ thống bỏ qua các bước tính toán dư thừa, từ đó giảm thiểu độ phức tạp thời gian trong các trường hợp tốt nhất (Best-case scenario).
+	
+	\item Mean-based Partitioning
+		
+	Đây là giai đoạn cốt lõi tạo nên tính ưu việt của giải thuật đối với thiết kế phần cứng. Thay vì chọn phần tử chốt (pivot) ngẫu nhiên như Quick-sort, framework tính toán giá trị trung bình (Mean value) của toàn bộ mảng dữ liệu.
+	\begin{itemize}
+		\item Dữ liệu được so sánh với giá trị Mean và chia thành hai mảng con: một mảng chứa các giá trị nhỏ hơn Mean và mảng còn lại chứa các giá trị lớn hơn hoặc bằng Mean.
+		\item Quá trình này được thực hiện đệ quy qua $M$ cấp độ (Levels), tạo ra $2^M$ mảng con.
+		\item \textbf{Đặc tính quan trọng:} Các tác giả đã chứng minh rằng việc sử dụng Mean làm pivot giúp tạo ra các mảng con có độ dài xấp xỉ bằng nhau (Approximately equal length) ngay cả với các phân phối dữ liệu bất đối xứng. Điều này đảm bảo tính cân bằng tải (Load balancing) tuyệt đối khi ánh xạ lên các phần tử xử lý song song.
+	\end{itemize}
+	
+	\item Core-Sort
+	
+	Sau khi đạt đến số lượng phân hoạch $M$ định trước, các mảng con độc lập (Independent Subarrays) sẽ được sắp xếp riêng biệt bằng một thuật toán lõi (Core-sort) như Quick-sort hoặc Merge-sort. 
+	
+	Do các mảng con đã được phân tách hoàn toàn về mặt giá trị (mọi phần tử ở mảng con $i$ đều nhỏ hơn mảng con $i+1$), quá trình này có thể thực hiện song song hoàn toàn trên các lõi xử lý phần cứng mà không cần cơ chế đồng bộ hóa hay trao đổi dữ liệu giữa các luồng (Inter-processor communication).
+	
+	Tổng hợp lại, framework này cung cấp một kiến trúc lý tưởng cho thiết kế \textit{Processing-In-Memory} (PIM) hướng tới mục tiêu CPU-less, vì nó loại bỏ sự phụ thuộc dữ liệu và cho phép các khối logic tính toán hoạt động định hình và cô lập.
+\end{enumerate}
+
+\subsection{Thực hiện lại Framework của bài báo}
+
+Trong bài báo nêu ra được cải thiện độ phức tạp khi sử dụng framework trong việc sử dụng thuật toán QuickSort và MergeSort như sau:
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{2.2}
+	\fontsize{11}{13}\selectfont
+	\caption{The time complexity of the conventional and proposed Quick and Merge sorts in the best, average, and worst cases.} 
+	\label{tab:complexity}
+	\hspace*{-1.5cm}%
+	\begin{tabular}{|>{\centering\arraybackslash}m{1.5cm}
+			|>{\centering\arraybackslash}m{2.5cm}
+			|>{\centering\arraybackslash}m{4.5cm}
+			|>{\centering\arraybackslash}m{4.5cm}
+			|>{\centering\arraybackslash}m{4.5cm}|}
+		
+		\hline
+		\textbf{} & \textbf{Method} & \textbf{Best-case} & \textbf{Average-case} & \textbf{Worst-case} \\
+		\hline
+		
+		% --- QUICK SORT SECTION ---
+%		\multirow{6}{*}{\textbf{Quick}} 
+		& Conventional & $O(N \log N)$ & $O(N \log N)$ & $O(N^2)$ \\ \cline{2-5}
+		
+		\textbf{Quick} & Proposed serial & $\begin{cases} O(2N), & \text{ord./sim.} \\ O(3N), & \text{rev. ord.} \end{cases}$ & $O(4M.N) + O(N \log(\frac{N}{2^M}))$ & $O(4M.N) + O((2^M - k)\frac{N}{2^M} \log(\frac{N}{2^M}) + k\frac{N^2}{2^{2M}})$ \\ \cline{2-5}       
+		
+		& Proposed parallel & $\begin{cases} O(\frac{2N}{2^M} + 2M), & \text{ord./sim.} \\ O(\frac{3N}{2^M} + 3M), & \text{rev. ord.} \end{cases}$ & $O(4M(\frac{N}{2^M} + 2^M - 1)) + O(\frac{N}{2^M} \log(\frac{N}{2^M}))$ & $O(4M(\frac{N}{2^M} + 2^M - 1)) + O(\frac{N^2}{2^{2M}})$ \\ \hline
+		
+		% --- MERGE SORT SECTION ---
+%		\multirow{6}{*}{\textbf{Merge}} 
+		& Conventional & $O(N \log N)$ & $O(N \log N)$ & $O(N \log N)$ \\ \cline{2-5}
+		
+		\textbf{Merge} & Proposed serial 
+		& $\begin{cases} O(2N), & \text{ord./sim.} \\ O(3N), & \text{rev. ord.} \end{cases}$ 
+		& $O(4M.N) + O(N \log(\frac{N}{2^M}))$ 
+		& $O(4M.N) + O(N \log(\frac{N}{2^M}))$ \\ \cline{2-5}
+		
+		& Proposed parallel 
+		& $\begin{cases} O(\frac{2N}{2^M} + 2M), & \text{ord./sim.} \\ O(\frac{3N}{2^M} + 3M), & \text{rev. ord.} \end{cases}$ 
+		& $O(4M(\frac{N}{2^M} + 2^M - 1)) + O(\frac{N}{2^M} \log(\frac{N}{2^M}))$ 
+		& $O(4M(\frac{N}{2^M} + 2^M - 1)) + O(\frac{N}{2^M} \log(\frac{N}{2^M}))$ \\
+		\hline
+	\end{tabular}
+\end{table}
+
+Và đây là đoạn code pseudo thực hiện:
+
+\lstinputlisting[
+basicstyle=\fontsize{10}{11}\selectfont\ttfamily,
+style=StylePseudo,
+language=Pseudo,
+caption={The Pseudo-Code of the Serial Realization of the Proposed Mean-Based Data Sorting Framework.},
+label=pseudo-code:Serial
+]{./my-chapters/my-codes/pseudo_serial.txt}
+
+Ta tiến hành thực hiện việc so các giải thuật trên với các phần tử số thực như sau:
+
+\begin{lstlisting}[style=StylePseudo, language=Pseudo]
+	-1344457441.558848 1837028809.6233559 ... 1967142726.7494054 421697126.41092634
+\end{lstlisting}
+
+\begin{lstlisting}[style=StyleResult, language=Result, basicstyle=\fontsize{5}{6}\selectfont\ttfamily, caption={Kết quả kiểm chứng khi chạy với $N = 2^{16}$.}]
+	Finished reading file: ./tools/unsorted.txt
+	Finish write file './Reports/COMPILE_REPORT/unsorted.txt'.
+	Size of array: 65536
+	Number subarry M = 4
+	Finish write file './Reports/COMPILE_REPORT/sorted.txt'.
+	Finish write file './Reports/COMPILE_REPORT/sorted_RTL.txt'.
+	
+	Sort algorithm                Check sorted   Time (ns)           Number Swap         Number Compare      Auxiliary Space (Bytes)
+	-----------------------------------------------------------------------------------------------------------------------------
+	Data Set                      FAIL           0                   0                   0                   0                   
+	-----------------------------------------------------------------------------------------------------------------------------
+	QuickSort                     PASS           4287727             1207637             574041              0                   
+	-----------------------------------------------------------------------------------------------------------------------------
+	MergeSort                     PASS           4108814             1207637             574041              0                   
+	-----------------------------------------------------------------------------------------------------------------------------
+	Framework_QuickSort           PASS           5341528             48326879            24038182            0                   
+	-----------------------------------------------------------------------------------------------------------------------------
+	Framework_Merge               PASS           4993397             142075339           70640897            0                   
+	-----------------------------------------------------------------------------------------------------------------------------
+	
+\end{lstlisting}
+
+\begin{lstlisting}[style=StyleResult, language=Result, basicstyle=\fontsize{9}{10}\selectfont\ttfamily]
+	    KB
+	85.27^                                                                    :   
+	|                                                             @: #:::::: 
+	|                                                             @::#:::::: 
+	|                                                          @@:@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	|                                                          @ :@::#::::::@
+	0 +----------------------------------------------------------------------->Mi
+	0                                                                   2.751
+\end{lstlisting}

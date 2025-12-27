@@ -1,0 +1,42 @@
+arr: Array of data;
+    arr.Leangth: Length of the array;
+    M: Number of divisions;
+    cnt: Global counter for divisions;
+    si: Starting index;
+    ei: Ending index;
+    iCnt: Global counter to store the index in indexes;
+    subarray: 0 - unsorted, 1 - sorted, 
+              2 - reversely sorted, 3 - similar;
+    bi: Boundary index;
+    Function Sort(arr, M):
+        cnt <- 0;
+        si <- 0;
+        Division(arr, 0, arr.Length - 1, M);
+    EndFunction
+EndFunction
+Function Division(arr, si, ei, M):
+    bool SS_check = SS_check(arr, si, ei);
+    case(SS_check):
+        1, 3: return;
+        2: Reverse(arr, si, ei);
+        0: 
+            if(cnt < (1<<M) - 1):
+                bi <- Partition(arr, si, ei);
+                cnt <- cnt + 1;
+                Division(arr, si, bi - 1, M);
+                if(si = 0 or ei = arr.Length - 1):
+                    iCnt <- 1;
+                Division(arr, bi + 1, ei, M);
+            else:
+                Sort form si -> ei using Core-Sort;
+    return;
+EndFunction
+Function Partition(arr, si, ei):
+    pivot <- mean(arr, si, ei)
+    bi <- si - 1;
+    for i = si to ei:
+        if arr[j] <= pivot:
+            bi <- bi + 1;
+            Swap(arr[bi], arr[i]);
+    return bi;
+EndFunction

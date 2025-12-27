@@ -1,0 +1,61 @@
+\section{Introduction}
+
+\subsection{Đặt vấn đề}
+
+Trong kỷ nguyên số hóa hiện nay, sự bùng nổ của Dữ liệu lớn (Big Data), Internet of Think (IoT) và Trí tuệ nhân tạo (AI) đã dẫn đến sự gia tăng theo cấp số nhân về khối lượng dữ liệu cần lưu trữ và xử lý. Sắp xếp dữ liệu (Data Sorting) không chỉ đơn thuần là việc tổ chức lại thông tin mà còn là một kernel tính toán nền tảng (fundamental computational kernel) quyết định hiệu năng của toàn bộ hệ thống. Sắp xếp đóng vai trò tiền đề thiết yếu cho các thuật toán tìm kiếm (như Binary Search), nén dữ liệu, loại bỏ trùng lặp và tối ưu hóa truy vấn cơ sở dữ liệu.
+
+Các lĩnh vực yêu cầu lưu trữ và xử lý lượng dữ liệu khổng lồ bao gồm:
+\begin{itemize}[label=-]
+	\item Hệ quản trị cơ sở dữ liệu (Database Management Systems): Sắp xếp là bước bắt buộc để tạo chỉ mục (indexing), giúp tăng tốc độ truy vấn SQL và tối ưu hóa các phép toán JOIN.
+	
+	\item Trí tuệ nhân tạo và Học máy (AI/ML): Các thuật toán như k-Nearest Neighbors (k-NN), lọc trung vị (median filtering) trong xử lý ảnh, và tiền xử lý dữ liệu huấn luyện đều phụ thuộc nặng nề vào tốc độ sắp xếp.
+	
+	\item Viễn thông và Mạng (5G/6G \& IoT): Trong các hệ thống MIMO quy mô lớn hoặc định tuyến gói tin, việc sắp xếp dữ liệu tín hiệu và ưu tiên luồng dữ liệu (traffic shaping) đòi hỏi độ trễ cực thấp.
+	
+	\item Tin sinh học (Bioinformatics): Sắp xếp các chuỗi gen và protein để tìm kiếm mẫu tương đồng trong các cơ sở dữ liệu sinh học khổng lồ.
+\end{itemize}
+
+\subsection{Thách thức trong thiết kế phần cứng}
+
+\subsubsection{Thách thức của Kiến trúc Máy tính Truyền thống và Hạn chế của Thuật toán Hiện hành}
+
+\begin{enumerate}[label=\alph*.]
+	\item Giới hạn của Kiến trúc Von Neumann và Bức tường Bộ nhớ
+	
+	Trong bối cảnh bùng nổ của các ứng dụng thâm dụng dữ liệu (Data-intensive applications) như Big Data và IoT, kiến trúc máy tính truyền thống Von Neumann đang đối mặt với những giới hạn vật lý nghiêm trọng. Sự chênh lệch ngày càng lớn giữa tốc độ xử lý của CPU và tốc độ truy xuất bộ nhớ đã tạo ra hiện tượng \textit{"Bức tường bộ nhớ"} (Memory Wall). Việc di chuyển khối lượng lớn dữ liệu chưa được sắp xếp giữa bộ nhớ ngoại vi (Off-chip DRAM) và bộ vi xử lý trung tâm (Host CPU) thông qua Bus hệ thống dẫn đến hai vấn đề cốt lõi trong thiết kế vi mạch:
+	\begin{itemize}
+		\item \textbf{Độ trễ truy xuất (Access Latency):} Thời gian chờ dữ liệu từ DRAM làm giảm hiệu suất thực thi của pipeline xử lý.
+		\item \textbf{Tiêu thụ năng lượng động (Dynamic Power Consumption):} Việc chuyển đổi trạng thái liên tục trên Bus dữ liệu gây hao phí năng lượng đáng kể, đi ngược lại các tiêu chuẩn về thiết kế công suất thấp (Low-power design).
+	\end{itemize}
+	
+	\item Hạn chế của Thuật toán Sắp xếp Kinh điển trong Triển khai Phần cứng
+	
+	Mặc dù các thuật toán như Merge-sort và Quick-sort hoạt động hiệu quả trên phần mềm, việc ánh xạ chúng lên kiến trúc phần cứng song song (Parallel Hardware Architecture) gặp nhiều trở ngại:
+	\begin{itemize}
+		\item \textbf{Merge-sort:} Tồn tại tính chất tuần tự cao trong giai đoạn hợp nhất (Merge phase), tạo ra các phụ thuộc dữ liệu (Data dependency) khiến việc thiết kế các bộ xử lý song song hoàn toàn trở nên bất khả thi mà không tiêu tốn tài nguyên bộ nhớ đệm (Buffer memory) lớn.
+		\item \textbf{Quick-sort:} Việc lựa chọn phần tử chốt (Pivot) ngẫu nhiên thường dẫn đến việc phân hoạch không đồng đều, tạo ra các mảng con mất cân bằng (Unbalanced subarrays). Trong phần cứng, điều này gây ra hiện tượng \textit{mất cân bằng tải} (Load Imbalance) giữa các đơn vị xử lý (Processing Units - PUs), khiến một số lõi hoàn thành sớm và rơi vào trạng thái rỗi (Idle state), làm giảm hiệu suất sử dụng tài nguyên (Resource Utilization).
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Đề xuất Giải pháp Kiến trúc Processing-In-Memory (PIM)}
+
+\begin{enumerate}[label=\alph*.]
+	\item Chuyển dịch sang Xử lý Tại Bộ nhớ (Near-Memory Processing)
+	
+	Để giải quyết nút thắt cổ chai về băng thông và độ trễ, đồ án đề xuất thiết kế một lõi IP (Intellectual Property Core) hoạt động theo cơ chế \textit{Processing-In-Memory} (PIM). Kiến trúc này cho phép thực thi tác vụ sắp xếp ngay tại miền bộ nhớ, giảm tải (Offload) hoàn toàn cho Host CPU và giảm thiểu lưu lượng giao tiếp trên Bus (Bus Traffic Reduction).
+	
+	\item Kỹ thuật Phân hoạch Dựa trên Giá trị Trung bình (Mean-based Partitioning)
+	
+	Thiết kế phần cứng đề xuất áp dụng phương pháp phân hoạch dữ liệu dựa trên giá trị trung bình để chia tập dữ liệu lớn thành các mảng con độc lập có kích thước xấp xỉ bằng nhau (Independent subarrays of approximately equal length). Phương pháp này mang lại các ưu điểm vượt trội cho thiết kế IC:
+	\begin{itemize}
+		\item \textbf{Cân bằng tải (Load Balancing):} Đảm bảo khối lượng tính toán được phân phối đều giữa các lõi xử lý song song, tối đa hóa thông lượng (Throughput).
+		\item \textbf{Kiến trúc Tự chủ (CPU-less Architecture):} Các mảng con độc lập cho phép các khối phần cứng hoạt động song song mà không cần cơ chế đồng bộ hóa phức tạp hay sự điều phối từ CPU.
+		\item \textbf{Tối ưu hóa Năng lượng (Energy Efficiency):} Việc thực hiện sắp xếp tại chỗ (In-place sorting) và loại bỏ các thao tác I/O dư thừa giúp cải thiện đáng kể chỉ số hiệu năng trên mỗi watt (Performance-per-Watt).
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Mục tiêu của báo cáo}
+
+Mục tiêu của đồ án là thiết kế một kiến trúc \textbf{Processing-In-Memory (PIM)} đóng vai trò như một bộ tăng tốc phần cứng (Hardware Accelerator), cho phép sắp xếp các tập dữ liệu kích thước lớn lưu trữ tại bộ nhớ ngoài (Off-chip Memory/DRAM) mà giảm thiểu tối đa sự phụ thuộc vào vi xử lý trung tâm (Host CPU).
+
+Khối thiết kế này ứng dụng kỹ thuật phân hoạch dữ liệu thành các mảng con độc lập (Independent Subarrays) và thực hiện sắp xếp tại chỗ (In-place). Cơ chế này giúp loại bỏ nhu cầu di chuyển dữ liệu liên tục qua Bus hệ thống, từ đó giải quyết triệt để vấn đề nút thắt băng thông (Memory Wall) và tiêu hao năng lượng do truyền tải dữ liệu. Bằng cách giảm tải (offload) tác vụ sắp xếp khỏi CPU, thiết kế giúp tối ưu hóa hiệu năng tổng thể và hiệu quả năng lượng cho các ứng dụng xử lý dữ liệu lớn (Big Data applications).
