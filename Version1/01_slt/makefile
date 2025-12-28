@@ -38,6 +38,7 @@ COMPILE_DIR    	:= $(S_REPORT_FILE)/COMPILE_REPORT
 TARGET         := $(MAIN_TEST)
 CXX            := g++
 CXXFLAGS       := -Wall -O2 -std=c++17
+TESTFLAGS      := -Wall -O3 -std=c++17 -march=native -DNDEBUG
 LDFLAGS        := -pthread
 
 MEM_LEAK       := valgrind
@@ -122,11 +123,11 @@ SRC_OBJ  := $(addprefix $(S_BUILD_FILE)/, $(SRC_ONLY:.cpp=.o))
 # ===========================
 test: $(TEST_BIN)
 	@echo "=== RUN TEST: $(S_NAME_TEST) ==="
-	./$(TEST_BIN) | tee $(TEST_LOG)
+	$(TEST_BIN) | tee $(TEST_LOG)
 
 $(TEST_BIN): $(SRC_OBJ) $(TEST_OBJ)
 	@echo "=== LINK TEST ==="
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
+	$(CXX) $(TESTFLAGS) $(LDFLAGS) $^ -o $@
 
 # ===========================
 # Compile test object
