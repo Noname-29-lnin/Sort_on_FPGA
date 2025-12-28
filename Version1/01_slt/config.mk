@@ -5,5 +5,5 @@ REPORT_DIR=Reports
 VALUE_SERIAL=14
 VALUE_PARALLEL=2
 ANALYSIS_NAME=TEST_NORMAL_14
-NAME_TEST=Division
-DIR_TEST=./example/Iteration_Test
+NAME_TEST=random_value
+DIR_TEST=./example/Random_value
