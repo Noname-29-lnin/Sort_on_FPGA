@@ -57,11 +57,13 @@ void C_Framework_RTL::P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, i
     }
 }
 
-status_rtl_e C_Framework_RTL::P_SS_Check(std::vector<SIZE_ARR_T> &arr, int si, int ei){
+status_rtl_e C_Framework_RTL::P_SS_Check(std::vector<SIZE_ARR_T> &arr, int si, int ei, SIZE_TYPE_T &mean){
     bool is_Similar     = true;
     bool is_Acsending   = true;
     bool is_Decsending  = true;
+    SIZE_TYPE_T temp_sum = 0;
     for(int i = si + 1; i <= ei; ++i){
+        temp_sum += arr[i - 1];
         if(arr[i] != arr[i - 1]){
             is_Similar      = false;
         }
@@ -72,6 +74,8 @@ status_rtl_e C_Framework_RTL::P_SS_Check(std::vector<SIZE_ARR_T> &arr, int si, i
             is_Decsending   = false;
         }
     }
+    temp_sum += arr[ei];
+    mean = temp_sum / (SIZE_TYPE_T)(ei - si + 1);
     if(is_Similar){
         return RTL_SIMILAR;
     }
@@ -104,6 +108,7 @@ void C_Framework_RTL::P_Division_Iterative(std::vector<SIZE_ARR_T>& arr, int M) 
         stack_registers.push_back({0, static_cast<IndexType>(arr.size()) - 1, 0});
     }
     while (!stack_registers.empty()) {
+        SIZE_TYPE_T mean_val = 0;
         PartitionTask task = stack_registers.back();
         stack_registers.pop_back();
         IndexType si = task.si;
@@ -111,30 +116,30 @@ void C_Framework_RTL::P_Division_Iterative(std::vector<SIZE_ARR_T>& arr, int M) 
         int current_level = task.level;
         if (si >= ei) continue;
         // --- CHECKER LOGIC ---
-        // RTL_state = P_SS_Check(arr, si, ei);
-        // if (RTL_state == RTL_SIMILAR) {
-        //     P_count_is_Sim++;
-        //     continue; 
-        // }
-        // else if (RTL_state == RTL_ACSENDING) {
-        //     P_count_is_Asc++;
-        //     continue;
-        // }
-        // else if (RTL_state == RTL_DESCENDING) {
-        //     P_count_is_Desc++;
-        //     std::reverse(arr.begin() + si, arr.begin() + ei + 1);
-        //     continue;
-        // }
-
-        if (current_level < M) {
-            SIZE_TYPE_T mean_val = P_Cal_Mean(arr, si, ei);
-            IndexType bi = P_Partition_Iterative(arr, si, ei, mean_val);
-            stack_registers.push_back({bi + 1, ei, current_level + 1});
-            stack_registers.push_back({si, bi, current_level + 1});
+        RTL_state = P_SS_Check(arr, si, ei, mean_val);
+        if (RTL_state == RTL_SIMILAR) {
+            P_count_is_Sim++;
+            continue; 
+        }
+        else if (RTL_state == RTL_ACSENDING) {
+            P_count_is_Asc++;
+            continue;
+        }
+        else if (RTL_state == RTL_DESCENDING) {
+            P_count_is_Desc++;
+            std::reverse(arr.begin() + si, arr.begin() + ei + 1);
+            continue;
         } else {
-            F_QuickSort(arr, si, ei);
-            P_count_compare += C_Sort_Algor::Get_Count_Compare();
-            P_count_swap    += C_Sort_Algor::Get_Count_Swap();
+            if (current_level < M) {
+                // SIZE_TYPE_T mean_val = P_Cal_Mean(arr, si, ei);
+                IndexType bi = P_Partition_Iterative(arr, si, ei, mean_val);
+                stack_registers.push_back({bi + 1, ei, current_level + 1});
+                stack_registers.push_back({si, bi, current_level + 1});
+            } else {
+                F_QuickSort(arr, si, ei);
+                P_count_compare += C_Sort_Algor::Get_Count_Compare();
+                P_count_swap    += C_Sort_Algor::Get_Count_Swap();
+            }
         }
     }
 }
@@ -144,6 +149,9 @@ void C_Framework_RTL::F_Framework_Serial_RTL(std::vector<SIZE_ARR_T> &arr, int M
     // int ei = arr.size() - 1;
     P_count_compare = 0;
     P_count_swap    = 0;
+    P_count_is_Sim  = 0;
+    P_count_is_Asc  = 0;
+    P_count_is_Desc = 0;
     // int cnt = 0;
     // P_Division(arr, si, ei, M, cnt);
     P_Division_Iterative(arr, M);

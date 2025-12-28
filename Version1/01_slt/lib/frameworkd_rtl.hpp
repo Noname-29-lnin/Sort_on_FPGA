@@ -48,13 +48,16 @@ class C_Framework_RTL : public C_Sort_Algor{
         void P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, int M, int S_cnt);
         IndexType P_Partition_Iterative(std::vector<SIZE_ARR_T>& arr, IndexType si, IndexType ei, SIZE_TYPE_T mean_value);
         void P_Division_Iterative(std::vector<SIZE_ARR_T>& arr, int M);
-        status_rtl_e P_SS_Check(std::vector<SIZE_ARR_T> &arr, int si, int ei);
+        status_rtl_e P_SS_Check(std::vector<SIZE_ARR_T> &arr, int si, int ei, SIZE_TYPE_T &mean);
     public:
         void F_Framework_Serial_RTL(
             std::vector<SIZE_ARR_T> &arr, int M
         );
         size_t Get_Count_Compare() { return P_count_compare; }
         size_t Get_Count_Swap() { return P_count_swap; }
+        size_t Get_Count_Similar() { return P_count_is_Sim; }
+        size_t Get_Count_Ascending() { return P_count_is_Asc; }
+        size_t Get_Count_Descending() { return P_count_is_Desc; }
 };
 
 #endif
