@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.10)  27 DEC 2025 11:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.10)  28 DEC 2025 15:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1612,7 +1612,7 @@ File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 
 ] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-runsystem(latexminted cleantemp  --timestamp 20251227113904 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20251228150226 FAD58DE7366495DB465
 0CFEFAC2FCD61)...disabled (restricted).
 
 (main.aux (my-chapters/introduction.aux) (my-chapters/theorical_basic.aux)
@@ -1626,10 +1626,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: F191987377F86F9BFEE2301ECA07B129;2924.
  ) 
 Here is how much of TeX's memory you used:
- 33151 strings out of 468134
- 645447 string characters out of 5430740
- 1796362 words of memory out of 5000000
- 61024 multiletter control sequences out of 15000+600000
+ 33158 strings out of 468134
+ 645578 string characters out of 5430740
+ 1808357 words of memory out of 5000000
+ 61026 multiletter control sequences out of 15000+600000
  666089 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,20n,101p,1065b,2191s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1658,9 +1658,9 @@ ype1/vntex/vnr/vnti12.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/vntex/vnr/vntt10.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/vntex/vnr/vntt8.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/vntex/vnr/vntt9.pfb>
-Output written on main.pdf (17 pages, 347792 bytes).
+Output written on main.pdf (17 pages, 348697 bytes).
 PDF statistics:
- 411 PDF objects out of 1000 (max. 8388607)
- 127 named destinations out of 1000 (max. 500000)
+ 416 PDF objects out of 1000 (max. 8388607)
+ 132 named destinations out of 1000 (max. 500000)
  135 words of extra memory for PDF output out of 10000 (max. 10000000)
 

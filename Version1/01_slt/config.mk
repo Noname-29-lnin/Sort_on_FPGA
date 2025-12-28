@@ -5,5 +5,5 @@ REPORT_DIR=Reports
 VALUE_SERIAL=5
 VALUE_PARALLEL=2
 ANALYSIS_NAME=test_v3
-NAME_TEST=slipt_coresort
-DIR_TEST=./example/Slipt_CoreSort
+NAME_TEST=cal_mean
+DIR_TEST=./example/Cal_mean

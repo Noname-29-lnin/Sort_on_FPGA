@@ -52,16 +52,14 @@ PACD_divisor #(
     .o_done         (w_BFP16_DIV_done) 
 );
 
-BFP16_div #(
-    .SIZE_DATA      (SIZE_DATA)
-) BFP16_DIV_UNIT (
-    .i_clk          (i_clk),
-    .i_rst_n        (i_rst_n),
-    .i_valid        (),
-    .i_data_a       (w_sum),
-    .i_data_b       (w_divisor),
-    .o_bfu_div      (o_mean_value),
-    .o_valid        (o_done) 
+FP32_div FPU32_DIV_UNIT (
+    .i_clk              (i_clk),
+    .i_rst_n            (i_rst_n),
+    .i_start            (w_PACS_done),
+    .a_value_i          (w_sum),
+    .b_value_i          (w_divisor),
+	.z_value_o          (o_mean_value),
+    .o_done             (o_done) 
 );
 
 endmodule

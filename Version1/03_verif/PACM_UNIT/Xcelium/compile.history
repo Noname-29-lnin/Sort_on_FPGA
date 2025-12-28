@@ -1,0 +1,1 @@
+s1(28Dec2025:04:05:07):  xrun +xm64bit -sv -f ./../PACM_UNIT/flist.f -top tb_PA_Cal_Mean -access +rwc -clean -log ./../PACM_UNIT/Xcelium/compile.log +nctimescale+1ns/1ps +ntb_random_seed=automatic -allowredefinition -v93 
