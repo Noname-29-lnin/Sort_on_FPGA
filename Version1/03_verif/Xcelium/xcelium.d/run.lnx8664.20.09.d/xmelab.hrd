@@ -3,7 +3,7 @@
 // Do not modify this file
 //
 
-tb_PA_Cal_Mean
+tb_PA_mem
 -ACCESS
 +rwc
 -timescale

@@ -1,0 +1,235 @@
+--------------------------------------------------------------------------------
+Command:            ./main 14 2
+Massif arguments:   --stacks=yes --massif-out-file=Reports/ANALYSIS_DIR/checkmemory/TEST_STACK_14.out
+ms_print arguments: Reports/ANALYSIS_DIR/checkmemory/TEST_STACK_14.out
+--------------------------------------------------------------------------------
+
+
+    MB
+2.083^                                                                    :   
+     |                                           ##::::@@::::@::::::::::::::::
+     |                                           # ::: @ : ::@: ::::: : ::::::
+     |                                           # ::: @ : ::@: ::::: : ::::::
+     |                                           # ::: @ : ::@: ::::: : ::::::
+     |        @@                                 # ::: @ : ::@: ::::: : ::::::
+     |        @                                  # ::: @ : ::@: ::::: : ::::::
+     |        @                                  # ::: @ : ::@: ::::: : ::::::
+     |        @                                  # ::: @ : ::@: ::::: : ::::::
+     |        @                                  # ::: @ : ::@: ::::: : ::::::
+     |        @ :::::::::@:::::::::::::::@@:::::@# ::: @ : ::@: ::::: : ::::::
+     |        @ ::: :::: @: :: : :::: :: @ : :: @# ::: @ : ::@: ::::: : ::::::
+     |        @ ::: :::: @: :: : :::: :: @ : :: @# ::: @ : ::@: ::::: : ::::::
+     |        @ ::: :::: @: :: : :::: :: @ : :: @# ::: @ : ::@: ::::: : ::::::
+     |        @ ::: :::: @: :: : :::: :: @ : :: @# ::: @ : ::@: ::::: : ::::::
+     |    ::::@ ::: :::: @: :: : :::: :: @ : :: @# ::: @ : ::@: ::::: : ::::::
+     |    :: :@ ::: :::: @: :: : :::: :: @ : :: @# ::: @ : ::@: ::::: : ::::::
+     |   ::: :@ ::: :::: @: :: : :::: :: @ : :: @# ::: @ : ::@: ::::: : ::::::
+     |   ::: :@ ::: :::: @: :: : :::: :: @ : :: @# ::: @ : ::@: ::::: : ::::::
+     |  :::: :@ ::: :::: @: :: : :::: :: @ : :: @# ::: @ : ::@: ::::: : ::::::
+   0 +----------------------------------------------------------------------->Gi
+     0                                                                   2.411
+
+Number of snapshots: 52
+ Detailed snapshots: [6, 14, 25, 29, 30 (peak), 34, 38]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1     74,642,465          214,504          212,518            74        1,912
+  2    133,079,620          345,576          343,590            74        1,912
+  3    172,037,042          607,656          605,734            74        1,848
+  4    213,313,994          607,432          605,734            74        1,624
+  5    265,355,044          607,224          605,734            74        1,416
+  6    302,001,855        1,655,664        1,654,253            67        1,344
+99.91% (1,654,253B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->95.00% (1,572,864B) 0x10B2D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+| ->95.00% (1,572,864B) 0x10D8BA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+|   ->95.00% (1,572,864B) 0x10A836: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+|     
+->04.39% (72,704B) 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->04.39% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->04.39% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->04.39% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->04.39% (72,704B) 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->04.39% (72,704B) 0x2: ???
+|           ->04.39% (72,704B) 0x1FFF0003A6: ???
+|             ->04.39% (72,704B) 0x1FFF0003AD: ???
+|               ->04.39% (72,704B) 0x1FFF0003B0: ???
+|                 
+->00.52% (8,685B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  7    367,937,569        1,131,576        1,130,022            74        1,480
+  8    406,507,381        1,131,744        1,130,022            74        1,648
+  9    462,219,546        1,131,696        1,130,022            74        1,600
+ 10    509,361,092        1,131,296        1,129,965            59        1,272
+ 11    552,217,020        1,131,944        1,130,022            74        1,848
+ 12    605,733,425        1,134,696        1,131,006            66        3,624
+ 13    646,392,597        1,135,216        1,131,006            66        4,144
+ 14    700,604,732        1,135,224        1,131,006            66        4,152
+99.63% (1,131,006B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->92.37% (1,048,576B) 0x10B2D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+| ->92.37% (1,048,576B) 0x10D8BA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+|   ->92.37% (1,048,576B) 0x10A836: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+|     
+->06.40% (72,704B) 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->06.40% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->06.40% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->06.40% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->06.40% (72,704B) 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->06.40% (72,704B) 0x2: ???
+|           ->06.40% (72,704B) 0x1FFF0003A6: ???
+|             ->06.40% (72,704B) 0x1FFF0003AD: ???
+|               ->06.40% (72,704B) 0x1FFF0003B0: ???
+|                 
+->00.86% (9,726B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 15    748,040,257        1,135,248        1,131,006            66        4,176
+ 16    809,029,204        1,135,224        1,131,006            66        4,152
+ 17    849,688,346        1,135,144        1,131,006            66        4,072
+ 18    916,099,004        1,135,304        1,131,006            66        4,232
+ 19    977,090,304        1,132,848        1,131,006            66        1,776
+ 20  1,013,685,161        1,135,144        1,131,006            66        4,072
+ 21  1,062,478,278        1,135,256        1,131,006            66        4,184
+ 22  1,111,271,348        1,135,288        1,131,006            66        4,216
+ 23  1,160,064,393        1,135,256        1,131,006            66        4,184
+ 24  1,208,857,469        1,132,248        1,131,006            66        1,176
+ 25  1,269,848,923        1,132,632        1,131,006            66        1,560
+99.86% (1,131,006B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->92.58% (1,048,576B) 0x10B2D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+| ->92.58% (1,048,576B) 0x10D8BA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+|   ->92.58% (1,048,576B) 0x10A836: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+|     
+->06.42% (72,704B) 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->06.42% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->06.42% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->06.42% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->06.42% (72,704B) 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->06.42% (72,704B) 0x2: ???
+|           ->06.42% (72,704B) 0x1FFF0003A6: ???
+|             ->06.42% (72,704B) 0x1FFF0003AD: ???
+|               ->06.42% (72,704B) 0x1FFF0003B0: ???
+|                 
+->00.86% (9,726B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 26  1,343,038,454        1,132,632        1,131,006            66        1,560
+ 27  1,416,228,038        1,135,136        1,131,006            66        4,064
+ 28  1,465,021,098        1,135,136        1,131,006            66        4,064
+ 29  1,513,814,131        1,135,256        1,131,006            66        4,184
+99.63% (1,131,006B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->92.36% (1,048,576B) 0x10B2D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+| ->92.36% (1,048,576B) 0x10D8BA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+|   ->92.36% (1,048,576B) 0x10A836: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+|     
+->06.40% (72,704B) 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->06.40% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->06.40% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->06.40% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->06.40% (72,704B) 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->06.40% (72,704B) 0x2: ???
+|           ->06.40% (72,704B) 0x1FFF0003A6: ???
+|             ->06.40% (72,704B) 0x1FFF0003AD: ???
+|               ->06.40% (72,704B) 0x1FFF0003B0: ???
+|                 
+->00.86% (9,726B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 30  1,579,291,537        2,171,656        2,170,968            48          640
+99.97% (2,170,968B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.28% (1,048,576B) 0x10AA31: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+| 
+->48.28% (1,048,576B) 0x10B2D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+| ->48.28% (1,048,576B) 0x10D8BA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+|   ->48.28% (1,048,576B) 0x10A836: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+|     
+->03.35% (72,704B) 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->03.35% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->03.35% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->03.35% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->03.35% (72,704B) 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->03.35% (72,704B) 0x2: ???
+|           ->03.35% (72,704B) 0x1FFF0003A6: ???
+|             ->03.35% (72,704B) 0x1FFF0003AD: ???
+|               ->03.35% (72,704B) 0x1FFF0003B0: ???
+|                 
+->00.05% (1,112B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 31  1,641,916,496        2,171,912        2,171,160            56          696
+ 32  1,682,575,596        2,183,768        2,179,760            80        3,928
+ 33  1,723,234,661        2,183,904        2,179,760            80        4,064
+ 34  1,784,223,387        2,183,416        2,179,760            80        3,576
+99.83% (2,179,760B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.02% (1,048,576B) 0x10AA31: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+| 
+->48.02% (1,048,576B) 0x10B2D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+| ->48.02% (1,048,576B) 0x10D8BA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+|   ->48.02% (1,048,576B) 0x10A836: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+|     
+->03.33% (72,704B) 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->03.33% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->03.33% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->03.33% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->03.33% (72,704B) 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->03.33% (72,704B) 0x2: ???
+|           ->03.33% (72,704B) 0x1FFF0003A6: ???
+|             ->03.33% (72,704B) 0x1FFF0003AD: ???
+|               ->03.33% (72,704B) 0x1FFF0003B0: ???
+|                 
+->00.45% (9,904B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 35  1,845,212,103        2,183,464        2,179,760            80        3,624
+ 36  1,906,200,675        2,183,992        2,179,760            80        4,152
+ 37  1,946,859,831        2,181,200        2,179,760            80        1,360
+ 38  1,987,518,880        2,183,408        2,179,760            80        3,568
+99.83% (2,179,760B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.02% (1,048,576B) 0x10AA31: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+| 
+->48.02% (1,048,576B) 0x10B2D2: void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+| ->48.02% (1,048,576B) 0x10D8BA: void ReadDataToFile_DEC<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<float, std::allocator<float> >&) (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+|   ->48.02% (1,048,576B) 0x10A836: main (in /home/noname/Documents/project_tiny/Sort_on_FPGA/Version1/01_slt/main)
+|     
+->03.33% (72,704B) 0x4914939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->03.33% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->03.33% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->03.33% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->03.33% (72,704B) 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->03.33% (72,704B) 0x2: ???
+|           ->03.33% (72,704B) 0x1FFF0003A6: ???
+|             ->03.33% (72,704B) 0x1FFF0003AD: ???
+|               ->03.33% (72,704B) 0x1FFF0003B0: ???
+|                 
+->00.45% (9,904B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 39  2,048,507,465        2,183,992        2,179,760            80        4,152
+ 40  2,089,166,508        2,183,912        2,179,760            80        4,072
+ 41  2,129,825,556        2,181,064        2,179,760            80        1,224
+ 42  2,170,484,613        2,184,016        2,179,760            80        4,176
+ 43  2,211,143,678        2,181,160        2,179,760            80        1,320
+ 44  2,251,802,727        2,183,984        2,179,760            80        4,144
+ 45  2,312,791,464        2,184,024        2,179,760            80        4,184
+ 46  2,373,780,012        2,183,808        2,179,760            80        3,968
+ 47  2,434,768,708        2,183,912        2,179,760            80        4,072
+ 48  2,475,427,778        2,184,072        2,179,760            80        4,232
+ 49  2,516,086,891        2,183,912        2,179,760            80        4,072
+ 50  2,552,681,758        2,181,632        2,179,760            80        1,792
+ 51  2,589,276,648        2,183,912        2,179,760            80        4,072

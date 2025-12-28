@@ -5,13 +5,19 @@ Reallocating 'name_of_file' (item size: 1) to 31 items.
 A level-1 auxiliary file: ./my-chapters/introduction.aux
 Reallocating 'name_of_file' (item size: 1) to 34 items.
 A level-1 auxiliary file: ./my-chapters/theorical_basic.aux
+Reallocating 'name_of_file' (item size: 1) to 34 items.
+A level-1 auxiliary file: ./my-chapters/SystemLevelTest.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: ./my-chapters/RTL.aux
+Reallocating 'name_of_file' (item size: 1) to 31 items.
+A level-1 auxiliary file: ./my-chapters/verification.aux
 Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: my-bib/ref.bib
 You've used 1 entry,
             1876 wiz_defined-function locations,
-            486 strings with 3744 characters,
+            489 strings with 3828 characters,
 and the built_in function-call counts, 415 in all, are:
 = -- 44
 > -- 8

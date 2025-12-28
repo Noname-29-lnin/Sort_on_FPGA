@@ -5,14 +5,14 @@
 +xm64bit
 -sv
 -f
-./../PACM_UNIT/flist.f
+./../PAMEM_UNIT/flist.f
 -top
-tb_PA_Cal_Mean
+tb_PA_mem
 -access
 +rwc
 -clean
 -log
-./../PACM_UNIT/Xcelium/compile.log
+./../PAMEM_UNIT/Xcelium/compile.log
 +nctimescale+1ns/1ps
 +ntb_random_seed=automatic
 -allowredefinition

@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 module tb_PA_mem();
 
-parameter SIZE_ADDR     = 11;
+parameter SIZE_ADDR     = 5;
 parameter SIZE_DATA     = 32;
 parameter IS_READ       = 1; // READ=1//WRITE=0 
 parameter MEM_INIT_FILE = "./../../03_verif/lib/mem_init.hex";
@@ -84,7 +84,7 @@ initial begin
     @(posedge i_clk);
     i_start = 1;
     i_addr_si   = 0;
-    i_addr_ei   = 32'h4e3ebc20;
+    i_addr_ei   = 32'h4cc1affc;
     i_mean_value    = 0;
     @(posedge i_clk);
     i_start = 0;

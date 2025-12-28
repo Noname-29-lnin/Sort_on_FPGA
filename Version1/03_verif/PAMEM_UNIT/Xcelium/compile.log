@@ -1,5 +1,5 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s001: Started on Dec 27, 2025 at 05:17:20 EST
+TOOL:	xrun(64)	20.09-s001: Started on Dec 28, 2025 at 06:45:03 EST
 xrun
 	+xm64bit
 	-sv
@@ -89,8 +89,8 @@ file: ./../../02_rtl/PA_mem/PAMEM_address.sv
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.PAMEM_writedata:sv <0x7a4ad8c1>
-			streams:  16, words:  5014
+		worklib.PAMEM_writedata:sv <0x526075c4>
+			streams:  16, words:  4981
 		worklib.COMP_Mantissa:sv <0x6f2a0e2b>
 			streams:  13, words:  5452
 		worklib.COMP_4bit:sv <0x7b7d3efa>
@@ -103,42 +103,42 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 			streams:  18, words:  5568
 		worklib.PASW_unit:sv <0x13ba827c>
 			streams:  15, words:  5436
-		worklib.PAMEM_swap:sv <0x2ba6e0ce>
-			streams:  18, words:  4925
+		worklib.PAMEM_swap:sv <0x3c9163ef>
+			streams:  18, words:  4916
 		worklib.SS_detect_edge:sv <0x02d248f6>
 			streams:   4, words:   955
-		worklib.PAMEM_readdata:sv <0x57545927>
-			streams:  20, words:  6087
+		worklib.PAMEM_readdata:sv <0x4808ef90>
+			streams:  20, words:  6063
 		worklib.CNT_T_FF:sv <0x72f5ca14>
 			streams:   3, words:   921
 		worklib.SS_detect_edge:sv <0x21c25ec6>
 			streams:   4, words:   955
 		worklib.SS_detect_start:sv <0x5eb942d8>
 			streams:   4, words:  1265
-		worklib.PA_mem:sv <0x6d9d33b9>
-			streams:  31, words:  8590
-		worklib.tb_PA_mem:sv <0x263d303e>
-			streams:  25, words: 11636
-		worklib.PAMEM_address:sv <0x5d2c8862>
-			streams:  27, words: 10359
-		worklib.PAMEM_address:sv <0x49ad5b99>
-			streams:  27, words: 10277
-		worklib.tb_simple_dual_port_ram_single_clock:sv <0x72df4ff9>
-			streams:   8, words:  4070
+		worklib.PA_mem:sv <0x302aa1f2>
+			streams:  31, words:  8527
+		worklib.tb_PA_mem:sv <0x1b3c8e13>
+			streams:  25, words: 11591
+		worklib.PAMEM_address:sv <0x347aebce>
+			streams:  21, words:  7573
+		worklib.PAMEM_address:sv <0x49347249>
+			streams:  21, words:  7491
+		worklib.tb_simple_dual_port_ram_single_clock:sv <0x09cdd645>
+			streams:   8, words:  4054
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                 Instances  Unique
-		Modules:                61      16
-		Registers:             283     144
-		Scalar wires:          332       -
+		Modules:                49      16
+		Registers:             259     144
+		Scalar wires:          248       -
 		Expanded wires:         64       4
 		Vectored wires:         54       -
-		Always blocks:         109      35
+		Always blocks:          85      35
 		Initial blocks:          4       4
 		Final blocks:            1       1
-		Cont. assignments:      68      23
-		Pseudo assignments:    221     115
+		Cont. assignments:      56      23
+		Pseudo assignments:    161     115
 		Simulation timescale:  1ps
 	Writing initial simulation snapshot: worklib.tb_PA_mem:sv
 Loading snapshot worklib.tb_PA_mem:sv .................... Done
@@ -146,10 +146,10 @@ xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009
 xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
 xcelium> run
 Initial load memory contents from ./../../03_verif/lib/mem_init.hex
-o_pi_value =  530
+o_pi_value = 16
 Dumping memory contents to ./../../03_verif/PAMEM_UNIT/mem_dump.hex
 Dumping memory contents to ./../../03_verif/PAMEM_UNIT/mem_dump.hex
-Simulation complete via $finish(1) at time 359730 NS + 0
+Simulation complete via $finish(1) at time 10210 NS + 0
 ../PAMEM_UNIT/tb_PA_mem.sv:98     $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Dec 27, 2025 at 05:17:21 EST  (total: 00:00:01)
+TOOL:	xrun(64)	20.09-s001: Exiting on Dec 28, 2025 at 06:45:04 EST  (total: 00:00:01)

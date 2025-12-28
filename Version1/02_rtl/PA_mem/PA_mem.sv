@@ -55,19 +55,6 @@ SS_detect_start SSDS_UPDATE_PI (
     .i_done         (w_done_i),
     .o_w_start      (w_en_update_pi) 
 );
-// Update_I #(
-//     .SIZE_ADDR      (SIZE_ADDR)
-// ) UPDATE_READ_DATA_UNIT (
-//     .i_clk          (i_clk),
-//     .i_rst_n        (i_rst_n),
-//     .i_num_elems    (i_addr_ei),
-//     .i_start_val    (i_addr_si),
-//     .i_start        (i_start),
-//     .i_en           (w_PAMEM_WRITE_done),
-//     .o_en           (),
-//     .o_value_i      (i_value),
-//     .o_done         (w_done_i) 
-// );
 PAMEM_address #(
     .SIZE_ADDR      (SIZE_ADDR)
 ) PACS_I_VALUE_UNIT (
@@ -81,19 +68,6 @@ PAMEM_address #(
     .o_addr_ram     (i_value),
     .o_done         (w_done_i) 
 );
-// Update_I #(
-//     .SIZE_ADDR      (SIZE_ADDR)
-// ) UPDATE_POS_PARTITION_UNIT (
-//     .i_clk          (i_clk),
-//     .i_rst_n        (i_rst_n),
-//     .i_num_elems    (i_addr_ei),
-//     .i_start_val    (i_addr_si),
-//     .i_start        (i_start),
-//     .i_en           (w_PAMEM_WRITE_update_pi & w_en_update_pi),
-//     .o_en           (),
-//     .o_value_i      (pi_value),
-//     .o_done         (w_done_pi) 
-// );
 PAMEM_address #(
     .SIZE_ADDR      (SIZE_ADDR)
 ) PACS_PI_VALUE_UNIT (
