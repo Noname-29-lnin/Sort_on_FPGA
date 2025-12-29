@@ -1,14 +1,14 @@
 Finished reading file: ./tools/unsorted.txt
 Finish write file './Reports/COMPILE_REPORT/unsorted.txt'.
-Size of array: 16
+Size of array: 42967296
 Finish write file './Reports/COMPILE_REPORT/sorted_RTL.txt'.
 [FrameworkRTL_Quick] Number of Similar = 0
-[FrameworkRTL_Quick] Number of Ascending = 2
-[FrameworkRTL_Quick] Number of Descending = 4
+[FrameworkRTL_Quick] Number of Ascending = 0
+[FrameworkRTL_Quick] Number of Descending = 0
 
 Sort algorithm                Check sorted   Time (ns)           Number Swap         Number Compare      
 --------------------------------------------------------------------------------------------------------------
 Data Set                      FAIL           0                   0                   0                   
 --------------------------------------------------------------------------------------------------------------
-Data Test                     PASS           1925                0                   0                   
+Data Test                     FAIL           6231834787          437866522           209822370           
 --------------------------------------------------------------------------------------------------------------
