@@ -226,7 +226,7 @@ int main(int argc, char** argv) {
         if (span <= UINT32_MAX) {
             std::uint32_t bound = (std::uint32_t)span;
             for (std::uint64_t i = 0; i < number; ++i) {
-                if (i) w.putc(' ');
+                if (i) w.putc('\n');
                 std::uint32_t r = pcg32_boundedrand_r(&rng, bound);
                 std::int64_t v = low_i + (std::int64_t)r;
                 w.write_int<long long>((long long)v);
@@ -234,7 +234,7 @@ int main(int argc, char** argv) {
         } else {
             // Rare for bit close to 62, still works
             for (std::uint64_t i = 0; i < number; ++i) {
-                if (i) w.putc(' ');
+                if (i) w.putc('\n');
                 std::uint64_t r = ((std::uint64_t)pcg32_random_r(&rng) << 32) | (std::uint64_t)pcg32_random_r(&rng);
                 std::int64_t v = low_i + (std::int64_t)(r % span);
                 w.write_int<long long>((long long)v);
@@ -243,7 +243,7 @@ int main(int argc, char** argv) {
     } else {
         // float: uniform in [low, high) then cast to float32
         for (std::uint64_t i = 0; i < number; ++i) {
-            if (i) w.putc(' ');
+            if (i) w.putc('\n');
             double u = rng_double01(&rng);              // [0,1)
             double xd = low_f + range_f * u;            // [low, high)
             float xf = (float)xd;                       // float32

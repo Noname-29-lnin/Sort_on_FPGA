@@ -23,6 +23,6 @@ else:
 
 file_path = "./unsorted.txt"
 with open(file_path, "w") as f:
-    f.write(" ".join(large_dataset))
+    f.write("\n".join(large_dataset))
 
 print(f"Data saved to: {file_path}")

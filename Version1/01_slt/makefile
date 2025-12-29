@@ -103,7 +103,7 @@ clear:
 # ===========================
 # Unit Test Configuration
 # ===========================
-.PHONY: test test_clean
+.PHONY: test run_test test_clean
 
 # File test
 TEST_CPP := $(S_DIR_TEST)/$(S_NAME_TEST).cpp
@@ -122,6 +122,9 @@ SRC_OBJ  := $(addprefix $(S_BUILD_FILE)/, $(SRC_ONLY:.cpp=.o))
 # Build & Run Test
 # ===========================
 test: $(TEST_BIN)
+	@echo "=== COMPILE TEST: $(S_NAME_TEST) ==="
+	
+run_test: 
 	@echo "=== RUN TEST: $(S_NAME_TEST) ==="
 	$(TEST_BIN) | tee $(TEST_LOG)
 
