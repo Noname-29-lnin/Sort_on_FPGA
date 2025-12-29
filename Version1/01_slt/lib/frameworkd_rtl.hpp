@@ -42,6 +42,7 @@ class C_Framework_RTL : public C_Sort_Algor{
         size_t P_count_is_Sim   = 0;
         size_t P_count_is_Asc   = 0;
         size_t P_count_is_Desc  = 0;
+        size_t P_count_subarrays = 0;
         status_rtl_e RTL_state;
         SIZE_TYPE_T P_Cal_Mean(std::vector<SIZE_ARR_T> &arr, int si, int ei);
         int P_Partition(std::vector<SIZE_TYPE_T> &arr, int si, int ei);
@@ -58,6 +59,7 @@ class C_Framework_RTL : public C_Sort_Algor{
         size_t Get_Count_Similar() { return P_count_is_Sim; }
         size_t Get_Count_Ascending() { return P_count_is_Asc; }
         size_t Get_Count_Descending() { return P_count_is_Desc; }
+        size_t Get_Count_Subarrays() { return P_count_subarrays; }
 };
 
 #endif

@@ -1,20 +1,22 @@
 Finished reading file: ./tools/unsorted.txt
-Size of array: 1024
-Number subarry M = 6
-[FrameworkStandard_Quick] Number of Similar = 0
-[FrameworkStandard_Quick] Number of Ascending = 83
-[FrameworkStandard_Quick] Number of Descending = 99
+Size of array: 65536
+Number subarry M = 14
+[FrameworkStandard_Quick] Number of Similar = 25
+[FrameworkStandard_Quick] Number of Ascending = 11276
+[FrameworkStandard_Quick] Number of Descending = 12939
+[FrameworkStandard_Quick] Number of SubArrays = 7
 [FrameworkRTL_Quick] Number of Similar = 0
-[FrameworkRTL_Quick] Number of Ascending = 0
+[FrameworkRTL_Quick] Number of Ascending = 2153
 [FrameworkRTL_Quick] Number of Descending = 0
+[FrameworkRTL_Quick] Number of SubArrays = 14187
 
 Sort algorithm                Check sorted   Time (ns)           Number Swap         Number Compare      
 --------------------------------------------------------------------------------------------------------------
 Data Set                      FAIL           0                   0                   0                   
 --------------------------------------------------------------------------------------------------------------
-QuickSort                     PASS           41250               12054               6006                
+QuickSort                     PASS           3928241             1273625             622035              
 --------------------------------------------------------------------------------------------------------------
-Framework_QuickSort           PASS           77457               21107               10261               
+FrameworkStandard_Quick       PASS           8412159             68302               37295               
 --------------------------------------------------------------------------------------------------------------
-Data Test                     PASS           76816               9698                1895                
+FrameworkRTL_Quick            PASS           7898373             109686              66725               
 --------------------------------------------------------------------------------------------------------------

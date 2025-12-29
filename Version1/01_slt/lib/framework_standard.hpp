@@ -64,6 +64,7 @@ class C_Framework_Serial : public C_Func_Cal, public C_Sort_Algor{
         size_t P_count_is_Desc  = 0;
         size_t P_count_swap     = 0;
         size_t P_count_compare  = 0;
+        size_t P_count_subarrays = 0;
         Status_e P_status;
         int P_Partition(std::vector<SIZE_ARR_T>& arr, int si, int ei);
         void P_Division_Quick(std::vector<SIZE_ARR_T>& arr, int si, int ei, int M, int& S_cnt);
@@ -81,6 +82,7 @@ class C_Framework_Serial : public C_Func_Cal, public C_Sort_Algor{
         size_t Get_Count_Similar() { return P_count_is_Sim; }
         size_t Get_Count_Ascending() { return P_count_is_Asc; }
         size_t Get_Count_Descending() { return P_count_is_Desc; }
+        size_t Get_Count_Subarrays() { return P_count_subarrays; }
 };
 
 #endif

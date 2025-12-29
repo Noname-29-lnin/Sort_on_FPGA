@@ -32,7 +32,7 @@ C_Framework_Serial C_Framework_QuickSort;
 int main(int argc, char** argv) {
     std::vector<DATATPPE_ARR> arr;
     ReadDataToFile_DEC<DATATPPE_ARR>(PATH_UNSORTED_FILE, arr);
-    WriteDataToFile_Dec<DATATPPE_ARR>(arr, PATH_UNSORTED_READ);
+    // WriteDataToFile_Dec<DATATPPE_ARR>(arr, PATH_UNSORTED_READ);
     std::cout << "Size of array: " << arr.size() << std::endl;
     std::vector<SortResult<size_t>> results;
     results.push_back({"Data Set", CheckSortedString<DATATPPE_ARR>(arr), 0, 0, 0});
@@ -45,22 +45,23 @@ int main(int argc, char** argv) {
     // results.push_back({"Sort Standard", CheckSortedString<DATATPPE_ARR>(data_set), Time_Standard, 0, 0});
     // WriteDataToFile_Dec<DATATPPE_ARR>(data_set, PATH_SORTED_FILE);
 
-    // C_Sort_Algor C_QuickSort;
-    // std::vector<DATATPPE_ARR> Data_QuickSort = arr;
-    // size_t Time_QuickSort =  V_CAL_MeasureTime([&]() {
-    //             C_QuickSort.F_QuickSort(Data_QuickSort, 0, Data_QuickSort.size() - 1);
-    //         });
-    // results.push_back({"QuickSort", CheckSortedString(Data_QuickSort), Time_QuickSort, C_QuickSort.Get_Count_Compare(), C_QuickSort.Get_Count_Swap()});
+    C_Sort_Algor C_QuickSort;
+    std::vector<DATATPPE_ARR> Data_QuickSort = arr;
+    size_t Time_QuickSort =  V_CAL_MeasureTime([&]() {
+                C_QuickSort.F_QuickSort(Data_QuickSort, 0, Data_QuickSort.size() - 1);
+            });
+    results.push_back({"QuickSort", CheckSortedString(Data_QuickSort), Time_QuickSort, C_QuickSort.Get_Count_Compare(), C_QuickSort.Get_Count_Swap()});
 
-    // std::vector<DATATPPE_ARR> Data_Framework_QuickSort = arr;
-    // std::cout << "Number subarry M = " << M_Framework_Serial << std::endl;
-    // size_t Time_Framework_QuickSort =  V_CAL_MeasureTime([&]() {
-    //     C_Framework_QuickSort.F_Frameworkd_Serial_Quick(Data_Framework_QuickSort, M_Framework_Serial);
-    // });
-    // results.push_back({"Framework_QuickSort", CheckSortedString(Data_Framework_QuickSort), Time_Framework_QuickSort, C_Framework_QuickSort.Get_Count_Compare(), C_Framework_QuickSort.Get_Count_Swap()});
-    // std::cout << "[FrameworkStandard_Quick] Number of Similar = " << C_Framework_QuickSort.Get_Count_Similar() << std::endl;
-    // std::cout << "[FrameworkStandard_Quick] Number of Ascending = " << C_Framework_QuickSort.Get_Count_Ascending() << std::endl;
-    // std::cout << "[FrameworkStandard_Quick] Number of Descending = " << C_Framework_QuickSort.Get_Count_Descending() << std::endl;
+    std::vector<DATATPPE_ARR> Data_Framework_QuickSort = arr;
+    std::cout << "Number subarry M = " << M_Framework_Serial << std::endl;
+    size_t Time_Framework_QuickSort =  V_CAL_MeasureTime([&]() {
+        C_Framework_QuickSort.F_Frameworkd_Serial_Quick(Data_Framework_QuickSort, M_Framework_Serial);
+    });
+    results.push_back({"FrameworkStandard_Quick", CheckSortedString(Data_Framework_QuickSort), Time_Framework_QuickSort, C_Framework_QuickSort.Get_Count_Compare(), C_Framework_QuickSort.Get_Count_Swap()});
+    std::cout << "[FrameworkStandard_Quick] Number of Similar = " << C_Framework_QuickSort.Get_Count_Similar() << std::endl;
+    std::cout << "[FrameworkStandard_Quick] Number of Ascending = " << C_Framework_QuickSort.Get_Count_Ascending() << std::endl;
+    std::cout << "[FrameworkStandard_Quick] Number of Descending = " << C_Framework_QuickSort.Get_Count_Descending() << std::endl;
+    std::cout << "[FrameworkStandard_Quick] Number of SubArrays = " << C_Framework_QuickSort.Get_Count_Subarrays() << std::endl;
     //
     // std::vector<DATATPPE_ARR> Data_MergeSort = arr;
     // size_t Time_Merge =  V_CAL_MeasureTime([&]() {
@@ -80,11 +81,12 @@ int main(int argc, char** argv) {
     size_t Time_Framework_test =  V_CAL_MeasureTime([&]() {
                 c_test.F_Framework_Serial_RTL(Data_test, M_Framework_Serial);
             });
-    results.push_back({"Data Test", CheckSortedString<DATATPPE_ARR>(Data_test), Time_Framework_test, c_test.Get_Count_Compare(), c_test.Get_Count_Swap()});
-    WriteDataToFile_Dec<DATATPPE_ARR>(Data_test, PATH_SORTED_FILE_1);
+    results.push_back({"FrameworkRTL_Quick", CheckSortedString<DATATPPE_ARR>(Data_test), Time_Framework_test, c_test.Get_Count_Compare(), c_test.Get_Count_Swap()});
+    // WriteDataToFile_Dec<DATATPPE_ARR>(Data_test, PATH_SORTED_FILE_1);
     std::cout << "[FrameworkRTL_Quick] Number of Similar = " << c_test.Get_Count_Similar() << std::endl;
     std::cout << "[FrameworkRTL_Quick] Number of Ascending = " << c_test.Get_Count_Ascending() << std::endl;
     std::cout << "[FrameworkRTL_Quick] Number of Descending = " << c_test.Get_Count_Descending() << std::endl;
+    std::cout << "[FrameworkRTL_Quick] Number of SubArrays = " << c_test.Get_Count_Subarrays() << std::endl;
     
     Print_Table_Result(results);
 

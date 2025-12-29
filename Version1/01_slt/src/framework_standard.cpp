@@ -160,6 +160,7 @@ void C_Framework_Serial::P_Division_Quick(std::vector<SIZE_ARR_T>& arr, int si, 
                 }
                 P_Division_Quick(arr, bi+1, ei, M, S_cnt);
             } else { // core-sort
+                P_count_subarrays ++;
                 P_QuickSort(arr, si, ei);
                 P_count_compare += C_Sort_Algor::Get_Count_Compare();
                 P_count_swap    += C_Sort_Algor::Get_Count_Swap();
@@ -195,6 +196,7 @@ void C_Framework_Serial::P_Division_Merge(std::vector<SIZE_ARR_T>&arr, int si, i
                 }
                 P_Division_Merge(arr, bi+1, ei, M, S_cnt);
             } else { // core-sort
+                P_count_subarrays ++;
                 P_MergeSort(arr, si, ei);
                 P_count_compare += C_Sort_Algor::Get_Count_Compare();
                 P_count_swap    += C_Sort_Algor::Get_Count_Swap();
@@ -213,6 +215,7 @@ void C_Framework_Serial::F_Frameworkd_Serial_Quick(std::vector<SIZE_ARR_T> &arr,
     P_count_is_Sim  = 0;
     P_count_is_Asc  = 0;
     P_count_is_Desc = 0;
+    P_count_subarrays = 0;
     P_Division_Quick(arr, addr_si, addr_ei, M, cnt);
 }
 
@@ -225,5 +228,6 @@ void C_Framework_Serial::F_Frameworkd_Serial_Merge(std::vector<SIZE_ARR_T> &arr,
     P_count_is_Sim  = 0;
     P_count_is_Asc  = 0;
     P_count_is_Desc = 0;
+    P_count_subarrays = 0;
     P_Division_Merge(arr, addr_si, addr_ei, M, cnt);
 }
