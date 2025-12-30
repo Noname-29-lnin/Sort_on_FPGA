@@ -12,7 +12,7 @@ VALUE_SERIAL     ?= 2
 VALUE_PARALLEL   ?= 2
 ANALYSIS_NAME    ?= serial
 NAME_TEST        ?= slipt_subarr
-DIR_TEST         ?= example
+DIR_TEST         ?= example 
 
 -include config.mk
 
@@ -28,6 +28,7 @@ S_VALUE_PARALLEL   	= $(VALUE_PARALLEL)
 S_ANALYSIS_NAME    	= $(ANALYSIS_NAME)
 S_NAME_TEST			= $(NAME_TEST)
 S_DIR_TEST			= $(DIR_TEST)
+DIR_HISTORY		 	:= ./Reports/history.log
 
 # ===========================
 # Tools
@@ -47,7 +48,7 @@ CACHE_MISS     := perf
 # ===========================
 # Load/Save Config Targets
 # ===========================
-.PHONY: load view help clean run all
+.PHONY: load view history help clean run all
 
 load:
 	@echo "Saving configuration..."
@@ -67,6 +68,10 @@ view:
 	@echo "Opening config.mk..."
 	@cat config.mk
 
+history:
+	@echo "Adding to History..."
+	@echo "=== ANALYSIS_NAME=$(ANALYSIS_NAME) ===" >> $(DIR_HISTORY)
+	@cat $(COMPILE_DIR)/$(S_ANALYSIS_NAME).log >> $(DIR_HISTORY)
 # ===========================
 # Source File Handling
 # ===========================

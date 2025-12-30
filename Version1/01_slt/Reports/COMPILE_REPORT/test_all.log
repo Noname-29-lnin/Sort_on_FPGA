@@ -127,3 +127,25 @@ FrameworkStandard_Quick       PASS           8412159             68302          
 --------------------------------------------------------------------------------------------------------------
 FrameworkRTL_Quick            PASS           7898373             109686              66725               
 --------------------------------------------------------------------------------------------------------------
+Finished reading file: ./tools/unsorted.txt
+Size of array: 1048576
+Number subarry M = 16
+[FrameworkStandard_Quick] Number of Similar = 340
+[FrameworkStandard_Quick] Number of Ascending = 18618
+[FrameworkStandard_Quick] Number of Descending = 21863
+[FrameworkStandard_Quick] Number of SubArrays = 139
+[FrameworkRTL_Quick] Number of Similar = 0
+[FrameworkRTL_Quick] Number of Ascending = 0
+[FrameworkRTL_Quick] Number of Descending = 0
+[FrameworkRTL_Quick] Number of SubArrays = 65536
+
+Sort algorithm                Check sorted   Time (ns)           Number Swap         Number Compare      
+--------------------------------------------------------------------------------------------------------------
+Data Set                      FAIL           0                   0                   0                   
+--------------------------------------------------------------------------------------------------------------
+QuickSort                     PASS           79804420            25893782            13985572            
+--------------------------------------------------------------------------------------------------------------
+FrameworkStandard_Quick       PASS           115890270           1204597655          606506471           
+--------------------------------------------------------------------------------------------------------------
+FrameworkRTL_Quick            PASS           109366080           3582318             1894364             
+--------------------------------------------------------------------------------------------------------------

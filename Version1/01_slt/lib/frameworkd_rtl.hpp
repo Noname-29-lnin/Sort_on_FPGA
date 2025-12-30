@@ -27,14 +27,14 @@ typedef enum {
 class C_Framework_RTL : public C_Sort_Algor{
     private:
         struct TaskState {
-            int si;
-            int ei;
-            int S_cnt;
+            IndexType si;
+            IndexType ei;
+            IndexType S_cnt;
         };
         struct PartitionTask {
-            IndexType si;    // Start Index
-            IndexType ei;    // End Index
-            int level;       // Độ sâu hiện tại
+            IndexType si;    //
+            IndexType ei;    //
+            IndexType level; //
         };
         size_t P_count_swap    = 0;
         size_t P_count_compare = 0;
@@ -44,12 +44,12 @@ class C_Framework_RTL : public C_Sort_Algor{
         size_t P_count_is_Desc  = 0;
         size_t P_count_subarrays = 0;
         status_rtl_e RTL_state;
-        SIZE_TYPE_T P_Cal_Mean(std::vector<SIZE_ARR_T> &arr, int si, int ei);
-        int P_Partition(std::vector<SIZE_TYPE_T> &arr, int si, int ei);
-        void P_Division(std::vector<SIZE_ARR_T>& arr, int si, int ei, int M, int S_cnt);
+        SIZE_TYPE_T P_Cal_Mean(std::vector<SIZE_ARR_T> &arr, IndexType si, IndexType ei);
+        IndexType P_Partition(std::vector<SIZE_TYPE_T> &arr, IndexType si, IndexType ei);
+        void P_Division(std::vector<SIZE_ARR_T>& arr, IndexType si, IndexType ei, int M, int S_cnt);
         IndexType P_Partition_Iterative(std::vector<SIZE_ARR_T>& arr, IndexType si, IndexType ei, SIZE_TYPE_T mean_value);
         void P_Division_Iterative(std::vector<SIZE_ARR_T>& arr, int M);
-        status_rtl_e P_SS_Check(std::vector<SIZE_ARR_T> &arr, int si, int ei, SIZE_TYPE_T &mean);
+        status_rtl_e P_SS_Check(std::vector<SIZE_ARR_T> &arr, IndexType si, IndexType ei, SIZE_TYPE_T &mean);
     public:
         void F_Framework_Serial_RTL(
             std::vector<SIZE_ARR_T> &arr, int M

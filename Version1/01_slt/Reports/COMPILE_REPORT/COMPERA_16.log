@@ -1,22 +1,22 @@
 Finished reading file: ./tools/unsorted.txt
-Size of array: 65536
-Number subarry M = 14
-[FrameworkStandard_Quick] Number of Similar = 25
-[FrameworkStandard_Quick] Number of Ascending = 11276
-[FrameworkStandard_Quick] Number of Descending = 12939
-[FrameworkStandard_Quick] Number of SubArrays = 7
+Size of array: 1048576
+Number subarry M = 16
+[FrameworkStandard_Quick] Number of Similar = 413
+[FrameworkStandard_Quick] Number of Ascending = 19606
+[FrameworkStandard_Quick] Number of Descending = 23195
+[FrameworkStandard_Quick] Number of SubArrays = 120
 [FrameworkRTL_Quick] Number of Similar = 0
-[FrameworkRTL_Quick] Number of Ascending = 2153
+[FrameworkRTL_Quick] Number of Ascending = 0
 [FrameworkRTL_Quick] Number of Descending = 0
-[FrameworkRTL_Quick] Number of SubArrays = 14187
+[FrameworkRTL_Quick] Number of SubArrays = 65536
 
 Sort algorithm                Check sorted   Time (ns)           Number Swap         Number Compare      
 --------------------------------------------------------------------------------------------------------------
 Data Set                      FAIL           0                   0                   0                   
 --------------------------------------------------------------------------------------------------------------
-QuickSort                     PASS           3928241             1273625             622035              
+QuickSort                     PASS           79566567            25069490            12511004            
 --------------------------------------------------------------------------------------------------------------
-FrameworkStandard_Quick       PASS           8412159             68302               37295               
+FrameworkStandard_Quick       PASS           106096522           844963838           419072306           
 --------------------------------------------------------------------------------------------------------------
-FrameworkRTL_Quick            PASS           7898373             109686              66725               
+FrameworkRTL_Quick            PASS           107097781           3582510             1897069             
 --------------------------------------------------------------------------------------------------------------
