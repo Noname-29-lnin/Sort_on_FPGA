@@ -42,6 +42,7 @@ SS_detect_edge #(
     .i_signal       (i_start),
     .o_signal       (w_start)
 );
+
 always_ff @( posedge i_clk or negedge i_rst_n ) begin
     if(~i_rst_n) begin
         w_i_addr_si   <= '0;
