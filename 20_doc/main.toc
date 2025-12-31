@@ -1,6 +1,5 @@
 \babel@toc {vietnamese}{}\relax 
 \contentsline {section}{Abstract}{iii}{Doc-Start}%
-\contentsline {section}{Acknowledgement}{iv}{Doc-Start}%
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Đặt vấn đề}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Thách thức trong thiết kế phần cứng}{1}{subsection.1.2}%
@@ -10,12 +9,16 @@
 \contentsline {section}{\numberline {2}Literature Review}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Thực hiện lại Framework của bài báo}{5}{subsection.2.1}%
 \contentsline {section}{\numberline {3}System Level Test}{12}{section.3}%
-\contentsline {section}{\numberline {4}RTL Implementation}{13}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Bộ thực hiện tính giá trị trung bình của mảng (PACM\_UNIT)}{13}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Bộ tính cộng số thực (BFP16\_add)}{13}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Bộ tính cộng tích lũy của mảng (PA\_Cal\_Sum)}{14}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Bộ tính chia số thực (FP32\_div)}{17}{subsubsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.2}Bộ thực hiện partition lại mảng theo giá trị trung bình (PAMEM\_UNIT)}{17}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Bộ thực hiện đệ quy cho giải thuật (DI\_UNIT)}{17}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Verification}{18}{section.5}%
-\contentsline {section}{References}{19}{section.5}%
+\contentsline {subsection}{\numberline {3.1}Xây dựng Bộ tính giá trị trung bình của mảng}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Xây dựng bộ thực hiện phân hoạch mảng theo giá trị trung bình}{13}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Xây dựng bộ thực hiện kiểm soát chia mảng dữ liệu}{13}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Kết quả của thuật toán sau khi viết lại}{15}{subsection.3.4}%
+\contentsline {section}{\numberline {4}RTL Implementation}{18}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Bộ thực hiện tính giá trị trung bình của mảng (PACM\_UNIT)}{18}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Bộ tính cộng số thực (BFP16\_add)}{18}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Bộ tính cộng tích lũy của mảng (PA\_Cal\_Sum)}{19}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Bộ tính chia số thực (FP32\_div)}{22}{subsubsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.2}Bộ thực hiện partition lại mảng theo giá trị trung bình (PAMEM\_UNIT)}{22}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Bộ thực hiện đệ quy cho giải thuật (DI\_UNIT)}{22}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Verification}{23}{section.5}%
+\contentsline {section}{References}{24}{section.5}%
