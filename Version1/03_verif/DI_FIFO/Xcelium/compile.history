@@ -1,0 +1,1 @@
+s1(30Dec2025:20:51:09):  xrun +xm64bit -sv -f ./../DI_FIFO/flist.f -top tb_DI_fifo -access +rwc -clean -log ./../DI_FIFO/Xcelium/compile.log +nctimescale+1ns/1ps +ntb_random_seed=automatic -allowredefinition -v93 

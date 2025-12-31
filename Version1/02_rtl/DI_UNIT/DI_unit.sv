@@ -6,7 +6,6 @@ module DI_unit #(
     input logic                     i_clk       ,
     input logic                     i_rst_n     ,
     input logic                     i_start     ,
-
     input logic [SIZE_ADDR-1:0]     i_addr_si   ,
     input logic [SIZE_ADDR-1:0]     i_addr_ei   ,
 
@@ -15,6 +14,8 @@ module DI_unit #(
 
     output logic [SIZE_ADDR-1:0]    o_addr_si   ,
     output logic [SIZE_ADDR-1:0]    o_addr_ei   ,
+    output logic                    o_valid     ,
+
     output logic                    o_done       
 );
 

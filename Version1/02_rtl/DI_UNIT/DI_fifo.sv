@@ -7,12 +7,15 @@ module DI_fifo #(
   input logic                         i_rst_n     ,
   input logic                         i_wr_en     ,
   input logic                         i_rd_en     ,
+
   input logic [SIZE_LEVEL-1:0]        i_level     ,
   input logic [SIZE_ADDR-1:0]         i_addr_si   ,
   input logic [SIZE_ADDR-1:0]         i_addr_ei   ,
+
   output logic [SIZE_ADDR-1:0]        o_level     ,
   output logic [SIZE_ADDR-1:0]        o_addr_si   ,
-  output logic [SIZE_ADDR-1:0]        o_addr_ei   ,  
+  output logic [SIZE_ADDR-1:0]        o_addr_ei   ,
+
   output logic                        o_done       
 );
 
@@ -56,8 +59,8 @@ always_ff @(posedge i_clk, negedge i_rst_n) begin: proc_update_ptr
   end
 end
 
-assign n_rd_ptr = i_rd_en ? (p_rd_ptr + 1'b1) : p_rd_ptr;
-assign n_wr_ptr = i_wr_en ? (p_wr_ptr + 1'b1) : p_wr_ptr;
+assign n_rd_ptr = update_rd_ptr ? (p_rd_ptr + 1'b1) : p_rd_ptr;
+assign n_wr_ptr = update_wr_ptr ? (p_wr_ptr + 1'b1) : p_wr_ptr;
 
 DIFIFO_dual_mem #(
   .DATA_WIDTH(SIZE_FIFO), 
@@ -79,8 +82,8 @@ always_ff @( posedge i_clk or negedge i_rst_n ) begin
     o_addr_ei     <= '0;
     o_level       <= '0;
   end else if(w_valid) begin
-    o_addr_si     <= temp_o_mem[3*SIZE_ADDR-1:2*SIZE_ADDR];
-    o_addr_ei     <= temp_o_mem[2*SIZE_ADDR-1:SIZE_LEVEL];
+    o_addr_si     <= temp_o_mem[SIZE_FIFO-1:SIZE_ADDR+SIZE_LEVEL];
+    o_addr_ei     <= temp_o_mem[SIZE_FIFO-SIZE_ADDR-SIZE_LEVEL-1:SIZE_LEVEL];
     o_level       <= temp_o_mem[SIZE_LEVEL-1:0];
   end
 end

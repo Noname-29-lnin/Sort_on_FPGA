@@ -1,0 +1,68 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Dec 30, 2025 at 20:51:09 EST
+xrun
+	+xm64bit
+	-sv
+	-f ./../DI_FIFO/flist.f
+		./../../03_verif/DI_FIFO/tb_DI_fifo.sv
+		./../../02_rtl/DI_UNIT/DI_fifo.sv
+		./../../02_rtl/DI_UNIT/DIFIFO_dual_mem.sv
+	-top tb_DI_fifo
+	-access +rwc
+	-clean
+	-log ./../DI_FIFO/Xcelium/compile.log
+	+nctimescale+1ns/1ps
+	+ntb_random_seed=automatic
+	-allowredefinition
+	-v93
+
+   User defined plus("+") options:
+	+ntb_random_seed=automatic
+
+xrun: *W,OPDEPRREN: Command Line Option (+nctimescale+1ns/1ps) is deprecated. Use (+xmtimescale+1ns/1ps) instead.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ./../../03_verif/DI_FIFO/tb_DI_fifo.sv
+	module worklib.tb_DI_fifo:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/DI_UNIT/DI_fifo.sv
+	module worklib.DI_fifo:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/DI_UNIT/DIFIFO_dual_mem.sv
+	module worklib.DIFIFO_dual_mem:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_DI_fifo
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.DIFIFO_dual_mem:sv <0x42fe82e2>
+			streams:   7, words:  2846
+		worklib.DI_fifo:sv <0x5d0045dd>
+			streams:  21, words:  7663
+		worklib.tb_DI_fifo:sv <0x755e197e>
+			streams:  14, words: 19146
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 3       3
+		Registers:              28      28
+		Scalar wires:           10       -
+		Vectored wires:         16       -
+		Always blocks:           8       8
+		Initial blocks:          4       4
+		Cont. assignments:       2       2
+		Pseudo assignments:     18      18
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_DI_fifo:sv
+Loading snapshot worklib.tb_DI_fifo:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+DONE test
+Simulation complete via $finish(1) at time 7890 NS + 0
+../DI_FIFO/tb_DI_fifo.sv:135     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Dec 30, 2025 at 20:51:09 EST  (total: 00:00:00)
