@@ -28,6 +28,13 @@ logic [SIZE_ADDR-1:0] w_i_addr_si;
 logic [SIZE_ADDR-1:0] w_i_addr_ei;
 logic [SIZE_ADDR-1:0] w_i_addr_pi;
 logic [SIZE_LEVEL-1:0] w_i_level;
+logic [SIZE_LEVEL-1:0] w_n_level;
+
+logic [SIZE_LEVEL-1:0]  w_DIFIFO_level;
+logic [SIZE_ADDR-1:0]   w_DIFIFO_addr_si;
+logic [SIZE_ADDR-1:0]   w_DIFIFO_addr_ei;
+logic                   w_DIFIFO_done;
+
 logic w_done;
 
 /////////////////////////////////////////////////////////////
@@ -35,7 +42,7 @@ logic w_done;
 /////////////////////////////////////////////////////////////
 
 SS_detect_edge #(
-    .POS_EDGE       (1)   // 1: posedge, 0: negedge
+    .POS_EDGE       (0)   // 1: posedge, 0: negedge
 ) SSDE_START_UNIT (
     .i_clk          (i_clk),
     .i_rst_n        (i_rst_n),
@@ -43,23 +50,6 @@ SS_detect_edge #(
     .o_signal       (w_start)
 );
 
-always_ff @( posedge i_clk or negedge i_rst_n ) begin
-    if(~i_rst_n) begin
-        w_i_addr_si   <= '0;
-        w_i_addr_ei   <= '0;
-    end else if(w_start) begin
-        w_i_addr_si   <= i_addr_si;
-        w_i_addr_ei   <= i_addr_ei;
-    end
-end
-
-always_ff @( posedge i_clk or negedge i_rst_n ) begin
-    if(~i_rst_n) begin
-        o_done      <= '0; 
-    end else begin
-        o_done      <= w_done; 
-    end
-end
 
 DI_fifo #(
   .SIZE_ADDR        (SIZE_ADDR),
@@ -73,10 +63,11 @@ DI_fifo #(
   .i_level          (w_i_level),
   .i_addr_si        (w_i_addr_si),
   .i_addr_ei        (w_i_addr_ei),
-  .o_level          (),
-  .o_addr_si        (),
-  .o_addr_ei        (),  
-  .o_done           () 
+
+  .o_level          (w_DIFIFO_level),
+  .o_addr_si        (w_DIFIFO_addr_si),
+  .o_addr_ei        (w_DIFIFO_addr_ei),  
+  .o_done           (w_DIFIFO_done) 
 );
 
 endmodule

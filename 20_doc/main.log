@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2025.12.31)  31 DEC 2025 17:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2025.12.31)  1 JAN 2026 10:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1432,8 +1432,8 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count413
-<./my-chapters/my-images/01_logobachkhoatoi.png, id=100, 471.9231pt x 478.9092p
-t>
+<./my-chapters/my-images/01_logobachkhoatoi.png, id=97, 471.9231pt x 478.9092pt
+>
 File: ./my-chapters/my-images/01_logobachkhoatoi.png Graphic file (type png)
 <use ./my-chapters/my-images/01_logobachkhoatoi.png>
 Package pdftex.def Info: ./my-chapters/my-images/01_logobachkhoatoi.png  used o
@@ -1453,7 +1453,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-<./my-chapters/my-images/bia.jpg, id=102, 301.125pt x 414.95026pt>
+<./my-chapters/my-images/bia.jpg, id=99, 301.125pt x 414.95026pt>
 File: ./my-chapters/my-images/bia.jpg Graphic file (type jpg)
 <use ./my-chapters/my-images/bia.jpg>
 Package pdftex.def Info: ./my-chapters/my-images/bia.jpg  used on input line 29
@@ -1463,7 +1463,7 @@ Package pdftex.def Info: ./my-chapters/my-images/bia.jpg  used on input line 29
 
 {/home/noname/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map} <./my-chapters/m
 y-images/bia.jpg> <./my-chapters/my-images/01_logobachkhoatoi.png>] (main.toc
-LaTeX Font Info:    Calculating math sizes for size <13> on input line 5.
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 4.
 )
 \tf@toc=\write6
 \openout6 = `main.toc'.
@@ -1570,14 +1570,14 @@ File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 ]
 
 [13]
-<./my-chapters/my-images/SLT/stack_diagram.png, id=577, 1393.205pt x 362.35374p
+<./my-chapters/my-images/SLT/stack_diagram.png, id=573, 1393.205pt x 362.35374p
 t>
 File: ./my-chapters/my-images/SLT/stack_diagram.png Graphic file (type png)
 <use ./my-chapters/my-images/SLT/stack_diagram.png>
 Package pdftex.def Info: ./my-chapters/my-images/SLT/stack_diagram.png  used on
  input line 126.
 (pdftex.def)             Requested size: 386.95897pt x 100.64005pt.
-<./my-chapters/my-images/SLT/Sort_2_20.png, id=578, 962.84718pt x 642.90187pt>
+<./my-chapters/my-images/SLT/Sort_2_20.png, id=574, 962.84718pt x 642.90187pt>
 File: ./my-chapters/my-images/SLT/Sort_2_20.png Graphic file (type png)
 <use ./my-chapters/my-images/SLT/Sort_2_20.png>
 Package pdftex.def Info: ./my-chapters/my-images/SLT/Sort_2_20.png  used on inp
@@ -1586,7 +1586,7 @@ ut line 134.
 
 
 [14 <./my-chapters/my-images/SLT/stack_diagram.png>]
-<./my-chapters/my-images/SLT/mem_framework_standard_2_20.png, id=594, 878.53218
+<./my-chapters/my-images/SLT/mem_framework_standard_2_20.png, id=590, 878.53218
 pt x 587.19376pt>
 File: ./my-chapters/my-images/SLT/mem_framework_standard_2_20.png Graphic file 
 (type png)
@@ -1597,7 +1597,7 @@ Package pdftex.def Info: ./my-chapters/my-images/SLT/mem_framework_standard_2_2
 
 
 [15 <./my-chapters/my-images/SLT/Sort_2_20.png>]
-<./my-chapters/my-images/SLT/mem_framework_rtl_2_20.png, id=602, 768.62157pt x 
+<./my-chapters/my-images/SLT/mem_framework_rtl_2_20.png, id=598, 768.62157pt x 
 582.67688pt>
 File: ./my-chapters/my-images/SLT/mem_framework_rtl_2_20.png Graphic file (type
  png)
@@ -1615,7 +1615,7 @@ Package pdftex.def Info: ./my-chapters/my-images/SLT/mem_framework_rtl_2_20.png
 
 (my-chapters/RTL.tex
 <./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BFP16_add_diagram.png, id=6
-15, 593.5776pt x 773.289pt>
+11, 593.5776pt x 773.289pt>
 File: ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BFP16_add_diagram.png 
 Graphic file (type png)
 <use ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BFP16_add_diagram.png>
@@ -1623,7 +1623,7 @@ Package pdftex.def Info: ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BFP
 16_add_diagram.png  used on input line 9.
 (pdftex.def)             Requested size: 386.95897pt x 504.11864pt.
 <./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png, id=
-616, 609.2361pt x 2350.2204pt>
+612, 609.2361pt x 2350.2204pt>
 File: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png
  Graphic file (type png)
 <use ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png>
@@ -1638,7 +1638,7 @@ address_diagram.png  used on input line 17.
 
 
  <./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BFP16_add_diagram.png>]
-<./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png, id=623, 91
+<./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png, id=619, 91
 .3011pt x 129.6042pt>
 File: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png Graphi
 c file (type png)
@@ -1650,7 +1650,7 @@ nit_data.png  used on input line 23.
 
 [19 <./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png>
 ]
-<./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_diagram.png, id=630, 179.7
+<./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_diagram.png, id=626, 179.7
 114pt x 380.622pt>
 File: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_diagram.png Graphic f
 ile (type png)
@@ -1662,7 +1662,7 @@ agram.png  used on input line 29.
 
 [20 <./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png>]
 <./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png, id=6
-37, 2315.7717pt x 4248.0306pt>
+33, 2315.7717pt x 4248.0306pt>
 File: ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png 
 Graphic file (type png)
 <use ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png>
@@ -1677,25 +1677,37 @@ Overfull \hbox (57.30345pt too wide) in paragraph at lines 41--41
 (PAMEM_UNIT)| 
  []
 
+<./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png, id=641, 1907.6871p
+t x 379.1766pt>
+File: ./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png Graphic file (
+type png)
+<use ./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png>
+Package pdftex.def Info: ./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit
+.png  used on input line 47.
+(pdftex.def)             Requested size: 483.69687pt x 96.142pt.
 )
 
 [22 <./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png>]
+
+
+[23 <./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png>]
 \openout2 = `./my-chapters/verification.aux'.
+
 
 (my-chapters/verification.tex)
 
-[23
+[24
 
 
 
 ] (main.bbl)
 
-[24
+[25
 
 
 ] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-runsystem(latexminted cleantemp  --timestamp 20251231171509 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20260101100601 FAD58DE7366495DB465
 0CFEFAC2FCD61)...disabled (restricted).
 
 (main.aux (my-chapters/introduction.aux) (my-chapters/theorical_basic.aux)
@@ -1705,21 +1717,14 @@ runsystem(latexminted cleantemp  --timestamp 20251231171509 FAD58DE7366495DB465
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 83BA600877C4F4F58E45D42CEBA31018;6667
-(rerunfilecheck)             After:  EBA91B20AAA5AF039F85D0B899EE5960;6549.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: EBA91B20AAA5AF039F85D0B899EE5960;6549.
  ) 
 Here is how much of TeX's memory you used:
- 33701 strings out of 470046
- 652545 string characters out of 5482219
- 2285251 words of memory out of 5000000
- 61086 multiletter control sequences out of 15000+600000
+ 33710 strings out of 470046
+ 653023 string characters out of 5482219
+ 2285248 words of memory out of 5000000
+ 61093 multiletter control sequences out of 15000+600000
  666399 words of font info for 132 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,20n,101p,1065b,2191s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1746,9 +1751,9 @@ type1/vntex/vnr/vnr9.pfb></home/noname/.miktex/texmfs/install/fonts/type1/vntex
 10.pfb></home/noname/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt12.pfb></
 home/noname/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt8.pfb></home/nonam
 e/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt9.pfb>
-Output written on main.pdf (28 pages, 3645583 bytes).
+Output written on main.pdf (29 pages, 3878906 bytes).
 PDF statistics:
- 837 PDF objects out of 1000 (max. 8388607)
- 376 named destinations out of 1000 (max. 500000)
- 260 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 841 PDF objects out of 1000 (max. 8388607)
+ 378 named destinations out of 1000 (max. 500000)
+ 257 words of extra memory for PDF output out of 10000 (max. 10000000)
 

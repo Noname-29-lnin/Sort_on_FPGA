@@ -35,7 +35,7 @@ logic w_output_sum;
 // Submodules
 /////////////////////////////////////////////////////////////////////////////////////////
 SS_detect_edge #(
-    .POS_EDGE   (1)   // 1: posedge, 0: negedge
+    .POS_EDGE   (0)   // 1: posedge, 0: negedge
 ) SS_DETECT_EDGE_START (
     .i_clk      (i_clk),
     .i_rst_n    (i_rst_n),
