@@ -24,6 +24,8 @@ module PA_mem #(
 // Internal Signals
 /////////////////////////////////////////////////////////////////////
 
+logic w_active;
+logic w_start;
 logic [SIZE_ADDR-1:0] i_value;
 logic w_done_i;
 logic w_en_update_pi;
@@ -41,12 +43,27 @@ logic w_PAMEM_WRITE_update_pi;
 /////////////////////////////////////////////////////////////////////
 // Submodules
 /////////////////////////////////////////////////////////////////////
+SS_detect_edge #(
+    .POS_EDGE       (0)   // 1: posedge, 0: negedge
+) SSDE_start (
+    .i_clk          (i_clk),
+    .i_rst_n        (i_rst_n),
+    .i_signal       (i_start),
+    .o_signal       (w_start)
+);
 always_ff @( posedge i_clk or negedge i_rst_n ) begin
     if(~i_rst_n)
         mean_value  <= '0;
     else if(i_start)
         mean_value  <= i_mean_value;
 end
+SS_detect_start SSDS_ACTIVE_UNIT (
+    .i_clk          (i_clk),
+    .i_rst_n        (i_rst_n),
+    .i_start        (i_start),
+    .i_done         (o_done),
+    .o_w_start      (w_active) 
+);
 SS_detect_start SSDS_UPDATE_PI (
     .i_clk          (i_clk),
     .i_rst_n        (i_rst_n),
@@ -59,7 +76,7 @@ PAMEM_address #(
 ) PACS_I_VALUE_UNIT (
     .i_clk          (i_clk),
     .i_rst_n        (i_rst_n),
-    .i_start        (i_start),
+    .i_start        (w_start & w_active),
     .i_rd_ram       (w_PAMEM_WRITE_done),
     .i_addr_si      (i_addr_si),
     .i_addr_ei      (i_addr_ei),
@@ -72,7 +89,7 @@ PAMEM_address #(
 ) PACS_PI_VALUE_UNIT (
     .i_clk          (i_clk),
     .i_rst_n        (i_rst_n),
-    .i_start        (i_start),
+    .i_start        (w_start & w_active),
     .i_rd_ram       (w_PAMEM_WRITE_update_pi & w_en_update_pi),
     .i_addr_si      (i_addr_si),
     .i_addr_ei      (i_addr_ei),
@@ -97,7 +114,7 @@ PAMEM_readdata #(
     .i_addr_b       (pi_value),
     .o_data_a       (w_PAMEM_READ_data_a),
     .o_data_b       (w_PAMEM_READ_data_b),
-    .i_valid_rd     (i_valid_rd),
+    .i_valid_rd     (i_valid_rd & w_active),
     .i_data_ram     (i_data_ram),
     .o_rd_ram       (o_rd_ram),
     .o_addr_ram     (o_addr_rd_ram),
@@ -109,7 +126,7 @@ PAMEM_swap #(
 ) PAMEM_SWAP (
     .i_clk          (i_clk),
     .i_rst_n        (i_rst_n),
-    .i_start        (w_PAMEM_READ_done),
+    .i_start        (w_PAMEM_READ_done & w_active),
     .i_mean_value   (mean_value),
     .i_addr_a       (i_value),
     .i_addr_b       (pi_value),

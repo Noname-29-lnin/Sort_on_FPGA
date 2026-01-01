@@ -19,13 +19,5 @@ always_ff @( posedge i_clk or negedge i_rst_n ) begin
         w_o_equal     <= w_equal;
 end
 assign o_equal = w_o_equal;
-// SS_detect_edge #(
-//     .POS_EDGE       (1)   // 1: posedge, 0: negedge
-// ) SSDE_START_UNIT (
-//     .i_clk          (i_clk),
-//     .i_rst_n        (i_rst_n),
-//     .i_signal       (w_o_equal),
-//     .o_signal       (o_equal)
-// );
 
 endmodule

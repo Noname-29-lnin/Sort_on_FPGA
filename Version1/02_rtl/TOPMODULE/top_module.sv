@@ -4,11 +4,11 @@ module top_module #(
     parameter SIZE_DATA     = 32    ,
     parameter SIZE_ADDR     = 32     
 )(
-    input logic                 i_clk       ,
-    input logic                 i_rst_n     ,
-    input logic                 i_start     ,
-    input logic[SIZE_ADDR-1:0]  i_addr_si   ,
-    input logic[SIZE_ADDR-1:0]  i_addr_ei   ,
+    input logic                     i_clk       ,
+    input logic                     i_rst_n     ,
+    input logic                     i_start     ,
+    input logic[SIZE_ADDR-1:0]      i_addr_si   ,
+    input logic[SIZE_ADDR-1:0]      i_addr_ei   ,
 
     input logic                     i_valid_ram ,
     input logic [SIZE_DATA-1:0]     i_data_ram  ,
@@ -41,7 +41,7 @@ logic [SIZE_ADDR-1:0]   PAMEM_addr_rd_ram;
 logic [SIZE_ADDR-1:0]   PAMEM_addr_wr_ram;
 logic [SIZE_DATA-1:0]   PAMEM_data_ram;
 logic [SIZE_ADDR-1:0]   PAMEM_pi_ram;
-logic                   PAMEM_done;
+// logic                   PAMEM_done;
 
 logic                   RAM_rd_ram;
 logic [SIZE_ADDR-1:0]   RAM_addr_rd;
@@ -67,10 +67,8 @@ DI_unit #(
     .o_addr_si          (DI_addr_si),
     .o_addr_ei          (DI_addr_ei),
     .o_valid            (DI_valid),
-    .o_done             (DI_done) 
+    .o_done             (o_done) 
 );
-
-assign o_done = DI_done;
 
 PA_Cal_Mean #(
     .SIZE_ADDR          (SIZE_ADDR),
@@ -81,8 +79,8 @@ PA_Cal_Mean #(
     .i_start            (DI_valid),
     .i_addr_si          (DI_addr_si),
     .i_addr_ei          (DI_addr_ei),
-    .i_valid_ram        (RAM_rd_valid),
-    .i_data_ram         (RAM_data_rd),
+    .i_valid_ram        (i_valid_ram),
+    .i_data_ram         (i_data_ram),
     .o_en_ram           (PACM_en_ram),
     .o_addr_ram         (PACM_addr_ram),
     .o_mean_value       (PACM_mean_value),
@@ -99,13 +97,13 @@ PA_mem #(
     .i_addr_si          (DI_addr_si),
     .i_addr_ei          (DI_addr_ei),
     .i_mean_value       (PACM_mean_value),
-    .i_valid_rd         (RAM_rd_valid),
-    .i_data_ram         (RAM_data_rd),
+    .i_valid_rd         (i_valid_ram),
+    .i_data_ram         (i_data_ram),
     .o_rd_ram           (PAMEM_rd_ram),
-    .o_wr_ram           (PAMEM_wr_ram),
+    .o_wr_ram           (o_wr_ram),
     .o_addr_rd_ram      (PAMEM_addr_rd_ram),
-    .o_addr_wr_ram      (PAMEM_addr_wr_ram),
-    .o_data_ram         (PAMEM_data_ram),
+    .o_addr_wr_ram      (o_addr_wr_ram),
+    .o_data_ram         (o_data_ram),
     .o_pi_ram           (PAMEM_pi_ram),
     .o_done             (PAMEM_done) 
 );
@@ -113,13 +111,13 @@ PA_mem #(
 SS_detect_start SSDS_ACTIVE_PACM_UNIT (
     .i_clk              (i_clk),
     .i_rst_n            (i_rst_n),
-    .i_start            (i_start),
-    .i_done             (PACM_done),
+    .i_start            (PACM_done),
+    .i_done             (PAMEM_done),
     .o_w_start          (PACM_active) 
 );
 
-assign RAM_rd_ram = PACM_active ? PACM_en_ram : PAMEM_rd_ram;
-assign RAM_addr_rd = PACM_active ? PACM_addr_ram : PAMEM_addr_rd_ram;
+assign o_rd_ram     = PACM_active ? PAMEM_rd_ram : PACM_en_ram;
+assign o_addr_rd_ram = PACM_active ? PAMEM_addr_rd_ram : PACM_addr_ram;
 
 // tb_simple_dual_port_ram_single_clock#(
 //     .IS_READ            (1), // READ=1//WRITE=0 
@@ -140,12 +138,12 @@ assign RAM_addr_rd = PACM_active ? PACM_addr_ram : PAMEM_addr_rd_ram;
 //     .o_valid            (RAM_rd_valid) 
 // );
 
-assign i_valid_ram = RAM_rd_valid;
-assign i_data_ram = RAM_data_rd;
-assign o_addr_wr_ram = PAMEM_addr_wr_ram;
-assign o_addr_rd_ram = RAM_addr_rd;
-assign o_data_ram = PAMEM_data_ram;
-assign o_rd_ram = RAM_rd_ram;
-assign o_wr_ram = PAMEM_wr_ram;
+// assign i_valid_ram = RAM_rd_valid;
+// assign i_data_ram = RAM_data_rd;
+// assign o_addr_wr_ram = PAMEM_addr_wr_ram;
+// assign o_addr_rd_ram = RAM_addr_rd;
+// assign o_data_ram = PAMEM_data_ram;
+// assign o_rd_ram = RAM_rd_ram;
+// assign o_wr_ram = PAMEM_wr_ram;
 
 endmodule

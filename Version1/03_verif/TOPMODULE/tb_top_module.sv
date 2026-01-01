@@ -43,7 +43,7 @@ top_module #(
 tb_simple_dual_port_ram_single_clock#(
     .IS_READ            (1), // READ=1//WRITE=0 
     .DATA_WIDTH         (SIZE_DATA),
-    .ADDR_WIDTH         (SIZE_ADDR),
+    .ADDR_WIDTH         (5),
     .MEM_INIT_FILE      (MEM_INIT_FILE),
     .MEM_DUMP_FILE      (MEM_DUMP_FILE)
 ) RAM_UNIT (

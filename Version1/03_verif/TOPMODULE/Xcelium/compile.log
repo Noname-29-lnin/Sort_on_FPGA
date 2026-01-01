@@ -1,5 +1,5 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s001: Started on Jan 01, 2026 at 02:32:46 EST
+TOOL:	xrun(64)	20.09-s001: Started on Jan 01, 2026 at 08:33:17 EST
 xrun
 	+xm64bit
 	-sv
@@ -222,11 +222,13 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
   .o_level          (w_DIFIFO_level),
                                   |
 xmelab: *W,CUVMPW (/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/DI_UNIT/DI_unit.sv,144|34): port sizes differ in port connection(8/32) for the instance(tb_top_module.DUT.DI_UNIT) .
-	Building instance overlay tables: 
-                $readmemh(MEM_INIT_FILE, ram);
-                                           |
-xmelab: *W,MEMODR (../lib/tb_simple_dual_port_ram_single_clock.sv,26|43): $readmem default memory order incompatible with IEEE1364.
-.................... Done
+    .read_addr          (o_addr_rd_ram),
+                                     |
+xmelab: *W,CUVMPW (../TOPMODULE/tb_top_module.sv,55|37): port sizes differ in port connection(32/5) for the instance(tb_top_module) .
+    .write_addr         (o_addr_wr_ram),
+                                     |
+xmelab: *W,CUVMPW (../TOPMODULE/tb_top_module.sv,56|37): port sizes differ in port connection(32/5) for the instance(tb_top_module) .
+	Building instance overlay tables: .................... Done
 	Generating native compiled code:
 		worklib.PAMEM_writedata:sv <0x39feb94f>
 			streams:  16, words:  4964
@@ -244,8 +246,8 @@ xmelab: *W,MEMODR (../lib/tb_simple_dual_port_ram_single_clock.sv,26|43): $readm
 			streams:  18, words:  4907
 		worklib.PAMEM_readdata:sv <0x73fffaf5>
 			streams:  20, words:  6049
-		worklib.PA_mem:sv <0x1e8cb808>
-			streams:  31, words:  8464
+		worklib.PA_mem:sv <0x2956e0c2>
+			streams:  36, words:  9788
 		worklib.FP32_div:sv <0x2c4e7180>
 			streams:  56, words: 29262
 		worklib.PACD_LOPD_8bit:sv <0x00641cdd>
@@ -260,10 +262,6 @@ xmelab: *W,MEMODR (../lib/tb_simple_dual_port_ram_single_clock.sv,26|43): $readm
 			streams:  25, words:  6874
 		worklib.CNT_T_FF:sv <0x0e1d1c79>
 			streams:   3, words:   921
-		worklib.SS_detect_edge:sv <0x7e187f64>
-			streams:   4, words:   955
-		worklib.SS_detect_start:sv <0x225194b5>
-			streams:   4, words:  1265
 		worklib.PSC_unit:sv <0x1aeae991>
 			streams:   7, words:  2343
 		worklib.SIGN_unit:sv <0x4e748e72>
@@ -292,10 +290,14 @@ xmelab: *W,MEMODR (../lib/tb_simple_dual_port_ram_single_clock.sv,26|43): $readm
 			streams:  65, words: 18679
 		worklib.PACS_detect_intit_data:sv <0x5de3f32f>
 			streams:   4, words:  1044
-		worklib.PA_Cal_Sum:sv <0x79544dba>
-			streams:  18, words:  5389
-		worklib.PA_Cal_Mean:sv <0x78efdbc1>
-			streams:  11, words:  3232
+		worklib.PA_Cal_Sum:sv <0x697ab3d8>
+			streams:  16, words:  4853
+		worklib.SS_detect_edge:sv <0x7e187f64>
+			streams:   4, words:   955
+		worklib.SS_detect_start:sv <0x225194b5>
+			streams:   4, words:  1265
+		worklib.PA_Cal_Mean:sv <0x7649783d>
+			streams:  14, words:  3829
 		worklib.DI_compare_equal:sv <0x63ac4ca2>
 			streams:   4, words:   722
 		worklib.DIFIFO_dual_mem:sv <0x42fe82e2>
@@ -310,10 +312,10 @@ xmelab: *W,MEMODR (../lib/tb_simple_dual_port_ram_single_clock.sv,26|43): $readm
 			streams:   4, words:   955
 		worklib.DI_unit:sv <0x36f6b7ca>
 			streams:  35, words: 11358
-		worklib.top_module:sv <0x58ff8e73>
-			streams:  33, words:  9185
-		worklib.tb_top_module:sv <0x1e1c3c62>
-			streams:  23, words:  9799
+		worklib.top_module:sv <0x1ab7ec22>
+			streams:  23, words:  7187
+		worklib.tb_top_module:sv <0x02d36bb7>
+			streams:  23, words:  9815
 		worklib.SHF_right:sv <0x2eed04ad>
 			streams:   6, words:  3493
 		worklib.SHF_left:sv <0x54af70f2>
@@ -326,23 +328,22 @@ xmelab: *W,MEMODR (../lib/tb_simple_dual_port_ram_single_clock.sv,26|43): $readm
 			streams:  48, words: 21637
 		worklib.PAMEM_address:sv <0x5ecc4e1e>
 			streams:  48, words: 21555
-		worklib.tb_simple_dual_port_ram_single_clock:sv <0x41385dcc>
-			streams:   8, words:  4106
+		worklib.tb_simple_dual_port_ram_single_clock:sv <0x7f1d84bc>
+			streams:   8, words:  4062
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                  Instances  Unique
-		Modules:                199      45
-		Resolved nets:            0       1
-		Registers:              829     403
-		Scalar wires:          1166       -
+		Modules:                205      45
+		Registers:              848     404
+		Scalar wires:          1177       -
 		Expanded wires:         128      10
-		Vectored wires:         281       -
-		Always blocks:          335      82
+		Vectored wires:         274       -
+		Always blocks:          345      82
 		Initial blocks:           5       5
 		Final blocks:             1       1
-		Cont. assignments:      339     121
-		Pseudo assignments:     794     298
+		Cont. assignments:      337     113
+		Pseudo assignments:     800     300
 		Simulation timescale:   1ps
 	Writing initial simulation snapshot: worklib.tb_top_module:sv
 Loading snapshot worklib.tb_top_module:sv .................... Done
@@ -350,15 +351,9 @@ xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009
 xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
 xcelium> run
 Initial load memory contents from ./../../03_verif/lib/mem_init.hex
-xmsim: *W,RMEMAR: $readmem warning: address incremented out of range. Too many data words read
-	at line 3 of file "./../../03_verif/lib/mem_init.hex". Current address: 2, address range: [-1:0].
-            File: ../lib/tb_simple_dual_port_ram_single_clock.sv, line = 26, pos = 43
-           Scope: tb_top_module.RAM_UNIT
-            Time: 0 FS + 0
-
 Dumping memory contents to ./../../03_verif/TOPMODULE/mem_dump.hex
 Dumping memory contents to ./../../03_verif/TOPMODULE/mem_dump.hex
 Simulation complete via $finish(1) at time 10000330 NS + 0
 ../TOPMODULE/tb_top_module.sv:93     $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Jan 01, 2026 at 02:32:47 EST  (total: 00:00:01)
+TOOL:	xrun(64)	20.09-s001: Exiting on Jan 01, 2026 at 08:33:18 EST  (total: 00:00:01)

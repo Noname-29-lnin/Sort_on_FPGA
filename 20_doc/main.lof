@@ -1,10 +1,6 @@
 \babel@toc {vietnamese}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Cấu trúc của bộ lưu trữ stack khi thay thế cho đệ quy.}}{14}{figure.caption.2}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Kết quả so sánh giữa bộ Framework chuẩn và Framework chỉnh sửa.}}{15}{figure.caption.3}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Kết quả của việc sử dụng Memory khi sử dụng Framework chuẩn.}}{16}{figure.caption.4}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Kết quả của việc sử dụng Memory khi sử dụng Framework chỉnh sửa.}}{17}{figure.caption.5}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Bộ cộng số thực.}}{18}{figure.caption.6}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Bộ điều khiển dữ liệu đọc với Memory Unit.}}{19}{figure.caption.7}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Bộ phát hiện tính hiệu bắt đầu.}}{20}{figure.caption.8}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Bộ tính cộng số thực (BFP16\_add).}}{21}{figure.caption.9}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Bộ chia số thực.}}{22}{figure.caption.10}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Bộ thực hiện 2 số Floating Point 32-bit.}}{1}{figure.caption.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Bộ điều khiển dữ liệu đọc với Memory Unit.}}{2}{figure.caption.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Bộ phát hiện tính hiệu bắt đầu.}}{3}{figure.caption.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Bộ tính cộng số thực (BFP16\_add).}}{4}{figure.caption.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Bộ chia số thực.}}{5}{figure.caption.5}%

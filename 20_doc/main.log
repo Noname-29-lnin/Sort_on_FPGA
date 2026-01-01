@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2025.12.31)  1 JAN 2026 10:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2025.12.31)  2 JAN 2026 00:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1333,9 +1333,7 @@ File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 (babel)             Reported on input line 9.
 
-(my-chapters/introduction.aux) (my-chapters/theorical_basic.aux)
-(my-chapters/SystemLevelTest.aux) (my-chapters/RTL.aux)
-(my-chapters/verification.aux))
+(my-chapters/RTL.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -1432,7 +1430,7 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count413
-<./my-chapters/my-images/01_logobachkhoatoi.png, id=97, 471.9231pt x 478.9092pt
+<./my-chapters/my-images/01_logobachkhoatoi.png, id=42, 471.9231pt x 478.9092pt
 >
 File: ./my-chapters/my-images/01_logobachkhoatoi.png Graphic file (type png)
 <use ./my-chapters/my-images/01_logobachkhoatoi.png>
@@ -1453,7 +1451,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-<./my-chapters/my-images/bia.jpg, id=99, 301.125pt x 414.95026pt>
+<./my-chapters/my-images/bia.jpg, id=44, 301.125pt x 414.95026pt>
 File: ./my-chapters/my-images/bia.jpg Graphic file (type jpg)
 <use ./my-chapters/my-images/bia.jpg>
 Package pdftex.def Info: ./my-chapters/my-images/bia.jpg  used on input line 29
@@ -1468,9 +1466,7 @@ LaTeX Font Info:    Calculating math sizes for size <13> on input line 4.
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- (main.lof
-
-[1])
+ (main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
@@ -1484,276 +1480,125 @@ LaTeX Font Info:    Calculating math sizes for size <13> on input line 4.
 
 
 
+[1]
+
 [2]
+\openout2 = `./my-chapters/RTL.aux'.
 
-[3]
-\openout2 = `./my-chapters/introduction.aux'.
+ (my-chapters/RTL.tex
+<./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BlockDiagram_Overview.png, 
+id=80, 1453.43pt x 1446.40375pt>
+File: ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BlockDiagram_Overview.
+png Graphic file (type png)
+<use ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BlockDiagram_Overview.p
+ng>
+Package pdftex.def Info: ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/Blo
+ckDiagram_Overview.png  used on input line 9.
+(pdftex.def)             Requested size: 338.58632pt x 336.94751pt.
+<./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png, id=
+81, 609.2361pt x 2350.2204pt>
+File: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png
+ Graphic file (type png)
+<use ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png>
 
- (my-chapters/introduction.tex
+Package pdftex.def Info: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_
+address_diagram.png  used on input line 20.
+(pdftex.def)             Requested size: 96.73788pt x 373.17404pt.
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 		\item \textbf
-                    {ƒê·ªô tr·ªÖ truy xu·∫•t (Access Latency):} Th·ªùi gian ...
-[1
+l.23 
+      [1
 
+ <./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BlockDiagram_Overview.png>
 ]
-
-[2])
-
-[3]
-\openout2 = `./my-chapters/theorical_basic.aux'.
-
- (my-chapters/theorical_basic.tex
-
-[4
-
-
-
-]
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 46.
-
-Overfull \hbox (2.61615pt too wide) in paragraph at lines 62--62
- []|$[]$| 
- []
-
-
-Overfull \hbox (2.61615pt too wide) in paragraph at lines 74--75
- []|$[]$| 
- []
-
-
-Overfull \hbox (33.94717pt too wide) in paragraph at lines 45--79
-[]| [] 
- []
-
-
-
-[5]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 89.
-LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 8
-9.
- (/home/noname/.miktex/texmfs/install/tex/latex/vntex/t5cmtt.fd
-File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-(my-chapters/my-codes/pseudo_serial.txt
-
-[6])
-
-[7]
-
-[8]
-
-[9]
-
-[10])
-
-[11]
-\openout2 = `./my-chapters/SystemLevelTest.aux'.
-
- (my-chapters/SystemLevelTest.tex
-(/home/noname/.miktex/texmfs/install/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2024/09/23 1.10c listings language file
-)
-(/home/noname/.miktex/texmfs/install/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-)
-
-[12
-
-
-
-]
-
-[13]
-<./my-chapters/my-images/SLT/stack_diagram.png, id=573, 1393.205pt x 362.35374p
-t>
-File: ./my-chapters/my-images/SLT/stack_diagram.png Graphic file (type png)
-<use ./my-chapters/my-images/SLT/stack_diagram.png>
-Package pdftex.def Info: ./my-chapters/my-images/SLT/stack_diagram.png  used on
- input line 126.
-(pdftex.def)             Requested size: 386.95897pt x 100.64005pt.
-<./my-chapters/my-images/SLT/Sort_2_20.png, id=574, 962.84718pt x 642.90187pt>
-File: ./my-chapters/my-images/SLT/Sort_2_20.png Graphic file (type png)
-<use ./my-chapters/my-images/SLT/Sort_2_20.png>
-Package pdftex.def Info: ./my-chapters/my-images/SLT/Sort_2_20.png  used on inp
-ut line 134.
-(pdftex.def)             Requested size: 435.32422pt x 290.66673pt.
-
-
-[14 <./my-chapters/my-images/SLT/stack_diagram.png>]
-<./my-chapters/my-images/SLT/mem_framework_standard_2_20.png, id=590, 878.53218
-pt x 587.19376pt>
-File: ./my-chapters/my-images/SLT/mem_framework_standard_2_20.png Graphic file 
-(type png)
-<use ./my-chapters/my-images/SLT/mem_framework_standard_2_20.png>
-Package pdftex.def Info: ./my-chapters/my-images/SLT/mem_framework_standard_2_2
-0.png  used on input line 140.
-(pdftex.def)             Requested size: 435.32422pt x 290.97092pt.
-
-
-[15 <./my-chapters/my-images/SLT/Sort_2_20.png>]
-<./my-chapters/my-images/SLT/mem_framework_rtl_2_20.png, id=598, 768.62157pt x 
-582.67688pt>
-File: ./my-chapters/my-images/SLT/mem_framework_rtl_2_20.png Graphic file (type
- png)
-<use ./my-chapters/my-images/SLT/mem_framework_rtl_2_20.png>
-Package pdftex.def Info: ./my-chapters/my-images/SLT/mem_framework_rtl_2_20.png
-  used on input line 146.
-(pdftex.def)             Requested size: 435.32422pt x 330.01323pt.
-
-
-[16 <./my-chapters/my-images/SLT/mem_framework_standard_2_20.png>])
-
-[17 <./my-chapters/my-images/SLT/mem_framework_rtl_2_20.png>]
-\openout2 = `./my-chapters/RTL.aux'.
-
-
-(my-chapters/RTL.tex
-<./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BFP16_add_diagram.png, id=6
-11, 593.5776pt x 773.289pt>
-File: ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BFP16_add_diagram.png 
-Graphic file (type png)
-<use ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BFP16_add_diagram.png>
-Package pdftex.def Info: ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BFP
-16_add_diagram.png  used on input line 9.
-(pdftex.def)             Requested size: 386.95897pt x 504.11864pt.
-<./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png, id=
-612, 609.2361pt x 2350.2204pt>
-File: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png
- Graphic file (type png)
-<use ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png>
-
-Package pdftex.def Info: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_
-address_diagram.png  used on input line 17.
-(pdftex.def)             Requested size: 96.73788pt x 373.17404pt.
-
-
-[18
-
-
-
- <./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BFP16_add_diagram.png>]
-<./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png, id=619, 91
-.3011pt x 129.6042pt>
+<./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png, id=89, 91.
+3011pt x 129.6042pt>
 File: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png Graphi
 c file (type png)
 <use ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png>
 Package pdftex.def Info: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_i
-nit_data.png  used on input line 23.
+nit_data.png  used on input line 26.
 (pdftex.def)             Requested size: 193.47578pt x 274.65474pt.
 
 
-[19 <./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png>
-]
-<./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_diagram.png, id=626, 179.7
-114pt x 380.622pt>
+[2 <./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png>]
+<./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_diagram.png, id=96, 179.71
+14pt x 380.622pt>
 File: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_diagram.png Graphic f
 ile (type png)
 <use ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_diagram.png>
 Package pdftex.def Info: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_di
-agram.png  used on input line 29.
+agram.png  used on input line 32.
 (pdftex.def)             Requested size: 193.47578pt x 409.78789pt.
 
 
-[20 <./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png>]
-<./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png, id=6
-33, 2315.7717pt x 4248.0306pt>
+[3 <./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png>]
+<./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png, id=1
+03, 2315.7717pt x 4248.0306pt>
 File: ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png 
 Graphic file (type png)
 <use ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png>
 Package pdftex.def Info: ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU
-32_div_diagram.png  used on input line 37.
+32_div_diagram.png  used on input line 40.
 (pdftex.def)             Requested size: 241.84843pt x 443.62564pt.
 
 
-[21 <./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_diagram.png>]
-Overfull \hbox (57.30345pt too wide) in paragraph at lines 41--41
+[4 <./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_diagram.png>]
+Overfull \hbox (57.30345pt too wide) in paragraph at lines 44--44
 |[]\T5/cmr/bx/n/14.4 BÎ th¸c hiªn par-ti-tion l§i m£ng theo gi° tr‡ trung bºnh 
 (PAMEM_UNIT)| 
  []
 
-<./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png, id=641, 1907.6871p
+<./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png, id=111, 1907.6871p
 t x 379.1766pt>
 File: ./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png Graphic file (
 type png)
 <use ./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png>
 Package pdftex.def Info: ./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit
-.png  used on input line 47.
+.png  used on input line 50.
 (pdftex.def)             Requested size: 483.69687pt x 96.142pt.
 )
 
-[22 <./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png>]
+[5 <./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png>]
 
+[6 <./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png>] (main.bbl)
 
-[23 <./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png>]
-\openout2 = `./my-chapters/verification.aux'.
-
-
-(my-chapters/verification.tex)
-
-[24
-
-
-
-] (main.bbl)
-
-[25
+[7
 
 
 ] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-runsystem(latexminted cleantemp  --timestamp 20260101100601 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20260102003334 FAD58DE7366495DB465
 0CFEFAC2FCD61)...disabled (restricted).
 
-(main.aux (my-chapters/introduction.aux) (my-chapters/theorical_basic.aux)
-(my-chapters/SystemLevelTest.aux) (my-chapters/RTL.aux)
-(my-chapters/verification.aux))
+(main.aux (my-chapters/RTL.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EBA91B20AAA5AF039F85D0B899EE5960;6549.
+(rerunfilecheck)             Checksum: 3EBB01399F880E63A074CF982803DF31;2553.
  ) 
 Here is how much of TeX's memory you used:
- 33710 strings out of 470046
- 653023 string characters out of 5482219
- 2285248 words of memory out of 5000000
- 61093 multiletter control sequences out of 15000+600000
- 666399 words of font info for 132 fonts, out of 8000000 for 9000
+ 32511 strings out of 470046
+ 633241 string characters out of 5482219
+ 1141956 words of memory out of 5000000
+ 60306 multiletter control sequences out of 15000+600000
+ 649564 words of font info for 89 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 99i,20n,101p,1065b,2191s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/noname/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi450/tctt080
-0.pk> </home/noname/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi650/tcrm
-1200.pk></home/noname/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cme
-x10.pfb></home/noname/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb></home/noname/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmm
-i12.pfb></home/noname/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmm
-i5.pfb></home/noname/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi
-8.pfb></home/noname/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi9
-.pfb></home/noname/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></home/noname/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.p
-fb></home/noname/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr5.pfb
-></home/noname/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-/home/noname/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></h
-ome/noname/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></h
-ome/noname/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnbx12.pfb></home/nonam
-e/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr12.pfb></home/noname/.miktex/
-texmfs/install/fonts/type1/vntex/vnr/vnr17.pfb></home/noname/.miktex/texmfs/ins
-tall/fonts/type1/vntex/vnr/vnr6.pfb></home/noname/.miktex/texmfs/install/fonts/
-type1/vntex/vnr/vnr9.pfb></home/noname/.miktex/texmfs/install/fonts/type1/vntex
-/vnr/vnti12.pfb></home/noname/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt
-10.pfb></home/noname/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt12.pfb></
-home/noname/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt8.pfb></home/nonam
-e/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt9.pfb>
-Output written on main.pdf (29 pages, 3878906 bytes).
+ 99i,11n,101p,1065b,508s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/noname/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnbx12.pfb></home/
+noname/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr12.pfb></home/noname/.mi
+ktex/texmfs/install/fonts/type1/vntex/vnr/vnr17.pfb></home/noname/.miktex/texmf
+s/install/fonts/type1/vntex/vnr/vnti12.pfb>
+Output written on main.pdf (10 pages, 3204901 bytes).
 PDF statistics:
- 841 PDF objects out of 1000 (max. 8388607)
- 378 named destinations out of 1000 (max. 500000)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 154 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -125,7 +125,7 @@ always_ff @( posedge i_clk or negedge i_rst_n ) begin
 end
 
 always_ff @( posedge i_clk or negedge i_rst_n ) begin
-  w_LEVEL_out <= 3;
+  w_LEVEL_out <= 4;
 end
 
 DI_fifo #(

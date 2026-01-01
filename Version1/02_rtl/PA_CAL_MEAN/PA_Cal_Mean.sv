@@ -17,10 +17,19 @@ module PA_Cal_Mean #(
     output logic                    o_done       
 );
 
+logic w_active;
 logic w_PACS_done;
 logic w_BFP16_DIV_done;
 logic [SIZE_DATA-1:0] w_sum;
 logic [SIZE_DATA-1:0] w_divisor;
+
+SS_detect_start SSDS_ACTIVE_UNIT (
+    .i_clk          (i_clk),
+    .i_rst_n        (i_rst_n),
+    .i_start        (i_start),
+    .i_done         (o_done),
+    .o_w_start      (w_active) 
+);
 
 PA_Cal_Sum #(
     .SIZE_ADDR      (SIZE_ADDR),
@@ -31,7 +40,7 @@ PA_Cal_Sum #(
     .i_start        (i_start),
     .i_addr_si      (i_addr_si),
     .i_addr_ei      (i_addr_ei),
-    .i_valid_ram    (i_valid_ram),
+    .i_valid_ram    (i_valid_ram & w_active),
     .i_data_ram     (i_data_ram),
     .o_sum          (w_sum),
     .o_rd_ram       (o_en_ram),
