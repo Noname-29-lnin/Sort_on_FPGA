@@ -69,6 +69,16 @@ initial begin
 
     @(negedge o_done);
     $display("o_diff_addr = %h (%.4f)", o_diff_addr, $bitstoshortreal(o_diff_addr));
+    
+    @(posedge i_clk);
+    i_addr_si = 32'd0;
+    i_addr_ei = 32'd31;
+    i_start = 1;
+    @(posedge i_clk);
+    i_start = 0;
+
+    @(negedge o_done);
+    $display("o_diff_addr = %h (%.4f)", o_diff_addr, $bitstoshortreal(o_diff_addr));
     $finish;
 end
 

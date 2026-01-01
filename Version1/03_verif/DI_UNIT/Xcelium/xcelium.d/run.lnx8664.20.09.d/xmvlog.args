@@ -1,0 +1,26 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.20.09.d
+-RUNMODE
+-sv
+./../../03_verif/DI_UNIT/tb_DI_unit.sv
+./../../02_rtl/DI_UNIT/DI_unit.sv
+./../../02_rtl/DI_UNIT/DI_compare_equal.sv
+./../../02_rtl/DI_UNIT/DI_fifo.sv
+./../../02_rtl/DI_UNIT/DI_up_level.sv
+./../../02_rtl/DI_UNIT/DIFIFO_dual_mem.sv
+./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+-ALLOWREDEFINITION
+-CDSLIB
+./xcelium.d/run.lnx8664.20.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.20.09.d/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.20.09.d/xllibs
+-ALLOWUNBOUND
+-hastop

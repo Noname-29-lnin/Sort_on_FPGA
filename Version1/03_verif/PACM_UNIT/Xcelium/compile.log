@@ -1,5 +1,5 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s001: Started on Dec 28, 2025 at 04:20:33 EST
+TOOL:	xrun(64)	20.09-s001: Started on Jan 01, 2026 at 03:29:53 EST
 xrun
 	+xm64bit
 	-sv
@@ -28,11 +28,11 @@ xrun
 		./../../02_rtl/PA_CAL_MEAN/PACS_detect_intit_data.sv
 		./../../02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv
 		./../../02_rtl/PA_CAL_MEAN/BFP16_DIV/FP32_div.sv
-		./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_diff_addr.sv
-		./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_divisor.sv
-		./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_8bit.sv
-		./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_16bit.sv
-		./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_32bit.sv
+		./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_diff_addr.sv
+		./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_divisor.sv
+		./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_8bit.sv
+		./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_16bit.sv
+		./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_32bit.sv
 	-top tb_PA_Cal_Mean
 	-access +rwc
 	-clean
@@ -119,19 +119,19 @@ file: ./../../02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv
 file: ./../../02_rtl/PA_CAL_MEAN/BFP16_DIV/FP32_div.sv
 	module worklib.FP32_div:sv
 		errors: 0, warnings: 0
-file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_diff_addr.sv
+file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_diff_addr.sv
 	module worklib.PACD_diff_addr:sv
 		errors: 0, warnings: 0
-file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_divisor.sv
+file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_divisor.sv
 	module worklib.PACD_divisor:sv
 		errors: 0, warnings: 0
-file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_8bit.sv
+file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_8bit.sv
 	module worklib.PACD_LOPD_8bit:sv
 		errors: 0, warnings: 0
-file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_16bit.sv
+file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_16bit.sv
 	module worklib.PACD_LOPD_16bit:sv
 		errors: 0, warnings: 0
-file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_32bit.sv
+file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_32bit.sv
 	module worklib.PACD_LOPD_32bit:sv
 		errors: 0, warnings: 0
 	Elaborating the design hierarchy:
@@ -139,6 +139,9 @@ file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_32bit.sv
 	Top level design units:
 		tb_PA_Cal_Mean
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+    .read_addr          (o_addr_ram),
+                                  |
+xmelab: *W,CUVMPW (../PACM_UNIT/tb_PA_Cal_Mean.sv,34|34): port sizes differ in port connection(32/6) for the instance(tb_PA_Cal_Mean) .
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
 		worklib.SS_detect_edge:sv <0x1400a503>
@@ -151,10 +154,10 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 			streams:  10, words:  3832
 		worklib.PACD_LOPD_32bit:sv <0x02d04ff4>
 			streams:  23, words:  7609
-		worklib.PACD_diff_addr:sv <0x26ddcb2d>
-			streams:  11, words:  3509
-		worklib.PACD_divisor:sv <0x1b3f7135>
-			streams:  25, words:  6915
+		worklib.PACD_diff_addr:sv <0x1cd04918>
+			streams:  12, words:  3827
+		worklib.PACD_divisor:sv <0x09fcc607>
+			streams:  25, words:  6874
 		worklib.CNT_T_FF:sv <0x72f5ca14>
 			streams:   3, words:   921
 		worklib.SS_detect_edge:sv <0x21c25ec6>
@@ -191,36 +194,36 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 			streams:   4, words:  1044
 		worklib.SS_detect_edge:sv <0x02d248f6>
 			streams:   4, words:   955
-		worklib.PA_Cal_Sum:sv <0x33d23ce1>
-			streams:  18, words:  5407
-		worklib.PA_Cal_Mean:sv <0x000dc429>
-			streams:  11, words:  3250
-		worklib.tb_simple_dual_port_ram_single_clock:sv <0x61e91524>
-			streams:   8, words:  4078
-		worklib.tb_PA_Cal_Mean:sv <0x020fb1fc>
-			streams:  18, words:  9793
+		worklib.PA_Cal_Sum:sv <0x03e3a854>
+			streams:  16, words:  4853
+		worklib.tb_simple_dual_port_ram_single_clock:sv <0x62571b53>
+			streams:   8, words:  4062
+		worklib.tb_PA_Cal_Mean:sv <0x7f30c4b8>
+			streams:  18, words: 12537
 		worklib.SHF_right:sv <0x2eed04ad>
 			streams:   6, words:  3493
 		worklib.SHF_left:sv <0x54af70f2>
 			streams:   5, words:  2711
 		worklib.SHF_left:sv <0x18f65f76>
 			streams:   7, words:  3911
-		worklib.PACS_control_address:sv <0x677e332d>
-			streams:  27, words: 10329
+		worklib.PACS_control_address:sv <0x6f54a909>
+			streams:  48, words: 21607
+		worklib.PA_Cal_Mean:sv <0x6d5db227>
+			streams:  11, words:  3260
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                 Instances  Unique
-		Modules:                64      29
-		Registers:             343     217
-		Scalar wires:          347       -
+		Modules:                85      29
+		Registers:             386     218
+		Scalar wires:          492       -
 		Expanded wires:         64       6
 		Vectored wires:        189       -
-		Always blocks:          74      39
+		Always blocks:         116      39
 		Initial blocks:          4       4
 		Final blocks:            1       1
-		Cont. assignments:     188      86
-		Pseudo assignments:    222     151
+		Cont. assignments:     209      86
+		Pseudo assignments:    326     150
 		Simulation timescale:  1ps
 	Writing initial simulation snapshot: worklib.tb_PA_Cal_Mean:sv
 Loading snapshot worklib.tb_PA_Cal_Mean:sv .................... Done
@@ -228,16 +231,12 @@ xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009
 xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
 xcelium> run
 Initial load memory contents from ./../../03_verif/lib/mem_init.hex
-xmsim: *W,RMEMAR: $readmem warning: address incremented out of range. Too many data words read
-	at line 2049 of file "./../../03_verif/lib/mem_init.hex". Current address: 2048, address range: [0:2047].
-            File: ../lib/tb_simple_dual_port_ram_single_clock.sv, line = 26, pos = 43
-           Scope: tb_PA_Cal_Mean.RAM_UNIT
-            Time: 0 FS + 0
-
-o_mean_value = ca710000 (-3948544.0000)
+o_total_sum = 42800000 (64.0000)
+o_total_sum = 4fb50000 (6073352192.0000)
+o_mean_value = 4cb50000 (94896128.0000)
 End Simulation
 Dumping memory contents to ./../../03_verif/PACM_UNIT/mem_dump.hex
-Simulation complete via $finish(1) at time 207470 NS + 0
-../PACM_UNIT/tb_PA_Cal_Mean.sv:88     $finish;
+Simulation complete via $finish(1) at time 7770 NS + 0
+../PACM_UNIT/tb_PA_Cal_Mean.sv:94     $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Dec 28, 2025 at 04:20:35 EST  (total: 00:00:02)
+TOOL:	xrun(64)	20.09-s001: Exiting on Jan 01, 2026 at 03:29:54 EST  (total: 00:00:01)

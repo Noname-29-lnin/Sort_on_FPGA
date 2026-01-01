@@ -26,8 +26,8 @@
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACS_detect_intit_data.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACS_ADDRESS/CNT_T_FF.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/FP32_div.sv
-/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_diff_addr.sv
-/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_divisor.sv
-/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_8bit.sv
-/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_16bit.sv
-/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_32bit.sv
+/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_diff_addr.sv
+/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_divisor.sv
+/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_8bit.sv
+/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_16bit.sv
+/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_32bit.sv

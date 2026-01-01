@@ -5,14 +5,14 @@
 +xm64bit
 -sv
 -f
-./../DI_FIFO/flist.f
+./../PACM_UNIT/flist.f
 -top
-tb_DI_fifo
+tb_PA_Cal_Mean
 -access
 +rwc
 -clean
 -log
-./../DI_FIFO/Xcelium/compile.log
+./../PACM_UNIT/Xcelium/compile.log
 +nctimescale+1ns/1ps
 +ntb_random_seed=automatic
 -allowredefinition

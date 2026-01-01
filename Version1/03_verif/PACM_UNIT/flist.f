@@ -27,8 +27,8 @@
 
 ./../../02_rtl/PA_CAL_MEAN/BFP16_DIV/FP32_div.sv
 
-./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_diff_addr.sv
-./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_divisor.sv
-./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_8bit.sv
-./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_16bit.sv
-./../../02_rtl/PA_CAL_MEAN/PACD_divisor.sv/PACD_LOPD_32bit.sv
+./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_diff_addr.sv
+./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_divisor.sv
+./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_8bit.sv
+./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_16bit.sv
+./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_32bit.sv

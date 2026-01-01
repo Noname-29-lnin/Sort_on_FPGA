@@ -1,0 +1,106 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Jan 01, 2026 at 03:15:10 EST
+xrun
+	+xm64bit
+	-sv
+	-f ./../PACD_DIVISOR/flist.f
+		./../../03_verif/PACD_DIVISOR/tb_PACD_divisor.sv
+		./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_divisor.sv
+		./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_diff_addr.sv
+		./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_8bit.sv
+		./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_16bit.sv
+		./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_32bit.sv
+		./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+		./../../02_rtl/SS_MODULE/SS_detect_start.sv
+		./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_left.sv
+	-top tb_PACD_divisor
+	-access +rwc
+	-clean
+	-log ./../PACD_DIVISOR/Xcelium/compile.log
+	+nctimescale+1ns/1ps
+	+ntb_random_seed=automatic
+	-allowredefinition
+	-v93
+
+   User defined plus("+") options:
+	+ntb_random_seed=automatic
+
+xrun: *W,OPDEPRREN: Command Line Option (+nctimescale+1ns/1ps) is deprecated. Use (+xmtimescale+1ns/1ps) instead.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ./../../03_verif/PACD_DIVISOR/tb_PACD_divisor.sv
+	module worklib.tb_PACD_divisor:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_divisor.sv
+	module worklib.PACD_divisor:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_diff_addr.sv
+	module worklib.PACD_diff_addr:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_8bit.sv
+	module worklib.PACD_LOPD_8bit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_16bit.sv
+	module worklib.PACD_LOPD_16bit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/PACD_divisor/PACD_LOPD_32bit.sv
+	module worklib.PACD_LOPD_32bit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+	module worklib.SS_detect_edge:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/SS_detect_start.sv
+	module worklib.SS_detect_start:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_left.sv
+	module worklib.SHF_left:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_PACD_divisor
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.PACD_LOPD_8bit:sv <0x00641cdd>
+			streams:   5, words:  2314
+		worklib.PACD_LOPD_16bit:sv <0x6bdbce3b>
+			streams:  10, words:  3832
+		worklib.PACD_LOPD_32bit:sv <0x02d04ff4>
+			streams:  23, words:  7609
+		worklib.SS_detect_edge:sv <0x6d022561>
+			streams:   4, words:   955
+		worklib.PACD_diff_addr:sv <0x1cd04918>
+			streams:  12, words:  3827
+		worklib.PACD_divisor:sv <0x09fcc607>
+			streams:  25, words:  6874
+		worklib.tb_PACD_divisor:sv <0x4a33b19b>
+			streams:   9, words: 15967
+		worklib.SHF_left:sv <0x66caa832>
+			streams:   7, words:  3911
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                12       8
+		Registers:              79      63
+		Scalar wires:           63       -
+		Expanded wires:         32       2
+		Vectored wires:         44       -
+		Always blocks:          18      18
+		Initial blocks:          2       2
+		Cont. assignments:      53      29
+		Pseudo assignments:     33      29
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_PACD_divisor:sv
+Loading snapshot worklib.tb_PACD_divisor:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+o_diff_addr = 43960000 (300.0000)
+o_diff_addr = 4f800000 (4294967296.0000)
+o_diff_addr = 41300000 (11.0000)
+o_diff_addr = 42000000 (32.0000)
+Simulation complete via $finish(1) at time 730 NS + 3
+../PACD_DIVISOR/tb_PACD_divisor.sv:82     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Jan 01, 2026 at 03:15:10 EST  (total: 00:00:00)

@@ -16,7 +16,6 @@ module PA_mem #(
     output logic [SIZE_ADDR-1:0]    o_addr_rd_ram,
     output logic [SIZE_ADDR-1:0]    o_addr_wr_ram,
     output logic [SIZE_DATA-1:0]    o_data_ram  ,
-
     output logic [SIZE_ADDR-1:0]    o_pi_ram    ,
     output logic                    o_done       
 );

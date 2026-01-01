@@ -19,7 +19,7 @@ NAME_WAVE		= $(WORK_DIR)/$(TB_NAME).$(DEF_WAVE)
 -include config.mk
 
 # Load Targets
-.PHONY: load
+.PHONY: load view history
 load:
 	@echo "Saving configuration..."
 	@echo "TOPMODULE=$(TOPMODULE)" > config.mk
@@ -30,6 +30,15 @@ load:
 	@echo "DEF_WAVE=$(DEF_WAVE)" >> config.mk
 	@echo "-> Saved to config.mk"
 	@cat config.mk
+
+view:
+	@echo "Print config.mk"
+	@cat "========= $(TB_NAME) ========="
+	@cat config.mk
+
+history:
+	@echo "Load in History.log"
+	@cat $(WORK_DIR)/compile.log >> $(WORK_DIR)/history.log
 
 .PHONY: all all_wave create view compile run gui clean kill help
 all: create compile run
@@ -61,6 +70,10 @@ create:
 	@echo "DEF_GATELEVEL = $(NAME_GATELEVEL)"
 	@echo "DEF_ANNOTATION = $(NAME_ANNOTATION)"
 	@echo " "
+		@echo "Checking history.log..."
+	@test -f "$(WORK_DIR)/history.log" \
+		&& echo "<Skip> history.log already exists" \
+		|| (touch "$(WORK_DIR)/history.log" && echo "<Pass> create history.log")
 
 view:
 	@echo "Open config.mk..."

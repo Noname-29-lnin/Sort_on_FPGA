@@ -1,0 +1,97 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Jan 01, 2026 at 02:48:18 EST
+xrun
+	+xm64bit
+	-sv
+	-f ./../DI_UNIT/flist.f
+		./../../03_verif/DI_UNIT/tb_DI_unit.sv
+		./../../02_rtl/DI_UNIT/DI_unit.sv
+		./../../02_rtl/DI_UNIT/DI_compare_equal.sv
+		./../../02_rtl/DI_UNIT/DI_fifo.sv
+		./../../02_rtl/DI_UNIT/DI_up_level.sv
+		./../../02_rtl/DI_UNIT/DIFIFO_dual_mem.sv
+		./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+	-top tb_DI_unit
+	-access +rwc
+	-clean
+	-log ./../DI_UNIT/Xcelium/compile.log
+	+nctimescale+1ns/1ps
+	+ntb_random_seed=automatic
+	-allowredefinition
+	-v93
+
+   User defined plus("+") options:
+	+ntb_random_seed=automatic
+
+xrun: *W,OPDEPRREN: Command Line Option (+nctimescale+1ns/1ps) is deprecated. Use (+xmtimescale+1ns/1ps) instead.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ./../../03_verif/DI_UNIT/tb_DI_unit.sv
+	module worklib.tb_DI_unit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/DI_UNIT/DI_unit.sv
+	module worklib.DI_unit:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/DI_UNIT/DI_compare_equal.sv
+	module worklib.DI_compare_equal:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/DI_UNIT/DI_fifo.sv
+	module worklib.DI_fifo:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/DI_UNIT/DI_up_level.sv
+	module worklib.DI_up_level:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/DI_UNIT/DIFIFO_dual_mem.sv
+	module worklib.DIFIFO_dual_mem:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+	module worklib.SS_detect_edge:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_DI_unit
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+  .o_level          (w_DIFIFO_level),
+                                  |
+xmelab: *W,CUVMPW (/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/DI_UNIT/DI_unit.sv,144|34): port sizes differ in port connection(8/32) for the instance(tb_DI_unit.DUT) .
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.DI_compare_equal:sv <0x63ac4ca2>
+			streams:   4, words:   722
+		worklib.DIFIFO_dual_mem:sv <0x42fe82e2>
+			streams:   7, words:  2846
+		worklib.DI_fifo:sv <0x5d0045dd>
+			streams:  21, words:  7663
+		worklib.DI_up_level:sv <0x1574734f>
+			streams:   4, words:   930
+		worklib.SS_detect_edge:sv <0x4bda84a1>
+			streams:   4, words:   955
+		worklib.SS_detect_edge:sv <0x5d086954>
+			streams:   4, words:   955
+		worklib.DI_unit:sv <0x36f6b7ca>
+			streams:  35, words: 11358
+		worklib.tb_DI_unit:sv <0x066dd70c>
+			streams:  15, words: 11569
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 9       7
+		Registers:              65      59
+		Scalar wires:           31       -
+		Vectored wires:         30       -
+		Always blocks:          22      18
+		Initial blocks:          4       4
+		Cont. assignments:       9       8
+		Pseudo assignments:     36      36
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_DI_unit:sv
+Loading snapshot worklib.tb_DI_unit:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+Finish test...
+Simulation complete via $finish(1) at time 13910 NS + 0
+../DI_UNIT/tb_DI_unit.sv:92     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Jan 01, 2026 at 02:48:18 EST  (total: 00:00:00)

@@ -3,7 +3,7 @@
 // Do not modify this file
 //
 
-tb_DI_fifo
+tb_PA_Cal_Mean
 -ACCESS
 +rwc
 -timescale

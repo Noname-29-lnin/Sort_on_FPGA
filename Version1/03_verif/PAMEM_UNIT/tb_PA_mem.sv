@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 module tb_PA_mem();
 
-parameter SIZE_ADDR     = 5;
+parameter SIZE_ADDR     = 32;
 parameter SIZE_DATA     = 32;
 parameter IS_READ       = 1; // READ=1//WRITE=0 
 parameter MEM_INIT_FILE = "./../../03_verif/lib/mem_init.hex";
@@ -25,7 +25,7 @@ logic                   o_done;
 tb_simple_dual_port_ram_single_clock#(
     .IS_READ            (IS_READ), // READ=1//WRITE=0 
     .DATA_WIDTH         (SIZE_DATA),
-    .ADDR_WIDTH         (SIZE_ADDR),
+    .ADDR_WIDTH         (5),
     .MEM_INIT_FILE      (MEM_INIT_FILE),
     .MEM_DUMP_FILE      (MEM_DUMP_FILE)
 ) RAM_UNIT (
@@ -34,8 +34,8 @@ tb_simple_dual_port_ram_single_clock#(
     .i_data             (o_data_ram),
     .wr_en              (o_wr_ram),
     .rd_en              (o_rd_ram), 
-    .read_addr          (o_addr_rd_ram),
-    .write_addr         (o_addr_wr_ram),
+    .read_addr          (o_addr_rd_ram[4:0]),
+    .write_addr         (o_addr_wr_ram[4:0]),
     .o_data             (i_data_ram),
     .o_valid            (i_valid_rd) 
 );
@@ -84,8 +84,8 @@ initial begin
     @(posedge i_clk);
     i_start = 1;
     i_addr_si   = 0;
-    i_addr_ei   = 32'h4cc1affc;
-    i_mean_value    = 0;
+    i_addr_ei   = 31;
+    i_mean_value    = 32'h4cc1affc;
     @(posedge i_clk);
     i_start = 0;
     

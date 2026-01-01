@@ -35,27 +35,27 @@ logic w_output_sum;
 // Submodules
 /////////////////////////////////////////////////////////////////////////////////////////
 SS_detect_edge #(
-    .POS_EDGE   (0)   // 1: posedge, 0: negedge
+    .POS_EDGE   (1)   // 1: posedge, 0: negedge
 ) SS_DETECT_EDGE_START (
     .i_clk      (i_clk),
     .i_rst_n    (i_rst_n),
     .i_signal   (i_start),
     .o_signal   (w_start)
 );
-SS_detect_edge #(
-    .POS_EDGE   (1)   // 1: posedge, 0: negedge
-) SS_DETECT_EDGE_VALID_RAM (
-    .i_clk      (i_clk),
-    .i_rst_n    (i_rst_n),
-    .i_signal   (i_valid_ram),
-    .o_signal   (w_valid_ram)
-);
+// SS_detect_edge #(
+//     .POS_EDGE   (1)   // 1: posedge, 0: negedge
+// ) SS_DETECT_EDGE_VALID_RAM (
+//     .i_clk      (i_clk),
+//     .i_rst_n    (i_rst_n),
+//     .i_signal   (i_valid_ram),
+//     .o_signal   (w_valid_ram)
+// );
 
 PACS_detect_intit_data PACS_DETECT_INIT (
     .i_clk      (i_clk),
     .i_rst_n    (i_rst_n),
     .i_start    (w_start),
-    .i_valid    (w_valid_ram),
+    .i_valid    (i_valid_ram),
     .o_init_sum (w_init_sum) 
 );
 assign w_data_save = w_init_sum ? 32'b0 : w_bfp16_sum;
@@ -64,7 +64,7 @@ BFP16_add #(
 ) BFP16_ADD_UNIT (
     .i_clk          (i_clk),
     .i_rst_n        (i_rst_n),
-    .i_valid        (w_valid_ram),
+    .i_valid        (i_valid_ram),
     .i_data_a       (i_data_ram),
     .i_data_b       (w_data_save),
     .o_bfu_add      (w_bfp16_sum),

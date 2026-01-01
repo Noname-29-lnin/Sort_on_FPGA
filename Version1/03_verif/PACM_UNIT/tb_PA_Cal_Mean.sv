@@ -2,7 +2,7 @@
 
 module tb_PA_Cal_Mean();
 
-parameter SIZE_ADDR     = 11;
+parameter SIZE_ADDR     = 32;
 parameter SIZE_DATA     = 32;
 parameter IS_READ       = 1; // READ=1//WRITE=0 
 parameter MEM_INIT_FILE = "./../../03_verif/lib/mem_init.hex";
@@ -22,7 +22,7 @@ logic                   o_done;
 tb_simple_dual_port_ram_single_clock#(
     .IS_READ            (IS_READ), // READ=1//WRITE=0 
     .DATA_WIDTH         (SIZE_DATA),
-    .ADDR_WIDTH         (SIZE_ADDR),
+    .ADDR_WIDTH         (6),
     .MEM_INIT_FILE      (MEM_INIT_FILE),
     .MEM_DUMP_FILE      (MEM_DUMP_FILE)
 ) RAM_UNIT (
@@ -77,11 +77,17 @@ initial begin
     @(posedge i_clk);
     i_start = 1;
     i_addr_si = 0;
-    i_addr_ei = 2**SIZE_ADDR - 1;
+    i_addr_ei = 63;
     @(posedge i_clk);
     i_start = 0;
 
-    @(negedge o_done);
+    @(posedge DUT.w_BFP16_DIV_done);
+    $display("o_total_sum = %h (%.4f)", DUT.w_divisor, $bitstoshortreal(DUT.w_divisor));
+
+    @(posedge DUT.w_PACS_done);
+    $display("o_total_sum = %h (%.4f)", DUT.w_sum, $bitstoshortreal(DUT.w_sum));
+
+    @(posedge o_done);
     $display("o_mean_value = %h (%.4f)", o_mean_value, $bitstoshortreal(o_mean_value));
     $display("End Simulation");
     #100;

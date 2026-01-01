@@ -1,0 +1,1 @@
+s1(01Jan2026:02:48:18):  xrun +xm64bit -sv -f ./../DI_UNIT/flist.f -top tb_DI_unit -access +rwc -clean -log ./../DI_UNIT/Xcelium/compile.log +nctimescale+1ns/1ps +ntb_random_seed=automatic -allowredefinition -v93 
