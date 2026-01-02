@@ -1,0 +1,20 @@
+Finished reading file: ./tools/unsorted.txt
+Size of array: 1024
+Number subarry M = 6
+[FrameworkStandard_Quick] Number of Similar = 0
+[FrameworkStandard_Quick] Number of Ascending = 83
+[FrameworkStandard_Quick] Number of Descending = 99
+[FrameworkRTL_Quick] Number of Similar = 0
+[FrameworkRTL_Quick] Number of Ascending = 0
+[FrameworkRTL_Quick] Number of Descending = 0
+
+Sort algorithm                Check sorted   Time (ns)           Number Swap         Number Compare      
+--------------------------------------------------------------------------------------------------------------
+Data Set                      FAIL           0                   0                   0                   
+--------------------------------------------------------------------------------------------------------------
+QuickSort                     PASS           41250               12054               6006                
+--------------------------------------------------------------------------------------------------------------
+Framework_QuickSort           PASS           77457               21107               10261               
+--------------------------------------------------------------------------------------------------------------
+Data Test                     PASS           76816               9698                1895                
+--------------------------------------------------------------------------------------------------------------

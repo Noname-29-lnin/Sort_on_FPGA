@@ -1,0 +1,33 @@
+==================================
+========== TEST SUMMARY ==========
+Total test cases:   2048
+Passed          :   1007
+Failed          :   1041
+Pass rate       : 49.17%
+==================================
+
+Temp = -6752.000000000000000000000000 (c5d30000)
+Exp = -6768.124023437500000000000000 (c5d380fe)
+Max_Error = 6147.1016 %
+Simulation complete via $finish(1) at time 61931 NS + 0
+../SUBMODULE/BPF16_UNIT/tb_BFP16_add.sv:209     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Jan 02, 2026 at 07:39:08 EST  (total: 00:00:03)
+
+=====================================================================================================================================================================
+
+==================================
+========== TEST SUMMARY ==========
+Total test cases:   2048
+Passed          :   1011
+Failed          :   1037
+Pass rate       : 49.37%
+==================================
+
+Temp = -6768.000000000000000000000000 (c5d38000)
+Exp = -6768.124023437500000000000000 (c5d380fe)
+Max_Error = 6194.3818 %
+Simulation complete via $finish(1) at time 61931 NS + 0
+../SUBMODULE/BPF16_UNIT/tb_BFP16_add.sv:209     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Jan 02, 2026 at 07:49:07 EST  (total: 00:00:03)

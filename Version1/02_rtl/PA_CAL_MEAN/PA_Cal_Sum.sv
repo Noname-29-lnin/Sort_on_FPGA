@@ -59,6 +59,7 @@ PACS_detect_intit_data PACS_DETECT_INIT (
     .o_init_sum (w_init_sum) 
 );
 assign w_data_save = w_init_sum ? 32'b0 : w_bfp16_sum;
+
 BFP16_add #(
     .SIZE_DATA     (SIZE_DATA)
 ) BFP16_ADD_UNIT (

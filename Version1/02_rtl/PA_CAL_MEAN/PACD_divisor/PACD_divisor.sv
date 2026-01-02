@@ -30,8 +30,8 @@ logic w_valid_2;
 logic w_sign_fpu;
 logic [7:0] w_exp_fpu;
 logic [23:0] w_man_fpu;
-
 logic w_valid_3;
+
 // Stage 0
 PACD_diff_addr #(
     .SIZE_ADDR      (SIZE_ADDR)
@@ -59,13 +59,13 @@ PACD_LOPD_32bit #(
     .i_data         (w_lopd_data),
     .o_one_position (w_lopd_one_pos),
     .o_zero_flag    (w_lopd_zero_flag), 
-    .o_valid        (w_lopd_valid) 
+    .o_valid        (w_lopd_valid)
 );
 
 // Stage 2
 always_ff @( posedge i_clk or negedge i_rst_n ) begin
     if(~i_rst_n) 
-        w_valid_1    <= '0;
+        w_valid_1    <= '0; 
     else 
         w_valid_1    <= w_valid;
 end
@@ -99,7 +99,7 @@ always_ff @( posedge i_clk or negedge i_rst_n ) begin
     if(~i_rst_n) 
         w_valid_3    <= '0;
     else 
-        w_valid_3    <= w_valid_2;
+        w_valid_3    <= w_lopd_valid;
 end
 always_ff @( posedge i_clk or negedge i_rst_n ) begin
     if(~i_rst_n) begin

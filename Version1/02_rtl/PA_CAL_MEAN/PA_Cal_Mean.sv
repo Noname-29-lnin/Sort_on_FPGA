@@ -7,10 +7,8 @@ module PA_Cal_Mean #(
     input logic                     i_start     ,
     input logic [SIZE_ADDR-1:0]     i_addr_si   ,
     input logic [SIZE_ADDR-1:0]     i_addr_ei   ,
-
     input logic                     i_valid_ram ,
     input logic [SIZE_DATA-1:0]     i_data_ram  ,
-
     output logic                    o_en_ram    ,
     output logic [SIZE_ADDR-1:0]    o_addr_ram  ,
     output logic [SIZE_DATA-1:0]    o_mean_value,

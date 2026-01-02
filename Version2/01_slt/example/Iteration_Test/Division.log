@@ -1,0 +1,18 @@
+Before: 12.5 7.2 14.1 9.9 10 11.5 2.1 5.5 8.8 1 3.3 15.2 6.6 4.4 13.7 0 12.5 7.2 14.1 9.9 10 11.5 2.1 5.5 8.8 1 1103.3 15.2 6.6 4.4 13.7 0 
+Level 0: [0, 31] Mean=42.2375 Split@30
+Level 1: [0, 30] Mean=8.00968 Split@14
+Level 2: [0, 14] Mean=3.79333 Split@6
+Level 3: [0, 6] Mean=1.35714 Split@3
+SORT: si=0 ei=3
+SORT: si=4 ei=6
+Level 3: [7, 14] Mean=5.925 Split@10
+SORT: si=7 ei=10
+SORT: si=11 ei=14
+Level 2: [15, 30] Mean=11.9625 Split@22
+Level 3: [15, 22] Mean=10.05 Split@20
+SORT: si=15 ei=20
+SORT: si=21 ei=22
+Level 3: [23, 30] Mean=13.875 Split@26
+SORT: si=23 ei=26
+SORT: si=27 ei=30
+After : 0 0 1 1 2.1 2.1 3.3 4.4 4.4 5.5 5.5 6.6 6.6 7.2 7.2 8.8 8.8 9.9 9.9 10 10 11.5 11.5 12.5 12.5 13.7 13.7 14.1 14.1 15.2 15.2 1103.3 
