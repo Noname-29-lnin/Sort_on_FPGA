@@ -5,5 +5,5 @@ REPORT_DIR=Reports
 VALUE_SERIAL=16
 VALUE_PARALLEL=2
 ANALYSIS_NAME=COMPERA_16
-NAME_TEST=random_value
-DIR_TEST=./example/Random_value
+NAME_TEST=divisor_reciprocal
+DIR_TEST=./example/Newton-Rashap
