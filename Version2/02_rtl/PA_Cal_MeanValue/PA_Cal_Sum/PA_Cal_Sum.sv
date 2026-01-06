@@ -25,8 +25,8 @@ logic w_valid_ram;
 logic w_init_sum;
 logic [SIZE_DATA-1:0] w_data_save;
 
-logic [SIZE_DATA-1:0] w_bfp16_sum;
-logic w_bfp16_valid;
+logic [SIZE_DATA-1:0] w_sum_value;
+logic w_value_sum;
 
 logic w_controladdress_done;
 logic w_output_sum;
@@ -50,7 +50,7 @@ PACS_detect_intit_data PACS_DETECT_INIT (
     .i_valid    (i_valid_ram),
     .o_init_sum (w_init_sum) 
 );
-assign w_data_save = w_init_sum ? 32'b0 : w_bfp16_sum;
+assign w_data_save = w_init_sum ? 32'b0 : w_sum_value;
 
 BFP16_add #(
     .SIZE_DATA     (SIZE_DATA)
@@ -60,8 +60,8 @@ BFP16_add #(
     .i_valid        (i_valid_ram),
     .i_data_a       (i_data_ram),
     .i_data_b       (w_data_save),
-    .o_bfu_add      (w_bfp16_sum),
-    .o_valid        (w_bfp16_valid) 
+    .o_bfu_add      (w_sum_value),
+    .o_valid        (w_value_sum) 
 );
 
 PACS_control_address #(
@@ -70,7 +70,7 @@ PACS_control_address #(
     .i_clk          (i_clk),
     .i_rst_n        (i_rst_n),
     .i_start        (w_start),
-    .i_rd_ram       (w_bfp16_valid),
+    .i_rd_ram       (w_value_sum),
     .i_addr_si      (i_addr_si),
     .i_addr_ei      (i_addr_ei),
     .o_rd_ram       (o_rd_ram),
@@ -78,32 +78,19 @@ PACS_control_address #(
     .o_done         (w_controladdress_done) 
 );
 
-// SS_detect_done SSDD_output_sum(
-//     .i_clk          (i_clk),
-//     .i_rst_n        (i_rst_n),
-//     .i_done_a       (w_controladdress_done),
-//     .i_done_b       (w_bfp16_valid),
-//     .o_done         (w_output_sum) 
-// );
-// SS_detect_start SSDS_output_sum (
-//     .i_clk          (i_clk),
-//     .i_rst_n        (i_rst_n),
-//     .i_start        (w_controladdress_done),
-//     .i_done         (w_bfp16_valid),
-//     .o_w_start      (w_output_sum) 
-// );
 PACS_detect_done PACS_DETECT_DONE (
     .i_clk          (i_clk),
     .i_rst_n        (i_rst_n),
     .i_start        (w_controladdress_done),
-    .i_done         (w_bfp16_valid),
+    .i_done         (w_value_sum),
     .o_done         (w_output_sum) 
 );
+
 always_ff @( posedge i_clk or negedge i_rst_n ) begin 
     if(~i_rst_n) 
         o_sum       <= '0;
     else if(w_output_sum)
-        o_sum       <= w_bfp16_sum;
+        o_sum       <= w_sum_value;
 end
 always_ff @( posedge i_clk or negedge i_rst_n ) begin 
     if(~i_rst_n) 
