@@ -16,8 +16,10 @@
 ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SIGN_unit.sv
 ./../../02_rtl/PA_CAL_MEAN/BFP16_ADD/SWAP_unit.sv
 
-./../../02_rtl/SS_MODULE/SS_detect_edge.sv
 ./../../02_rtl/SS_MODULE/SS_detect_start.sv
+./../../02_rtl/SS_MODULE/SS_detect_done.sv
+./../../02_rtl/SS_MODULE/SS_detect_edge.sv
+./../../02_rtl/SS_MODULE/TFFE.sv
 
 ./../../02_rtl/PA_CAL_MEAN/PA_Cal_Mean.sv
 ./../../02_rtl/PA_CAL_MEAN/PA_Cal_Sum.sv

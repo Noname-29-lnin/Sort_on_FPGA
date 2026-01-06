@@ -50,8 +50,10 @@
 ./../../02_rtl/PA_mem/PAMEM_swap.sv
 ./../../02_rtl/PA_mem/PAMEM_writedata.sv
 ./../../02_rtl/PA_mem/PASW_unit.sv
+./../../02_rtl/SS_MODULE/SS_detect_done.sv
 ./../../02_rtl/SS_MODULE/SS_detect_edge.sv
 ./../../02_rtl/SS_MODULE/SS_detect_start.sv
+./../../02_rtl/SS_MODULE/TFFE.sv
 ./../../02_rtl/SS_MODULE/SS_read_data.sv
 ./../../02_rtl/SS_MODULE/SS_read_write_ram.sv
 ./../../02_rtl/TOPMODULE/top_module.sv

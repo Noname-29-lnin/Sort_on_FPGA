@@ -2,7 +2,7 @@
 
 module tb_PA_Cal_Mean();
 
-parameter SIZE_ADDR     = 32;
+parameter SIZE_ADDR     = 5;
 parameter SIZE_DATA     = 32;
 parameter IS_READ       = 1; // READ=1//WRITE=0 
 parameter MEM_INIT_FILE = "./../../03_verif/lib/mem_init.hex";

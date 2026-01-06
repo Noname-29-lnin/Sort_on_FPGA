@@ -1,0 +1,1 @@
+s1(06Jan2026:04:20:46):  xrun +xm64bit -sv -f ./../SSDD_UNIT/flist.f -top tb_SS_detect_done -access +rwc -clean -log ./../SSDD_UNIT/Xcelium/compile.log +nctimescale+1ns/1ps +ntb_random_seed=automatic -allowredefinition -v93 

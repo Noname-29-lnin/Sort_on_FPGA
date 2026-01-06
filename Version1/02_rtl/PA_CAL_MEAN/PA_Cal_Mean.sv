@@ -15,6 +15,7 @@ module PA_Cal_Mean #(
     output logic                    o_done       
 );
 
+logic w_start;
 logic w_active;
 logic w_PACS_done;
 logic w_BFP16_DIV_done;
@@ -59,10 +60,18 @@ PACD_divisor #(
     .o_done         (w_BFP16_DIV_done) 
 );
 
+SS_detect_done SSDD_DONE_UNIT (
+    .i_clk          (i_clk),
+    .i_rst_n        (i_rst_n),
+    .i_done_a       (w_PACS_done),
+    .i_done_b       (w_BFP16_DIV_done),
+    .o_done         (w_start) 
+);
+
 FP32_div FPU32_DIV_UNIT (
     .i_clk              (i_clk),
     .i_rst_n            (i_rst_n),
-    .i_start            (w_PACS_done),
+    .i_start            (w_start),
     .a_value_i          (w_sum),
     .b_value_i          (w_divisor),
 	.z_value_o          (o_mean_value),

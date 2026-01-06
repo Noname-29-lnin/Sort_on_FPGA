@@ -18,8 +18,10 @@
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/SHF_right.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/SIGN_unit.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/SWAP_unit.sv
-/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_edge.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_start.sv
+/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_done.sv
+/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_edge.sv
+/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/TFFE.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PA_Cal_Mean.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PA_Cal_Sum.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_CAL_MEAN/PACS_control_address.sv

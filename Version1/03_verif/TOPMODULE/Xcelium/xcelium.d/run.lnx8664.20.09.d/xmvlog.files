@@ -46,8 +46,10 @@
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_mem/PAMEM_swap.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_mem/PAMEM_writedata.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/PA_mem/PASW_unit.sv
+/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_done.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_edge.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_detect_start.sv
+/home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/TFFE.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_read_data.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/SS_MODULE/SS_read_write_ram.sv
 /home/admin/shared/My_project/Sort_on_FPGA/Version1/02_rtl/TOPMODULE/top_module.sv

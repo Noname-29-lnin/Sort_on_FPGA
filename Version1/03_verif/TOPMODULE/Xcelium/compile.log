@@ -1,5 +1,5 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s001: Started on Jan 01, 2026 at 08:33:17 EST
+TOOL:	xrun(64)	20.09-s001: Started on Jan 06, 2026 at 04:26:58 EST
 xrun
 	+xm64bit
 	-sv
@@ -48,8 +48,10 @@ xrun
 		./../../02_rtl/PA_mem/PAMEM_swap.sv
 		./../../02_rtl/PA_mem/PAMEM_writedata.sv
 		./../../02_rtl/PA_mem/PASW_unit.sv
+		./../../02_rtl/SS_MODULE/SS_detect_done.sv
 		./../../02_rtl/SS_MODULE/SS_detect_edge.sv
 		./../../02_rtl/SS_MODULE/SS_detect_start.sv
+		./../../02_rtl/SS_MODULE/TFFE.sv
 		./../../02_rtl/SS_MODULE/SS_read_data.sv
 		./../../02_rtl/SS_MODULE/SS_read_write_ram.sv
 		./../../02_rtl/TOPMODULE/top_module.sv
@@ -199,11 +201,17 @@ file: ./../../02_rtl/PA_mem/PAMEM_writedata.sv
 file: ./../../02_rtl/PA_mem/PASW_unit.sv
 	module worklib.PASW_unit:sv
 		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/SS_detect_done.sv
+	module worklib.SS_detect_done:sv
+		errors: 0, warnings: 0
 file: ./../../02_rtl/SS_MODULE/SS_detect_edge.sv
 	module worklib.SS_detect_edge:sv
 		errors: 0, warnings: 0
 file: ./../../02_rtl/SS_MODULE/SS_detect_start.sv
 	module worklib.SS_detect_start:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/SS_MODULE/TFFE.sv
+	module worklib.TFFE:sv
 		errors: 0, warnings: 0
 file: ./../../02_rtl/SS_MODULE/SS_read_data.sv
 	module worklib.SS_read_data:sv
@@ -250,6 +258,10 @@ xmelab: *W,CUVMPW (../TOPMODULE/tb_top_module.sv,56|37): port sizes differ in po
 			streams:  36, words:  9788
 		worklib.FP32_div:sv <0x2c4e7180>
 			streams:  56, words: 29262
+		worklib.TFFE:sv <0x161b94d7>
+			streams:   3, words:   730
+		worklib.SS_detect_done:sv <0x53a3b9fb>
+			streams:  12, words:  3617
 		worklib.PACD_LOPD_8bit:sv <0x00641cdd>
 			streams:   5, words:  2314
 		worklib.PACD_LOPD_16bit:sv <0x6bdbce3b>
@@ -258,8 +270,8 @@ xmelab: *W,CUVMPW (../TOPMODULE/tb_top_module.sv,56|37): port sizes differ in po
 			streams:  23, words:  7609
 		worklib.PACD_diff_addr:sv <0x036ac847>
 			streams:  12, words:  3827
-		worklib.PACD_divisor:sv <0x74a8e604>
-			streams:  25, words:  6874
+		worklib.PACD_divisor:sv <0x4293c573>
+			streams:  25, words:  6833
 		worklib.CNT_T_FF:sv <0x0e1d1c79>
 			streams:   3, words:   921
 		worklib.PSC_unit:sv <0x1aeae991>
@@ -296,14 +308,14 @@ xmelab: *W,CUVMPW (../TOPMODULE/tb_top_module.sv,56|37): port sizes differ in po
 			streams:   4, words:   955
 		worklib.SS_detect_start:sv <0x225194b5>
 			streams:   4, words:  1265
-		worklib.PA_Cal_Mean:sv <0x7649783d>
-			streams:  14, words:  3829
+		worklib.PA_Cal_Mean:sv <0x24780ac4>
+			streams:  17, words:  4397
 		worklib.DI_compare_equal:sv <0x63ac4ca2>
 			streams:   4, words:   722
 		worklib.DIFIFO_dual_mem:sv <0x42fe82e2>
 			streams:   7, words:  2846
-		worklib.DI_fifo:sv <0x5d0045dd>
-			streams:  21, words:  7663
+		worklib.DI_fifo:sv <0x5bee9d5c>
+			streams:  22, words:  6839
 		worklib.DI_up_level:sv <0x1574734f>
 			streams:   4, words:   930
 		worklib.SS_detect_edge:sv <0x4bda84a1>
@@ -322,8 +334,8 @@ xmelab: *W,CUVMPW (../TOPMODULE/tb_top_module.sv,56|37): port sizes differ in po
 			streams:   5, words:  2711
 		worklib.SHF_left:sv <0x18f65f76>
 			streams:   7, words:  3911
-		worklib.PACS_control_address:sv <0x2ad31b9c>
-			streams:  48, words: 21607
+		worklib.PACS_control_address:sv <0x0f090b40>
+			streams:  52, words: 23025
 		worklib.PAMEM_address:sv <0x1de73500>
 			streams:  48, words: 21637
 		worklib.PAMEM_address:sv <0x5ecc4e1e>
@@ -334,16 +346,16 @@ xmelab: *W,CUVMPW (../TOPMODULE/tb_top_module.sv,56|37): port sizes differ in po
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                  Instances  Unique
-		Modules:                205      45
-		Registers:              848     404
-		Scalar wires:          1177       -
+		Modules:                211      47
+		Registers:              871     416
+		Scalar wires:          1206       -
 		Expanded wires:         128      10
 		Vectored wires:         274       -
-		Always blocks:          345      82
+		Always blocks:          356      86
 		Initial blocks:           5       5
 		Final blocks:             1       1
-		Cont. assignments:      337     113
-		Pseudo assignments:     800     300
+		Cont. assignments:      344     116
+		Pseudo assignments:     812     312
 		Simulation timescale:   1ps
 	Writing initial simulation snapshot: worklib.tb_top_module:sv
 Loading snapshot worklib.tb_top_module:sv .................... Done
@@ -356,4 +368,4 @@ Dumping memory contents to ./../../03_verif/TOPMODULE/mem_dump.hex
 Simulation complete via $finish(1) at time 10000330 NS + 0
 ../TOPMODULE/tb_top_module.sv:93     $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Jan 01, 2026 at 08:33:18 EST  (total: 00:00:01)
+TOOL:	xrun(64)	20.09-s001: Exiting on Jan 06, 2026 at 04:26:59 EST  (total: 00:00:01)
