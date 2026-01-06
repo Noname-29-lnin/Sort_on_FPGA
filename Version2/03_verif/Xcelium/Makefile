@@ -19,7 +19,7 @@ NAME_WAVE		= $(WORK_DIR)/$(TB_NAME).$(DEF_WAVE)
 -include config.mk
 
 # Load Targets
-.PHONY: load view history
+.PHONY: load history
 load:
 	@echo "Saving configuration..."
 	@echo "TOPMODULE=$(TOPMODULE)" > config.mk
@@ -29,11 +29,6 @@ load:
 	@echo "DEF_ANNOTATION=$(DEF_ANNOTATION)" >> config.mk
 	@echo "DEF_WAVE=$(DEF_WAVE)" >> config.mk
 	@echo "-> Saved to config.mk"
-	@cat config.mk
-
-view:
-	@echo "Print config.mk"
-	@cat ==================================== $(TB_NAME) ===================================="
 	@cat config.mk
 
 history:
@@ -49,9 +44,9 @@ all_annotation: create compile_annotation run
 
 create:
 	@echo "-> Creating work directory..."
-	@mkdir -p $(INC_WORK) \
-		&& echo "<Pass> mkdir $(INC_WORK)" \
-		|| echo "<False> mkdir $(INC_WORK)"
+	@mkdir -p $(WORK_DIR) \
+		&& echo "<Pass> mkdir $(WORK_DIR)" \
+		|| echo "<False> mkdir $(WORK_DIR)"
 	@echo "TB_NAME: $(TB_NAME)"
 	@echo "INC_DIR: $(INC_DIR)"
 	@echo "LIB_DIR: $(LIB_DIR)"

@@ -1,0 +1,123 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Jan 06, 2026 at 07:57:06 EST
+xrun
+	+xm64bit
+	-sv
+	-f ./../SUBMODULE/PACM_PACS_CONTROL_ADDRESS/flist.f
+		./../../03_verif/SUBMODULE/PACM_PACS_CONTROL_ADDRESS/tb_PACS_control_address.sv
+		./../../02_rtl/PA_Cal_MeanValue/PA_Cal_Sum/PACS_control_address.sv
+		./../../02_rtl/COMMON_MODULE/TFFE.sv
+		./../../02_rtl/COMMON_MODULE/SS_detect_start.sv
+		./../../02_rtl/COMMON_MODULE/SS_detect_edge.sv
+	-top tb_PACS_control_address
+	-access +rwc
+	-clean
+	-log ./../SUBMODULE/PACM_PACS_CONTROL_ADDRESS/Xcelium/compile.log
+	+nctimescale+1ns/1ps
+	+ntb_random_seed=automatic
+	-allowredefinition
+	-v93
+
+   User defined plus("+") options:
+	+ntb_random_seed=automatic
+
+xrun: *W,OPDEPRREN: Command Line Option (+nctimescale+1ns/1ps) is deprecated. Use (+xmtimescale+1ns/1ps) instead.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ./../../03_verif/SUBMODULE/PACM_PACS_CONTROL_ADDRESS/tb_PACS_control_address.sv
+	module worklib.tb_PACS_control_address:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_Cal_MeanValue/PA_Cal_Sum/PACS_control_address.sv
+	module worklib.PACS_control_address:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/COMMON_MODULE/TFFE.sv
+	module worklib.TFFE:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/COMMON_MODULE/SS_detect_start.sv
+	module worklib.SS_detect_start:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/COMMON_MODULE/SS_detect_edge.sv
+	module worklib.SS_detect_edge:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_PACS_control_address
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.TFFE:sv <0x550c7a96>
+			streams:   3, words:   730
+		worklib.SS_detect_edge:sv <0x21c25ec6>
+			streams:   4, words:   955
+		worklib.SS_detect_start:sv <0x1b5466da>
+			streams:   4, words:  1265
+		worklib.SS_detect_edge:sv <0x02d248f6>
+			streams:   4, words:   955
+		worklib.tb_PACS_control_address:sv <0x440688fb>
+			streams:  12, words: 17601
+		worklib.PACS_control_address:sv <0x79fe6912>
+			streams:  52, words: 23028
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                38       5
+		Registers:              96      28
+		Scalar wires:          278       -
+		Vectored wires:          4       -
+		Always blocks:          43       8
+		Initial blocks:          3       3
+		Cont. assignments:      69       8
+		Pseudo assignments:    174      19
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_PACS_control_address:sv
+Loading snapshot worklib.tb_PACS_control_address:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+o_addr_ram = 00000001
+o_addr_ram = 00000002
+o_addr_ram = 00000003
+o_addr_ram = 00000004
+o_addr_ram = 00000005
+o_addr_ram = 00000006
+o_addr_ram = 00000007
+o_addr_ram = 00000008
+o_addr_ram = 00000009
+o_addr_ram = 0000000a
+o_addr_ram = 0000000b
+o_addr_ram = 0000000c
+o_addr_ram = 0000000d
+o_addr_ram = 0000000e
+o_addr_ram = 0000000f
+o_addr_ram = 00000010
+o_addr_ram = 00000011
+o_addr_ram = 00000012
+o_addr_ram = 00000013
+o_addr_ram = 00000014
+o_addr_ram = 00000015
+o_addr_ram = 00000001
+o_addr_ram = 00000002
+o_addr_ram = 00000003
+o_addr_ram = 00000004
+o_addr_ram = 00000005
+o_addr_ram = 00000006
+o_addr_ram = 00000007
+o_addr_ram = 00000008
+o_addr_ram = 00000009
+o_addr_ram = 0000000a
+o_addr_ram = 0000000b
+o_addr_ram = 0000000c
+o_addr_ram = 0000000d
+o_addr_ram = 0000000e
+o_addr_ram = 0000000f
+o_addr_ram = 00000010
+o_addr_ram = 00000011
+o_addr_ram = 00000012
+o_addr_ram = 00000013
+o_addr_ram = 00000014
+o_addr_ram = 00000015
+Simulation complete via $finish(1) at time 2951 NS + 0
+../SUBMODULE/PACM_PACS_CONTROL_ADDRESS/tb_PACS_control_address.sv:98     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Jan 06, 2026 at 07:57:06 EST  (total: 00:00:00)

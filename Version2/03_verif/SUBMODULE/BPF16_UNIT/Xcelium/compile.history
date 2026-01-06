@@ -1,1 +1,0 @@
-s1(02Jan2026:08:20:11):  xrun +xm64bit -sv -f ./../SUBMODULE/BPF16_UNIT/flist.f -top tb_BFP16_add -access +rwc -clean -log ./../SUBMODULE/BPF16_UNIT/Xcelium/compile.log +nctimescale+1ns/1ps +ntb_random_seed=automatic -allowredefinition -v93 
