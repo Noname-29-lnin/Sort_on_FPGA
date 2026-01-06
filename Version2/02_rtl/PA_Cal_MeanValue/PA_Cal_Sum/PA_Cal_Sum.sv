@@ -85,12 +85,19 @@ PACS_control_address #(
 //     .i_done_b       (w_bfp16_valid),
 //     .o_done         (w_output_sum) 
 // );
-SS_detect_start SSDS_output_sum (
+// SS_detect_start SSDS_output_sum (
+//     .i_clk          (i_clk),
+//     .i_rst_n        (i_rst_n),
+//     .i_start        (w_controladdress_done),
+//     .i_done         (w_bfp16_valid),
+//     .o_w_start      (w_output_sum) 
+// );
+PACS_detect_done PACS_DETECT_DONE (
     .i_clk          (i_clk),
     .i_rst_n        (i_rst_n),
     .i_start        (w_controladdress_done),
     .i_done         (w_bfp16_valid),
-    .o_w_start      (w_output_sum) 
+    .o_done         (w_output_sum) 
 );
 always_ff @( posedge i_clk or negedge i_rst_n ) begin 
     if(~i_rst_n) 

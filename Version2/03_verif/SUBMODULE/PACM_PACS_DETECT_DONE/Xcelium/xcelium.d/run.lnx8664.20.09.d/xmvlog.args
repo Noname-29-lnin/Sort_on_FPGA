@@ -1,0 +1,23 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.20.09.d
+-RUNMODE
+-sv
+./../../03_verif/SUBMODULE/PACM_PACS_DETECT_DONE/tb_PACS_detect_done.sv
+./../../02_rtl/PA_Cal_MeanValue/PA_Cal_Sum/PACS_detect_done.sv
+./../../02_rtl/COMMON_MODULE/SS_detect_edge.sv
+./../../02_rtl/COMMON_MODULE/TFFE.sv
+-ALLOWREDEFINITION
+-CDSLIB
+./xcelium.d/run.lnx8664.20.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.20.09.d/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.20.09.d/xllibs
+-ALLOWUNBOUND
+-hastop

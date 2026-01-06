@@ -1,0 +1,1 @@
+s1(06Jan2026:10:11:48):  xrun +xm64bit -sv -f ./../SUBMODULE/PACM_PACS_DETECT_DONE/flist.f -top tb_PACS_detect_done -access +rwc -clean -log ./../SUBMODULE/PACM_PACS_DETECT_DONE/Xcelium/compile.log +nctimescale+1ns/1ps +ntb_random_seed=automatic -allowredefinition -v93 

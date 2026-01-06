@@ -1,0 +1,72 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Jan 06, 2026 at 10:11:48 EST
+xrun
+	+xm64bit
+	-sv
+	-f ./../SUBMODULE/PACM_PACS_DETECT_DONE/flist.f
+		./../../03_verif/SUBMODULE/PACM_PACS_DETECT_DONE/tb_PACS_detect_done.sv
+		./../../02_rtl/PA_Cal_MeanValue/PA_Cal_Sum/PACS_detect_done.sv
+		./../../02_rtl/COMMON_MODULE/SS_detect_edge.sv
+		./../../02_rtl/COMMON_MODULE/TFFE.sv
+	-top tb_PACS_detect_done
+	-access +rwc
+	-clean
+	-log ./../SUBMODULE/PACM_PACS_DETECT_DONE/Xcelium/compile.log
+	+nctimescale+1ns/1ps
+	+ntb_random_seed=automatic
+	-allowredefinition
+	-v93
+
+   User defined plus("+") options:
+	+ntb_random_seed=automatic
+
+xrun: *W,OPDEPRREN: Command Line Option (+nctimescale+1ns/1ps) is deprecated. Use (+xmtimescale+1ns/1ps) instead.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ./../../03_verif/SUBMODULE/PACM_PACS_DETECT_DONE/tb_PACS_detect_done.sv
+	module worklib.tb_PACS_detect_done:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_Cal_MeanValue/PA_Cal_Sum/PACS_detect_done.sv
+	module worklib.PACS_detect_done:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/COMMON_MODULE/SS_detect_edge.sv
+	module worklib.SS_detect_edge:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/COMMON_MODULE/TFFE.sv
+	module worklib.TFFE:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_PACS_detect_done
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.TFFE:sv <0x2366499e>
+			streams:   3, words:   730
+		worklib.SS_detect_edge:sv <0x02d248f6>
+			streams:   4, words:   955
+		worklib.PACS_detect_done:sv <0x751bd448>
+			streams:  10, words:  2698
+		worklib.tb_PACS_detect_done:sv <0x0f4ea27f>
+			streams:   8, words:  6965
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 5       4
+		Registers:              18      15
+		Scalar wires:           20       -
+		Always blocks:           6       4
+		Initial blocks:          3       3
+		Cont. assignments:       4       4
+		Pseudo assignments:     12      12
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_PACS_detect_done:sv
+Loading snapshot worklib.tb_PACS_detect_done:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+Simulation complete via $finish(1) at time 630 NS + 0
+../SUBMODULE/PACM_PACS_DETECT_DONE/tb_PACS_detect_done.sv:57     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Jan 06, 2026 at 10:11:49 EST  (total: 00:00:01)
