@@ -22,7 +22,6 @@ module PAMEM_readdata #(
 // Internal Signals
 /////////////////////////////////////////////////////////////////////
 logic w_start;
-logic w_valid_rd;
 logic w_en_rank;
 logic [SIZE_ADDR-1:0] w_addr_b;
 
@@ -41,14 +40,7 @@ SS_detect_edge #(
     .i_signal       (i_start),
     .o_signal       (w_start)
 );
-SS_detect_edge #(
-    .POS_EDGE       (1)   // 1: posedge, 0: negedge
-) SSDE_VALID_RD_UNIT (
-    .i_clk          (i_clk),
-    .i_rst_n        (i_rst_n),
-    .i_signal       (i_valid_rd),
-    .o_signal       (w_valid_rd)
-);
+
 SS_detect_start SSDS_EN_UNIT (
     .i_clk          (i_clk),
     .i_rst_n        (i_rst_n),
@@ -57,23 +49,21 @@ SS_detect_start SSDS_EN_UNIT (
     .o_w_start      (w_en_rank) 
 );
 assign w_sel_en = w_start | (i_valid_rd & w_en_rank);
-CNT_T_FF T_FF_UNIT (
-    .i_clk          (i_clk),
-    .i_set          (1'b1),
-    .i_rst          (i_rst_n),
-    .i_en           (1'b1),
-    .i_t            (w_sel_en),
-    .o_q            (w_sel_addr_ram),
-    .o_q_n          () 
+TFFE T_FF_UNIT_0 (
+	.t              (w_sel_en), 
+	.clk            (i_clk), 
+	.clrn           (i_rst_n), 
+	.prn            (1'b1), 
+	.ena            (1'b1), 
+	.q              (w_sel_addr_ram)
 );
-CNT_T_FF T_FF_UNIT_1 (
-    .i_clk          (i_clk),
-    .i_set          (1'b1),
-    .i_rst          (i_rst_n),
-    .i_en           (1'b1),
-    .i_t            (i_valid_rd),
-    .o_q            (w_sel_data_rd),
-    .o_q_n          () 
+TFFE T_FF_UNIT_1 (
+	.t              (i_valid_rd), 
+	.clk            (i_clk), 
+	.clrn           (i_rst_n), 
+	.prn            (1'b1), 
+	.ena            (1'b1), 
+	.q              (w_sel_data_rd)
 );
 
 always_ff @( posedge i_clk or negedge i_rst_n ) begin
@@ -98,26 +88,38 @@ always_ff @( posedge i_clk or negedge i_rst_n ) begin
         o_addr_ram        <= w_sel_addr_ram ? i_addr_a : w_addr_b;
     end
 end
+
+logic w_en_update_a;
+logic w_en_update_b;
+assign w_en_update_a    = (w_sel_data_rd) & (i_valid_rd);
+assign w_en_update_b    = (~w_sel_data_rd) & (i_valid_rd);
 always_ff @( posedge i_clk or negedge i_rst_n ) begin
     if(~i_rst_n) begin
         o_data_a        <= '0;
-    end else if( (w_sel_data_rd) & (i_valid_rd) ) begin
+    end else if(w_en_update_a) begin
         o_data_a        <= i_data_ram;
     end
 end
 always_ff @( posedge i_clk or negedge i_rst_n ) begin
     if(~i_rst_n) begin
         o_data_b        <= '0;
-    end else if( (~w_sel_data_rd) & (i_valid_rd) ) begin
+    end else if(w_en_update_b) begin
         o_data_b        <= i_data_ram;
     end
 end
-always_ff @( posedge i_clk or negedge i_rst_n ) begin
-    if(~i_rst_n) begin
-        o_done        <= '0;
-    end else begin
-        o_done        <= (w_sel_data_rd) & (i_valid_rd);
-    end
-end
+SS_detect_done SSDD_detec_done (
+    .i_clk          (i_clk),
+    .i_rst_n        (i_rst_n),
+    .i_done_a       (w_en_update_a),
+    .i_done_b       (w_en_update_b),
+    .o_done         (o_done) 
+);
+// always_ff @( posedge i_clk or negedge i_rst_n ) begin
+//     if(~i_rst_n) begin
+//         o_done        <= '0;
+//     end else begin
+//         o_done        <= (~w_sel_data_rd) & (i_valid_rd);
+//     end
+// end
 
 endmodule

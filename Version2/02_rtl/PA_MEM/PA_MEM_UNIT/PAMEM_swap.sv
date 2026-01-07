@@ -51,12 +51,14 @@ PASW_unit #(
     .o_valid        (w_PASW_done),
     .o_comp_less    (w_PASW_comp_less)
 );
+
 always_ff @( posedge i_clk or negedge i_rst_n ) begin
     if(~i_rst_n)
         w_o_update_pi     <= '0;
     else if(w_PASW_done)
         w_o_update_pi     <= w_PASW_comp_less;
 end
+
 PAMEM_writedata #(
     .SIZE_ADDR      (SIZE_ADDR),
     .SIZE_DATA      (SIZE_DATA)
@@ -80,6 +82,7 @@ always_ff @( posedge i_clk or negedge i_rst_n ) begin
     else 
         o_update_pi     <= w_o_update_pi & w_PAMEM_WRITE_done;
 end
+
 always_ff @( posedge i_clk or negedge i_rst_n ) begin
     if(~i_rst_n)
         o_done     <= '0;

@@ -1,0 +1,1 @@
+s1(07Jan2026:05:26:59):  xrun +xm64bit -sv -f ./../SUBMODULE/PA_MEM_READDATA/flist.f -top tb_PAMEM_readdata -access +rwc -clean -log ./../SUBMODULE/PA_MEM_READDATA/Xcelium/compile.log +nctimescale+1ns/1ps +ntb_random_seed=automatic -allowredefinition -v93 

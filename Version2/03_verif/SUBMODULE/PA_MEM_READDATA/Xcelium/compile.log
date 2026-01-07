@@ -1,0 +1,180 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Jan 07, 2026 at 05:26:59 EST
+xrun
+	+xm64bit
+	-sv
+	-f ./../SUBMODULE/PA_MEM_READDATA/flist.f
+		./../../03_verif/SUBMODULE/PA_MEM_READDATA/tb_PAMEM_readdata.sv
+		./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv
+		./../../02_rtl/COMMON_MODULE/SS_detect_edge.sv
+		./../../02_rtl/COMMON_MODULE/TFFE.sv
+		./../../02_rtl/COMMON_MODULE/SS_detect_start.sv
+		./../../02_rtl/COMMON_MODULE/SS_detect_done.sv
+		./../../02_rtl/PA_MEM/PA_MEM_UNIT/PAMEM_readdata.sv
+	-top tb_PAMEM_readdata
+	-access +rwc
+	-clean
+	-log ./../SUBMODULE/PA_MEM_READDATA/Xcelium/compile.log
+	+nctimescale+1ns/1ps
+	+ntb_random_seed=automatic
+	-allowredefinition
+	-v93
+
+   User defined plus("+") options:
+	+ntb_random_seed=automatic
+
+xrun: *W,OPDEPRREN: Command Line Option (+nctimescale+1ns/1ps) is deprecated. Use (+xmtimescale+1ns/1ps) instead.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ./../../03_verif/SUBMODULE/PA_MEM_READDATA/tb_PAMEM_readdata.sv
+	module worklib.tb_PAMEM_readdata:sv
+		errors: 0, warnings: 0
+file: ./../../03_verif/lib/tb_simple_dual_port_ram_single_clock.sv
+	module worklib.tb_simple_dual_port_ram_single_clock:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/COMMON_MODULE/SS_detect_edge.sv
+	module worklib.SS_detect_edge:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/COMMON_MODULE/TFFE.sv
+	module worklib.TFFE:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/COMMON_MODULE/SS_detect_start.sv
+	module worklib.SS_detect_start:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/COMMON_MODULE/SS_detect_done.sv
+	module worklib.SS_detect_done:sv
+		errors: 0, warnings: 0
+file: ./../../02_rtl/PA_MEM/PA_MEM_UNIT/PAMEM_readdata.sv
+	module worklib.PAMEM_readdata:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_PAMEM_readdata
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .
+    $readmemh(MEM_INIT_FILE, mem_test);
+                                    |
+xmelab: *W,MEMODR (../SUBMODULE/PA_MEM_READDATA/tb_PAMEM_readdata.sv,29|36): $readmem default memory order incompatible with IEEE1364.
+................... Done
+	Generating native compiled code:
+		worklib.SS_detect_done:sv <0x18eaecb5>
+			streams:  12, words:  3617
+		worklib.TFFE:sv <0x134e8711>
+			streams:   3, words:   730
+		worklib.SS_detect_edge:sv <0x31921871>
+			streams:   4, words:   955
+		worklib.SS_detect_start:sv <0x313df204>
+			streams:   4, words:  1265
+		worklib.SS_detect_edge:sv <0x12820e41>
+			streams:   4, words:   955
+		worklib.PAMEM_readdata:sv <0x76da7ed8>
+			streams:  22, words:  6751
+		worklib.tb_simple_dual_port_ram_single_clock:sv <0x342a8ace>
+			streams:   8, words:  4062
+		worklib.tb_PAMEM_readdata:sv <0x4a80ccca>
+			streams:  24, words: 16957
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                14       7
+		Registers:              71      53
+		Scalar wires:           65       -
+		Vectored wires:         14       -
+		Always blocks:          24      13
+		Initial blocks:          8       8
+		Final blocks:            1       1
+		Cont. assignments:      14       8
+		Pseudo assignments:     35      35
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_PAMEM_readdata:sv
+Loading snapshot worklib.tb_PAMEM_readdata:sv .................... Done
+SVSEED default: 1
+xmsim: *W,RNDXCELON: A newer version of the SystemVerilog constraint solver is being used which has better support for array-solving, new solve-order mechanism, and seed stability enhancements..
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+Initial load memory contents from ./../../03_verif/lib/mem_init.hex
+[PASS] i_addr_a = 00 	 => o_data_a = 4892e9e1
+[PASS] i_addr_b = 01 	 => o_data_b = c61fa78f
+[PASS] i_addr_a = 02 	 => o_data_a = 490412ea
+[PASS] i_addr_b = 03 	 => o_data_b = c2e1b44e
+[PASS] i_addr_a = 03 	 => o_data_a = c2e1b44e
+[PASS] i_addr_b = 0b 	 => o_data_b = 42d66de6
+[PASS] i_addr_a = 00 	 => o_data_a = 4892e9e1
+[PASS] i_addr_b = 08 	 => o_data_b = 49460a3a
+[PASS] i_addr_a = 01 	 => o_data_a = c61fa78f
+[PASS] i_addr_b = 1e 	 => o_data_b = 4630d16c
+[PASS] i_addr_a = 02 	 => o_data_a = 490412ea
+[PASS] i_addr_b = 01 	 => o_data_b = c61fa78f
+[PASS] i_addr_a = 03 	 => o_data_a = c2e1b44e
+[PASS] i_addr_b = 08 	 => o_data_b = 49460a3a
+[PASS] i_addr_a = 04 	 => o_data_a = ca04e69c
+[PASS] i_addr_b = 07 	 => o_data_b = 43cc11bc
+[PASS] i_addr_a = 05 	 => o_data_a = 4efbb8e4
+[PASS] i_addr_b = 03 	 => o_data_b = c2e1b44e
+[PASS] i_addr_a = 06 	 => o_data_a = c6d5358d
+[PASS] i_addr_b = 1f 	 => o_data_b = cd859cba
+[PASS] i_addr_a = 07 	 => o_data_a = 43cc11bc
+[PASS] i_addr_b = 10 	 => o_data_b = c415e180
+[PASS] i_addr_a = 08 	 => o_data_a = 49460a3a
+[PASS] i_addr_b = 1f 	 => o_data_b = cd859cba
+[PASS] i_addr_a = 09 	 => o_data_a = 4d3ce874
+[PASS] i_addr_b = 01 	 => o_data_b = c61fa78f
+[PASS] i_addr_a = 0a 	 => o_data_a = c55e27b1
+[PASS] i_addr_b = 1a 	 => o_data_b = 450a1832
+[PASS] i_addr_a = 0b 	 => o_data_a = 42d66de6
+[PASS] i_addr_b = 07 	 => o_data_b = 43cc11bc
+[PASS] i_addr_a = 0c 	 => o_data_a = 48f58268
+[PASS] i_addr_b = 0b 	 => o_data_b = 42d66de6
+[PASS] i_addr_a = 0d 	 => o_data_a = 433f534f
+[PASS] i_addr_b = 18 	 => o_data_b = 41369a7b
+[PASS] i_addr_a = 0e 	 => o_data_a = c527a04e
+[PASS] i_addr_b = 13 	 => o_data_b = c68fc68a
+[PASS] i_addr_a = 0f 	 => o_data_a = c91eb707
+[PASS] i_addr_b = 00 	 => o_data_b = 4892e9e1
+[PASS] i_addr_a = 10 	 => o_data_a = c415e180
+[PASS] i_addr_b = 0f 	 => o_data_b = c91eb707
+[PASS] i_addr_a = 11 	 => o_data_a = c2c5f83b
+[PASS] i_addr_b = 1a 	 => o_data_b = 450a1832
+[PASS] i_addr_a = 12 	 => o_data_a = c40075f7
+[PASS] i_addr_b = 1b 	 => o_data_b = c736fe01
+[PASS] i_addr_a = 13 	 => o_data_a = c68fc68a
+[PASS] i_addr_b = 0d 	 => o_data_b = 433f534f
+[PASS] i_addr_a = 14 	 => o_data_a = c53914f6
+[PASS] i_addr_b = 1e 	 => o_data_b = 4630d16c
+[PASS] i_addr_a = 15 	 => o_data_a = c7173dd1
+[PASS] i_addr_b = 0e 	 => o_data_b = c527a04e
+[PASS] i_addr_a = 16 	 => o_data_a = 4e0eca11
+[PASS] i_addr_b = 14 	 => o_data_b = c53914f6
+[PASS] i_addr_a = 17 	 => o_data_a = cd989073
+[PASS] i_addr_b = 0b 	 => o_data_b = 42d66de6
+[PASS] i_addr_a = 18 	 => o_data_a = 41369a7b
+[PASS] i_addr_b = 04 	 => o_data_b = ca04e69c
+[PASS] i_addr_a = 19 	 => o_data_a = cac73fbb
+[PASS] i_addr_b = 19 	 => o_data_b = cac73fbb
+[PASS] i_addr_a = 1a 	 => o_data_a = 450a1832
+[PASS] i_addr_b = 1a 	 => o_data_b = 450a1832
+[PASS] i_addr_a = 1b 	 => o_data_a = c736fe01
+[PASS] i_addr_b = 07 	 => o_data_b = 43cc11bc
+[PASS] i_addr_a = 1c 	 => o_data_a = c4aff789
+[PASS] i_addr_b = 08 	 => o_data_b = 49460a3a
+[PASS] i_addr_a = 1d 	 => o_data_a = 47a9d195
+[PASS] i_addr_b = 1f 	 => o_data_b = cd859cba
+[PASS] i_addr_a = 1e 	 => o_data_a = 4630d16c
+[PASS] i_addr_b = 0a 	 => o_data_b = c55e27b1
+[PASS] i_addr_a = 1f 	 => o_data_a = cd859cba
+[PASS] i_addr_b = 01 	 => o_data_b = c61fa78f
+
+==================================
+========== TEST SUMMARY ==========
+Total test cases:     35
+Passed          :     35
+Failed          :      0
+==================================
+
+Dumping memory contents to ./../../03_verif/SUBMODULE/PA_MEM_READDATA/mem_dump.hex
+Simulation complete via $finish(1) at time 5990 NS + 0
+../SUBMODULE/PA_MEM_READDATA/tb_PAMEM_readdata.sv:130     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Jan 07, 2026 at 05:26:59 EST  (total: 00:00:00)
