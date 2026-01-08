@@ -1,51 +1,115 @@
 \section{RTL Implementation}
 
-\subsection{Bộ thực hiện tính giá trị trung bình của mảng (PACM\_UNIT)}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/Overview_diagram.png}
+	\caption{Tổng quan thiết kế của bộ.}
+\end{figure}
 
-\subsubsection{Bộ tính cộng số thực (BFP16\_add)}
+\subsection{Bộ thực hiện tính giá trị trung bình của mảng (PACM\_UNIT)}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=.7\linewidth]{./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BlockDiagram_Overview.png}
-	\caption{Bộ thực hiện 2 số Floating Point 32-bit.}
-	\label{fig: RTL_BFP16}
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/PA_Cal_Mean.png}
+	\caption{Bộ tính giá trị trung bình của mảng.}
 \end{figure}
-
-
 
 \subsubsection{Bộ tính cộng tích lũy của mảng (PA\_Cal\_Sum)}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=.2\linewidth]{./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png}
-	\caption{Bộ điều khiển dữ liệu đọc với Memory Unit.}
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/PA_Cal_Sum.png}
+	\caption{Bộ tính giá trị tổng tích lũy trong mảng mảng.}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=.4\linewidth]{./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png}
-	\caption{Bộ phát hiện tính hiệu bắt đầu.}
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/PA_control_address.png}
+	\caption{Bộ tính đọc dữ liệu trong mảng.}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=.4\linewidth]{./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_diagram.png}
-	\caption{Bộ tính cộng số thực (BFP16\_add).}
+	\includegraphics[width=.7\linewidth]{./my-chapters/my-diagram/PACS_add_unit.png}
+	\caption{Bộ thực hiện 2 số Floating Point 32-bit.}
+\end{figure}
+
+\subsubsection{Bộ tính giá trị số lượng phần từ giữa vị trí \texttt{addr\_si} đến \texttt{addr\_ei}}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/PACD_divisor.png}
+	\caption{Bộ tính giá trị khoảng cách từ \texttt{addr\_si} đến \texttt{addr\_ei}.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/PACD_diff_addr.png}
+	\caption{Bộ tính giá trị khoảng cách giữa hai \texttt{addr\_si} đến \texttt{addr\_ei}.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/LODP_32bit.png}
+	\caption{Bộ phát hiện bit 1 của dữ liệu.}
 \end{figure}
 
 \subsubsection{Bộ tính chia số thực (FP32\_div)}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=.5\linewidth]{./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png}
-	\caption{Bộ chia số thực.}
-\end{figure}
-
 \subsection{Bộ thực hiện partition lại mảng theo giá trị trung bình (PAMEM\_UNIT)}
 
-\subsection{Bộ thực hiện đệ quy cho giải thuật (DI\_UNIT)}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/PAMEM_unit.png}
+	\caption{Bộ thực hiện phân hoạch lại mảng dữ liệu}
+\end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png}
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/PAMEM_readdata.png}
+	\caption{bộ đọc dữ liệu cho hàm.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/PASW_unit.png}
+	\caption{Bộ thực hiện và hoán vị vị trí cho dữ liệu ghi vào bộ nhớ.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/COMP_FPU.png}
+	\caption{Bộ so sánh Floating Point 32-bit.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/PAMEM_writedata.png}
+	\caption{Bộ thực hiện ghi dữ liệu vào lại bộ nhớ.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/PAMEM_addr.png}
+	\caption{Bộ thực hiện điều khiển hai con trỏ địa chỉ.}
+\end{figure}
+
+\subsection{Bộ thực hiện kiểm soát địa chỉ phân hoạch cho giải thuật (DI\_UNIT)}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/DI_unit.png}
+	\caption{Bộ điều khiển chính trong việc kiểm soát địa chỉ phân hoạch.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/DI_fifo.png}
+	\caption{Phần tử nhớ các dữ liệu địa chỉ phân hoạch.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\linewidth]{./my-chapters/my-diagram/DI_stack_licture.png}
+	\caption{Nguyên tắc hoạt hoạt động của bộ điều khiển phân hoạch địa chỉ.}
 \end{figure}

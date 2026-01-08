@@ -3,3 +3,20 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Kết quả so sánh giữa bộ Framework chuẩn và Framework chỉnh sửa.}}{15}{figure.caption.4}%
 \contentsline {figure}{\numberline {3}{\ignorespaces Kết quả của việc sử dụng Memory khi sử dụng Framework chuẩn.}}{16}{figure.caption.5}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Kết quả của việc sử dụng Memory khi sử dụng Framework chỉnh sửa.}}{17}{figure.caption.6}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Tổng quan thiết kế của bộ.}}{19}{figure.caption.9}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Bộ tính giá trị trung bình của mảng.}}{20}{figure.caption.10}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Bộ tính giá trị tổng tích lũy trong mảng mảng.}}{21}{figure.caption.11}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Bộ tính đọc dữ liệu trong mảng.}}{21}{figure.caption.12}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Bộ thực hiện 2 số Floating Point 32-bit.}}{22}{figure.caption.13}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Bộ tính giá trị khoảng cách từ \texttt {addr\_si} đến \texttt {addr\_ei}.}}{22}{figure.caption.14}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Bộ tính giá trị khoảng cách giữa hai \texttt {addr\_si} đến \texttt {addr\_ei}.}}{23}{figure.caption.15}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Bộ phát hiện bit 1 của dữ liệu.}}{23}{figure.caption.16}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Bộ thực hiện phân hoạch lại mảng dữ liệu}}{24}{figure.caption.17}%
+\contentsline {figure}{\numberline {14}{\ignorespaces bộ đọc dữ liệu cho hàm.}}{24}{figure.caption.18}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Bộ thực hiện và hoán vị vị trí cho dữ liệu ghi vào bộ nhớ.}}{25}{figure.caption.19}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Bộ so sánh Floating Point 32-bit.}}{25}{figure.caption.20}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Bộ thực hiện ghi dữ liệu vào lại bộ nhớ.}}{26}{figure.caption.21}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Bộ thực hiện điều khiển hai con trỏ địa chỉ.}}{26}{figure.caption.22}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Bộ điều khiển chính trong việc kiểm soát địa chỉ phân hoạch.}}{27}{figure.caption.23}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Phần tử nhớ các dữ liệu địa chỉ phân hoạch.}}{28}{figure.caption.24}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Nguyên tắc hoạt hoạt động của bộ điều khiển phân hoạch địa chỉ.}}{28}{figure.caption.25}%

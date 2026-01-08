@@ -1,3 +1,5 @@
 \babel@toc {vietnamese}{}\relax 
 \contentsline {table}{\numberline {1}{\ignorespaces The time complexity of the conventional and proposed Quick and Merge sorts in the best, average, and worst cases.}}{6}{table.caption.1}%
 \contentsline {table}{\numberline {2}{\ignorespaces Bảng so sánh độ phức tạp và tài nguyên giữa bộ \texttt {Division\_Recursive} và bộ \texttt {Division\_Iterative}.}}{15}{table.caption.3}%
+\contentsline {table}{\numberline {3}{\ignorespaces So sánh đặc tính sử dụng bộ so sánh và swap giữa mô hình Framework sử dụng Iterative (RTL) và Recursive (Standard).}}{17}{table.caption.7}%
+\contentsline {table}{\numberline {4}{\ignorespaces So sánh đặc tính sử dụng bộ nhớ giữa mô hình Framework sử dụng Iterative (RTL) và Recursive (Standard).}}{18}{table.caption.8}%

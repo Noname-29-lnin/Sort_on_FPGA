@@ -204,4 +204,76 @@ Nhờ đó, giải thuật đệ quy cho phép chia mảng thành từng đoạn
 	\caption{Kết quả của việc sử dụng Memory khi sử dụng Framework chỉnh sửa.}
 \end{figure}
 
-Như vậy, sau khi tối ưu framework thì có số lượng Number Compare và Number Swap ít hơn tương đối so với framework chính thống.
+\noindent\textbf{Nhận xét,}
+
+\begin{itemize}[label=-, leftmargin=1.5cm]
+	\item Đầu tiên là về số lượng sử dụng phép so sánh và phép swap:
+	
+	\begin{table}[H]
+		\centering
+		{
+			\fontsize{11}{10}\selectfont
+			\renewcommand{\arraystretch}{1.5}
+			\begin{tabular}{@{}p{4cm} p{5.5cm} p{5.5cm}@{}}
+				\toprule
+				
+				& \textbf{Iterative (C\_Framework\_RTL)} 
+				& \textbf{Recursive (C\_Framework\_Standard)} \\
+				\midrule
+				
+				\textbf{Time (ns)} 
+				& 122454491
+				& 133749037 \\
+				
+				\textbf{Number of Compare} 
+				& 5918523 
+				& 1182680610 \\
+				
+				\textbf{Number of Swap} 
+				& 2957092 
+				& 581537292 \\
+				
+				\bottomrule
+			\end{tabular}
+		}
+		\caption{So sánh đặc tính sử dụng bộ so sánh và swap giữa mô hình Framework sử dụng Iterative (RTL) và Recursive (Standard).}
+		\label{tab:number_compare_swap_iterative_recursive}
+	\end{table}
+	
+	\item Thứ hai là về sử dụng bộ nhớ của đoạn code: 
+	
+	\begin{table}[H]
+		\centering
+		{
+			\fontsize{11}{10}\selectfont
+			\renewcommand{\arraystretch}{1.5}
+			\begin{tabular}{@{}p{4cm} p{5.5cm} p{5.5cm}@{}}
+				\toprule
+				
+				& \textbf{Iterative (C\_Framework\_RTL)} 
+				& \textbf{Recursive (C\_Framework\_Standard)} \\
+				\midrule
+				
+				\textbf{Peak Memory (Đỉnh)} 
+				& 8.090 MB 
+				& 8.662 MB \\
+				
+				\textbf{Chênh lệch bộ nhớ} 
+				& Thấp hơn 
+				& Cao hơn khoảng 0.57 MB \\
+				
+				\textbf{Thời điểm đạt đỉnh} 
+				& Snapshot 41 \newline (giữa quá trình) 
+				& Snapshot 86 \newline (gần cuối quá trình) \\
+				
+				\textbf{Hình dạng biểu đồ} 
+				& Cao nguyên (Plateau): \newline tăng lên và giữ ổn định 
+				& Gai nhọn (Spike): \newline duy trì thấp rồi tăng đột ngột \\
+				
+				\bottomrule
+			\end{tabular}
+		}
+		\caption{So sánh đặc tính sử dụng bộ nhớ giữa mô hình Framework sử dụng Iterative (RTL) và Recursive (Standard).}
+		\label{tab:memory_iterative_recursive}
+	\end{table}
+\end{itemize}
