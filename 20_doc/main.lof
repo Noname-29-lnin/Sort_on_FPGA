@@ -6,7 +6,7 @@
 \contentsline {figure}{\numberline {5}{\ignorespaces Tổng quan thiết kế của bộ.}}{19}{figure.caption.9}%
 \contentsline {figure}{\numberline {6}{\ignorespaces Bộ tính giá trị trung bình của mảng.}}{20}{figure.caption.10}%
 \contentsline {figure}{\numberline {7}{\ignorespaces Bộ tính giá trị tổng tích lũy trong mảng mảng.}}{21}{figure.caption.11}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Bộ tính đọc dữ liệu trong mảng.}}{21}{figure.caption.12}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Bộ tính đọc dữ liệu trong mảng\cite {Kim2025HighSpeed}.}}{21}{figure.caption.12}%
 \contentsline {figure}{\numberline {9}{\ignorespaces Bộ thực hiện 2 số Floating Point 32-bit.}}{22}{figure.caption.13}%
 \contentsline {figure}{\numberline {10}{\ignorespaces Bộ tính giá trị khoảng cách từ \texttt {addr\_si} đến \texttt {addr\_ei}.}}{22}{figure.caption.14}%
 \contentsline {figure}{\numberline {11}{\ignorespaces Bộ tính giá trị khoảng cách giữa hai \texttt {addr\_si} đến \texttt {addr\_ei}.}}{23}{figure.caption.15}%
@@ -20,3 +20,4 @@
 \contentsline {figure}{\numberline {19}{\ignorespaces Bộ điều khiển chính trong việc kiểm soát địa chỉ phân hoạch.}}{27}{figure.caption.23}%
 \contentsline {figure}{\numberline {20}{\ignorespaces Phần tử nhớ các dữ liệu địa chỉ phân hoạch.}}{28}{figure.caption.24}%
 \contentsline {figure}{\numberline {21}{\ignorespaces Nguyên tắc hoạt hoạt động của bộ điều khiển phân hoạch địa chỉ.}}{28}{figure.caption.25}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Quá trình hoạt động của bộ điều khiển địa chỉ phân hoạch bộ nhớ.}}{28}{figure.caption.26}%

@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{Kim2025HighSpeed}
+S.~Kim, J.~Kim, and I.-c. Park, ``High-speed {CMOS} synchronous binary counter
+  with constant counting rate,'' {\em IEEE Access}, vol.~PP, no.~99, pp.~1--1,
+  2025.
+
 \bibitem{moghaddam2022general}
 S.~Shirvani~Moghaddam and K.~Shirvani~Moghaddam, ``A general framework for
   sorting large data sets using independent subarrays of approximately equal
