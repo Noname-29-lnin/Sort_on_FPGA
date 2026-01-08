@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2025.12.31)  2 JAN 2026 00:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.10)  8 JAN 2026 13:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,9 +8,9 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
 (my-article.cls
 Document Class: my-article 2025/08/11 HCMUT Report Class - Layout Only
-(/home/noname/.miktex/texmfs/install/tex/latex/base/article.cls
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
-(/home/noname/.miktex/texmfs/install/tex/latex/base/size12.clo
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count275
@@ -25,27 +25,28 @@ File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/anyfontsize/anyfontsize.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/anyfontsize\anyfontsize
+.sty
 Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/06/16 v2.17y AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-(/home/noname/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
 
-(/home/noname/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen149
 ))
-(/home/noname/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen150
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count283
@@ -96,28 +97,28 @@ LaTeX Info: Redefining \Relbar on input line 970.
 LaTeX Info: Redefining \[ on input line 2949.
 LaTeX Info: Redefining \] on input line 2950.
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/amsfonts/amssymb.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/home/noname/.miktex/texmfs/install/tex/latex/amsfonts/amsfonts.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/home/noname/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
+)) (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.st
+y
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(/home/noname/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/iftex/ifvtex.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(/home/noname/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 \Gm@cnth=\count295
@@ -133,72 +134,76 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layoutvoffset=\dimen165
 \Gm@dimlist=\toks23
 
-(/home/noname/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg))
-(/home/noname/.miktex/texmfs/install/tex/latex/hyperref/hyperref.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
-(/home/noname/.miktex/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (/home/noname/.miktex/texmfs/install/tex/generic/pdfescape/pdfescape.sty
+)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 
-(/home/noname/.miktex/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/home/noname/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 ))
-(/home/noname/.miktex/texmfs/install/tex/latex/hycolor/hycolor.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
 
-(/home/noname/.miktex/texmfs/install/tex/latex/refcount/refcount.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/gettitlestring/gettitlestring.
-sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
- (/home/noname/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count298
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count299
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/stringenc/stringenc.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \@linkdim=\dimen166
 \Hy@linkcounter=\count300
 \Hy@pagecounter=\count301
-
-(/home/noname/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
+ (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/home/noname/.miktex/texmfs/install/tex/generic/intcalc/intcalc.sty
+) (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count302
-
-(/home/noname/.miktex/texmfs/install/tex/latex/hyperref/puenc.def
+ (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -212,17 +217,18 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
 \c@Hy@tempcnt=\count303
 
-(/home/noname/.miktex/texmfs/install/tex/latex/url/url.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4801.
 \XeTeXLinkMargin=\dimen167
 
-(/home/noname/.miktex/texmfs/install/tex/generic/bitset/bitset.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(/home/noname/.miktex/texmfs/install/tex/generic/bigintcalc/bigintcalc.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
@@ -242,30 +248,31 @@ Package hyperref Info: PDF/A mode OFF on input line 6108.
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-(/home/noname/.miktex/texmfs/install/tex/latex/hyperref/hpdftex.def
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
 \Fld@listcount=\count308
 \c@bookmark@seq@number=\count309
 
-(/home/noname/.miktex/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.st
-y
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
 
-(/home/noname/.miktex/texmfs/install/tex/generic/uniquecounter/uniquecounter.st
-y
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
 \Hy@SectionHShift=\skip54
-) (/home/noname/.miktex/texmfs/install/tex/latex/tools/indentfirst.sty
+)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/setspace/setspace.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/titlesec/titlesec.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box55
 \beforetitleunit=\skip55
@@ -277,27 +284,27 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidthlast=\dimen173
 \titlewidthfirst=\dimen174
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/home/noname/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
-(/home/noname/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 
-(/home/noname/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen175
 \Gin@req@width=\dimen176
-)
-(/home/noname/.miktex/texmfs/install/tex/latex/tools/array.sty
+) (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
 \col@sep=\dimen177
 \ar@mcellbox=\box56
@@ -307,7 +314,7 @@ Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
 \backup@length=\skip58
 \ar@cellbox=\box57
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/booktabs/booktabs.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen179
 \lightrulewidth=\dimen180
@@ -327,7 +334,7 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count313
 \@thisrulewidth=\dimen191
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/tools/tabularx.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@col@width=\dimen192
 \TX@old@table=\dimen193
@@ -337,7 +344,7 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@cols=\count314
 \TX@ftn=\toks26
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/tabulary/tabulary.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/tabulary\tabulary.sty
 Package: tabulary 2024/06/04 v0.11 tabulary package (DPC)
 \TY@count=\count315
 \TY@linewidth=\dimen197
@@ -345,7 +352,7 @@ Package: tabulary 2024/06/04 v0.11 tabulary package (DPC)
 \tymax=\dimen199
 \TY@tablewidth=\dimen256
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/tools/longtable.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2024-12-18 v4.23 Multi-page Table package (DPC)
 \LTleft=\skip59
 \LTright=\skip60
@@ -364,14 +371,14 @@ Package: longtable 2024-12-18 v4.23 Multi-page Table package (DPC)
 \c@LT@chunks=\count320
 \LT@p@ftn=\toks27
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/multirow/multirow.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip63
 \multirow@cntb=\count321
 \multirow@dima=\skip64
 \bigstrutjot=\dimen258
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/tools/multicol.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2025/05/25 v2.0a multicolumn formatting (FMi)
 \c@tracingmulticols=\count322
 \mult@box=\box63
@@ -442,10 +449,10 @@ Package: multicol 2025/05/25 v2.0a multicolumn formatting (FMi)
 \mc@col@check@num=\count331
 \g__mc_curr_col_int=\count332
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/caption/caption.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
-(/home/noname/.miktex/texmfs/install/tex/latex/caption/caption3.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen268
 \captionmargin=\dimen269
@@ -462,10 +469,10 @@ Package caption Info: Standard document class detected.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 
-(/home/noname/.miktex/texmfs/install/tex/latex/caption/ltcaption.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
-))
-(/home/noname/.miktex/texmfs/install/tex/latex/fancyhdr/fancyhdr.sty
+)) (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.st
+y
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
 \f@nch@headwidth=\skip67
@@ -483,33 +490,33 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip79
 \f@nch@widthR=\skip80
 \@temptokenb=\toks28
-)
-(/home/noname/.miktex/texmfs/install/tex/latex/natbib/natbib.sty
+) (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip81
 \bibsep=\skip82
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count335
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/lastpage/lastpage.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage.sty
 Package: lastpage 2025/06/06 v2.1g lastpage: 2.09 or 2e? (HMM)
 
-(/home/noname/.miktex/texmfs/install/tex/latex/lastpage/lastpage2e.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage2e.sty
 Package: lastpage2e 2025/06/06 v2.1g Decide which 2e lastpage version to use (H
 MM)
 
-(/home/noname/.miktex/texmfs/install/tex/latex/lastpage/lastpagemodern.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpagemodern
+.sty
 Package: lastpagemodern 2025-06-06 v2.1g Refers to last page's name (HMM; JPG)
 \c@lastpagecount=\count336
 ) 
-)) (/home/noname/.miktex/texmfs/install/tex/latex/base/ifthen.sty
+)) (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/tools/enumerate.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty
 Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
 \@enLab=\toks29
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/enumitem/enumitem.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip83
 \enit@outerparindent=\dimen276
@@ -531,20 +538,19 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 105.
 ) (my-coverpage.sty
 Package: my-coverpage 2025/08/11 HCMUT Report Cover Page
 
-(/home/noname/.miktex/texmfs/install/tex/latex/eso-pic/eso-pic.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
 \ESO@tempdima=\dimen277
 \ESO@tempdimb=\dimen278
 
-(/home/noname/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 
-(/home/noname/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
-
-(/home/noname/.miktex/texmfs/install/tex/latex/graphics/mathcolor.ltx)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -554,8 +560,7 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-))
-(/home/noname/.miktex/texmfs/install/tex/latex/float/float.sty
+)) (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count339
 \float@exts=\toks31
@@ -563,15 +568,15 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks32
 \@floatcapt=\box111
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/base/inputenc.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks33
 \inpenc@posthook=\toks34
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/base/fontenc.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/babel/babel.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2025/08/03 v25.12 The multilingual framework for LuaLaTeX, pdfLa
 TeX and XeLaTeX
 \babel@savecnt=\count340
@@ -590,24 +595,25 @@ on input line 2053.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
 on input line 2078.
 \U@D=\dimen279
-\l@unhyphenated=\language2
+\l@unhyphenated=\language79
 
-(/home/noname/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count341
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(/home/noname/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/babel-vietnamese/vietnamese.ldf
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/babel-vietnamese\vietna
+mese.ldf
 Language: vietnamese 
 
-(/home/noname/.miktex/texmfs/install/tex/generic/babel/locale/vi/babel-vietname
-se.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/vi\babel
+-vietnamese.tex
 Package babel Info: Importing font and identification data for vietnamese
 (babel)             from babel-vi.ini. Reported on input line 12.
 )
@@ -623,12 +629,12 @@ Package babel Info: Hyphen rules for 'vietnamese' set to \l@english
 Package babel Info: Hyphen rules for 'vietnam' set to \l@english
 (babel)             (\language0). Reported on input line 38.
 Loading definitions for the Vietnamese font encoding
-(/home/noname/.miktex/texmfs/install/tex/latex/vntex/t5enc.def
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.def
 File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
 Now handling font encoding T5 ...
 ... processing UTF-8 mapping file for font encoding T5
 
-(/home/noname/.miktex/texmfs/install/tex/latex/vntex/t5enc.dfu
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.dfu
 File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
    defining Unicode char U+00AB (decimal 171)
    defining Unicode char U+00BB (decimal 187)
@@ -787,37 +793,43 @@ Package babel Info: Making " an active character on input line 147.
 (my-codespace.sty
 Package: my-codespace 2025/08/11 v0.0 My Codespace Package
 
-(/home/noname/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.sty
-(/home/noname/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgf.sty
-(/home/noname/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfrcs.sty
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-common.t
-ex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex
 \pgfutil@everybye=\toks35
 \pgfutil@tempdima=\dimen280
 \pgfutil@tempdimb=\dimen281
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-latex.de
-f
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def
 \pgfutil@abb=\box112
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/pgf.revision.tex)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 
-(/home/noname/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgfcore.sty
-(/home/noname/.miktex/texmfs/install/tex/latex/pgf/systemlayer/pgfsys.sty
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys.code.te
-x
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
 \pgfkeys@pathtoks=\toks36
 \pgfkeys@temptoks=\toks37
 
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeyslibraryfi
-ltered.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks38
 ))
 \pgf@x=\dimen282
@@ -841,37 +853,40 @@ ltered.code.tex
 \t@pgf@tokc=\toks41
 \pgf@sys@id@count=\count346
 
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgf.cfg
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-pdftex.
-def
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
 File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-common-
-pdf.def
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 )))
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsyssoftpath
-.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfsyssoftpath@smallbuffer@items=\count347
 \pgfsyssoftpath@bigbuffer@items=\count348
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsysprotocol
-.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore.code.te
-x
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
- (/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathutil.code.tex)
 
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathparser.code.te
-x
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex
 \pgfmath@dimen=\dimen292
 \pgfmath@count=\count349
 \pgfmath@box=\box113
@@ -879,31 +894,34 @@ x
 \pgfmath@stack@operand=\toks43
 \pgfmath@stack@operation=\toks44
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.code
-.tex)
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.basi
-c.code.tex)
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.trig
-onometric.code.tex)
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.rand
-om.code.tex)
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.comp
-arison.code.tex)
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.base
-.code.tex)
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.roun
-d.code.tex)
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.misc
-.code.tex)
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.inte
-gerarithmetics.code.tex)
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathcalc.code.tex)
-
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfloat.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex
 \c@pgfmathroundto@lastzeros=\count350
-)) (/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfint.code.tex)
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepoints.c
-ode.tex
+))
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@picminx=\dimen293
 \pgf@picmaxx=\dimen294
@@ -920,124 +938,129 @@ File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@zx=\dimen305
 \pgf@zy=\dimen306
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathcons
-truct.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@path@lastx=\dimen307
 \pgf@path@lasty=\dimen308
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathusag
-e.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@shorten@end@additional=\dimen309
 \pgf@shorten@start@additional=\dimen310
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorescopes.c
-ode.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box114
 \pgf@hbox=\box115
 \pgf@layerbox@main=\box116
 \pgf@picture@serial@count=\count351
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoregraphics
-tate.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgflinewidth=\dimen311
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransfor
-mations.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@pt@x=\dimen312
 \pgf@pt@y=\dimen313
 \pgf@pt@temp=\dimen314
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorequick.co
-de.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreobjects.
-code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex
 File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathproc
-essing.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorearrows.c
-ode.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfarrowsep=\dimen315
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreshade.co
-de.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen316
 \pgf@sys@shading@range@num=\count352
 \pgf@shadingcount=\count353
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreimage.co
-de.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreexternal
-.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfexternal@startupbox=\box117
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorelayers.c
-ode.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretranspar
-ency.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex
 File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepatterns
-.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex
 File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorerdf.code
-.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex
 File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleshapes.co
-de.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfnodeparttextbox=\box118
 )
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleplot.code
-.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-versio
-n-0-65.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 \pgf@nodesepstart=\dimen317
 \pgf@nodesepend=\dimen318
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-versio
-n-1-18.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 ))
-(/home/noname/.miktex/texmfs/install/tex/latex/pgf/utilities/pgffor.sty
-(/home/noname/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfkeys.sty
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex
-)) (/home/noname/.miktex/texmfs/install/tex/latex/pgf/math/pgfmath.sty
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex))
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/utilities/pgffor.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen319
 \pgffor@skip=\dimen320
 \pgffor@stack=\toks45
 \pgffor@toks=\toks46
 ))
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/tikz.co
-de.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplotha
-ndlers.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@plot@mark@count=\count354
 \pgfplotmarksize=\dimen321
@@ -1059,8 +1082,8 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikznumberofcurrentchild=\count357
 \tikz@fig@count=\count358
 
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulematrix.co
-de.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfmatrixcurrentrow=\count359
 \pgfmatrixcurrentcolumn=\count360
@@ -1068,32 +1091,34 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 \tikz@expandcount=\count362
 
-(/home/noname/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/librari
-es/tikzlibrarytopaths.code.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-(/home/noname/.miktex/texmfs/install/tex/latex/mdframed/mdframed.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
 
-(/home/noname/.miktex/texmfs/install/tex/latex/l3packages/xparse/xparse.sty
-(/home/noname/.miktex/texmfs/install/tex/latex/l3kernel/expl3.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2025-07-20 L3 programming layer (loader) 
 
-(/home/noname/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count363
 ))
 Package: xparse 2024-08-16 L3 Experimental document command parser
-) (/home/noname/.miktex/texmfs/install/tex/latex/zref/zref-abspage.sty
+)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-abspage.sty
 Package: zref-abspage 2025-06-08 v2.36 Module abspage for zref (HO)
 
-(/home/noname/.miktex/texmfs/install/tex/latex/zref/zref-base.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-base.sty
 Package: zref-base 2025-06-08 v2.36 Module base for zref (HO)
 
-(/home/noname/.miktex/texmfs/install/tex/generic/etexcmds/etexcmds.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)
-(/home/noname/.miktex/texmfs/install/tex/latex/auxhook/auxhook.sty
+) (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 Package zref Info: New property list: main on input line 767.
@@ -1103,7 +1128,7 @@ Package zref Info: New property: page on input line 769.
 \c@abspage=\count364
 Package zref Info: New property: abspage on input line 67.
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/needspace/needspace.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/needspace\needspace.sty
 Package: needspace 2025/03/13 v1.3e reserve vertical space
 )
 \mdf@templength=\skip84
@@ -1148,7 +1173,7 @@ Package: needspace 2025/03/13 v1.3e reserve vertical space
 \mdf@subsubtitleinneraboveskip@length=\skip122
 \mdf@subsubtitleinnerbelowskip@length=\skip123
 
-(/home/noname/.miktex/texmfs/install/tex/latex/mdframed/md-frame-1.mdf
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\md-frame-1.mdf
 File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 )
 \mdf@frametitlebox=\box123
@@ -1195,7 +1220,7 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 \c@mdf@zref@counter=\count370
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/listings/listings.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count371
 \lst@gtempboxa=\box128
 \lst@token=\toks47
@@ -1209,36 +1234,35 @@ Package zref Info: New property: mdf@pagevalue on input line 895.
 \lst@lineno=\count376
 \lst@maxwidth=\dimen333
 
-(/home/noname/.miktex/texmfs/install/tex/latex/listings/lstpatch.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/listings/lstmisc.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 \c@lstnumber=\count377
 \lst@skipnumbers=\count378
 \lst@framebox=\box129
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/listings/listings.cfg
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
 
-(/home/noname/.miktex/texmfs/install/tex/latex/lstaddons/lstautogobble.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/lstaddons\lstautogobble
+.sty
 Package: lstautogobble 2012/05/03 v0.1 Implements 'autogobble' option for 'list
 ings'
 \lstag@spacecount=\count379
-)
-(/home/noname/.miktex/texmfs/install/tex/latex/minted/minted.sty
+) (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/minted\minted.sty
 Package: minted 2025/05/14 v3.7.0 Yet another Pygments shim for LaTeX
 
-(/home/noname/.miktex/texmfs/install/tex/generic/catchfile/catchfile.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.s
+ty
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
-)
-(/home/noname/.miktex/texmfs/install/tex/latex/fvextra/fvextra.sty
+) (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/fvextra\fvextra.sty
 Package: fvextra 2025/05/29 v1.13.2 fvextra - extensions and patches for fancyv
 rb
-
-(/home/noname/.miktex/texmfs/install/tex/latex/fancyvrb/fancyvrb.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
 Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
 \FV@CodeLineNo=\count380
 \FV@InFile=\read4
@@ -1247,14 +1271,14 @@ Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
 \FV@StepNumber=\count382
 \FV@OutFile=\write4
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/upquote/upquote.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 
-(/home/noname/.miktex/texmfs/install/tex/latex/base/textcomp.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 ))
-(/home/noname/.miktex/texmfs/install/tex/latex/lineno/lineno.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
 Package: lineno 2025/05/13 line numbers on paragraphs v5.5
 \linenopenalty=\count383
 \output=\toks48
@@ -1299,16 +1323,17 @@ Package: lineno 2025/05/13 line numbers on paragraphs v5.5
 \c@FV@BreakBufferDepth=\count404
 \FV@LineWidth=\dimen344
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/latex2pydata/latex2pydata.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/latex2pydata\latex2pyda
+ta.sty
 Package: latex2pydata 2025/03/26 v0.6.0 latex2pydata - write data to file in Py
 thon literal format
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/pgfopts/pgfopts.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/pgfopts\pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 \pgfopts@list@add@a@toks=\toks49
 \pgfopts@list@add@b@toks=\toks50
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/tools/shellesc.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
@@ -1316,24 +1341,25 @@ Package shellesc Info: Restricted shell escape enabled on input line 77.
 \@float@every@listing=\toks51
 \c@listing=\count406
 )
-(/home/noname/.miktex/texmfs/install/tex/latex/tools/verbatim.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks52
 \verbatim@line=\toks53
 \verbatim@in@stream=\read5
 ))
-(/home/noname/.miktex/texmfs/install/tex/latex/base/fontenc.sty
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T5+cmr on input line 11
 6.
 
-(/home/noname/.miktex/texmfs/install/tex/latex/vntex/t5cmr.fd
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmr.fd
 File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)) (main.aux
+))
+(main.aux
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 (babel)             Reported on input line 9.
-
-(my-chapters/RTL.aux))
+ (my-chapters/introduction.aux) (my-chapters/theorical_basic.aux)
+(my-chapters/SystemLevelTest.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -1397,7 +1423,8 @@ Package hyperref Info: Link coloring ON on input line 26.
 \openout5 = `main.out'.
 
 
-(/home/noname/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count407
 \scratchdimen=\dimen345
@@ -1410,9 +1437,12 @@ Package hyperref Info: Link coloring ON on input line 26.
 \MPnumerator=\count411
 \makeMPintoPDFobject=\count412
 \everyMPtoPDFconversion=\toks55
-) (/home/noname/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
+)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-(/home/noname/.miktex/texmfs/install/tex/latex/grfext/grfext.sty
+
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1422,7 +1452,8 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
 
-(/home/noname/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
@@ -1430,7 +1461,7 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count413
-<./my-chapters/my-images/01_logobachkhoatoi.png, id=42, 471.9231pt x 478.9092pt
+<./my-chapters/my-images/01_logobachkhoatoi.png, id=66, 471.9231pt x 478.9092pt
 >
 File: ./my-chapters/my-images/01_logobachkhoatoi.png Graphic file (type png)
 <use ./my-chapters/my-images/01_logobachkhoatoi.png>
@@ -1440,18 +1471,17 @@ n input line 28.
 LaTeX Font Info:    Calculating math sizes for size <14> on input line 28.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
 
-
-(/home/noname/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
+ (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
 
 
-(/home/noname/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-<./my-chapters/my-images/bia.jpg, id=44, 301.125pt x 414.95026pt>
+<./my-chapters/my-images/bia.jpg, id=68, 301.125pt x 414.95026pt>
 File: ./my-chapters/my-images/bia.jpg Graphic file (type jpg)
 <use ./my-chapters/my-images/bia.jpg>
 Package pdftex.def Info: ./my-chapters/my-images/bia.jpg  used on input line 29
@@ -1459,8 +1489,9 @@ Package pdftex.def Info: ./my-chapters/my-images/bia.jpg  used on input line 29
 (pdftex.def)             Requested size: 597.62614pt x 845.06903pt.
 [1
 
-{/home/noname/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map} <./my-chapters/m
-y-images/bia.jpg> <./my-chapters/my-images/01_logobachkhoatoi.png>] (main.toc
+{C:/Users/nguye/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./my-chapter
+s/my-images/bia.jpg> <./my-chapters/my-images/01_logobachkhoatoi.png>]
+(main.toc
 LaTeX Font Info:    Calculating math sizes for size <13> on input line 4.
 )
 \tf@toc=\write6
@@ -1474,131 +1505,210 @@ LaTeX Font Info:    Calculating math sizes for size <13> on input line 4.
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- (main.lol)
+ (main.lol
+
+[1])
 \tf@lol=\write9
 \openout9 = `main.lol'.
 
 
 
-[1]
-
 [2]
-\openout2 = `./my-chapters/RTL.aux'.
 
- (my-chapters/RTL.tex
-<./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BlockDiagram_Overview.png, 
-id=80, 1453.43pt x 1446.40375pt>
-File: ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BlockDiagram_Overview.
-png Graphic file (type png)
-<use ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BlockDiagram_Overview.p
-ng>
-Package pdftex.def Info: ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/Blo
-ckDiagram_Overview.png  used on input line 9.
-(pdftex.def)             Requested size: 338.58632pt x 336.94751pt.
-<./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png, id=
-81, 609.2361pt x 2350.2204pt>
-File: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png
- Graphic file (type png)
-<use ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png>
+[3]
+\openout2 = `./my-chapters/introduction.aux'.
 
-Package pdftex.def Info: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_
-address_diagram.png  used on input line 20.
-(pdftex.def)             Requested size: 96.73788pt x 373.17404pt.
-
+ (my-chapters/introduction.tex
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.23 
-      [1
+l.27 		\item \textbf
+                    {ƒê·ªô tr·ªÖ truy xu·∫•t (Access Latency):} Th·ªùi gian ...
+[1
 
- <./../Version1/02_rtl/PA_CAL_MEAN/BFP16_ADD/00_spec/BlockDiagram_Overview.png>
 ]
-<./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png, id=89, 91.
-3011pt x 129.6042pt>
-File: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png Graphi
-c file (type png)
-<use ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png>
-Package pdftex.def Info: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_i
-nit_data.png  used on input line 26.
-(pdftex.def)             Requested size: 193.47578pt x 274.65474pt.
+
+[2])
+
+[3]
+\openout2 = `./my-chapters/theorical_basic.aux'.
+
+ (my-chapters/theorical_basic.tex
+
+[4
 
 
-[2 <./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_control_address_diagram.png>]
-<./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_diagram.png, id=96, 179.71
-14pt x 380.622pt>
-File: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_diagram.png Graphic f
-ile (type png)
-<use ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_diagram.png>
-Package pdftex.def Info: ./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_di
-agram.png  used on input line 32.
-(pdftex.def)             Requested size: 193.47578pt x 409.78789pt.
 
+]
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 46.
 
-[3 <./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PACS_detect_init_data.png>]
-<./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png, id=1
-03, 2315.7717pt x 4248.0306pt>
-File: ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png 
-Graphic file (type png)
-<use ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png>
-Package pdftex.def Info: ./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU
-32_div_diagram.png  used on input line 40.
-(pdftex.def)             Requested size: 241.84843pt x 443.62564pt.
-
-
-[4 <./../Version1/02_rtl/PA_CAL_MEAN/00_spec/PA_cal_sum_diagram.png>]
-Overfull \hbox (57.30345pt too wide) in paragraph at lines 44--44
-|[]\T5/cmr/bx/n/14.4 BÎ th¸c hiªn par-ti-tion l§i m£ng theo gi° tr‡ trung bºnh 
-(PAMEM_UNIT)| 
+Overfull \hbox (2.61615pt too wide) in paragraph at lines 62--62
+ []|$[]$| 
  []
 
-<./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png, id=111, 1907.6871p
-t x 379.1766pt>
-File: ./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png Graphic file (
-type png)
-<use ./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png>
-Package pdftex.def Info: ./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit
-.png  used on input line 50.
-(pdftex.def)             Requested size: 483.69687pt x 96.142pt.
+
+Overfull \hbox (2.61615pt too wide) in paragraph at lines 74--75
+ []|$[]$| 
+ []
+
+
+Overfull \hbox (33.94717pt too wide) in paragraph at lines 45--79
+[]| [] 
+ []
+
+
+
+[5]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 89.
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 8
+9.
+ (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
+File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+(my-chapters/my-codes/pseudo_serial.txt
+
+[6])
+
+[7]
+
+[8]
+
+[9]
+
+[10])
+
+[11]
+\openout2 = `./my-chapters/SystemLevelTest.aux'.
+
+ (my-chapters/SystemLevelTest.tex
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 )
 
-[5 <./../Version1/02_rtl/PA_CAL_MEAN/BFP16_DIV/00_spec/FPU32_div_diagram.png>]
+[12
 
-[6 <./../Version1/02_rtl/DI_UNIT/00_spec/WaveDrome_DI_unit.png>] (main.bbl)
 
-[7
+
+]
+
+[13]
+<./my-chapters/my-images/SLT/stack_diagram.png, id=515, 1393.205pt x 362.35374p
+t>
+File: ./my-chapters/my-images/SLT/stack_diagram.png Graphic file (type png)
+<use ./my-chapters/my-images/SLT/stack_diagram.png>
+Package pdftex.def Info: ./my-chapters/my-images/SLT/stack_diagram.png  used on
+ input line 161.
+(pdftex.def)             Requested size: 386.95897pt x 100.64005pt.
+
+Underfull \hbox (badness 1622) in paragraph at lines 176--176
+[]|\T5/cmr/bx/n/11 ThÌi gian (Av-er-age
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
+[]|\T5/cmr/bx/n/11 ThÌi gian (Worst
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+[]|\T5/cmr/bx/n/11 Chi phΩ qu£n l˛
+ []
+
+
+
+[14 <./my-chapters/my-images/SLT/stack_diagram.png>]
+<./my-chapters/my-images/SLT/Sort_2_20.png, id=541, 962.84718pt x 642.90187pt>
+File: ./my-chapters/my-images/SLT/Sort_2_20.png Graphic file (type png)
+<use ./my-chapters/my-images/SLT/Sort_2_20.png>
+Package pdftex.def Info: ./my-chapters/my-images/SLT/Sort_2_20.png  used on inp
+ut line 191.
+(pdftex.def)             Requested size: 435.32422pt x 290.66673pt.
+<./my-chapters/my-images/SLT/mem_framework_standard_2_20.png, id=542, 878.53218
+pt x 587.19376pt>
+File: ./my-chapters/my-images/SLT/mem_framework_standard_2_20.png Graphic file 
+(type png)
+<use ./my-chapters/my-images/SLT/mem_framework_standard_2_20.png>
+Package pdftex.def Info: ./my-chapters/my-images/SLT/mem_framework_standard_2_2
+0.png  used on input line 197.
+(pdftex.def)             Requested size: 435.32422pt x 290.97092pt.
+
+
+[15 <./my-chapters/my-images/SLT/Sort_2_20.png>]
+<./my-chapters/my-images/SLT/mem_framework_rtl_2_20.png, id=550, 768.62157pt x 
+582.67688pt>
+File: ./my-chapters/my-images/SLT/mem_framework_rtl_2_20.png Graphic file (type
+ png)
+<use ./my-chapters/my-images/SLT/mem_framework_rtl_2_20.png>
+Package pdftex.def Info: ./my-chapters/my-images/SLT/mem_framework_rtl_2_20.png
+  used on input line 203.
+(pdftex.def)             Requested size: 435.32422pt x 330.01323pt.
+
+
+[16 <./my-chapters/my-images/SLT/mem_framework_standard_2_20.png>])
+
+[17 <./my-chapters/my-images/SLT/mem_framework_rtl_2_20.png>] (main.bbl)
+
+[18
 
 
 ] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-runsystem(latexminted cleantemp  --timestamp 20260102003334 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20260108132107 FAD58DE7366495DB465
 0CFEFAC2FCD61)...disabled (restricted).
 
-(main.aux (my-chapters/RTL.aux))
+(main.aux (my-chapters/introduction.aux) (my-chapters/theorical_basic.aux)
+(my-chapters/SystemLevelTest.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3EBB01399F880E63A074CF982803DF31;2553.
+(rerunfilecheck)             Checksum: 66EDA523DD849265E76A8E3CFEDB130F;4061.
  ) 
 Here is how much of TeX's memory you used:
- 32511 strings out of 470046
- 633241 string characters out of 5482219
- 1141956 words of memory out of 5000000
- 60306 multiletter control sequences out of 15000+600000
- 649564 words of font info for 89 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 99i,11n,101p,1065b,508s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/noname/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnbx12.pfb></home/
-noname/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr12.pfb></home/noname/.mi
-ktex/texmfs/install/fonts/type1/vntex/vnr/vnr17.pfb></home/noname/.miktex/texmf
-s/install/fonts/type1/vntex/vnr/vnti12.pfb>
-Output written on main.pdf (10 pages, 3204901 bytes).
+ 33592 strings out of 468134
+ 651573 string characters out of 5430740
+ 2288321 words of memory out of 5000000
+ 61244 multiletter control sequences out of 15000+600000
+ 667531 words of font info for 134 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 99i,20n,101p,1065b,2191s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\nguye\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi450\tctt
+0800.pk> <C:\Users\nguye\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi65
+0\tcrm1200.pk><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmex10.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/nguye/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/nguye/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/nguye/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/nguy
+e/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Us
+ers/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmr5.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr8.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmr9.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/f
+onts/type1/vntex/vnr/vnbx12.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/f
+onts/type1/vntex/vnr/vnr12.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fo
+nts/type1/vntex/vnr/vnr17.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fon
+ts/type1/vntex/vnr/vnr6.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts
+/type1/vntex/vnr/vnr9.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/vntex/vnr/vnti12.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/vntex/vnr/vntt10.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/vntex/vnr/vntt12.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/vntex/vnr/vntt8.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/vntex/vnr/vntt9.pfb>
+Output written on main.pdf (22 pages, 732783 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 740 PDF objects out of 1000 (max. 8388607)
+ 357 named destinations out of 1000 (max. 500000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 

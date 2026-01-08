@@ -112,10 +112,10 @@ PAMEM_readdata #(
     .i_start        (w_PAMEM_READ_start),
     .i_addr_a       (i_value),
     .i_addr_b       (pi_value),
-    .o_data_a       (w_PAMEM_READ_data_a),
-    .o_data_b       (w_PAMEM_READ_data_b),
     .i_valid_rd     (i_valid_rd & w_active),
     .i_data_ram     (i_data_ram),
+    .o_data_a       (w_PAMEM_READ_data_a),
+    .o_data_b       (w_PAMEM_READ_data_b),
     .o_rd_ram       (o_rd_ram),
     .o_addr_ram     (o_addr_rd_ram),
     .o_done         (w_PAMEM_READ_done) 

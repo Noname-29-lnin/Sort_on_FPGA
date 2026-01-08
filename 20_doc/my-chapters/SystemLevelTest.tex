@@ -1,5 +1,7 @@
 \section{System Level Test}
 
+Từ đoạn code mẫu \ref{pseudo-code:Serial} được nêu trong bài báo, có vài điểm cần phải phải tối ưu trong quá trình có thể chuyển từ giải thuật của bài báo xuông được phần cứng.
+
 \subsection{Xây dựng Bộ tính giá trị trung bình của mảng}
 
 \begin{lstlisting}[style=StyleCode, language=C, caption={Tính giá trị Trung bình.}]
@@ -16,21 +18,55 @@
 
 Với một bộ tính giá trị trung bình bằng cách đọc tất cả các giá trị trong mảng để tính được giá trị tổng quát của mảng. Còn giá trị số lượng phần tử được tính bằng công thức \texttt{(SIZE\_TYPE\_T)(ei - si + 1)} để chuyển từ giá trị HEX qua Float. Kết hợp thêm bộ kiểm tra các trường hợp đặc biệt của vùng dữ liệu:
 
+%\begin{lstlisting}[style=StyleCode, language=C, caption={Tính giá trị Trung bình và Tìm trường hợp đặc biệt.}]
+%	status_rtl_e C_Framework_RTL::P_SS_Check(std::vector<SIZE_ARR_T> &arr, IndexType si, IndexType ei, SIZE_TYPE_T &mean){
+%		bool is_Similar     = true;
+%		bool is_Acsending   = true;
+%		bool is_Decsending  = true;
+%		SIZE_TYPE_T temp_sum = 0;
+%		for(int i = si + 1; i <= ei; ++i){
+%			temp_sum += arr[i - 1];
+%			if(arr[i] != arr[i - 1]){
+%				is_Similar      = false;
+%			}
+%			if(arr[i] < arr[i - 1]){
+%				is_Acsending    = false;
+%			}
+%			if(arr[i] > arr[i - 1]){
+%				is_Decsending   = false;
+%			}
+%		}
+%		temp_sum += arr[ei];
+%		mean = temp_sum / (SIZE_TYPE_T)(ei - si + 1);
+%		if(is_Similar){
+%			return RTL_SIMILAR;
+%		}
+%		else if(is_Acsending){
+%			return RTL_ACSENDING;
+%		}
+%		else if(is_Decsending){
+%			return RTL_DESCENDING;
+%		}
+%		else{
+%			return RTL_NORMAL;
+%		}
+%	};
+%\end{lstlisting}
 \begin{lstlisting}[style=StyleCode, language=C, caption={Tính giá trị Trung bình và Tìm trường hợp đặc biệt.}]
 	status_rtl_e C_Framework_RTL::P_SS_Check(std::vector<SIZE_ARR_T> &arr, IndexType si, IndexType ei, SIZE_TYPE_T &mean){
 		bool is_Similar     = true;
 		bool is_Acsending   = true;
 		bool is_Decsending  = true;
 		SIZE_TYPE_T temp_sum = 0;
-		for(int i = si + 1; i <= ei; ++i){
-			temp_sum += arr[i - 1];
-			if(arr[i] != arr[i - 1]){
+		for(int i = si; i < ei; ++i){
+			temp_sum += arr[i];
+			if(arr[i] != arr[i + 1]){
 				is_Similar      = false;
 			}
-			if(arr[i] < arr[i - 1]){
+			if(arr[i] > arr[i + 1]){
 				is_Acsending    = false;
 			}
-			if(arr[i] > arr[i - 1]){
+			if(arr[i] < arr[i + 1]){
 				is_Decsending   = false;
 			}
 		}
@@ -61,7 +97,6 @@ Với một bộ tính giá trị trung bình bằng cách đọc tất cả cá
 		for (IndexType i = si; i <= ei; ++i) {
 			temp_a = arr[i];
 			temp_pi = arr[pi];
-			// P_count_compare ++;
 			if (temp_a < mean_value) {
 				arr[i] = temp_pi;
 				arr[pi] = temp_a;
@@ -72,7 +107,7 @@ Với một bộ tính giá trị trung bình bằng cách đọc tất cả cá
 	}
 \end{lstlisting}
 
-Với cho phép không cần sử dụng giải thuật \texttt{std::swap} để giúp giảm thiểu đơn vị swap.
+Với việc tiến hành đọc dữ liệu trước khi so sánh dữ liệu với \texttt{pivot} giúp ta tối ưu và làm rõ được các bước làm trong phần cứng để có thể dễ dàng tiếp cận hơn. Với cách đó, chúng cho phép ta không cần sử dụng giải thuật \texttt{std::swap} để giúp giảm thiểu đơn vị swap.
 
 \subsection{Xây dựng bộ thực hiện kiểm soát chia mảng dữ liệu}
 
@@ -126,6 +161,28 @@ Dựa trên việc kiểm soát luồng dữ liệu lưu hiện tại của mỗ
 	\includegraphics[width=.8\linewidth]{./my-chapters/my-images/SLT/stack_diagram.png}
 	\caption{Cấu trúc của bộ lưu trữ stack khi thay thế cho đệ quy.}
 \end{figure}
+
+Nhờ đó, giải thuật đệ quy cho phép chia mảng thành từng đoạn $N/2$ được trực quan hóa hơn và dễ dàng kiểm soát hơn về mặt độ rộng, độ sâu của bộ nhớ stack thêm vào. Sau đây là so sánh giữa hai giải thuật:
+
+\begin{table}[H]
+	\centering
+	{
+		\fontsize{11}{10}\selectfont
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{@{}p{4cm} p{5.5cm} p{5.5cm}@{}}
+			\toprule
+			\textbf{Tiêu chí} & \textbf{Recursive (Serial)} & \textbf{Iterative (RTL)} \\
+			\midrule
+			\textbf{Thời gian (Average Case)} & $O(N \log N)$ & $O(N \log N)$ \\
+			\textbf{Thời gian (Worst Case)} & $O(N^2)$ & $O(N^2)$ \\
+			\textbf{Không gian (Space)} & $O(M)$ hoặc $O(\log N)$ \newline (System Call Stack) & $O(M)$ hoặc $O(\log N)$ \newline (Heap Memory - \texttt{std::vector}) \\
+			\textbf{Chi phí quản lý (Overhead)} & Cao (do khởi tạo stack frame cho mỗi lần gọi hàm). & Thấp (chỉ thao tác \texttt{push/pop} trên vector). \\
+			\textbf{Rủi ro bộ nhớ} & Dễ gây \textit{Stack Overflow} khi $N$ lớn hoặc $M$ sâu. & An toàn hơn, giới hạn bởi dung lượng RAM (Heap). \\
+			\bottomrule
+		\end{tabular}
+	}
+	\caption{Bảng so sánh độ phức tạp và tài nguyên giữa bộ \texttt{Division\_Recursive} và bộ \texttt{Division\_Iterative}.}
+\end{table}
 
 \subsection{Kết quả của thuật toán sau khi viết lại}
 
