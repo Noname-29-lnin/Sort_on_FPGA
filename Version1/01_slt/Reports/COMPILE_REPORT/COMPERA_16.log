@@ -1,22 +1,22 @@
 Finished reading file: ./tools/unsorted.txt
-Size of array: 1048576
+Size of array: 32
 Number subarry M = 16
-[FrameworkStandard_Quick] Number of Similar = 413
-[FrameworkStandard_Quick] Number of Ascending = 19606
-[FrameworkStandard_Quick] Number of Descending = 23195
-[FrameworkStandard_Quick] Number of SubArrays = 120
+[FrameworkStandard_Quick] Number of Similar = 0
+[FrameworkStandard_Quick] Number of Ascending = 5
+[FrameworkStandard_Quick] Number of Descending = 7
+[FrameworkStandard_Quick] Number of SubArrays = 0
 [FrameworkRTL_Quick] Number of Similar = 0
-[FrameworkRTL_Quick] Number of Ascending = 0
+[FrameworkRTL_Quick] Number of Ascending = 3
 [FrameworkRTL_Quick] Number of Descending = 0
-[FrameworkRTL_Quick] Number of SubArrays = 65536
+[FrameworkRTL_Quick] Number of SubArrays = 1
 
 Sort algorithm                Check sorted   Time (ns)           Number Swap         Number Compare      
 --------------------------------------------------------------------------------------------------------------
 Data Set                      FAIL           0                   0                   0                   
 --------------------------------------------------------------------------------------------------------------
-QuickSort                     PASS           79566567            25069490            12511004            
+QuickSort                     PASS           919                 151                 65                  
 --------------------------------------------------------------------------------------------------------------
-FrameworkStandard_Quick       PASS           106096522           844963838           419072306           
+FrameworkStandard_Quick       PASS           1687                0                   0                   
 --------------------------------------------------------------------------------------------------------------
-FrameworkRTL_Quick            PASS           107097781           3582510             1897069             
+FrameworkRTL_Quick            PASS           2371                97                  39                  
 --------------------------------------------------------------------------------------------------------------
